@@ -2,8 +2,12 @@
 
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{ulem}
+\usepackage[usenames]{color}
+\usepackage{graphicx}
 
-\title{¿Cómo nos defendemos de los patógenos? Las células T y su comportamiento}
+
+\title{	\xout{¿Cómo nos defendemos de los patógenos?} El antivirus biológico. Las células T y su comportamiento}
 \author{Belén Serrano Antón }
 
 
@@ -14,16 +18,45 @@
 	\end{titlepage}
 	
 	\section{Introducción}
-	La habilidad de nuestro sistema inmune para combatir patógenos, ya sean internos (como un tumor) o externos (como una infección por microbios) es ciertamente apasionante. 
-	\\
-	\\
-	Parece natural pensar que existe un ``órgano inmune" que controla a las células inmunes y les da información sobre cómo y cuándo actuar. Sin embargo, ese órgano, si existe, aún no se ha encontrado. Incita a pensar, por tanto, que las células inmunes basan su actuación en la información que encuentran a su alrededor. Y sobre esta suposición construiremos un modelo que describa las dos actuaciones básicas (división o muerte celular) que desarrollarán las células inmunes de nuestro estudio: las células T.
+	\xout{La habilidad de nuestro sistema inmune para combatir antígenos, ya sean internos (como un tumor) o externos (como una infección por microbios) es ciertamente apasionante. }
 	
-	\section{Reconocimiento de antígenos}
-	 Como veníamos diciendo en la introducción, asumiremos que las células T toman sus decisiones basándose únicamente en información local, pero ¿cómo distinguen a los amigos de los enemigos?
+	Como si de un campo de batalla se tratara, nuestro cuerpo es testigo de numerosas contiendas que el sistema inmune libra contra los antígenos para mantenernos sanos. No es una tarea fácil, pues estamos continuamente expuestos a posibles atacantes.
+	\\
+	Sin embargo, la habilidad de nuestro sistema inmune para protegernos de los antígenos es ciertamente apasionante. Las células inmunes no solo tienen que identificar quiénes son nuestros amigos y quiénes nuestros enemigos, también tienen que saber cómo y dónde actuar.
+	\\
+	\\
+	Si bien parece natural pensar que hay un órgano que actúa de director, ese órgano, si existe, aún no se ha encontrado. Incita, por tanto, a pensar que las células inmunes basan su actuación en la información local que encuentran a su alrededor. Y sobre esta suposición construiremos un modelo que describa las dos actuaciones básicas, división y muerte celular, que desarrollan las células de nuestro estudio: las células T.
+	
+	 \section{Reconocimiento de antígenos}
+	 Los antígenos pueden venir tanto del exterior, por ejemplo los microbios, como del interior, entre ellos, el crecimiento de un tumor(?). Pero antes de atacar hay que cerciorarse de quién es el enemigo. Para el sistema inmune es una gran responsabilidad, pues atacar a células equivocadas puede provocar daños irreparables, como puede ser el caso de enfermedades autoinmunes si estamos atacando a células propias.
 	 \\
 	 \\
-	 Las células T están dotadas de un receptor de membrana, que en lo que sigue llamaremos TCR (T Cell Receptor), a través del cual son capaces de comunicarse con el exterior. Si el TCR no percibe ningún antígeno, la célula T quedará ``desactivada", en un estado naïve. Si, por el contrario, el TCR y un antígeno se encuentran se produce un proceso conocido como \textit{sinapsis inmmune} y la célula se activa, convirtiéndose en una \textit{célula efectora}, lista para combatir al antígeno, o una \textit{célula con memoria}, que guardará información sobre el patógeno por si volviera a aparecer en un futuro combatirlo más rápidamente. Es entonces cuando el número de células T comienza a aumentar (\textit{clonal expansion}). Y, una vez que el antígeno ha sido vencido, el número de estas células T decrece rápidamente (\textit{clonal contraction}), aunque con retardo respecto a la desaparición del antígeno.
+	 De la misma manera que veníamos diciendo en la introducción, asumiremos que las células T toman sus decisiones basándose únicamente en información de su entorno, es decir, son ellas de manera individual las que sentencian, o no, al organismo de al lado.
+	 \\
+ 	 \\
+ 	 Pero... ¿Cómo lo hacen?
+ 	 \\
+ 	 \\
+ 	 Las células dendríticas y los macrófagos \footnote{Dos tipos de células inmunes.} recorren el cuerpo tomando muestras de péptidos \footnote{Moléculas formadas por la unión de aminoácidos.} de los tejidos. Si estas detectan una infección incrementan su actividad fagocítica para comenzar a eliminar los primeros patógenos y, de manera simultánea, mandan señales de alerta para reclutar a otras células inmmunes. Los péptidos recolectados se mandan a estructuras de membrana específicas cerca de los ganglios linfáticos.
+ 	 \\
+ 	 \\
+ 	 Es allí donde interactúan con las células T. Estas están dotadas de un receptor de membrana, que en lo que sigue llamaremos TCR (T Cell Receptor), a través del cual son capaces de comunicarse con el exterior y cuya estructura es tremendamente variable, pues no todos los TCR presentan la misma afinidad para un determinado antígeno.
+ 	 \\
+ 	 \\
+ 	 En los ganglios, las células T están ``desactivadas", en un estado naïve. Si, por el contrario, el TCR y un antígeno se encuentran se produce un proceso conocido como \textit{sinapsis inmmune} y la célula se activa, convirtiéndose en una \textit{célula efectora}, lista para combatir al antígeno.
+ 	 \textcolor{blue}{La diversidad estructural del TCR implica que solo una pequeña fracción de células T se activan en presencia de los antígenos que ha presentado una célula dendrítica.}
+ 	 \\
+ 	 A partir de este momento, el número de células T comienza a aumentar, pasando de unos cientos a millones en unas horas. Este proceso se conoce como (\textit{clonal expansion}). De esta manera se consigue rápidamente un ejército con el que combatir al antígeno. La mayoría de ellas morirán después (apóptosis) y un pequeño porcentaje quedará como \textit{células con memoria}, que guardará información sobre el patógeno por si volviera a aparecer en un futuro combatirlo más rápidamente.
+ 	 \\
+ 	 \\
+ 	 Después de que la población de antígenos disminuya, el número de estas células T decrece rápidamente (\textit{clonal contraction}), aunque con retardo respecto a la desaparición del antígeno.
+ 	 
+ 	 \begin{figure}[h!]
+ 	 	\centering
+ 	 	\includegraphics[width=0.4\textwidth]{clonalExpContr}
+ 	 	\caption{Clonal expansion/contraction}
+ 	 	\label{fig:ejemplo}
+ 	 \end{figure}
 	 
 	 \section{Algoritmo de decisión}
 	 Una vez que una célula T ha sido activada, esta puede tomar un número de opciones muy limitadas, las resumiremos en dos:
