@@ -46,7 +46,7 @@
  	 En los ganglios, las células T están ``desactivadas", en un estado naïve. Si, por el contrario, el TCR y un antígeno se encuentran se produce un proceso conocido como \textit{sinapsis inmmune} y la célula se activa, convirtiéndose en una \textit{célula efectora}, lista para combatir al antígeno.
  	 \textcolor{blue}{La diversidad estructural del TCR implica que solo una pequeña fracción de células T se activan en presencia de los antígenos que ha presentado una célula dendrítica.}
  	 \\
- 	 A partir de este momento, el número de células T comienza a aumentar, pasando de unos cientos a millones en unas horas. Este proceso se conoce como (\textit{clonal expansion}). De esta manera se consigue rápidamente un ejército con el que combatir al antígeno. La mayoría de ellas morirán después (apóptosis) y un pequeño porcentaje quedará como \textit{células con memoria}, que guardará información sobre el patógeno por si volviera a aparecer en un futuro combatirlo más rápidamente.
+ 	 A partir de este momento, el número de células T comienza a aumentar, pasando de unos cientos a millones en unas horas. Este proceso se conoce como \textit{clonal expansion}. De esta manera se consigue rápidamente un ejército con el que combatir al antígeno. La mayoría de ellas morirán después (apóptosis) y un pequeño porcentaje quedará como \textit{células con memoria}, que guardará información sobre el patógeno por si volviera a aparecer en un futuro combatirlo más rápidamente.
  	 \\
  	 \\
  	 Después de que la población de antígenos disminuya, el número de estas células T decrece rápidamente (\textit{clonal contraction}), aunque con retardo respecto a la desaparición del antígeno.
@@ -59,18 +59,23 @@
  	 \end{figure}
 	 
 	 \section{Algoritmo de decisión}
+	 Todos estos cambios en el tamaño de la población (\textit{clonal expansion} y \textit{clonal contraction}), así como la diferenciación en células con memoria, puede verse de manera global como la toma de una inmensidad de decisiones individuales que hacen que todo el sistema funcione.
+	 \\
 	 Una vez que una célula T ha sido activada, esta puede tomar un número de opciones muy limitadas, las resumiremos en dos:
 	 \begin{itemize}
 	 	\item dividirse
 	 	\item morir
-	 	\item o diferenciarse en una restringida variedad de células T.
-	 	\end{itemize}
-	 Estas decisiones vendrán determinadas por la competición de dos moléculas inhibidoras: Retinoblastoma (Rb), que previene la expresión de genes necesarios para que la célula pueda continuar el ciclo celular y dividirse, y célula B linfoma-2 (Bcl-2), que bloqueará la muerte celular.
+	 	\item o diferenciarse en células con memoria
+	 \end{itemize}
+	 
+	 Pero, ¿qué factores afectan a esta toma de decisiones? Una primera intuición nos puede llevar a pensar que estas decisiones vienen determinadas por la presencia (o no) del antígeno. Sin embargo, sabemos que las células continúan dividiéndose aún cuando la presencia de este estímulo ya no está, o que las células mueren cuando el estímulo persiste. 
+	 \\
+	 Siguiendo esta línea, asumiremos en nuestro modelo que estas decisiones vienen determinadas por la competición de dos moléculas inhibidoras: Retinoblastoma (Rb), que previene la expresión de genes necesarios para que la célula pueda continuar el ciclo celular y dividirse, y célula B linfoma-2 (Bcl-2), que bloqueará la muerte celular.
 	 \\
 	 Si la cantidad de Rb cae por debajo de cierto límite, la célula T comenzará la división celular. Por el contrario, si es la cantidad de Bcl-2 la que  cae por debajo de cierto límite, provocará la apóptosis de la célula T. 
 	 \\
 	 \\
-	 Como ya habíamos aunuciado, la célula T se comunica con el exterior gracias a su TCR, y las variaciones en la cantidad de Rb y Bcl-2 dependerán de que sean fosforiladas por unas unas moléculas llamadas citoquinas.
+	 Como ya habíamos aunuciado, la célula T se comunica con el exterior gracias a su TCR, y las variaciones en la cantidad de Rb y Bcl-2 dependerán de que sean fosforiladas por unas unas moléculas llamadas citoquinas. De esta manera, la decisión de la célula T vendrá determinada por la concentración de citoquinas alrededor de ella y el número de receptores existentes en su TCR.
 	\\
 	Ambos procesos, división y apóptosis, son excluyentes y, en cuanto uno de ellos comienza, es interrumpible, independientemente de la acción de las citoquinas. LAS CELULAS T CON MEMORIA NO TIENEN RECEPTORES DEATH
 	\\

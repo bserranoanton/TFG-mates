@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.23)  14 OCT 2019 19:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.6.23)  18 OCT 2019 00:23
 entering extended mode
 **./resumenTFG.tex
 (resumenTFG.tex
@@ -523,24 +523,26 @@ File: clonalExpContr.jpg Graphic file (type jpg)
 <use clonalExpContr.jpg>
 Package pdftex.def Info: clonalExpContr.jpg used on input line 56.
 (pdftex.def)             Requested size: 137.9979pt x 124.27945pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 64.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ [2 <./clonalExpContr.jpg>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 64.
- [2 <./clonalExpContr.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 68--79
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--79
+Underfull \hbox (badness 10000) in paragraph at lines 71--84
 
  []
 
 
-Overfull \hbox (15.66934pt too wide) in paragraph at lines 92--99
+Overfull \hbox (15.66934pt too wide) in paragraph at lines 97--104
 \OT1/cmr/m/n/10 Estableceremos que las condi-ciones $\OML/cmm/m/it/10 a\OT1/cmr
 /m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = 0$ y $\OML/cmm/m/it/10 c\OT1/cmr
 /m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = 0$ provo-caran in-stantaneamen
@@ -548,16 +550,16 @@ te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--99
+Underfull \hbox (badness 10000) in paragraph at lines 97--104
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--113
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 109--118
 
  []
 
-[3] [4] (resumenTFG.aux) ) 
+[4] (resumenTFG.aux) ) 
 Here is how much of TeX's memory you used:
  1948 strings out of 493323
  25367 string characters out of 3139072
@@ -566,18 +568,18 @@ Here is how much of TeX's memory you used:
  7732 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,8n,25p,573b,229s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on resumenTFG.pdf (5 pages, 241480 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on resumenTFG.pdf (5 pages, 242212 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
