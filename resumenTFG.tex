@@ -10,17 +10,24 @@
 \title{	\xout{¿Cómo nos defendemos de los patógenos?} El antivirus biológico. Las células T y su comportamiento}
 \author{Belén Serrano Antón }
 
+\renewcommand{\contentsname}{Índice de contenidos}
 
 \begin{document}
 	
 	\begin{titlepage}
 		\maketitle
 	\end{titlepage}
+
+	% Índice de contenido
+
+	\tableofcontents
+	
+	\newpage
 	
 	\section{Introducción}
 	\xout{La habilidad de nuestro sistema inmune para combatir patógenos, ya sean internos (como un tumor) o externos (como una infección por microbios) es ciertamente apasionante. }
 	
-	Como si de un campo de batalla se tratara, nuestro cuerpo es testigo de numerosas contiendas que el sistema inmune libra para mantenernos sanos. No es una tarea fácil, pues estamos continuamente expuestos a posibles atacantes.
+	Como si de un campo de batalla se tratara, nuestro cuerpo es testigo de las numerosas contiendas que el sistema inmune libra para mantenernos sanos. No es una tarea fácil, pues estamos continuamente expuestos a posibles atacantes.
 	\\
 	Sin embargo, la habilidad de nuestro sistema inmune para protegernos de los patógenos es ciertamente apasionante. Las células inmunes no solo tienen que identificar quiénes son nuestros amigos y quiénes nuestros enemigos, también tienen que saber cómo y dónde actuar.
 	\\
@@ -31,7 +38,7 @@
 	 Los antígenos pueden venir tanto del exterior, por ejemplo los microbios, como del interior, entre ellos, el crecimiento de un tumor(?). Pero antes de atacar hay que cerciorarse de quién es el enemigo. Para el sistema inmune es una gran responsabilidad, pues atacar a células equivocadas puede provocar daños irreparables, como puede ser el caso de enfermedades autoinmunes si estamos atacando a células propias.
 	 \\
 	 \\
-	 De la misma manera que veníamos diciendo en la introducción, asumiremos que las células T toman sus decisiones basándose únicamente en información de su entorno, es decir, son ellas de manera individual las que sentencian, o no, al organismo de al lado.
+	 De la misma manera que veníamos diciendo en la introducción, asumiremos que las células T toman sus decisiones basándose únicamente en información de su entorno, es decir, son ellas, de manera individual las que determinan qué hacer en base a una situación concreta del ambiente.
 	 \\
  	 \\
  	 Pero... ¿Cómo lo hacen?
@@ -46,7 +53,7 @@
  	 En los ganglios, las células T están ``desactivadas", en un estado naïve. Si, por el contrario, el TCR y un antígeno se encuentran se produce un proceso conocido como \textit{sinapsis inmmune} y la célula se activa, convirtiéndose en una \textit{célula efectora}, lista para combatir al antígeno.
  	 \textcolor{blue}{La diversidad estructural del TCR implica que solo una pequeña fracción de células T se activan en presencia de los antígenos que ha presentado una célula dendrítica.}
  	 \\
- 	 A partir de este momento, el número de células T comienza a aumentar, pasando de unos cientos a millones en unas horas. Este proceso se conoce como \textit{clonal expansion}. De esta manera se consigue rápidamente un ejército con el que combatir al antígeno. La mayoría de ellas morirán después (apóptosis) y un pequeño porcentaje quedará como \textit{células con memoria}, que guardará información sobre el antígeno por si volviera a aparecer en un futuro combatirlo más rápidamente.
+ 	 A partir de este momento, el número de células T comienza a aumentar, pasando de unos cientos a millones en unas horas. Este proceso se conoce como \textit{clonal expansion}. De esta manera se consigue rápidamente un ejército con el que combatir al antígeno. La mayoría de ellas morirán después (apóptosis) y un pequeño porcentaje quedará como \textit{células con memoria}, que guardarán información sobre el antígeno, por si volviera a aparecer en un futuro combatirlo más rápidamente.
  	 \\
  	 \\
  	 Después de que la población de antígenos disminuya, el número de estas células T decrece rápidamente (\textit{clonal contraction}), aunque con retardo respecto a la desaparición del antígeno.
@@ -69,16 +76,16 @@
      También pueden diferenciarse en células con memoria, pero trataremos este caso más adelante.
 	 \\
 	 \\
-	 Pero, ¿qué factores afectan a esta toma de decisiones? Una primera intuición nos puede llevar a pensar que estas decisiones vienen determinadas por la presencia (o no) del antígeno. Sin embargo, sabemos que las células continúan dividiéndose aún cuando la presencia de este estímulo ya no está, o que las células cometen apóptosis aún cuando el estímulo persiste. 
+	 Pero, ¿qué factores afectan a esta toma de decisiones? Una primera intuición nos puede llevar a pensar que estas decisiones vienen determinadas por la presencia (o no) del antígeno. Sin embargo, sabemos que las células continúan dividiéndose aún cuando la presencia de este estímulo ya no está, o que las células cometen apóptosis aún cuando el estímulo persiste. $\rightarrow Sistema (9)$
 	 \\
 	 Siguiendo esta línea, asumiremos en nuestro modelo que estas decisiones vienen determinadas por la competición de dos moléculas inhibidoras: Retinoblastoma (Rb), que previene la expresión de genes necesarios para que la célula pueda continuar el ciclo celular y dividirse, y célula B linfoma-2 (Bcl-2), que bloqueará la muerte celular.
 	 \\
 	 Estableceremos que, si la cantidad de Rb cae por debajo de cierto límite, la célula T comenzará la división celular. Por el contrario, si es la cantidad de Bcl-2 la que  cae por debajo de cierto límite, provocará la apóptosis de la célula T. 
 	 \\
 	 \\
-	 Como ya habíamos aunuciado, la célula T se comunica con el exterior gracias a su TCR, y las variaciones en la cantidad de Rb y Bcl-2 dependerán de que sean fosforiladas por unas unas moléculas llamadas citoquinas. De esta manera, la decisión de la célula T vendrá determinada por la concentración de citoquinas alrededor de ella y el número de receptores existentes en su TCR.
+	 Como ya habíamos aunuciado, la célula T se comunica con el exterior gracias a su TCR, por otra parte, las variaciones en la cantidad de Rb y Bcl-2 dependerán de que sean fosforiladas por unas unas moléculas llamadas citoquinas. De esta manera, la decisión de la célula T vendrá determinada por la concentración de citoquinas alrededor de ella y el número de receptores existentes en su TCR.
 	\\
-	Ambos procesos, división y apóptosis, son excluyentes y, en cuanto uno de ellos comienza, es interrumpible, independientemente de la acción de las citoquinas. LAS CELULAS T CON MEMORIA NO TIENEN RECEPTORES DEATH
+	Ambos procesos, división y apóptosis, son excluyentes y, en cuanto uno de ellos comienza, es interrumpible, independientemente de la acción de las citoquinas. 
 	\\
 	\\
 	Con toda esta información, ya estamos en condiciones de presentar las ecuaciones de nuestro modelo: 
@@ -98,7 +105,7 @@
     \end{displaymath}
     Estableceremos que las condiciones $a(t)=0$ y $c(t)=0$ provocarán instantáneamente la transición desde la etapa de decisión a apóptosis o división celular, respectivamente.
 	\\
-	Si una célula muere, será eliminada de la población. De manera contraria, si esta se divide será sustituida por dos células del mismo tipo y cuyas condiciones iniales veremos más adelante.
+	En este modelo, si una célula muere, será eliminada de la población. De manera contraria, si esta se divide será sustituida por dos células del mismo tipo y cuyas condiciones iniciales veremos más adelante.
 	\\
 	\\
 	La ecuación que modelará el comportamiento del TCR vendrá dada por 
@@ -108,7 +115,7 @@
         \dot{r}_{i}(t) = \lambda_{Ti}r_{T}(t) + \sum_{j=1}^{k}\lambda_{ji}r_{j}(t) & \mbox{para $i=1,...,k$} 
         \end{array}
     \end{displaymath}
-	En ella expresamos el carácter lineal del TCR y su dependencia de la cantidad del resto de receptores y el número de señales percibidas por la célula T. 
+	En ella expresamos el carácter lineal del TCR y su dependencia de la cantidad del resto de receptores y el número de señales percibidas por la célula T. Los parámetros $\lambda_{Ti}$ y $\lambda_{ji}$ denotan el cambio en el receptor de membrana $R_{i}$ debido al TCR y a las señales $R_{j}$.
 	\\
 	Las ecuaciones que hemos tomado son lineales porque suponemos que los TCR son independientes y tienen efectos acumulativos. Así mismo, nos permiten establecer que para configuraciones de membrana similares, las células T tomarán decisiones similares.
 	\\
@@ -137,7 +144,7 @@
 	
 	Donde $y(t)$ representa el número de células patógeno y $n(t)$ el número de células T en un tiempo $t$. Asumimos que estas funciones son positivas, pues no puede haber un número negativo de individuos, y que también son positivos los parámetros $\alpha$ y $\beta$ que dependerán del patógeno concreto.
 	\\
-	Con esta ecuación establecemos que los patógenos aumentan su población hasta que las células T superan un determinado número. Es entonces cuando el término que acompaña al parámetro $\beta$ es lo suficiente grande como para hacer decrecer la población de patógenos.
+	Con esta ecuación establecemos que los patógenos aumentan su población hasta que las células T superen un determinado número. Es entonces cuando el término que acompaña al parámetro $\beta$ es lo suficiente grande como para hacer decrecer la población de patógenos.
 	\\
 	\\
 	(Lotka–Volterra predator–prey)
@@ -146,6 +153,11 @@
 	Hemos visto un algoritmo muy simple, que modeliza las decisiones de las células T.
 	\\
 	A pesar de que el modelo se asemeja a lo que observamos experimentalmente, aún quedan muchas cosas por resolver, una de las más importantes es: ¿cómo puede ser que si el comportamiento de estas células depende de decisiones locales veamos un comportamiento global? Es decir, que las células T funcionen como un ``equipo" para protegernos de los patógenos. 
-	
+	\\
+	\\
+	\\
+	\\
+	\\
+	Notas aparte: LAS CELULAS T CON MEMORIA NO TIENEN RECEPTORES DEATH
 	
 \end{document}
