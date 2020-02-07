@@ -1,0 +1,65 @@
+%This code is desgined to simulate the ...
+%By Belén Serrano Antón
+%Created 07/02/2020
+%Last Modified --/--/2020
+
+
+%Define params:
+t_cycle = 0.15;
+t_apo = 0.20;
+alpha = 10;
+beta = 0.015;
+
+%For effector T cells
+lambda_pd = 0.5;
+gamma_lambda_taup = 6*10^(-5);
+
+%For memory T cells
+lambda_pd_mem = 0;
+gamma_lambda_taup_mem = 10^(-5);
+
+% Define the number of repeats we will do
+M=1;
+
+% Define the final time we will simulate to
+T_final=80;
+
+%Define the initial number of particles
+N_init=100;
+Y_init=200;
+
+%Define how long the recording vectors should be
+num_rec_steps=10^6;
+
+%Initialise the index which will tell us where to write the current values
+rec_ind=1;
+
+%Instantiate a vector which will hold the time varying values of N and Y
+rec_vector_N=-ones(1,num_rec_steps);
+rec_vector_Y=-ones(1,num_rec_steps);
+
+%Write the initial condisiotn to these vectors
+rec_vector_N(rec_ind)=N_init;
+rec_vector_Y(rec_ind)=Y_init;
+
+% Initialise a vector which will hold the times when reactions occur
+time_vec=-ones(1,num_rec_steps);
+
+%Write the initial time to this vector
+time_vec(rec_ind)=0;
+
+%Define a vector which will hold the propensity functions
+a=zeros(4,1);
+
+%Define the initial time to be zero
+t=0;
+
+%Initialise the times to help recording
+t_after=0;
+
+%   initialise the number of particles for this repeat
+A=A_init;
+B=B_init;
+
+%Run through a for loop for each of the time-steps
+%Enter the while loop
