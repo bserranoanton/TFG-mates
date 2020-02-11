@@ -17,9 +17,6 @@ classdef TCell
     methods
         function obj = TCell(type, r_p, r_d)
             obj.My_type = type;
-            %obj.Delta_P = dp;
-            %obj.Delta_D = dd;
-            %obj.R_tau = r_tau;
             obj.R_p = r_p;
             obj.R_d = r_d;
         end
