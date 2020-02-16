@@ -12,11 +12,18 @@
 \contentsline {section}{\numberline {2.1}Cuestiones b\IeC {\'a}sicas de inmunolog\IeC {\'\i }a}{7}{section.17}
 \contentsline {subsection}{\numberline {2.1.1}El sistema inmune innato}{7}{subsection.18}
 \contentsline {subsection}{\numberline {2.1.2}El sistema inmune adaptativo}{8}{subsection.20}
-\contentsline {chapter}{\numberline {3}Descripci\IeC {\'o}n del Trabajo}{11}{chapter.22}
-\contentsline {chapter}{\numberline {4}Conclusiones y Trabajo Futuro}{13}{chapter.25}
-\contentsline {chapter}{\numberline {5}Introduction}{15}{chapter.26}
+\contentsline {chapter}{\numberline {3}Modelo matem\IeC {\'a}tico}{11}{chapter.22}
+\contentsline {section}{\numberline {3.1}Introducci\IeC {\'o}n}{11}{section.23}
+\contentsline {section}{\numberline {3.2}Hip\IeC {\'o}tesis biol\IeC {\'o}gicas y modelo matem\IeC {\'a}tico}{11}{section.24}
+\contentsline {subsection}{\numberline {3.2.1}Hip\IeC {\'o}tesis biol\IeC {\'o}gicas}{12}{subsection.25}
+\contentsline {subsubsection}{\numberline {3.2.1.1}La competici\IeC {\'o}n entre dos mol\IeC {\'e}culas inhibidoras determina la decisi\IeC {\'o}n y la duraci\IeC {\'o}n de la vida de una c\IeC {\'e}lula T}{12}{subsubsection.26}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Los receptores de membrana regulan las din\IeC {\'a}micas de Rb y Bcl-2}{12}{subsubsection.30}
+\contentsline {subsubsection}{\numberline {3.2.1.3}Las c\IeC {\'e}lulas T na\IeC {\"\i }ve se dividen de manera asim\IeC {\'e}trica despu\IeC {\'e}s de su activaci\IeC {\'o}n.}{13}{subsubsection.32}
+\contentsline {subsection}{\numberline {3.2.2}Modelo matem\IeC {\'a}tico}{13}{subsection.33}
+\contentsline {chapter}{\numberline {4}Conclusiones y Trabajo Futuro}{15}{chapter.34}
+\contentsline {chapter}{\numberline {5}Introduction}{17}{chapter.35}
 \select@language {english}
-\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{17}{chapter.27}
-\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{19}{appendix.28}
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{19}{chapter.36}
+\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{21}{appendix.37}
 \select@language {spanish}
-\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{21}{appendix.29}
+\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{23}{appendix.38}

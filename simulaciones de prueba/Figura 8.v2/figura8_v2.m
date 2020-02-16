@@ -76,7 +76,7 @@ f1=figure;
 for repeats=1:M
     
     %Hay código repetido de arriba para resetear valores, habría que
-    %ponerlo solo aquí. 
+    %ponerlo solo aquí.
     
     %Write the initial time to this vector
     time_vec(rec_ind)=0;
@@ -172,9 +172,15 @@ for repeats=1:M
                         d=max(d,0);
                         p=max(p,0);
                     else
-                        if(c <= 0 && a > 0) %division
+                        if(a <= 0) %apoptosis
+                            a=0;
+                            disp('Matamos');
+                            disp(nCell);
+                            t_cell_matrix(nCell,4)=t_apo;
+                            t_cell_matrix(nCell,1)=4;
+                        elseif(c <= 0 && a > 0) %division
                             %si dejo condición a > 0 se dispara el patógeno
-                            disp('dividimos');
+                            disp('dividimos Effector');
                             c=0;
                             delta_P_child_1 = randi([4 6]) / 10;
                             delta_P_child_2 = 1 - delta_P_child_1;
@@ -199,12 +205,12 @@ for repeats=1:M
                             
                             disp('Acabamos param div');
                             
-                        elseif(a <= 0) %apoptosis
-                            a=0;
-                            disp('Matamos');
-                            disp(nCell);
-                            t_cell_matrix(nCell,4)=t_apo;
-                            t_cell_matrix(nCell,1)=4;
+                            %                         elseif(a <= 0) %apoptosis
+                            %                             a=0;
+                            %                             disp('Matamos');
+                            %                             disp(nCell);
+                            %                             t_cell_matrix(nCell,4)=t_apo;
+                            %                             t_cell_matrix(nCell,1)=4;
                         end
                     end
                 end
@@ -216,7 +222,7 @@ for repeats=1:M
                     t_cell_matrix(nCell,4) = max(t_cell_matrix(nCell,4)-t_next,0);
                     if(t_cell_matrix(nCell,4)==0) %Se completa la division
                         N_mem=N_mem+1;
-                        disp('Hay division mem');
+                        %disp('Hay division mem');
                     end
                 else
                     %Soluciones de solutions_system_15.m
@@ -226,7 +232,7 @@ for repeats=1:M
                     p=(lambda_taup*r_tau + exp(-lambda_pp*t)*(lambda_pp*p0 - lambda_taup*r_tau))/lambda_pp;
                     
                     if(c <= 0)%dividimos
-                        disp('dividimos');
+                        %disp('dividimos');
                         c=0;
                         delta_P_child_1 = randi([4 6]) / 10;
                         delta_P_child_2 = 1 - delta_P_child_1;
