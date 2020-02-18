@@ -11,20 +11,20 @@ t_cycle=0.15;     %Duración del ciclo celular (desde el punto de
 t_apo=0.20;       %Duración de la fase de apóptosis
 t_next=0.3;       %Tiempo de interacción considerado en el modelo
 alpha=10;         %Parámetro positivo dependiente del antígeno (eq 5)
-beta=0.3;       %Parámetro positivo dependiente del antígeno (eq 5)
+beta=0.3;         %Parámetro positivo dependiente del antígeno (eq 5)
 
 %Parameters for effector T cells
 lambda_pd=0.5;    %Change in membrane receptor Rd, due to Rp signals
 lambda_taup=6*10^(-5); %Change in membrane receptor Rd, due to TCR signals
 lambda_pp=0.5*10^(-5);
 mu_pc=0.2; %????????????
-mu_da=0.2; %???????????
+mu_da=3; %???????????
 
 %Parameters for memory T cells
 lambda_pd_mem = 0;  %Change in membrane receptor Rd, due to Rp signals
 lambda_taup_mem = 10^(-5); %Change in membrane receptor Rd, due to TCR signals
 lambda_pp_mem=0.5*10^(-5);
-mu_pc_mem=0.2; %????????????
+mu_pc_mem=2; %????????????
 
 % Define the number of repeats we will do
 M=1;
@@ -33,8 +33,8 @@ M=1;
 T_final=100;
 
 %Define the initial number of particles
-N_init = 20; %tras la primera division habrá N_init effector y N_init memory
-Y_init = 10;
+N_init = 25; %tras la primera division habrá N_init effector y N_init memory
+Y_init = 5;
 
 %Define the initial number of T cell receptors
 rp_init = 0;
@@ -64,11 +64,11 @@ t_cell_matrix=zeros(num_max_cells,6);
 
 %Write the initial condision to this vector
 t_cell_matrix(1:2:2*N_init,1)=1;
-t_cell_matrix(1:2:2*N_init,2)=20;
+t_cell_matrix(1:2:2*N_init,2)=10;
 t_cell_matrix(1:2:2*N_init,3)=1;
 
 t_cell_matrix(2:2:2*N_init,1)=2;
-t_cell_matrix(1:2:2*N_init,3)=1;
+t_cell_matrix(2:2:2*N_init,3)=1;
 
 %disp(t_cell_matrix(1:N_init,1:4));
 
@@ -77,7 +77,7 @@ time_vec=-ones(1,num_rec_steps);
 
 
 f1=figure;
-f2=figure;
+%f2=figure;
 for repeats=1:M
     
     %Hay código repetido de arriba para resetear valores, habría que
@@ -109,7 +109,7 @@ for repeats=1:M
     
     %Write the initial condision to this vector
     t_cell_matrix(1:2:2*N_init,1)=1;
-    t_cell_matrix(1:2:2*N_init,2)=20;
+    t_cell_matrix(1:2:2*N_init,2)=10;
     t_cell_matrix(1:2:2*N_init,3)=1;
 
     t_cell_matrix(2:2:2*N_init,1)=2;
@@ -180,11 +180,13 @@ for repeats=1:M
                         - (lambda_pd*lambda_taup*mu_da*r_tau)/lambda_pp) + ...
                         (lambda_pd*lambda_pp*lambda_taup*mu_da*r_tau*t^2)/2)/lambda_pp^2;
                     
-                    if(d <=0 || p<=0)
+                    if((d <=0 || p<=0) && a >= 0 && c >= 0)
                         d=max(d,0);
                         p=max(p,0);
                         t_cell_matrix(nCell,4) = p;
                         t_cell_matrix(nCell,5) = d;
+                        t_cell_matrix(nCell,3) = c;
+                        t_cell_matrix(nCell,2) = a;
                     else
                         if(a <= 0) %apoptosis
                             a=0;
@@ -213,6 +215,10 @@ for repeats=1:M
                             t_cell_matrix(nCell,5)=r_d_child_1;
                             t_cell_matrix(nCell,6)=t_cycle;
                             
+                            t_cell_matrix(nCell,3) = c;
+                            t_cell_matrix(nCell,2) = a;
+                            
+                            t_cell_matrix(rec_ind_tcell_matrix,1)=1;
                             t_cell_matrix(rec_ind_tcell_matrix,4)=r_p_child_2;
                             t_cell_matrix(rec_ind_tcell_matrix,5)=r_d_child_2;
                             t_cell_matrix(rec_ind_tcell_matrix,6)=t_cycle;
@@ -225,11 +231,6 @@ for repeats=1:M
                             disp('Acabamos param div');
                         end
                     end
-                    %Actualizamos valores en la matriz
-                    %t_cell_matrix(nCell,4) = p;
-                    %t_cell_matrix(nCell,5) = d;
-                    t_cell_matrix(nCell,3) = c;
-                    t_cell_matrix(nCell,2) = a;
                 end
                 nCell=nCell+1;
                 
@@ -253,27 +254,30 @@ for repeats=1:M
                         c=0;
                         delta_P_child_1 = 0.4+(0.6-0.4)*rand();
                         delta_P_child_2 = 1 - delta_P_child_1;
-                        delta_D_child_1 = 0.4+(0.6-0.4)*rand();
-                        delta_D_child_2 = 1 - delta_D_child_1;
+                        %delta_D_child_1 = 0.4+(0.6-0.4)*rand();
+                        %delta_D_child_2 = 1 - delta_D_child_1;
                         
                         r_p_child_1 = delta_P_child_1 * p;
                         r_p_child_2 = delta_P_child_2 * p;
                         
-                        r_d_child_1 = delta_D_child_1 * d;
-                        r_d_child_2 = delta_D_child_2 * d;
+                        %r_d_child_1 = delta_D_child_1 * d;
+                        %r_d_child_2 = delta_D_child_2 * d;
                         
-                        t_cell_matrix(nCell,2)=r_p_child_1;
-                        t_cell_matrix(nCell,3)=r_d_child_1;
-                        t_cell_matrix(nCell,4)=t_cycle;
+                        t_cell_matrix(nCell,4)=r_p_child_1;
+                        %t_cell_matrix(nCell,5)=r_d_child_1;
+                        t_cell_matrix(nCell,6)=t_cycle;
                         
-                        t_cell_matrix(rec_ind_tcell_matrix,2)=r_p_child_2;
-                        t_cell_matrix(rec_ind_tcell_matrix,3)=r_d_child_2;
-                        t_cell_matrix(rec_ind_tcell_matrix,4)=t_cycle;
+                        t_cell_matrix(nCell,3) = c;
+                        
+                        t_cell_matrix(rec_ind_tcell_matrix,1)=2;
+                        t_cell_matrix(rec_ind_tcell_matrix,4)=r_p_child_2;
+                        %t_cell_matrix(rec_ind_tcell_matrix,5)=r_d_child_2;
+                        t_cell_matrix(rec_ind_tcell_matrix,6)=t_cycle;
+                        
+                        t_cell_matrix(rec_ind_tcell_matrix,3)=c;
                         
                         rec_ind_tcell_matrix=rec_ind_tcell_matrix+1;
                     end
-                    t_cell_matrix(nCell,4)=p;
-                    t_cell_matrix(nCell,3)=c;
                 end
                 
                 nCell=nCell+1;
@@ -313,8 +317,8 @@ for repeats=1:M
     %Draw results
     figure(f1)
     [hA1]=semilogy(time_vec,rec_vector_N_eff,'b');
-    %hold on
-    figure(f2)
+    hold on
+    %figure(f2)
     [hA2]=semilogy(time_vec,rec_vector_Y,'r');
     %plot(time_vec,rec_vector_Y,'b');
     %hold on
