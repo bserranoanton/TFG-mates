@@ -149,10 +149,10 @@ for repeats=1:M
             %Solve sys 9 (effector)
             if(t_cell_matrix(nCell,1) == 1)
                 %disp('Efectora');
-                if(t_cell_matrix(nCell,6) > 0)
+                if(t_cell_matrix(nCell,4) > 0)
                     %Aún está en proceso de división
-                    t_cell_matrix(nCell,6) = max(t_cell_matrix(nCell,6)-t_next,0);
-                    if(t_cell_matrix(nCell,6)==0) %Se completa la division
+                    t_cell_matrix(nCell,4) = max(t_cell_matrix(nCell,4)-t_next,0);
+                    if(t_cell_matrix(nCell,4)==0) %Se completa la division
                         N_eff=N_eff+1;
                         disp('Hay division');
                     end
@@ -183,14 +183,12 @@ for repeats=1:M
                     if(d <=0 || p<=0)
                         d=max(d,0);
                         p=max(p,0);
-                        t_cell_matrix(nCell,4) = p;
-                        t_cell_matrix(nCell,5) = d;
                     else
                         if(a <= 0) %apoptosis
                             a=0;
                             disp('Matamos');
                             disp(nCell);
-                            t_cell_matrix(nCell,6)=t_apo;
+                            t_cell_matrix(nCell,4)=t_apo;
                             t_cell_matrix(nCell,1)=4;
                         elseif(c <= 0 && a > 0) %division
                             %si dejo condición a > 0 se dispara el patógeno
@@ -209,16 +207,13 @@ for repeats=1:M
                             r_d_child_1 = delta_D_child_1 * d;
                             r_d_child_2 = delta_D_child_2 * d;
                             
-                            t_cell_matrix(nCell,4)=r_p_child_1;
-                            t_cell_matrix(nCell,5)=r_d_child_1;
-                            t_cell_matrix(nCell,6)=t_cycle;
+                            t_cell_matrix(nCell,2)=r_p_child_1;
+                            t_cell_matrix(nCell,3)=r_d_child_1;
+                            t_cell_matrix(nCell,4)=t_cycle;
                             
-                            t_cell_matrix(rec_ind_tcell_matrix,4)=r_p_child_2;
-                            t_cell_matrix(rec_ind_tcell_matrix,5)=r_d_child_2;
-                            t_cell_matrix(rec_ind_tcell_matrix,6)=t_cycle;
-                            
-                            t_cell_matrix(rec_ind_tcell_matrix,2)=a;
-                            t_cell_matrix(rec_ind_tcell_matrix,3)=c;
+                            t_cell_matrix(rec_ind_tcell_matrix,2)=r_p_child_2;
+                            t_cell_matrix(rec_ind_tcell_matrix,3)=r_d_child_2;
+                            t_cell_matrix(rec_ind_tcell_matrix,4)=t_cycle;
                             
                             rec_ind_tcell_matrix=rec_ind_tcell_matrix+1;
                             
@@ -226,25 +221,25 @@ for repeats=1:M
                         end
                     end
                     %Actualizamos valores en la matriz
-                    %t_cell_matrix(nCell,4) = p;
-                    %t_cell_matrix(nCell,5) = d;
+                    t_cell_matrix(nCell,4) = p;
+                    t_cell_matrix(nCell,5) = d;
                     t_cell_matrix(nCell,3) = c;
                     t_cell_matrix(nCell,2) = a;
                 end
                 nCell=nCell+1;
                 
             elseif(t_cell_matrix(nCell,1) == 2) %memory
-                if(t_cell_matrix(nCell,6) > 0)
+                if(t_cell_matrix(nCell,4) > 0)
                     %Aún está en proceso de división
-                    t_cell_matrix(nCell,6) = max(t_cell_matrix(nCell,6)-t_next,0);
-                    if(t_cell_matrix(nCell,6)==0) %Se completa la division
+                    t_cell_matrix(nCell,4) = max(t_cell_matrix(nCell,4)-t_next,0);
+                    if(t_cell_matrix(nCell,4)==0) %Se completa la division
                         N_mem=N_mem+1;
                         %disp('Hay division mem');
                     end
                 else
                     %Soluciones de solutions_system_15.m
-                    p0=t_cell_matrix(nCell,4);
-                    c0=t_cell_matrix(nCell,3);
+                    p0=t_cell_matrix(nCell,2);
+                    c0=1;
                     c=c0 - (mu_pc*p0 - (lambda_taup*mu_pc*r_tau)/lambda_pp)/lambda_pp + (exp(-lambda_pp*t)*(mu_pc*p0 - (lambda_taup*mu_pc*r_tau)/lambda_pp) - lambda_taup*mu_pc*r_tau*t)/lambda_pp;
                     p=(lambda_taup*r_tau + exp(-lambda_pp*t)*(lambda_pp*p0 - lambda_taup*r_tau))/lambda_pp;
                     
@@ -272,8 +267,7 @@ for repeats=1:M
                         
                         rec_ind_tcell_matrix=rec_ind_tcell_matrix+1;
                     end
-                    t_cell_matrix(nCell,4)=p;
-                    t_cell_matrix(nCell,3)=c;
+                    
                 end
                 
                 nCell=nCell+1;
@@ -282,12 +276,12 @@ for repeats=1:M
             elseif(t_cell_matrix(nCell,1) == 4) %muerta effector
                 %disp('Hay muerte 1');
                 %disp(nCell);
-                if(t_cell_matrix(nCell,6) > 0)
+                if(t_cell_matrix(nCell,4) > 0)
                     disp('Hay muerte');
-                    disp(t_cell_matrix(nCell,6)-t_next);
+                    disp(t_cell_matrix(nCell,4)-t_next);
                     %Aún está en proceso de muerte celular
-                    t_cell_matrix(nCell,6) = max(t_cell_matrix(nCell,6)-t_next,0);
-                    if(t_cell_matrix(nCell,6)==0) %Muere
+                    t_cell_matrix(nCell,4) = max(t_cell_matrix(nCell,4)-t_next,0);
+                    if(t_cell_matrix(nCell,4)==0) %Muere
                         N_eff=N_eff-1;
                         
                     end
