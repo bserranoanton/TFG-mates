@@ -1,6 +1,6 @@
 %This code is desgined to simulate the ...
 %By Belén Serrano Antón
-%Created 18/02/2020
+%Created 22/02/2020
 %Last Modified --/--/2020
 
 %Definición de parámetros:
@@ -33,8 +33,8 @@ N_init = 25; %tras la primera division habrá N_init effector y N_init memory
 Y_init = 5;
 
 %Define the initial number of T cell receptors
-rp_init = 0;
-rd_init = 0;
+rp_init = 0;    %p0 no se usan porque ya tengo la matriz inicializada a 0
+rd_init = 0;    %d0 
 
 %Define how long the recording vectors should be
 num_rec_steps=round(T_final/t_next);
@@ -60,12 +60,12 @@ t_cell_matrix=zeros(num_max_cells,6);
 
 %Write the initial condision to this vector
 t_cell_matrix(1:2:2*N_init,1)=1;
-t_cell_matrix(1:2:2*N_init,2)=0.3;%0.2;
-t_cell_matrix(1:2:2*N_init,3)=0.01;
+t_cell_matrix(1:2:2*N_init,2)=0.3;%0.2; %a0
+t_cell_matrix(1:2:2*N_init,3)=0.01;     %c0
 
 t_cell_matrix(2:2:2*N_init,1)=2;
-t_cell_matrix(2:2:2*N_init,3)=0.3; %Hace que se disparen las memory
-t_cell_matrix(2:2:2*N_init,4)=0.01;%0.3;
+t_cell_matrix(2:2:2*N_init,3)=0.; %c0 Hace que se disparen las memory
+t_cell_matrix(2:2:2*N_init,4)=0.01;%p0 0.3;
 
 % Initialise a vector which will hold the times when reactions occur
 time_vec=-ones(1,num_rec_steps);
@@ -87,6 +87,7 @@ eliminado = 0;
 
 muertas = 0;
 creadas = 0;
+
 while t<T_final
     
     %Increase the recording index
@@ -101,6 +102,7 @@ while t<T_final
             eliminado=1;
         end
     end
+    
     %Fate decision for each T cell
     nCell=1;
     rho_left=1;
@@ -111,17 +113,21 @@ while t<T_final
         %rho_left=rho_left-rho;
         rho = 1/N;
         
+        %rho = rho_left * (0.2*rand()); %para que una célula tenga como mucho el 20% de antigeno
+        %rho_left=rho_left-rho;
+        
         %Calculate r_tau
         r_tau=rho*Y;
         
         %Solve sys 9 (effector)
-        if(t_cell_matrix(nCell,1) == 1)
+        if(t_cell_matrix(nCell,1) == 1 || t_cell_matrix(nCell,1) == 3)
             if(t_cell_matrix(nCell,6) > 0)
                 %Aún está en proceso de división
                 t_cell_matrix(nCell,6) = max(t_cell_matrix(nCell,6)-t_next,0);
-                if(t_cell_matrix(nCell,6)==0) %Se completa la division
+                if(t_cell_matrix(nCell,6)==0 && t_cell_matrix(nCell,1) == 3) %Se completa la division
                     N_eff=N_eff+1;
                     creadas = creadas +1;
+                    t_cell_matrix(nCell,1) = 1;
                     disp('Hay division');
                 end
             else
@@ -134,19 +140,8 @@ while t<T_final
                 a0=t_cell_matrix(nCell,2);
                 
                 %Calculamos c,a,p y d (Soluciones explícitas de
-                %solutions_system9.m)
-                p=(lambda_taup*r_tau + exp(-lambda_pp*t)*(lambda_pp*p0 - lambda_taup*r_tau))/lambda_pp;
-                d=d0 + (lambda_pd*p0 - (lambda_pd*lambda_taup*r_tau)/lambda_pp)/lambda_pp - ...
-                    (exp(-lambda_pp*t)*(lambda_pd*p0 - (lambda_pd*lambda_taup*r_tau)/lambda_pp) - ...
-                    lambda_pd*lambda_taup*r_tau*t)/lambda_pp;
-                c=c0 - (mu_pc*p0 - (lambda_taup*mu_pc*r_tau)/lambda_pp)/lambda_pp + ...
-                    (exp(-lambda_pp*t)*(mu_pc*p0 - (lambda_taup*mu_pc*r_tau)/lambda_pp) - ...
-                    lambda_taup*mu_pc*r_tau*t)/lambda_pp;
-                a=a0 + (lambda_pd*mu_da*p0 - (lambda_pd*lambda_taup*mu_da*r_tau)/lambda_pp)/lambda_pp^2 ...
-                    - (t*(d0*mu_da*lambda_pp^2 + lambda_pd*mu_da*p0*lambda_pp - ...
-                    lambda_pd*lambda_taup*mu_da*r_tau) + exp(-lambda_pp*t)*(lambda_pd*mu_da*p0 ...
-                    - (lambda_pd*lambda_taup*mu_da*r_tau)/lambda_pp) + ...
-                    (lambda_pd*lambda_pp*lambda_taup*mu_da*r_tau*t^2)/2)/lambda_pp^2;
+                %sys9_sol(lambda_taup,lambda_pp, r_tau, p0, lambda_pd, d0, mu_pc, c0, mu_da, a0)
+                [c,a,p,d] = sys9_sol(t,lambda_taup,lambda_pp, r_tau, p0, lambda_pd, d0, mu_pc, c0, mu_da, a0);
                 
                 if((d <=0 || p<=0) && a >= 0 && c >= 0)
                     d=max(d,0);
@@ -163,7 +158,6 @@ while t<T_final
                         t_cell_matrix(nCell,6)=t_apo;
                         t_cell_matrix(nCell,1)=4;
                     elseif(c <= 0 && a > 0) %division
-                        %si dejo condición a > 0 se dispara el patógeno
                         disp('dividimos Effector');
                         c=0;
                         %delta_P_child_1 = randi([4 6]) / 10;
@@ -186,7 +180,7 @@ while t<T_final
                         t_cell_matrix(nCell,3) = c;
                         t_cell_matrix(nCell,2) = a;
                         
-                        t_cell_matrix(rec_ind_tcell_matrix,1)=1;
+                        t_cell_matrix(rec_ind_tcell_matrix,1)=3;
                         t_cell_matrix(rec_ind_tcell_matrix,4)=r_p_child_2;
                         t_cell_matrix(rec_ind_tcell_matrix,5)=r_d_child_2;
                         t_cell_matrix(rec_ind_tcell_matrix,6)=t_cycle;
@@ -194,7 +188,7 @@ while t<T_final
                         t_cell_matrix(rec_ind_tcell_matrix,2)=a;
                         t_cell_matrix(rec_ind_tcell_matrix,3)=c;
                         
-                        rec_ind_tcell_matrix=rec_ind_tcell_matrix+1;
+                        rec_ind_tcell_matrix = rec_ind_tcell_matrix + 1;
                         
                         disp('Acabamos param div');
                     end
@@ -214,40 +208,30 @@ while t<T_final
                 %Soluciones de solutions_system_15.m
                 p0 =t_cell_matrix(nCell,4);
                 c0 =t_cell_matrix(nCell,3);
-                c = c0 - (mu_pc_mem*p0 - (lambda_taup_mem*mu_pc_mem*r_tau)/lambda_pp_mem)...
-                    /lambda_pp_mem + (exp(-lambda_pp_mem*t)*(mu_pc_mem*p0 - ...
-                    (lambda_taup_mem*mu_pc_mem*r_tau)/lambda_pp_mem) - ...
-                    lambda_taup_mem*mu_pc_mem*r_tau*t)/lambda_pp_mem;
-                p = (lambda_taup_mem*r_tau + exp(-lambda_pp_mem*t)*(lambda_pp_mem*p0 - lambda_taup_mem*r_tau))/lambda_pp_mem;
+                
+                [c,p] = sys15_sol(t,mu_pc_mem, p0, lambda_taup_mem, lambda_pp_mem, r_tau, c0);
                 
                 if(c <= 0)%dividimos
                     %disp('dividimos');
                     c=0;
                     delta_P_child_1 = 0.4+(0.6-0.4)*rand();
                     delta_P_child_2 = 1 - delta_P_child_1;
-                    %delta_D_child_1 = 0.4+(0.6-0.4)*rand();
-                    %delta_D_child_2 = 1 - delta_D_child_1;
-                    
+                   
                     r_p_child_1 = delta_P_child_1 * p;
                     r_p_child_2 = delta_P_child_2 * p;
                     
-                    %r_d_child_1 = delta_D_child_1 * d;
-                    %r_d_child_2 = delta_D_child_2 * d;
-                    
                     t_cell_matrix(nCell,4)=r_p_child_1;
-                    %t_cell_matrix(nCell,5)=r_d_child_1;
                     t_cell_matrix(nCell,6)=t_cycle;
                     
-                    t_cell_matrix(nCell,3) = c;
+                    t_cell_matrix(nCell,3) = c; %es 0
                     
                     t_cell_matrix(rec_ind_tcell_matrix,1)=2;
                     t_cell_matrix(rec_ind_tcell_matrix,4)=r_p_child_2;
-                    %t_cell_matrix(rec_ind_tcell_matrix,5)=r_d_child_2;
                     t_cell_matrix(rec_ind_tcell_matrix,6)=t_cycle;
                     
                     t_cell_matrix(rec_ind_tcell_matrix,3)=c;
                     
-                    rec_ind_tcell_matrix=rec_ind_tcell_matrix+1;
+                    rec_ind_tcell_matrix = rec_ind_tcell_matrix + 1;
                 end
             end
             
@@ -301,3 +285,6 @@ hold on
 [hA2]=semilogy(time_vec,rec_vector_Y,'r');
 hold on
 [hA3]=semilogy(time_vec,rec_vector_N_mem,'g');
+
+%figure(f1)
+legend([hA1,hA3,hA2],'Effector T cells','Memory T cells','Pathogen');
