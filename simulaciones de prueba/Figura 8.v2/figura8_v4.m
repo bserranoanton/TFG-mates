@@ -8,7 +8,7 @@ t_cycle=0.15;     %Duración del ciclo celular (desde el punto de
 %restricción hasta la división
 %celular)
 t_apo=0.20;       %Duración de la fase de apóptosis
-t_next=0.1;       %Tiempo de interacción considerado en el modelo
+t_next=0.3;       %Tiempo de interacción considerado en el modelo
 alpha=10;         %Parámetro positivo dependiente del antígeno (eq 5)
 beta=0.1;         %Parámetro positivo dependiente del antígeno (eq 5)
 
@@ -64,7 +64,7 @@ t_cell_matrix(1:2:2*N_init,2)=0.3;%0.2; %a0
 t_cell_matrix(1:2:2*N_init,3)=0.01;     %c0
 
 t_cell_matrix(2:2:2*N_init,1)=2;
-t_cell_matrix(2:2:2*N_init,3)=0.3; %c0 Hace que se disparen las memory
+t_cell_matrix(2:2:2*N_init,3)=0.1; %c0 Hace que se disparen las memory
 t_cell_matrix(2:2:2*N_init,4)=0.01;%p0 0.3;
 
 % Initialise a vector which will hold the times when reactions occur
@@ -285,12 +285,9 @@ disp(muertas);
 figure(f1)
 [hA1]=semilogy(time_vec,rec_vector_N_eff,'b');
 hold on
-%figure(f2)
 [hA2]=semilogy(time_vec,rec_vector_Y,'r');
 hold on
-[hA3]=semilogy(time_vec,rec_vector_N_mem,'g');
-
-%figure(f1)
+[hA3]=plot(time_vec,rec_vector_N_mem,'g');%semilogy(time_vec,rec_vector_N_mem,'g');
 legend([hA1,hA3,hA2],'Effector T cells','Memory T cells','Pathogen');
 
 figure(f2)
@@ -302,5 +299,5 @@ figure(f3)
 legend(hA2,'Pathogen');
 
 figure(f4)
-[hA3]=semilogy(time_vec,rec_vector_N_mem,'g');
+[hA3]=plot(time_vec,rec_vector_N_mem,'g');%semilogy(time_vec,rec_vector_N_mem,'g');
 legend(hA3,'Memory T cells');

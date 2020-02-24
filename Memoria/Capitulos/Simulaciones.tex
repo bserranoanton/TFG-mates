@@ -1,0 +1,46 @@
+
+\chapter{Simulaciones}
+\label{cap:simulaciones}
+
+A lo largo de este capítulo veremos con detalle las simulaciones que se han realizado del modelo visto en \ref{sub:modelo}. El código propuesto se ha realizado en Matlab...continuará
+
+\section{Modelo simplificado}
+
+Para las simulaciones hemos optado por un sistema simplificado al propuesto en \ref{sub:modelo}, de tal manera que el número de parámetros sea suficiente para no perder la esencia del modelo pero no muy elevado para no distraer al lector con notación engorrosa. Siguiendo con la notación de \ref{sub:modelo}, asumiremos $k=2$, es decir, dos tipos de receptores: \textit{p} (de proliferación) y \textit{d} (de muerte).
+
+De esta manera y asumiendo que los receptores de proliferación de las células T efectoras se expresan siguiendo las señales TCR, que autorregulan su expresión y que inducen la producción de receptores tipo \textit{d}, tenemos que las ecuaciones \ref{sist_inhib} y \ref{sist_recep} pueden escribirse como:
+
+\begin{equation}
+	\label{sist9_simplif}
+	\left\{ \begin{array}{l}
+	\dot{c}(t) = -\mu_{pc}p(t) \\
+	\dot{a}(t) = -\mu_{da}d(t)  \\
+	\dot{p}(t) = \lambda_{Tp}r_{T}(t) - \lambda_{pp}p(t) \\
+	\dot{d}(t) = \lambda_{pd}p(t) \\
+	\\
+	c(0)=c_0 \\
+	a(0)=a_0 \\
+	p(0)=p_0 \\
+	d(0)=d_0 
+	\end{array}
+	\right.
+\end{equation}
+
+Así mismo, hemos simulado de manera conjunta este sistema \ref{sist9_simplif}, la ecuación \ref{sist_pat_T} y la dinámica de las células T con memoria. Esta última viene dada por el mismo sistema \ref{sist9_simplif}, en el que se ha tenido en cuenta que $d=0$, puesto que nos centramos solamente en el inhibidor del ciclo celular. Así las cosas, las ecuacines que rigen el algoritmo de decisión para células T con memoria viene dado por: 
+
+\begin{equation}
+	\label{sist9_simplif}
+	\left\{ \begin{array}{l}
+	\dot{c}(t) = -\mu_{pc}p(t) \\
+	\dot{p}(t) = \lambda_{Tp}r_{T}(t) - \lambda_{pp}p(t) \\
+	\\
+	c(0)=c_0 \\
+	p(0)=p_0 \\
+	\end{array}
+	\right.
+\end{equation}
+
+
+\section{Aspectos de la implementación}
+
+
