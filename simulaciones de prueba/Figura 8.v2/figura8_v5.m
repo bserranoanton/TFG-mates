@@ -1,6 +1,6 @@
 %This code is desgined to simulate the ...
 %By Belén Serrano Antón
-%Created 22/02/2020
+%Created 25/02/2020
 %Last Modified --/--/2020
 
 %Definición de parámetros:
@@ -22,11 +22,11 @@ mu_da=3.5; %??????????? antes 5
 %Parameters for memory T cells
 lambda_pd_mem = 0;  %Change in membrane receptor Rd, due to Rp signals
 lambda_taup_mem = 10^(-6); %Change in membrane receptor Rd, due to TCR signals
-lambda_pp_mem=0.5*10^(-4);
-mu_pc_mem=0.1; %???????????? 0.2 
+lambda_pp_mem=2*10^(-2);%0.5*10^(-4);
+mu_pc_mem=0.3; %???????????? 0.4
 
 % Define the final time we will simulate to
-T_final=12;
+T_final=25;
 
 %Define the initial number of particles
 N_init = 25; %tras la primera division habrá N_init effector y N_init memory
@@ -86,10 +86,7 @@ rec_ind_tcell_matrix=N+1;
 %Define the initial time to be zero
 t=0;
 
-f1=figure;
-f2=figure;
-f3=figure;
-f4=figure;
+
 eliminado = 0;
 
 muertas = 0;
@@ -112,7 +109,6 @@ while t<T_final
     
     %Fate decision for each T cell
     nCell=1;
-    rho_left=1;
     ind_N = 1;
     
     while nCell < rec_ind_tcell_matrix
@@ -122,11 +118,11 @@ while t<T_final
         %rho = 1/N;
         
         v_rand = rand(N,1)/N; %vector of N random numbers
-        
+       
         if(t_cell_matrix(nCell,1) == 1 || t_cell_matrix(nCell,1) == 2)
+            rho = v_rand(ind_N);
             ind_N = ind_N + 1;
         end
-        rho = v_rand(ind_N);
        
         %rho = rho_left * (0.2*rand()); %para que una célula tenga como mucho el 20% de antigeno
         %rho_left=rho_left-rho;
@@ -300,6 +296,11 @@ disp(creadas);
 disp('muertas');
 disp(muertas);
 
+f1=figure;
+%f2=figure;
+%f3=figure;
+%f4=figure;
+
 %Draw results
 figure(f1)
 [hA1]=semilogy(time_vec,rec_vector_N_eff,'b');
@@ -312,14 +313,14 @@ hold on
 %[hA3]=plot(time_vec,rec_vector_N_mem,'g');%semilogy(time_vec,rec_vector_N_mem,'g');
 legend([hA1,hA3,hA2],'Effector T cells','Memory T cells','Pathogen');
 
-figure(f2)
-[hA1]=semilogy(time_vec,rec_vector_N_eff,'b');
-legend(hA1,'Effector T cells');
+% figure(f2)
+% [hA1]=plot(time_vec,rec_vector_N_eff,'b');%semilogy(time_vec,rec_vector_N_eff,'b');
+% legend(hA1,'Effector T cells');
+% 
+% figure(f3)
+% [hA2]=plot(time_vec,rec_vector_Y,'r');%semilogy(time_vec,rec_vector_Y,'r');
+% legend(hA2,'Pathogen');
 
-figure(f3)
-[hA2]=semilogy(time_vec,rec_vector_Y,'r');
-legend(hA2,'Pathogen');
-
-figure(f4)
-[hA3]=plot(time_vec,rec_vector_N_mem,'g');%semilogy(time_vec,rec_vector_N_mem,'g');
-legend(hA3,'Memory T cells');
+%figure(f4)
+%[hA3]=plot(time_vec,rec_vector_N_mem,'g');%semilogy(time_vec,rec_vector_N_mem,'g');
+%legend(hA3,'Memory T cells');
