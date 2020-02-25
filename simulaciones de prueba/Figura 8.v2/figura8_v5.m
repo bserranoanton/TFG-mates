@@ -113,18 +113,28 @@ while t<T_final
     %Fate decision for each T cell
     nCell=1;
     rho_left=1;
+    ind_N = 1;
     
     while nCell < rec_ind_tcell_matrix
         %Calculate rho
         %rho=rho_left*rand();
         %rho_left=rho_left-rho;
-        rho = 1/N;
+        %rho = 1/N;
         
+        v_rand = rand(N,1)/N; %vector of N random numbers
+        
+        if(t_cell_matrix(nCell,1) == 1 || t_cell_matrix(nCell,1) == 2)
+            ind_N = ind_N + 1;
+        end
+        rho = v_rand(ind_N);
+       
         %rho = rho_left * (0.2*rand()); %para que una célula tenga como mucho el 20% de antigeno
         %rho_left=rho_left-rho;
         
         %Calculate r_tau
         r_tau=rho*Y;
+        
+      
         
         %Solve sys 9 (effector)
         if(t_cell_matrix(nCell,1) == 1 || t_cell_matrix(nCell,1) == 3)
