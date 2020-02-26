@@ -9,24 +9,24 @@ t_apo = 0.20;                   %Time lap between the deactivation of Bcl-2 and 
 t_next = 0.3;                   %Time step in this simulation
 
 %Parameters: pathogen
-alpha = 6;                     %Pathogen proliferation rate
-beta = 0.04;                     %Pathogen death rate
+alpha = 10;                     %Pathogen proliferation rate
+beta = 0.1;                     %Pathogen death rate
 
 %Parameters: effector T cells
-lambda_pd = 0.05;%0.04;               %Change rate in membrane receptor Rd, due to Rp signals
+lambda_pd = 0.04;               %Change rate in membrane receptor Rd, due to Rp signals
 lambda_taup = 6*10^(-5);        %Change rate in membrane receptor Rd, due to TCR signals
-lambda_pp = 0.5*10^(-4);%0.5*10^(-5);        %Change rate in membrane receptor Rp, due to Rp signals
-mu_pc = 15;%0.4                    %Change rate in inhibitor molecule Rb, due to receptor Rc
-mu_da = 10;                    %Change rate in inhibitor molecule Bcl-2, due to receptor Rc
+lambda_pp = 0.5*10^(-5);        %Change rate in membrane receptor Rp, due to Rp signals
+mu_pc = 0.4;%0.4                    %Change rate in inhibitor molecule Rb, due to receptor Rc
+mu_da = 3.5;                    %Change rate in inhibitor molecule Bcl-2, due to receptor Rc
 
 %Parameters: memory T cells
 lambda_pd_mem = 0;              %Change in membrane receptor Rd, due to Rp signals
-lambda_taup_mem = 10^(-5);      %Change rate in membrane receptor Rd, due to TCR signals
+lambda_taup_mem = 10^(-6);      %Change rate in membrane receptor Rd, due to TCR signals
 lambda_pp_mem = 2*10^(-2);      %Change rate in membrane receptor Rp, due to Rp signals
-mu_pc_mem = 13;%0.3;                %Change rate in inhibitor molecule Rb, due to receptor Rc
+mu_pc_mem = 0.3;                %Change rate in inhibitor molecule Rb, due to receptor Rc
 
 %Define the final time we will simulate to
-T_final = 25;
+T_final = 13;
 
 %Define the initial number of particles
 N_init = 25;                    %N will represent T cells                
@@ -273,13 +273,13 @@ f1=figure;
 % f4=figure;
 
 figure(f1)
-[hA1]=plot(time_vec,rec_vector_N_eff,'b','LineWidth', 1);
+[hA1]=semilogy(time_vec,rec_vector_N_eff,'b','LineWidth', 1);
 
 hold on
-[hA2]=plot(time_vec,rec_vector_Y,'r','LineWidth', 1);
+[hA2]=semilogy(time_vec,rec_vector_Y,'r','LineWidth', 1);
 
 hold on
-[hA3] = plot(time_vec,rec_vector_N_mem,'g','LineWidth', 1);
+[hA3] = semilogy(time_vec,rec_vector_N_mem,'g','LineWidth', 1);
 legend([hA1,hA3,hA2],'Effector T cells','Memory T cells','Pathogen');
 
 
