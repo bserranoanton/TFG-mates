@@ -10,7 +10,7 @@ t_next = 0.3;                   %Time step in this simulation
 
 %Parameters: pathogen
 alpha = 6;                     %Pathogen proliferation rate
-beta = 0.04;                     %Pathogen death rate
+beta = 0.03;                     %Pathogen death rate
 
 %Parameters: effector T cells
 lambda_pd = 0.05;%0.04;               %Change rate in membrane receptor Rd, due to Rp signals
