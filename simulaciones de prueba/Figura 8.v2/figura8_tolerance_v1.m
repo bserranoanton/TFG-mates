@@ -106,6 +106,11 @@ while t < T_final
     nCell=1;
     ind_N = 1;
     
+    if(N_eff == 0)
+        lambda_taup_mem = 0;
+        mu_pc_mem = 0;
+    end
+    
     while nCell < rec_ind_tcell_matrix
         v_rand = rand(N,1)/N; %vector of N random numbers
        

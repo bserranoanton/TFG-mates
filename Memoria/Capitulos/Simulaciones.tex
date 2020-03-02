@@ -130,3 +130,16 @@ En este pseudocódigo hemos omitido que cuando las condiciones son $a > 0$ y $c 
 Buena parte de la notación usada en el algoritmo \ref{algo:pseudocodigo} ya ha sido introducida a lo largo de este trabajo volvemos a insistir en que $Y$ representa el número de moléculas del patógeno, mientras que $N$ la cantidad total de células T, incluyendo las efectoras y las de memoria. Sin embargo, por cuestiones de implementación (QUÉ JUSTIFICACIÓN PONGO), en la implementación real, en la línea 4 del pseudocódigo, el $N$ utilizado es solamente el número total de células T efectoras.
 
 \section{Resultados y análisis}
+
+En esta sección  veremos los resultados de algunas simulaciones. La primera de ellas, Figura \ref{fig:intolerance}, muestra la simulación correspondiente a la elección de parámetros que se recoge en la Tabla \ref{tabla:param}. Estamos ante un caso de intolerancia al patógeno, puesto que las células T son capaces de eliminarlo por completo. 
+Veámoslo con más detalle: el patógeno, representado con un línea roja, crece rápidamente, debido a la elección de una tasa de crecimiento, $\alpha$, elevada. Una vez que las células T son conscientes de esta rápida proliferación de un agente no deseado, su número comienza a crecer. Sin embargo, como ya habíamos comentado anteriormente, esto se produce con cierto retraso tras la aparición del patógeno. Lo que estamos describiendo es la conocida \textit{expansión clonal}. Este crecimiento de células T provoca que el término que acompaña a $\beta$ en la Ecuación \ref{sist_pat_T} comience a ser más grande que el acompañado por $\alpha$ en esta misma ecuación, provocando así que la derivada de $y$ se haga negativa y, por tanto, el número de moléculas del patógeno comience a decrecer. Debemos mencionar que el número de células T necesarias para eliminar el patógeno viene regulado por el parámetro $\beta$, si este fuera más grande, es decir, las células T fueran más dañinas con el patógeno, veríamos una curva azul con un máximo mas pequeño que el de la Figura \ref{fig:intolerance}. Pero ¿qué pasaría si la fuerza de estas células T no fuera suficiente? El patógeno crecería de manera exponencial, a mucha más velocidad que las células T, de forma que estas no podrían llegar a acabar con él. 
+
+Prestemos atención ahora al comportamiento de las células T de memoria. Por la sección anterior, ya sabíamos que las células T efectoras y las de memoria iban a constituir poblaciones distintas, puesto que las ecuaciones que rigen sus dinámicas son distintas. La principal diferencia es que las células T de memoria no se suicidan una vez el patógeno ha desaparecido, sabemos que permanecen con la información necesaria para atacar al patógeno más rápidamente en caso de reaparición. Vemos cómo estas células de memoria aumentan su población tras la aparición del patógeno, no vemos un crecimiento tan grande 
+
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/intolerance}
+	\caption{Simulación: caso de intolerancia al patógeno.}
+	\label{fig:intolerance}
+\end{figure}
