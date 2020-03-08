@@ -12,12 +12,12 @@ t_next = 0.3;                   %Time step in this simulation
 alpha = 6;                     %Pathogen proliferation rate
 beta = 0.04;                     %Pathogen death rate
 
-%Parameters: effector T cells
+%Parameters: effector T cells (clon 2)
 lambda_pd = 0.05;%0.04;               %Change rate in membrane receptor Rd, due to Rp signals
-lambda_taup = 6*10^(-5);        %Change rate in membrane receptor Rd, due to TCR signals
+lambda_taup = 10^(-5);        %Change rate in membrane receptor Rd, due to TCR signals
 lambda_pp = 0.5*10^(-4);%0.5*10^(-5);        %Change rate in membrane receptor Rp, due to Rp signals
 mu_pc = 15;%0.4                    %Change rate in inhibitor molecule Rb, due to receptor Rc
-mu_da = 10;                    %Change rate in inhibitor molecule Bcl-2, due to receptor Rc
+mu_da = 10;
 
 %Parameters: memory T cells
 lambda_pd_mem = 0;              %Change in membrane receptor Rd, due to Rp signals
@@ -271,7 +271,7 @@ f1=figure;
 
 
 figure(f1)
-[hA1]=plot(time_vec,rec_vector_N_eff,'b','LineWidth', 1);
+[hA1]=plot(time_vec,rec_vector_N_eff,'m','LineWidth', 1);
 
 hold on
 [hA2]=plot(time_vec,rec_vector_Y,'r','LineWidth', 1);
@@ -279,7 +279,7 @@ hold on
 hold on
 [hA3] = plot(time_vec,rec_vector_N_mem,'g','LineWidth', 1);
 
-legend([hA1,hA3,hA2],'Células T efectoras','Células T de memoria','Patógeno');
+legend([hA1,hA3,hA2],'Células T efectoras clon 2','Células T de memoria','Patógeno');
 xlabel('tiempo');  ylabel('Número de células');
 
 

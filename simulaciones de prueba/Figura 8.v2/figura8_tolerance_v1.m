@@ -93,7 +93,7 @@ while t < T_final
     
     if(gone==0)
         %Calculate Y
-        Y = Y_init*exp(t*(alpha - N_eff*beta));
+        Y = Y_init*exp(t*(alpha - (N_eff + N_eff_clon1)*beta));
         Y = max(Y,0);
         if(Y < 10^(-6)) %condition that states when the pathogen is defeated
             Y = 0;
