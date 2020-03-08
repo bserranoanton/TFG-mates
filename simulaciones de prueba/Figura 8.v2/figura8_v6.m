@@ -10,7 +10,7 @@ t_next = 0.3;                   %Time step in this simulation
 
 %Parameters: pathogen
 alpha = 6;                     %Pathogen proliferation rate
-beta = 0.01;                     %Pathogen death rate
+beta = 0.04;                     %Pathogen death rate
 
 %Parameters: effector T cells
 lambda_pd = 0.05;%0.04;               %Change rate in membrane receptor Rd, due to Rp signals
@@ -26,7 +26,7 @@ lambda_pp_mem = 2*10^(-2);      %Change rate in membrane receptor Rp, due to Rp 
 mu_pc_mem = 13;%0.3;                %Change rate in inhibitor molecule Rb, due to receptor Rc
 
 %Define the final time we will simulate to
-T_final = 2;
+T_final = 25;
 
 %Define the initial number of particles
 N_init = 25;                    %N will represent T cells                
@@ -268,9 +268,7 @@ end
 
 %Draw results
 f1=figure;
-f2=figure;
-f3=figure;
-f4=figure;
+
 
 figure(f1)
 [hA1]=plot(time_vec,rec_vector_N_eff,'b','LineWidth', 1);
@@ -286,14 +284,18 @@ xlabel('tiempo');  ylabel('Número de células');
 
 
 %------------------------------------
-figure(f2)
-[hA1]=plot(time_vec,rec_vector_N_eff,'b','LineWidth', 1);%semilogy(time_vec,rec_vector_N_eff,'b');
-legend(hA1,'Effector T cells');
+% f2=figure;
+% f3=figure;
+% f4=figure;
 
-figure(f3)
-[hA2]=plot(time_vec,rec_vector_Y,'r','LineWidth', 1);%semilogy(time_vec,rec_vector_Y,'r');
-legend(hA2,'Pathogen');
-
-figure(f4)
-[hA3]=plot(time_vec,rec_vector_N_mem,'g','LineWidth', 1);%semilogy(time_vec,rec_vector_N_mem,'g');
-legend(hA3,'Memory T cells');
+% figure(f2)
+% [hA1]=plot(time_vec,rec_vector_N_eff,'b','LineWidth', 1);%semilogy(time_vec,rec_vector_N_eff,'b');
+% legend(hA1,'Effector T cells');
+% 
+% figure(f3)
+% [hA2]=plot(time_vec,rec_vector_Y,'r','LineWidth', 1);%semilogy(time_vec,rec_vector_Y,'r');
+% legend(hA2,'Pathogen');
+% 
+% figure(f4)
+% [hA3]=plot(time_vec,rec_vector_N_mem,'g','LineWidth', 1);%semilogy(time_vec,rec_vector_N_mem,'g');
+% legend(hA3,'Memory T cells');
