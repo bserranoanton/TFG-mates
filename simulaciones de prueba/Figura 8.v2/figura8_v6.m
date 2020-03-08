@@ -26,7 +26,7 @@ lambda_pp_mem = 2*10^(-2);      %Change rate in membrane receptor Rp, due to Rp 
 mu_pc_mem = 13;%0.3;                %Change rate in inhibitor molecule Rb, due to receptor Rc
 
 %Define the final time we will simulate to
-T_final = 2;
+T_final = 13;
 
 %Define the initial number of particles
 N_init = 25;                    %N will represent T cells                
