@@ -143,3 +143,56 @@ Prestemos atención ahora al comportamiento de las células T de memoria. Por la
 	\caption{Simulación: caso de intolerancia al patógeno.}
 	\label{fig:intolerance}
 \end{figure}
+
+\subsection{Tolerancia al patógeno}
+
+En el caso anterior hemos visto una simulación de intolerancia al patógeno. Esto es, las células inmunes consiguen derrotarlo. Sin embargo, esto no es siempre así. Existen virus como PONER EJEMPLO SI SE SABE que han desarrollado una estrategia para intentar sobrevivir lo máximo posible dentro de nuestro cuerpo. 
+Lo que hacen es crecer a un ritmo muy lento, de esta manera ``sigilosa'' engañan a las células T, haciéndolas creer que ha sido eliminado y provocando que estas células inmunes se suiciden. La Figura \ref{fig:tolerance} ilustra esta situación.
+
+Como vemos, las células T comienzan la \textit{expansión clonal}. Este aumento de población inmune hace que la población del patógeno se vea afectada rápidamente, recordemos que su factor de crecimiento, $\alpha$, es pequeño ahora. De esta manera, las células inmunes perciben que el patógeno ha sido eliminado con éxito y comienzan la \textit{contracción clonal}, haciendo que su población baje hasta desaparecer. Sin embargo, el patógeno no ha sido erradicado por completo, aún quedaban algunos organismos, imperceptibles para las células inmunes, que, ahora sí, pueden reproducirse sin problema. No hay células inmunes que puedan atacarlos. Es por esto que su población crece de manera exponencial. En poco tiempo estos patógenos ``astutos'' pueden tomar el control del otro organismo. 
+
+En cuanto a las células T de memoria, vemos como crecen con la presencia del patógeno y se estabilizan cuando la población de células T efectoras llega a cero. Esto es así puesto que las células T de memoria no continúan reproduciéndose en ausencia de células T efectoras, a pesar de la presencia de patógeno. PREGUNTAR RAZÓN 
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/tolerance}
+	\caption{Simulación: caso de tolerancia al patógeno.}
+	\label{fig:tolerance}
+\end{figure}
+
+\subsection{Simulaciones con distintas poblaciones de células T}
+
+En esta sección veremos cómo se comportan distintas poblaciones de células T efectoras frente a un mismo patógeno. Veremos, además, qué ocurre cuando alguna de estas poblaciones desaparece. 
+
+Comencemos mirando la Figura \ref{fig:tresClones}, para esta simulación hemos tomado tres poblaciones con distinta afinidad, $\lambda_{Tp}$, al patógeno. Tenemos el clon 0 con la afinidad más alta y el clon 2 con la más baja. La diferencia en cuanto a expansión es considerable, la población más afín al patógeno es la que se reproduce a mayor velocidad. Esto parece lógico, puesto que es la más preparada para combatir al patógeno, se denomina \textit{población inmunodominante}.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/tresClones}
+	\caption{Simulación:Distintas poblaciones de células T con distintas afinidades al patógeno.}
+	\label{fig:tresClones}
+\end{figure}
+
+
+Pero... ¿qué pasaría si esta \textit{población inmunodominante} desapareciera? Una posible explicación nos la da la Figura \ref{fig:dosClones}. En ella, podemos ver que el modelo sugiere que las \textit{poblaciones subdominantes} se expanden para suplir la ausencia de la \textit{inmunodominante} y controlar la infección. No debemos olvidar que la afinidad que tienen estas poblaciones al patógeno es menor y esto hace que el patógeno pueda crecer más y más rápidamente. 
+
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/dosClones}
+	\caption{Simulación:Distintas poblaciones de células T con distintas afinidades al patógeno. Clones subdominantes.}
+	\label{fig:dosClones}
+\end{figure}
+
+Para finalizar veamos el comportamiento del clon 2 cuando el resto de clones han desaparecido. Como es de esperar, ocurre algo similar a lo que veíamos en la Figura \ref{fig:dosClones}. En este caso el clon 2 debe hacer un esfuerzo mayor (reproducirse más) para mantener la infección controlada. Comportamiento ilustrado en la Figura \ref{fig:unClon}.
+
+También se observa que la cantidad de células T de memoria aumenta. Esto se debe al aumento de células del patógeno. 
+
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/unClon}
+	\caption{Simulación:Distintas poblaciones de células T con distintas afinidades al patógeno. Clon subdominante.}
+	\label{fig:unClon}
+\end{figure}
+

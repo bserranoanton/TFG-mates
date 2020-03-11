@@ -26,10 +26,12 @@
 \contentsline {section}{\numberline {4.1}Modelo simplificado}{15}{section.51}
 \contentsline {section}{\numberline {4.2}Pseudoc\IeC {\'o}digo}{16}{section.55}
 \contentsline {section}{\numberline {4.3}Resultados y an\IeC {\'a}lisis}{17}{section.58}
-\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro}{19}{chapter.60}
-\contentsline {chapter}{\numberline {6}Introduction}{21}{chapter.61}
+\contentsline {subsection}{\numberline {4.3.1}Tolerancia al pat\IeC {\'o}geno}{18}{subsection.60}
+\contentsline {subsection}{\numberline {4.3.2}Simulaciones con distintas poblaciones de c\IeC {\'e}lulas T}{19}{subsection.62}
+\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro}{23}{chapter.66}
+\contentsline {chapter}{\numberline {6}Introduction}{25}{chapter.67}
 \select@language {english}
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{23}{chapter.62}
-\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{25}{appendix.63}
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{27}{chapter.68}
+\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{29}{appendix.69}
 \select@language {spanish}
-\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{27}{appendix.64}
+\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{31}{appendix.70}
