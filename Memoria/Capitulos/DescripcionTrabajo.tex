@@ -3,12 +3,12 @@
 
 En este capítulo exponemos un modelo matemático sencillo que da una posible explicación al mecanismo de decisión entre reproducción y muerte de las células T. Para este algoritmo, se han supuesto una cantidad mínima de procesos bioquímicos conocidos y, a partir de ellos, se ha logrado un modelo que, a pesar de su simplicidad, es capaz de ajustarse a hechos observados. 
 
-En el siguiente capítulo se recogen una serie de simulaciones del modelo, así como un análisis de las mismas. 
+En el siguiente capítulo se recogen una serie de simulaciones de este modelo, así como un análisis de las mismas. 
 
 \section{Introducción}
 \label{sec:intro_cap3}
 
-Como ya sabemos, las células T juegan un papel fundamental en cuanto a la defensa de patógenos se refiere. Una vez que se detecta el patógeno, estas se activan y diferencian en células T efectoras. Es entonces cuando empiezan a  reproducirse de manera rápida para intentar paliar los efectos dañinos producidos por estos agentes. Durante este proceso de división masiva la población puede llegar a incrementarse hasta $10^6$ veces. Nos referiremos a esta etapa como \textit{expansión clonal}. Una vez que el patógeno ha sido vencido, los niveles de población se restauran mediante un proceso denominado \textit{contracción clonal}. Aunque durante esta última etapa muchas células T mueren, alrededor de un 5-10\% quedan, son las células T de memoria, células listas para dar una respuesta más rápida si el mismo patógeno vuelve a aparecer. La \textit{expansión} y \textit{contracción clonal} pueden ser vistas desde una perspectiva global como la manifestación de muchas decisiones individuales, recordemos que las células T basan sus decisiones únicamente en la información que recogen de su entorno.
+Como ya sabemos, las células T juegan un papel fundamental en cuanto a la defensa de patógenos se refiere. Una vez que se detecta el patógeno, estas se activan y diferencian en células T efectoras. Es entonces cuando empiezan a  reproducirse de manera rápida para intentar paliar los efectos dañinos producidos por estos agentes. Durante este proceso de división masiva, la población puede llegar a incrementarse hasta $10^6$ veces. Nos referiremos a esta etapa como \textit{expansión clonal}. Una vez que el patógeno ha sido vencido, los niveles de población se restauran mediante un proceso denominado \textit{contracción clonal}. Aunque durante esta última etapa muchas células T mueren, alrededor de un 5-10\% quedan, son las células T de memoria, células listas para dar una respuesta más rápida si el mismo patógeno vuelve a aparecer. La \textit{expansión} y \textit{contracción clonal} pueden ser vistas desde una perspectiva global como la manifestación de muchas decisiones individuales, recordemos que las células T basan sus decisiones únicamente en la información que recogen de su entorno.
 
 Hechos experimentales demuestran que la aparición de un patógeno no es suficiente para la toma de decisión entre división o muerte de la célula. Las células T continúan dividiéndose en la ausencia de este estímulo o cometen apóptosis cuando este persiste. 
 Siguiendo estos hechos, asumiremos en nuestro modelo que estas decisiones vienen determinadas por la competición de dos moléculas inhibidoras: Retinoblastoma (Rb), que previene la expresión de genes necesarios para que la célula pueda continuar el ciclo celular y dividirse, y célula B linfoma-2 (Bcl-2), que bloqueará la muerte celular. También tendremos en cuenta que la las células T se comunican con el exterior gracias a sus TCR y, por tanto, sus decisiones se ven influenciadas por la cantidad de receptores que tengan, es decir, cuantos más receptores, más estímulos serán capaces de percibir.
@@ -16,10 +16,12 @@ Siguiendo estos hechos, asumiremos en nuestro modelo que estas decisiones vienen
 
 \section{Hipótesis biológicas y modelo matemático}
 
-En esta sección explicaremos cuáles son las hipótesis de partida y describiremos con detalle las ecuaciones de nuestro modelo. 
 
 \subsection{Hipótesis biológicas} 
 \label{subsec:hip_bio}
+
+En lo que sigue explicaremos con detalle las tres hipótesis biológicas en las que se centra nuestro modelo. Cabe destacar que estas se basan en hechos contrastados y observados en el campo de la biología y que no constituyen, en ningún caso, la explicación al problema que se modeliza. Es decir, no son las hipótesis las que se ajustan al modelo, sino el modelo el que se basa en estos hechos.
+Bien es cierto que estas hipótesis son los únicos hechos que se conocen, pero son suficientes para la formulación de un modelo sencillo y con resultados relevantes. 
 
 \subsubsection{La competición entre dos moléculas inhibidoras determina la decisión y la duración de la vida de una célula T}
 \label{susubsec:hip_1}
@@ -42,18 +44,18 @@ de moléculas de Rb activas disminuye hasta un valor crítico, la célula abando
 
 La fluctuación en la cantidad de Rb y Bcl-2 depende de unas proteínas llamadas \textit{citoquinas} \footnote{citoquinas: son proteínas que regulan la función de las células que las producen sobre otros tipos celulares. Son los agentes responsables de la comunicación intercelular, inducen la activación de receptores específicos de membrana, funciones de proliferación y diferenciación celular, entre otros. Ver \url{https://es.wikipedia.org/wiki/Citocina}}. Estas pueden inducir tanto la fosforilación de Rb, en cuyo caso se denominan \textit{citoquinas de proliferación}. Como tener un efecto positivo o negativo en cuanto a la cantidad de Bcl-2 se refiere, en ese caso nos referiremos a ellas como \textit{citoquinas de supervivencia} o \textit{muerte}, respectivamente.
 
-El punto importante es que la acción que las citoquinas llevan a cabo se produce gracias sus interacciones con receptores de membrana específicos. De esta manera, el efecto que percibe una célula T depende, no solo de la cantidad de citoquinas del ambiente, sino también del número de receptores de membrana de la célula. De esta manera, si, por ejemplo, tenemos una concentración muy alta de cierta citoquina, podríamos asumir que el efecto que esta va a tener en una célula T vendrá determinado por la cantidad de receptores de membrana específicos para ella que posea la célula en cuestión. También sabemos que el número de receptores de membrana de una célula varía a lo largo de su vida, haciendo así que células adyacentes que compartan un entorno similar, la concentración de citoquinas sea la misma, por ejemplo, presenten comportamientos distintos si expresan diferentes receptores de membrana.
+El punto importante es que la acción que las citoquinas llevan a cabo se produce gracias sus interacciones con receptores de membrana específicos. De esta manera, el efecto que percibe una célula T depende, no solo de la cantidad de citoquinas del ambiente, sino también del número de receptores de membrana de la célula. De esta manera, si, por ejemplo, tenemos una concentración muy alta de cierta citoquina, podríamos asumir que el efecto que esta va a tener en una célula T vendrá determinado por la cantidad de receptores de membrana específicos para ella que posea la célula en cuestión. También sabemos que el número de receptores de membrana de una célula varía a lo largo de su vida, haciendo así que células adyacentes que compartan un entorno similar (la concentración de citoquinas sea la misma, por ejemplo) presenten comportamientos distintos si expresan diferentes receptores de membrana.
 
 \subsubsection{Las células T naïve se dividen de manera asimétrica después de su activación.}
 \label{subsub:hip_divAsim}
 
-Postulamos que tanto los fenotipos de las células T efectoras como los de las células T con memoria se determinan durante la sinapsis inmune. Esto es, una célula T en estado naïve puede diferenciarse en una célula T efectora o en una célula T de memoria. Por su parte, una vez diferenciadas, las células T efectoras y de memoria, se dividen de manera simétrica, es decir, las células hijas heredarán el tipo la madre, y ambas pueden considerarse indistinguibles durante la respuesta inmune.
+Postulamos que tanto los fenotipos de las células T efectoras como los de las células T con memoria se determinan durante la sinapsis inmune. Esto es, una célula T en estado naïve puede diferenciarse en una célula T efectora o en una célula T de memoria. Por su parte, una vez diferenciadas, las células T efectoras y de memoria, se dividen de manera simétrica, es decir, las células hijas heredarán el tipo la madre, y ambos tipos pueden considerarse indistinguibles durante la respuesta inmune.
 
 \subsection{Modelo matemático}
 \label{sub:modelo}
 
-Basándonos en las hipótesis anteriormente formuladas proponemos a continuación una serie de ecuaciones, con variables continuas y discretas, que darán forma al algoritmo de decisión de nuestro estudio. 
-En el Capítulo \ref{cap:simulaciones} podremos ver y analizar los resultados de estas ecuaciones. 
+Basándonos en las hipótesis anteriormente formuladas proponemos a continuación una serie de ecuaciones, con variables continuas y discretas, que darán forma al algoritmo de decisión de nuestro estudio. Como ya habíamos avanzado, se trata de un modelo sencillo, tanto es el caso que los sistemas de ecuaciones diferenciales de primer orden propuestos tienen una solución explícita. Sin embargo, es esta mima sencillez lo que hace de él un modelo tan potente, pues, como veremos en el capítulo siguiente, obtenemos resultados que no solo se ajustan a los hechos observados sino que sacan a la luz comportamientos poblacionales difícilmente observables desde un laboratorio.
+
 Antes de expresar en términos matemáticos las condiciones del modelo, damos cabida a la notación y a algunas aclaraciones previas: 
 
 \begin{itemize}
@@ -86,7 +88,7 @@ Así las cosas, ya estamos en condiciones de presentar las ecuaciones del modelo
 
 Con el sistema \ref{sist_inhib}, ponemos de manifiesto que las concentraciones de Rb y Bcl-2, representadas por $c(t)$ y $a(t)$, respectivamente, dependen del número de señales TCR/antígeno ($r_{T}$) y, del número de receptores de membrana que posea la célula en cuestión.
 
-Asumimos que los receptores de membrana involucrados en el algoritmo de decisión de las células T son independientes y tienen efectos aditivos, según la hipótesis \ref{subsub:hip_recep}, asumimos que las células son capaces de ``contar'' el número de señales que llegan, cuando estas llegan a cierto número la célula se divide o se suicida. De acuerdo con estas relaciones lineales obtenemos un modelo más robusto, puesto que configuraciones similares de receptores de membrana provocarán decisiones celulares similares. 
+Asumimos que los receptores de membrana involucrados en el algoritmo de decisión de las células T son independientes y tienen efectos aditivos. Según la hipótesis \ref{subsub:hip_recep}, asumimos que las células son capaces de ``contar'' el número de señales que llegan, cuando estas llegan a cierto número la célula se divide o se suicida. De acuerdo con estas relaciones lineales obtenemos un modelo más robusto, puesto que configuraciones similares de receptores de membrana provocarán decisiones celulares similares. 
 
 Luego, para los receptores de membrana proponemos la siguiente ecuación: 
 
@@ -112,7 +114,7 @@ Luego, para los receptores de membrana proponemos la siguiente ecuación:
 
 \section{Dinámica del patógeno durante la respuesta inmune}
 
-Ahora que ya tenemos un algoritmo para la dinámica de población de las células T, modelizamos la interacción del patógeno con estas células. Debemos recordar que la dinámica de un patógeno depende en gran cantidad de las características de este. Sin embargo, en esta sección daremos unas ecuaciones muy generales para que sean aplicables a la mayor cantidad posible de situaciones:
+Ahora que ya tenemos un algoritmo para la dinámica de población de las células T, modelizamos la interacción del patógeno con estas células. Debemos recordar que la dinámica de un patógeno depende en gran cantidad de las características de este. Sin embargo, en esta sección daremos unas ecuaciones muy generales para que sean aplicables a la mayor cantidad posible de situaciones. En este caso, la dinámica del patógeno vendrá dada por:
 
 \begin{equation}
 	\label{sist_pat_T}
@@ -136,7 +138,7 @@ Donde $\gamma$ es un parámetro que depende del antígeno y denota la probabilid
 	\sum_{x=1}^{n} \rho_{n}^{x} \leq 1
 \end{equation}
 
-Según la hipótesis \ref{subsub:hip_divAsim} las células T que ya se han diferenciado se dividen de manera simétrica y reparten sus receptores de membrana entre sus dos células hija. De esta manera, la experiencia con el antígeno, propia de cada célula puede ser transmitida a la siguiente generación.
+Según la hipótesis \ref{subsub:hip_divAsim} las células T que ya se han diferenciado se dividen de manera simétrica y reparten sus receptores de membrana entre sus dos células hijas. De esta manera, la experiencia con el antígeno, propia de cada célula puede ser transmitida a la siguiente generación.
 
 \begin{equation}
 	\label{sist:div_sim}
