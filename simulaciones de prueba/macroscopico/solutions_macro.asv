@@ -1,0 +1,33 @@
+syms t_cell(t)
+syms lambda
+syms k
+syms t_cell0
+syms t_cell_tilde0
+
+syms p(t)
+syms alpha
+syms beta
+syms p0
+syms t_cell_value
+
+%Resolvemos p:
+ode = diff(p,t) == alpha*p - beta*t_cell_value*p;
+
+cond = p(0) == p0;
+pSol(t) = dsolve(ode,cond);
+
+fprintf('La solucion de p es: ');
+disp(pSol);
+
+%Resolvemos T:
+ode = diff(t_cell,t,2) == -k*t_cell + lambda*pSol;
+Dt_cell = diff(t_cell);
+       
+cond1 = t_cell(0) == 1;
+cond2 = Dt_cell(0) == 0;
+
+
+cSol(t) = dsolve(ode,cond);
+
+fprintf('La solucion de c es: ');
+disp(cSol);
