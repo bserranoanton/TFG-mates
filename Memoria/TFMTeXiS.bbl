@@ -1,0 +1,17 @@
+\begin{thebibliography}{2}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Sompayrac(2016)}]{theHowItWorks}
+{\sc Sompayrac, L.}
+\newblock {\em How The Inmune System Works\/}.
+\newblock Versión electrónica, 2016.
+
+\bibitem[{Taborda et\ al.(2014)Taborda, Hernández, Montoya y
+  Rugeles}]{celulasNK}
+{\sc Taborda, N.~A.}, {\sc Hernández, J.~C.}, {\sc Montoya, C.~J.} y {\sc
+  Rugeles, M.~T.}
+\newblock Las células natural killer y su papel en la respuesta inmunitaria
+  durante la infección por el virus de la inmunodeficiencia humana tipo-1.
+\newblock 2014.
+
+\end{thebibliography}
