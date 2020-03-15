@@ -8,8 +8,8 @@
 \contentsline {section}{\numberline {1.4}Estructura del documento}{3}{section.12}
 \contentsline {chapter}{\numberline {2}Estado de la Cuesti\IeC {\'o}n}{5}{chapter.13}
 \contentsline {section}{\numberline {2.1}Cuestiones b\IeC {\'a}sicas de inmunolog\IeC {\'\i }a}{5}{section.14}
-\contentsline {subsection}{\numberline {2.1.1}El sistema inmune innato}{5}{subsection.15}
-\contentsline {subsection}{\numberline {2.1.2}El sistema inmune adaptativo}{6}{subsection.17}
+\contentsline {subsection}{\numberline {2.1.1}El sistema inmune innato}{6}{subsection.15}
+\contentsline {subsection}{\numberline {2.1.2}El sistema inmune adaptativo}{7}{subsection.17}
 \contentsline {subsubsection}{\numberline {2.1.2.1}Las c\IeC {\'e}lulas T}{7}{subsubsection.18}
 \contentsline {chapter}{\numberline {3}Modelo matem\IeC {\'a}tico}{9}{chapter.20}
 \contentsline {section}{\numberline {3.1}Introducci\IeC {\'o}n}{9}{section.21}
@@ -19,17 +19,20 @@
 \contentsline {subsubsection}{\numberline {3.2.1.2}Los receptores de membrana regulan las din\IeC {\'a}micas de Rb y Bcl-2}{11}{subsubsection.28}
 \contentsline {subsubsection}{\numberline {3.2.1.3}Las c\IeC {\'e}lulas T na\IeC {\"\i }ve se dividen de manera asim\IeC {\'e}trica despu\IeC {\'e}s de su activaci\IeC {\'o}n.}{11}{subsubsection.30}
 \contentsline {subsection}{\numberline {3.2.2}Modelo matem\IeC {\'a}tico}{11}{subsection.31}
-\contentsline {subsubsection}{\numberline {3.2.2.1}Aspectos de la modelizaci\IeC {\'o}n}{12}{subsubsection.34}
+\contentsline {subsubsection}{\numberline {3.2.2.1}Aspectos de la modelizaci\IeC {\'o}n}{13}{subsubsection.34}
 \contentsline {section}{\numberline {3.3}Din\IeC {\'a}mica del pat\IeC {\'o}geno durante la respuesta inmune}{13}{section.35}
 \contentsline {section}{\numberline {3.4}Resumen y conclusiones}{14}{section.40}
 \contentsline {chapter}{\numberline {4}Simulaciones}{15}{chapter.50}
 \contentsline {section}{\numberline {4.1}Modelo simplificado}{15}{section.51}
 \contentsline {section}{\numberline {4.2}Pseudoc\IeC {\'o}digo}{16}{section.55}
-\contentsline {section}{\numberline {4.3}Resultados y an\IeC {\'a}lisis}{17}{section.57}
-\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro}{19}{chapter.59}
-\contentsline {chapter}{\numberline {6}Introduction}{21}{chapter.60}
+\contentsline {section}{\numberline {4.3}Resultados y an\IeC {\'a}lisis}{17}{section.58}
+\contentsline {subsection}{\numberline {4.3.1}Tolerancia al pat\IeC {\'o}geno}{18}{subsection.60}
+\contentsline {subsection}{\numberline {4.3.2}Simulaciones con distintas poblaciones de c\IeC {\'e}lulas T}{19}{subsection.62}
+\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro}{23}{chapter.66}
+\contentsline {chapter}{\numberline {6}Introduction}{25}{chapter.67}
 \select@language {english}
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{23}{chapter.61}
-\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{25}{appendix.62}
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{27}{chapter.68}
+\contentsline {chapter}{Bibliograf\'{\i }a}{29}{chapter*.69}
 \select@language {spanish}
-\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{27}{appendix.63}
+\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{31}{appendix.70}
+\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{33}{appendix.71}

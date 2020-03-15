@@ -26,7 +26,7 @@ lambda_pp_mem = 2*10^(-2);      %Change rate in membrane receptor Rp, due to Rp 
 mu_pc_mem = 2;%0.3;                %Change rate in inhibitor molecule Rb, due to receptor Rc
 
 %Define the final time we will simulate to
-T_final = 13;
+T_final = 17;
 
 %Define the initial number of particles
 N_init = 25;                    %N will represent T cells                
@@ -287,8 +287,11 @@ axis([0 T_final 0 400]);
 
 hold on
 [hA3] = plot(time_vec,rec_vector_N_mem,'g','LineWidth', 1);
+
+set(gca,'YTickLabel',[]); %Para que no salgan los números del eje
+set(gca,'XTickLabel',[]);
 axis([0 T_final 0 400]);
-legend([hA1,hA3,hA2],'Effector T cells','Memory T cells','Pathogen');
+legend([hA1,hA3,hA2],'Células T efectoras','Células T de memoria','Patógeno');
 
 
 %------------------------------------

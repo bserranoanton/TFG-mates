@@ -271,14 +271,16 @@ f1=figure;
 
 
 figure(f1)
-[hA1]=plot(time_vec,rec_vector_N_eff,'b','LineWidth', 1);
+[hA1]=plot(time_vec,rec_vector_N_eff/max(rec_vector_N_eff),'b','LineWidth', 1);
 
 hold on
-[hA2]=plot(time_vec,rec_vector_Y,'r','LineWidth', 1);
+[hA2]=plot(time_vec,rec_vector_Y/max(rec_vector_Y),'r','LineWidth', 1);
 
 hold on
-[hA3] = plot(time_vec,rec_vector_N_mem,'g','LineWidth', 1);
+[hA3] = plot(time_vec,rec_vector_N_mem/max(rec_vector_N_eff),'g','LineWidth', 1);
 
+set(gca,'YTickLabel',[]); %Para que no salgan los números del eje
+set(gca,'XTickLabel',[]);
 legend([hA1,hA3,hA2],'Células T efectoras','Células T de memoria','Patógeno');
 xlabel('tiempo');  ylabel('Número de células');
 
