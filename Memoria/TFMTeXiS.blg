@@ -18,5 +18,9 @@ A level-1 auxiliary file: Apendices/appendixA.aux
 A level-1 auxiliary file: Apendices/appendixB.aux
 A level-1 auxiliary file: Cascaras/fin.aux
 Database file #1: biblio.bib
+Warning--empty journal in JTB
+Warning--empty journal in mathsModInmu
+Warning--empty journal in RoleOfM
+Warning--empty year in RoleOfM; set to ????
 Warning--empty journal in celulasNK
-(There was 1 warning)
+(There were 5 warnings)

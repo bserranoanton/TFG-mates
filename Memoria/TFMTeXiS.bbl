@@ -1,5 +1,24 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{5}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Arias et\ al.(2014)Arias, Herrero, Acosta y Fernandez-Arias}]{JTB}
+{\sc Arias, C.~F.}, {\sc Herrero, M.~A.}, {\sc Acosta, F.~J.} y {\sc
+  Fernandez-Arias, C.}
+\newblock A mathematical model for a t cell fate decision algorithm during
+  immune response.
+\newblock 2014.
+
+\bibitem[{Castro et\ al.(2016)Castro, Lythe, Molina-París y
+  Ribeiro}]{mathsModInmu}
+{\sc Castro, M.}, {\sc Lythe, G.}, {\sc Molina-París, C.} y {\sc Ribeiro,
+  R.~M.}
+\newblock Mathematics in modern immunology.
+\newblock 2016.
+
+\bibitem[{Herrero()}]{RoleOfM}
+{\sc Herrero, M.~A.}
+\newblock On the role of mathematics in biology.
+\newblock ????
 
 \bibitem[{Sompayrac(2016)}]{theHowItWorks}
 {\sc Sompayrac, L.}
