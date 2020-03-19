@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{8}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Arias et\ al.(2014)Arias, Herrero, Acosta y Fernandez-Arias}]{JTB}
@@ -7,6 +7,13 @@
 \newblock A mathematical model for a t cell fate decision algorithm during
   immune response.
 \newblock 2014.
+
+\bibitem[{Bousso et\ al.(2002)Bousso, Bhakta, Lewis y Robey}]{Bousso1876}
+{\sc Bousso, P.}, {\sc Bhakta, N.~R.}, {\sc Lewis, R.~S.} y {\sc Robey, E.}
+\newblock Dynamics of thymocyte-stromal cell interactions visualized by
+  two-photon microscopy.
+\newblock {\em Science\/}, vol. 296(5574), p\'aginas 1876--1880, 2002.
+\newblock ISSN 0036-8075.
 
 \bibitem[{Castro et\ al.(2016)Castro, Lythe, Molina-París y
   Ribeiro}]{mathsModInmu}
@@ -20,10 +27,23 @@
 \newblock On the role of mathematics in biology.
 \newblock ????
 
+\bibitem[{Miller et\ al.(2002)Miller, Wei, Parker y Cahalan}]{Miller1869}
+{\sc Miller, M.~J.}, {\sc Wei, S.~H.}, {\sc Parker, I.} y {\sc Cahalan, M.~D.}
+\newblock Two-photon imaging of lymphocyte motility and antigen response in
+  intact lymph node.
+\newblock {\em Science\/}, vol. 296(5574), p\'aginas 1869--1873, 2002.
+\newblock ISSN 0036-8075.
+
 \bibitem[{Sompayrac(2016)}]{theHowItWorks}
 {\sc Sompayrac, L.}
 \newblock {\em How The Inmune System Works\/}.
 \newblock Versión electrónica, 2016.
+
+\bibitem[{Stoll et\ al.(2002)Stoll, Delon, Brotz y Germain}]{Stoll1873}
+{\sc Stoll, S.}, {\sc Delon, J.}, {\sc Brotz, T.~M.} y {\sc Germain, R.~N.}
+\newblock Dynamic imaging of t cell-dendritic cell interactions in lymph nodes.
+\newblock {\em Science\/}, vol. 296(5574), p\'aginas 1873--1876, 2002.
+\newblock ISSN 0036-8075.
 
 \bibitem[{Taborda et\ al.(2014)Taborda, Hernández, Montoya y
   Rugeles}]{celulasNK}
