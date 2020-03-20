@@ -209,6 +209,25 @@
 
 \usepackage[english,activeacute,spanish]{babel}
 
+%Para tener distintos colores en el codigo
+\usepackage[dvipsnames]{xcolor}
+
+%Para importar el código de matlab
+\usepackage{listings}
+\lstset{
+	language=Matlab,
+	basicstyle=\ttfamily,
+	backgroundcolor=\color{lightgray!25},
+	breaklines=true,
+	columns=fullflexible,
+	frame=single,
+	commentstyle=\color{ForestGreen},
+	identifierstyle=\textbf,
+	keywordstyle=\color{blue},
+	numbers=left,
+	numberstyle=\footnotesize\sffamily,
+	showstringspaces=false
+}
 
 
 % El paquete url sirve para poder  poner direcciones Web y no morir en

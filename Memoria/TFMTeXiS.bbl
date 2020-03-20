@@ -1,4 +1,4 @@
-\begin{thebibliography}{8}
+\begin{thebibliography}{11}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Arias et\ al.(2014)Arias, Herrero, Acosta y Fernandez-Arias}]{JTB}
@@ -6,7 +6,9 @@
   Fernandez-Arias, C.}
 \newblock A mathematical model for a t cell fate decision algorithm during
   immune response.
-\newblock 2014.
+\newblock {\em Journal of Theoretical Biology\/}, vol. 349, p\'aginas 109 --
+  120, 2014.
+\newblock ISSN 0022-5193.
 
 \bibitem[{Bousso et\ al.(2002)Bousso, Bhakta, Lewis y Robey}]{Bousso1876}
 {\sc Bousso, P.}, {\sc Bhakta, N.~R.}, {\sc Lewis, R.~S.} y {\sc Robey, E.}
@@ -21,6 +23,25 @@
   R.~M.}
 \newblock Mathematics in modern immunology.
 \newblock 2016.
+
+\bibitem[{Darwin(1887)}]{darwin1887life}
+{\sc Darwin, F.}
+\newblock {\em The life and letters of Charles Darwin\/}.
+\newblock 1887.
+
+\bibitem[{Esteban et\ al.(2003)Esteban, Gonzalez y Tejerom}]{esteban2003mendel}
+{\sc Esteban, S.}, {\sc Gonzalez, M.~P.} y {\sc Tejerom, L.}
+\newblock Mendel: Biology, mathematics and history of science.
+\newblock En {\em The Mathematics Education into the 21st Century Project,
+  Proceedings of the International Conference The Decidable and the Undecidable
+  in Mathematics Education. Brno, Czech Republic\/}. 2003.
+
+\bibitem[{Gunawardena(2014)}]{Gunawardena2014}
+{\sc Gunawardena, J.}
+\newblock Models in biology: ‘accurate descriptions of our pathetic
+  thinking’.
+\newblock {\em BMC Biology\/}, vol.\ 12, 2014.
+\newblock ISSN 1741-7007.
 
 \bibitem[{Herrero()}]{RoleOfM}
 {\sc Herrero, M.~A.}
