@@ -29,12 +29,10 @@ vars = [t_cell(t); p(t)]
 M = matlabFunction(V,'vars', {'t','Y'});
 interval = [t0 tf];  %time interval    
 % Impose a nonnegativity constraint 
-% option1 = odeset('NonNegative',1);
 option2 = odeset('NonNegative',2); %T >= 0
-% option3 = odeset('NonNegative',3);
-% options = [option1, option2,option3];
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 ySol = ode45(M,interval,y0, option2);
 tValues = linspace(interval(1),interval(2),1000);
 yValues = deval(ySol,tValues,1); %number 1 denotes first position likewise you can mention 2 to 6 for the next 5 positions
@@ -48,7 +46,9 @@ hold on
 yValues = deval(ySol,tValues,2); 
 [hA1] = plot(tValues,yValues/max(yValues),'b','LineWidth', 1);  %células T 
 ylim([0,1]);
-%xlim([0,tf]);
+set(gca,'YTickLabel',[]); %Para que no salgan los números del eje
+set(gca,'XTickLabel',[]);
+
 
 legend([hA2,hA1],'Patógeno','Células T');
 

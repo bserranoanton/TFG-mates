@@ -33,11 +33,12 @@
 \contentsline {chapter}{\numberline {5}Modelo Macrosc\IeC {\'o}pico}{29}{chapter.75}
 \contentsline {section}{\numberline {5.1}Tolerancia y tasa de crecimiento}{29}{section.76}
 \contentsline {section}{\numberline {5.2}Inercia y elasticidad en las c\IeC {\'e}lulas T}{30}{section.77}
-\contentsline {chapter}{\numberline {6}Conclusiones y Trabajo Futuro}{31}{chapter.79}
-\contentsline {chapter}{\numberline {7}Introduction}{33}{chapter.80}
+\contentsline {section}{\numberline {5.3}Simulaciones del modelo macrosc\IeC {\'o}pico}{30}{section.79}
+\contentsline {chapter}{\numberline {6}Conclusiones y Trabajo Futuro}{33}{chapter.81}
+\contentsline {chapter}{\numberline {7}Introduction}{35}{chapter.82}
 \select@language {english}
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{35}{chapter.81}
-\contentsline {chapter}{Bibliograf\'{\i }a}{37}{chapter*.82}
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{37}{chapter.83}
+\contentsline {chapter}{Bibliograf\'{\i }a}{39}{chapter*.84}
 \select@language {spanish}
-\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{39}{appendix.83}
-\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{45}{appendix.388}
+\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{41}{appendix.85}
+\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{47}{appendix.390}
