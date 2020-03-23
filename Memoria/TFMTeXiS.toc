@@ -27,14 +27,17 @@
 \contentsline {section}{\numberline {4.1}Modelo simplificado}{19}{section.52}
 \contentsline {section}{\numberline {4.2}Pseudoc\IeC {\'o}digo}{20}{section.55}
 \contentsline {section}{\numberline {4.3}Resultados y an\IeC {\'a}lisis}{22}{section.65}
-\contentsline {section}{\numberline {4.4}Intolerancia al pat\IeC {\'o}geno}{22}{section.66}
-\contentsline {subsection}{\numberline {4.4.1}Tolerancia al pat\IeC {\'o}geno}{23}{subsection.69}
-\contentsline {subsection}{\numberline {4.4.2}Simulaciones con distintas poblaciones de c\IeC {\'e}lulas T}{24}{subsection.71}
-\contentsline {chapter}{\numberline {5}Conclusiones y Trabajo Futuro}{27}{chapter.75}
-\contentsline {chapter}{\numberline {6}Introduction}{29}{chapter.76}
+\contentsline {subsection}{\numberline {4.3.1}Intolerancia al pat\IeC {\'o}geno}{22}{subsection.66}
+\contentsline {subsection}{\numberline {4.3.2}Tolerancia al pat\IeC {\'o}geno}{23}{subsection.69}
+\contentsline {subsection}{\numberline {4.3.3}Simulaciones con distintas poblaciones de c\IeC {\'e}lulas T}{24}{subsection.71}
+\contentsline {chapter}{\numberline {5}Modelo Macrosc\IeC {\'o}pico}{29}{chapter.75}
+\contentsline {section}{\numberline {5.1}Tolerancia y tasa de crecimiento}{29}{section.76}
+\contentsline {section}{\numberline {5.2}Inercia y elasticidad en las c\IeC {\'e}lulas T}{30}{section.77}
+\contentsline {chapter}{\numberline {6}Conclusiones y Trabajo Futuro}{31}{chapter.79}
+\contentsline {chapter}{\numberline {7}Introduction}{33}{chapter.80}
 \select@language {english}
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{31}{chapter.77}
-\contentsline {chapter}{Bibliograf\'{\i }a}{33}{chapter*.78}
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{35}{chapter.81}
+\contentsline {chapter}{Bibliograf\'{\i }a}{37}{chapter*.82}
 \select@language {spanish}
-\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{35}{appendix.79}
-\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{41}{appendix.384}
+\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{39}{appendix.83}
+\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{45}{appendix.388}
