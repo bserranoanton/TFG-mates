@@ -55,6 +55,8 @@ yValues = deval(ySol,tValues,2);
 [hA1] = plot(tValues,yValues,'b','LineWidth', 1);  %células T 
 % ylim([0,1]);
 %xlim([0,tf]);
+set(gca,'YTickLabel',[]); %Para que no salgan los números del eje
+set(gca,'XTickLabel',[]);
 
-%legend([hA2,hA1],'Patógeno','Células T');
+legend([hA2,hA1],'Patógeno','Células T');
 

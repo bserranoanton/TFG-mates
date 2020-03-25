@@ -121,6 +121,7 @@ Buena parte de la notación usada en el Algoritmo \ref{algo:pseudocodigo} ya ha 
 En esta sección  veremos los resultados de algunas simulaciones y el por qué de estos resultados. Empezaremos por las dos situaciones básicas que se pueden dar en una infección: que logremos vencer al atacante o que, por el contrario, seamos vencidos, y acabaremos mostrando el resultado de diversas simulaciones cuando la afinidad por el \textit{patógeno} de las células T va variando.
 
 \subsection{Intolerancia al patógeno}
+\label{sim:intoler}
 
 La primera de nuestras simulaciones puede verse en la Figura \ref{fig:intolerance}, esta muestra el caso correspondiente a la elección de parámetros que se recoge en la Tabla \ref{tabla:param}. Estamos ante un caso de intolerancia al patógeno, puesto que las células T son capaces de eliminarlo por completo. Veámoslo con más detalle: el patógeno, representado con un línea roja, crece rápidamente, debido a la elección de una tasa de crecimiento, $\alpha$, elevada. Una vez que las células T son conscientes de la rápida proliferación de un agente no deseado, su número comienza a crecer. Sin embargo, como ya habíamos comentado anteriormente, esto se produce con cierto retraso tras la aparición del patógeno. Lo que estamos describiendo es la conocida \textit{expansión clonal}. Este crecimiento de células T provoca que el término que acompaña a $\beta$ en la Ecuación \ref{sist_pat_T} comience a ser más grande que el acompañado por $\alpha$ en esta misma ecuación, provocando así que la derivada de $y$ se haga negativa y, por tanto, el número de moléculas del patógeno comience a decrecer. Debemos mencionar que el número de células T necesarias para eliminar el patógeno viene regulado por el parámetro $\beta$, si este fuera más grande, es decir, las células T fueran más dañinas con el patógeno, veríamos una curva azul con un máximo mas pequeño que el de la Figura \ref{fig:intolerance}. (EN REALIDAD EN ESTA FIGURA LA GRÁFICA ESTÁ NORMALIZADA, SERÍA MEJOR PONER LA OTRA SIN NORMALIZAR?)Pero ¿qué pasaría si la fuerza de estas células T no fuera suficiente? El patógeno crecería de manera exponencial, a mucha más velocidad que las células T, de forma que estas no podrían llegar a acabar con él (un \textit{spoiler} de lo que viene en la sección siguiente).
 
@@ -166,6 +167,7 @@ Prestemos atención ahora al comportamiento de las células T de memoria: por la
 \end{figure}
 
 \subsection{Tolerancia al patógeno}
+\label{sim:toler}
 
 En el caso anterior hemos visto una simulación de intolerancia al patógeno. Esto es, las células inmunes consiguen derrotarlo. Sin embargo, esto no es siempre así. Existen virus como PONER EJEMPLO SI SE SABE que han desarrollado una estrategia para intentar sobrevivir lo máximo posible dentro de nuestro cuerpo, lo que hacen es crecer a un ritmo muy lento, de esta manera \textit{sigilosa} engañan a las células T, haciéndolas creer que ha sido eliminado y provocando que estas células inmunes se suiciden. La Figura \ref{fig:tolerance} ilustra esta situación.
 
