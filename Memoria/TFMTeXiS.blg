@@ -21,7 +21,5 @@ A level-1 auxiliary file: Cascaras/fin.aux
 Database file #1: biblio.bib
 Warning--empty journal in mathsModInmu
 Warning--missing publisher in darwin1887life
-Warning--empty journal in RoleOfM
-Warning--empty year in RoleOfM; set to ????
 Warning--empty journal in celulasNK
-(There were 5 warnings)
+(There were 3 warnings)

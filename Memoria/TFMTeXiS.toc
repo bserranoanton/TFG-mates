@@ -10,37 +10,37 @@
 \contentsline {section}{\numberline {2.1}Cuestiones b\IeC {\'a}sicas de inmunolog\IeC {\'\i }a}{5}{section.14}
 \contentsline {subsection}{\numberline {2.1.1}El sistema inmune innato}{5}{subsection.15}
 \contentsline {subsection}{\numberline {2.1.2}El sistema inmune adaptativo}{6}{subsection.17}
-\contentsline {subsubsection}{\numberline {2.1.2.1}Las c\IeC {\'e}lulas T}{7}{subsubsection.21}
-\contentsline {section}{\numberline {2.2}Cooperaci\IeC {\'o}n entre dos ciencias: Matem\IeC {\'a}ticas y Biolog\IeC {\'\i }a}{9}{section.22}
-\contentsline {subsection}{\numberline {2.2.1}Modelos matem\IeC {\'a}ticos \textit {versus} inmunolog\IeC {\'\i }a experimental}{10}{subsection.28}
-\contentsline {subsubsection}{\numberline {2.2.1.1}Din\IeC {\'a}mica de las c\IeC {\'e}lulas T. Decisi\IeC {\'o}n entre divisi\IeC {\'o}n o ap\IeC {\'o}ptosis}{11}{subsubsection.32}
-\contentsline {chapter}{\numberline {3}Algoritmo de decisi\IeC {\'o}n de las c\IeC {\'e}lulas T durante la respuesta inmune}{13}{chapter.33}
-\contentsline {section}{\numberline {3.1}Hip\IeC {\'o}tesis biol\IeC {\'o}gicas}{14}{section.34}
-\contentsline {subsection}{\numberline {3.1.1}La competici\IeC {\'o}n entre dos mol\IeC {\'e}culas inhibidoras determina la decisi\IeC {\'o}n y la duraci\IeC {\'o}n de la vida de una c\IeC {\'e}lula T}{14}{subsection.35}
-\contentsline {subsection}{\numberline {3.1.2}Los receptores de membrana regulan las din\IeC {\'a}micas de Rb y Bcl-2}{15}{subsection.39}
-\contentsline {subsection}{\numberline {3.1.3}Las c\IeC {\'e}lulas T na\IeC {\"\i }ve se dividen de manera asim\IeC {\'e}trica despu\IeC {\'e}s de su activaci\IeC {\'o}n.}{15}{subsection.40}
-\contentsline {section}{\numberline {3.2}Modelo matem\IeC {\'a}tico}{15}{section.41}
-\contentsline {subsubsection}{\numberline {3.2.0.1}Aspectos t\IeC {\'e}cnicos del modelo}{17}{subsubsection.44}
-\contentsline {section}{\numberline {3.3}Din\IeC {\'a}mica del pat\IeC {\'o}geno durante la respuesta inmune}{17}{section.45}
-\contentsline {chapter}{\numberline {4}Simulaciones}{19}{chapter.50}
-\contentsline {section}{\numberline {4.1}Modelo simplificado}{19}{section.51}
-\contentsline {section}{\numberline {4.2}Pseudoc\IeC {\'o}digo}{20}{section.54}
-\contentsline {section}{\numberline {4.3}Resultados y an\IeC {\'a}lisis}{22}{section.64}
-\contentsline {subsection}{\numberline {4.3.1}Intolerancia al pat\IeC {\'o}geno}{22}{subsection.65}
-\contentsline {subsection}{\numberline {4.3.2}Tolerancia al pat\IeC {\'o}geno}{23}{subsection.68}
-\contentsline {subsection}{\numberline {4.3.3}Simulaciones con distintas poblaciones de c\IeC {\'e}lulas T}{24}{subsection.70}
-\contentsline {chapter}{\numberline {5}Modelo Macrosc\IeC {\'o}pico}{29}{chapter.74}
-\contentsline {section}{\numberline {5.1}Tolerancia y tasa de crecimiento}{29}{section.75}
-\contentsline {section}{\numberline {5.2}Inercia y elasticidad en las c\IeC {\'e}lulas T}{30}{section.76}
-\contentsline {section}{\numberline {5.3}Simulaciones del modelo macrosc\IeC {\'o}pico}{31}{section.79}
-\contentsline {subsection}{\numberline {5.3.1}Intolerancia al pat\IeC {\'o}geno}{31}{subsection.81}
-\contentsline {subsection}{\numberline {5.3.2}Tolerancia al pat\IeC {\'o}geno}{32}{subsection.82}
-\contentsline {subsection}{\numberline {5.3.3}Regiones de tolerancia e intolerancia}{32}{subsection.84}
-\contentsline {chapter}{\numberline {6}Conclusiones y Trabajo Futuro}{35}{chapter.86}
-\contentsline {chapter}{\numberline {7}Introduction}{37}{chapter.87}
+\contentsline {subsubsection}{\numberline {2.1.2.1}Las c\IeC {\'e}lulas T}{8}{subsubsection.21}
+\contentsline {section}{\numberline {2.2}Cooperaci\IeC {\'o}n entre dos ciencias: Matem\IeC {\'a}ticas y Biolog\IeC {\'\i }a}{9}{section.25}
+\contentsline {subsection}{\numberline {2.2.1}Modelos matem\IeC {\'a}ticos \textit {versus} inmunolog\IeC {\'\i }a experimental}{11}{subsection.31}
+\contentsline {subsubsection}{\numberline {2.2.1.1}Din\IeC {\'a}mica de las c\IeC {\'e}lulas T. Decisi\IeC {\'o}n entre divisi\IeC {\'o}n o apoptosis}{11}{subsubsection.35}
+\contentsline {chapter}{\numberline {3}Algoritmo de decisi\IeC {\'o}n de las c\IeC {\'e}lulas T durante la respuesta inmune}{13}{chapter.36}
+\contentsline {section}{\numberline {3.1}Hip\IeC {\'o}tesis biol\IeC {\'o}gicas}{14}{section.37}
+\contentsline {subsection}{\numberline {3.1.1}La competici\IeC {\'o}n entre dos mol\IeC {\'e}culas inhibidoras determina la decisi\IeC {\'o}n y la duraci\IeC {\'o}n de la vida de una c\IeC {\'e}lula T}{14}{subsection.38}
+\contentsline {subsection}{\numberline {3.1.2}Los receptores de membrana regulan las din\IeC {\'a}micas de Rb y Bcl-2}{15}{subsection.42}
+\contentsline {subsection}{\numberline {3.1.3}Las c\IeC {\'e}lulas T na\IeC {\"\i }ve se dividen de manera asim\IeC {\'e}trica despu\IeC {\'e}s de su activaci\IeC {\'o}n.}{15}{subsection.43}
+\contentsline {section}{\numberline {3.2}Modelo matem\IeC {\'a}tico}{15}{section.44}
+\contentsline {subsubsection}{\numberline {3.2.0.1}Aspectos t\IeC {\'e}cnicos del modelo}{17}{subsubsection.47}
+\contentsline {section}{\numberline {3.3}Din\IeC {\'a}mica del pat\IeC {\'o}geno durante la respuesta inmune}{17}{section.48}
+\contentsline {chapter}{\numberline {4}Simulaciones}{19}{chapter.53}
+\contentsline {section}{\numberline {4.1}Modelo simplificado}{19}{section.54}
+\contentsline {section}{\numberline {4.2}Pseudoc\IeC {\'o}digo}{20}{section.57}
+\contentsline {section}{\numberline {4.3}Resultados y an\IeC {\'a}lisis}{22}{section.67}
+\contentsline {subsection}{\numberline {4.3.1}Intolerancia al pat\IeC {\'o}geno}{22}{subsection.68}
+\contentsline {subsection}{\numberline {4.3.2}Tolerancia al pat\IeC {\'o}geno}{23}{subsection.71}
+\contentsline {subsection}{\numberline {4.3.3}Simulaciones con distintas poblaciones de c\IeC {\'e}lulas T}{24}{subsection.73}
+\contentsline {chapter}{\numberline {5}Modelo Macrosc\IeC {\'o}pico}{29}{chapter.77}
+\contentsline {section}{\numberline {5.1}Tolerancia y tasa de crecimiento}{29}{section.78}
+\contentsline {section}{\numberline {5.2}Inercia y elasticidad en las c\IeC {\'e}lulas T}{30}{section.79}
+\contentsline {section}{\numberline {5.3}Simulaciones del modelo macrosc\IeC {\'o}pico}{31}{section.82}
+\contentsline {subsection}{\numberline {5.3.1}Intolerancia al pat\IeC {\'o}geno}{31}{subsection.84}
+\contentsline {subsection}{\numberline {5.3.2}Tolerancia al pat\IeC {\'o}geno}{32}{subsection.85}
+\contentsline {subsection}{\numberline {5.3.3}Regiones de tolerancia e intolerancia}{32}{subsection.87}
+\contentsline {chapter}{\numberline {6}Conclusiones y Trabajo Futuro}{35}{chapter.89}
+\contentsline {chapter}{\numberline {7}Introduction}{37}{chapter.90}
 \select@language {english}
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{39}{chapter.88}
-\contentsline {chapter}{Bibliograf\'{\i }a}{41}{chapter*.89}
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{39}{chapter.91}
+\contentsline {chapter}{Bibliograf\'{\i }a}{41}{chapter*.92}
 \select@language {spanish}
-\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{43}{appendix.90}
-\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{49}{appendix.395}
+\contentsline {chapter}{\numberline {A}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice A}{43}{appendix.93}
+\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{49}{appendix.398}
