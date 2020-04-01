@@ -10,7 +10,7 @@ Con ayuda de un pseudocódigo veremos algunos detalles sobre de la implementaci�
 \section{Modelo simplificado}
 
 Para las simulaciones hemos optado por un sistema simplificado al propuesto en la Sección \ref{sec:modelo}, de tal manera que el número de parámetros sea suficiente para no perder la esencia del modelo pero no muy elevado para no distraer al lector con notación engorrosa. Siguiendo con la notación de \ref{sec:modelo}, asumiremos $k=2$. Es decir, hay dos tipos de receptores: \textit{p} (de proliferación) y \textit{d} (de muerte) que controlan
-la evolución de los inhibidores de ciclo (Rb) y apóptosis (Bcl-2), respectivamente.
+la evolución de los inhibidores de ciclo (Rb) y apoptosis (Bcl-2), respectivamente.
 
 Para las células T efectoras que no forman parte de las células T de memoria (veremos ecuaciones específicas para esta población) asumimos que los receptores de proliferación (\textit{p}) se expresan a partir de las señales que reciben gracias a su TCR y que, simultáneamente, autorregulan su expresión induciendo la producción de receptores tipo muerte (\textit{d}). Luego, las ecuaciones \ref{sist_inhib} y \ref{sist_recep} pueden escribirse como:
 
@@ -112,7 +112,7 @@ Veamos, paso por paso, cómo se simula el modelo:
 	\end{algorithmic}
 \end{algorithm}
 
-En este pseudocódigo se ha detallado cuáles son las ecuaciones involucradas en cada paso. A continuación exponemos algunas particularidades de la simulación: hemos omitido que cuando las condiciones son $a > 0$ y $c > 0$, en el caso de las células T efectoras y $c > 0$, en el caso de las células T de memoria, la célula permanece en la fase de decisión pero actualiza sus condiciones para la siguiente iteración según los resultados que ha obtenido en la iteración actual. También hay que tener en cuenta que la división celular y el proceso de apóptosis no se llevan a cabo de manera inmediata, tienen un tiempo $t_{cycle}$ y $t_{apo}$, respectivamente, por lo que el número total de células en la población debe actualizarse cuando toque y no antes de que ninguna de estas dos fases haya finalizado. Otro aspecto que hemos supuesto es que el parámetro $\gamma$ que aparecía en la Ecuación \ref{ec:rhotau} es $\gamma = 1$. Es decir, suponemos que todo encuentro del TCR de la célula T con el antígeno va a desencadenar una activación. El parámetro $\rho$ debe ser calculado de tal manera que todas las células T tengan las mismas posibilidades a la hora de \textit{obtener su parte de patógeno}, en la implementación real se usó un vector de números aleatorios entre 0 y 1 normalizado por el número total de células T.
+En este pseudocódigo se ha detallado cuáles son las ecuaciones involucradas en cada paso. A continuación exponemos algunas particularidades de la simulación: hemos omitido que cuando las condiciones son $a > 0$ y $c > 0$, en el caso de las células T efectoras y $c > 0$, en el caso de las células T de memoria, la célula permanece en la fase de decisión pero actualiza sus condiciones para la siguiente iteración según los resultados que ha obtenido en la iteración actual. También hay que tener en cuenta que la división celular y el proceso de apoptosis no se llevan a cabo de manera inmediata, tienen un tiempo $t_{cycle}$ y $t_{apo}$, respectivamente, por lo que el número total de células en la población debe actualizarse cuando toque y no antes de que ninguna de estas dos fases haya finalizado. Otro aspecto que hemos supuesto es que el parámetro $\gamma$ que aparecía en la Ecuación \ref{ec:rhotau} es $\gamma = 1$. Es decir, suponemos que todo encuentro del TCR de la célula T con el antígeno va a desencadenar una activación. El parámetro $\rho$ debe ser calculado de tal manera que todas las células T tengan las mismas posibilidades a la hora de \textit{obtener su parte de patógeno}, en la implementación real se usó un vector de números aleatorios entre 0 y 1 normalizado por el número total de células T.
 
 Buena parte de la notación usada en el Algoritmo \ref{algo:pseudocodigo} ya ha sido introducida a lo largo de este trabajo, pero volvemos a insistir en que $Y$ representa el número de moléculas del patógeno, mientras que $N$ la cantidad total de células T, incluyendo las efectoras y las de memoria. Sin embargo, en la implementación real, en la línea 4 del pseudocódigo, el $N$ utilizado es solamente el número total de células T efectoras, sin contar las de memoria \footnote{Esto se ha hecho así porque el proceso que siguen las célualas T de memoria es más complejo que lo que se recoge en el modelo. Estas células al cabo de un tiempo se desactivan y para que tengan un efecto sobre el patógeno deben volver a activarse. Para intentar hacer el modelo lo más sencillo posible se ha optado por hacer que las únicas células que combaten al patógeno sean las T efectoras.}.
 
@@ -131,7 +131,7 @@ La primera de nuestras simulaciones puede verse en la Figura \ref{fig:intoleranc
 		\begin{tabular}{>{\centering\arraybackslash}m{2cm} >{\arraybackslash}m{3cm} >{\arraybackslash}m{7cm} }%{|l|l|l|}
 			\hline
 			\multirow{9}{*}{} & $t_{cycle} = 0.15$               & Duración de la fase de ciclo.                             \\ \cline{2-3}
-			& $t_{apo} = 0,2$                  & Duración de la fase de apóptosis.                         \\ \cline{2-3}
+			& $t_{apo} = 0,2$                  & Duración de la fase de apoptosis.                         \\ \cline{2-3}
 			& $t_{next} = 0,3$                 & Duración del paso en la simulación.                       \\ \cline{2-3}
 			& $a_0 = 0,3$                      & Cantidad inicial de Bcl-2 para células T efectoras.       \\ \cline{2-3}
 			Variables         & $c_0 = 0,08$                     & Cantidad inicial de Rb para células T efectoras.          \\ \cline{2-3}
@@ -162,7 +162,7 @@ Prestemos atención ahora al comportamiento de las células T de memoria: por la
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/intolerance}
-	\caption{Simulación: caso de intolerancia al patógeno.}
+	\caption{Simulación: caso de intolerancia al patógeno. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}.}
 	\label{fig:intolerance}
 \end{figure}
 
@@ -178,7 +178,7 @@ En cuanto a las células T de memoria, vemos como crecen con la presencia del pa
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/tolerance}
-	\caption{Simulación: caso de tolerancia al patógeno.}
+	\caption{Simulación: caso de tolerancia al patógeno. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.}
 	\label{fig:tolerance}
 \end{figure}
 
@@ -191,7 +191,7 @@ Comencemos mirando la Figura \ref{fig:tresClones}, para esta simulación hemos t
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/tresClones}
-	\caption{Simulación:Distintas poblaciones de células T con distintas afinidades al patógeno.}
+	\caption{Simulación:Distintas poblaciones de células T con distintas afinidades al patógeno. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_0} = 2*10^{-4}$, $\lambda_{Tp}^{clon_1} = 6*10^{-5}$, $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
 	\label{fig:tresClones}
 \end{figure}
 
@@ -202,7 +202,7 @@ Pero... ¿qué pasaría si esta \textit{población inmunodominante} desaparecier
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/dosClones}
-	\caption{Simulación:Distintas poblaciones de células T con distintas afinidades al patógeno. Clones subdominantes.}
+	\caption{Simulación:Distintas poblaciones de células T con distintas afinidades al patógeno. Clones subdominantes. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_1} = 6*10^{-5}$, $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
 	\label{fig:dosClones}
 \end{figure}
 
@@ -213,7 +213,7 @@ Estas simulaciones que hemos visto ponen de manifiesto la importancia de las cé
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/unClon}
-	\caption{Simulación:Distintas poblaciones de células T con distintas afinidades al patógeno. Clon subdominante.}
+	\caption{Simulación:Distintas poblaciones de células T con distintas afinidades al patógeno. Clon subdominante. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
 	\label{fig:unClon}
 \end{figure}
 

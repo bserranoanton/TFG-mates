@@ -4,7 +4,7 @@
 
 El modelo matemático que se presenta a continuación intenta dar respuesta al proceso biológico que vimos en la Sección \ref{cuestionAmodelizar}. A partir de unas hipótesis (procesos bioquímicos conocidos) se desarrollan una serie de ecuaciones diferenciales muy sencillas que, de hecho, pueden resolverse de manera explícita. Esta es una de las principales características del modelo, se ha intentado que este fuera lo más simple posible, reduciendo el número de parámetros al mínimo, haciendo que las simulaciones del mismo sean asequibles y más fáciles de entender. 
 
-Estos sistemas de ecuaciones modelizan tanto la dinámica de las células T efectoras, sin olvidar las de memoria, como la dinámica del \textit{patógeno}. Recordemos que no es el único modelo que se ha propuesto para este mismo proceso biológico, en el caso que nos ocupa el modelo rompe con la idea fija que presentaban algunos otros. Esto es, la idea de que las células se dividían un número fijo de veces después de ser activadas o la idea de la competición entre relojes estocásticos de vida o suicidio celular (ver \ref{cuestionAmodelizar}). En su lugar, asumiremos en nuestro modelo que estas decisiones (división o apóptosis) vienen determinadas por la competición de dos moléculas inhibidoras: Retinoblastoma (Rb), que previene la expresión de genes necesarios para que la célula pueda continuar el ciclo celular y dividirse, y linfoma de célula B-2 (Bcl-2), que bloqueará la muerte celular. También tendremos en cuenta que la las células T se comunican con el exterior gracias a sus TCR (ver \ref{Tcell}) y, por tanto, sus decisiones se ven influenciadas por la cantidad de receptores que tengan, es decir, cuantos más receptores, más estímulos serán capaces de percibir. 
+Estos sistemas de ecuaciones modelizan tanto la dinámica de las células T efectoras, sin olvidar las de memoria, como la dinámica del \textit{patógeno}. Recordemos que no es el único modelo que se ha propuesto para este mismo proceso biológico, en el caso que nos ocupa el modelo rompe con la idea fija que presentaban algunos otros. Esto es, la idea de que las células se dividían un número fijo de veces después de ser activadas o la idea de la competición entre relojes estocásticos de vida o suicidio celular (ver \ref{cuestionAmodelizar}). En su lugar, asumiremos en nuestro modelo que estas decisiones (división o apoptosis) vienen determinadas por la competición de dos moléculas inhibidoras: Retinoblastoma (Rb), que previene la expresión de genes necesarios para que la célula pueda continuar el ciclo celular y dividirse, y linfoma de célula B-2 (Bcl-2), que bloqueará la muerte celular. También tendremos en cuenta que la las células T se comunican con el exterior gracias a sus TCR (ver \ref{Tcell}) y, por tanto, sus decisiones se ven influenciadas por la cantidad de receptores que tengan, es decir, cuantos más receptores, más estímulos serán capaces de percibir. 
 
 La \textit{expansión} y \textit{contracción clonal} pueden ser vistas también desde una perspectiva global como la manifestación de muchas decisiones individuales, recordemos que las células T basan sus decisiones únicamente en la información que recogen de su entorno, y, por ello, presentamos a continuación un modelo microscópico. Es decir, se modela una a una la decisión de cada célula. En el Capítulo \ref{cap:modeloMacroscopico} se propone un modelo macroscópico, que consistirá en un sistema de ecuaciones que modeliza las dinámicas viendo la población como un único sistema, es decir, en conjunto, no como decisiones individuales. Analizaremos este modelo con más profundidad y veremos que ambos modelos, macro y micro, dan resultados muy similares. 
 
@@ -17,7 +17,7 @@ Bien es cierto que estas hipótesis no son los únicos hechos que se conocen, pe
 \subsection{La competición entre dos moléculas inhibidoras determina la decisión y la duración de la vida de una célula T}
 \label{subsec:hip_1}
 	 
-La división celular, así como, el programa de apóptosis están bloqueados al comienzo de la formación de las células T. Como ya avanzábamos en la introducción (ver Sección \ref{cap:descripcionTrabajo}), la acción de dos moléculas inhibidoras, Retinoblastoma (Rb) y linfoma de célula B-2 (Bcl-2), va a tener un papel clave no solo en la decisión entre apóptosis o división de las células T, sino también en el momento en el que deben hacerlo. Por una parte, Rb frena el inicio del ciclo celular. Para desactivar esta función y que la célula pueda dividirse, es necesario que un número suficiente de estas moléculas sea fosforilado \footnote{Fosforilación: adición de un grupo fosfato a cualquier otra molécula.}.  Por otra parte, las proteínas Bcl-2 bloquean el camino hacia la muerte celular durante infecciones agudas, mediante la contención de la acción de otras proteínas como \textit{Bax} o \textit{Bim}.
+La división celular, así como, el programa de apoptosis están bloqueados al comienzo de la formación de las células T. Como ya avanzábamos en la introducción (ver Sección \ref{cap:descripcionTrabajo}), la acción de dos moléculas inhibidoras, Retinoblastoma (Rb) y linfoma de célula B-2 (Bcl-2), va a tener un papel clave no solo en la decisión entre apoptosis o división de las células T, sino también en el momento en el que deben hacerlo. Por una parte, Rb frena el inicio del ciclo celular. Para desactivar esta función y que la célula pueda dividirse, es necesario que un número suficiente de estas moléculas sea fosforilado \footnote{Fosforilación: adición de un grupo fosfato a cualquier otra molécula.}.  Por otra parte, las proteínas Bcl-2 bloquean el camino hacia la muerte celular durante infecciones agudas, mediante la contención de la acción de otras proteínas como \textit{Bax} o \textit{Bim}.
 
 
 \begin{figure}[t]
@@ -27,7 +27,7 @@ La división celular, así como, el programa de apóptosis están bloqueados al 
 	\label{fig:ciclo celular}
 \end{figure}
 
-Para nuestro modelo estableceremos que la célula pasa el \textit{punto de restricción} \footnote{El punto de restricción es el punto entre las fases $G_{1}$ y $S$, donde pasamos del crecimiento celular a la división (o apóptosis).} (ver Figura \ref{fig:ciclo celular}) si la cantidad de Bcl-2 o de Rb cae por debajo de cierto límite, dando lugar al inicio de la muerte celular o división, respectivamente. Es decir, cuando el número
+Para nuestro modelo estableceremos que la célula pasa el \textit{punto de restricción} \footnote{El punto de restricción es el punto entre las fases $G_{1}$ y $S$, donde pasamos del crecimiento celular a la división (o apoptosis).} (ver Figura \ref{fig:ciclo celular}) si la cantidad de Bcl-2 o de Rb cae por debajo de cierto límite, dando lugar al inicio de la muerte celular o división, respectivamente. Es decir, cuando el número
 de moléculas de Rb activas disminuye hasta un valor crítico, la célula abandona $G_1$ para iniciar la división celular y, cuando la cantidad de moléculas de Bcl-2 alcanza un umbral, la célula abandona $G_1$ para poner en marcha los mecanismos que llevan a la muerte celular. La variación en las dinámicas de Rb y Bcl-2 da una explicación de la variabilidad observada en la duración de la fase $G_{1}$ de las células y, consecuentemente, en la duración de sus vidas.
 
 \subsection{Los receptores de membrana regulan las dinámicas de Rb y Bcl-2}
@@ -52,7 +52,7 @@ Antes de expresar en términos matemáticos las condiciones del modelo, damos ca
 \begin{itemize}
 	\item Denotaremos por \textit{$c(t)$} y \textit{$a(t)$} la cantidad de Rb y Bcl-2 activa en tiempo $t$, respectivamente.
 
-	\item Establecemos, sin pérdida de generalidad, que los límites que determinan la decisión entre división o apóptosis (ver hipótesis \ref{subsec:hip_1}) estarán en $c(t)=0$ y $a(t)=0$, respectivamente. De acuerdo a esta hipótesis definimos: 
+	\item Establecemos, sin pérdida de generalidad, que los límites que determinan la decisión entre división o apoptosis (ver hipótesis \ref{subsec:hip_1}) estarán en $c(t)=0$ y $a(t)=0$, respectivamente. De acuerdo a esta hipótesis definimos: 
 	
 	\begin{itemize}
 		\item \textit{Decisión}: Fase que parte desde el nacimiento de la célula hasta que una de las células inhibidoras alcanza el límite establecido.
@@ -63,7 +63,7 @@ Antes de expresar en términos matemáticos las condiciones del modelo, damos ca
 		
 		\item \textit{División}: Estado final después de que la célula haya entrado en la fase de ciclo.
 		
-		\item \textit{Muerte}: Estado final después de haberse completado la fase de apóptosis.
+		\item \textit{Muerte}: Estado final después de haberse completado la fase de apoptosis.
 	\end{itemize}
 
 	\item \textit{$R_{i}$} será el receptor de la i-ésima citoquina y \textit{$r_{i}(t)$} será la cantidad de ese receptor en tiempo $t$. 
@@ -110,11 +110,11 @@ En esta breve sección damos cabida a los aspectos más técnicos, entre los que
 	
 	\item Cualquier receptor con valor negarivo $r_i(t)\leq0$ es \textit{reseteado} a 0 sin cambiar la fase de decisión en la que está la célula.
 	
-	\item Por su parte, las condiciones $a(t)=0$, $c(t)=0$ desencadenan el inicio de la fase de apóptosis y ciclo, respectivamente. Estas fases son excluyentes y no se pueden revertir mediante estimulación por \textit{citoquinas}. Además tienen longitud constante que denotaremos por $t_{apo}$ y $t_{cycle}$.
+	\item Por su parte, las condiciones $a(t)=0$, $c(t)=0$ desencadenan el inicio de la fase de apoptosis y ciclo, respectivamente. Estas fases son excluyentes y no se pueden revertir mediante estimulación por \textit{citoquinas}. Además tienen longitud constante que denotaremos por $t_{apo}$ y $t_{cycle}$.
 	
 	\item Si la célula progresa en la fase de ciclo los valores de $a(t)$ y $c(t)$ deben ser reiniciados para que las células hijas puedan comenzar la fase de decisión otra vez. 
 	
-	\item Una vez que la célula termina la fase de apóptosis es retirada de la población.
+	\item Una vez que la célula termina la fase de apoptosis es retirada de la población.
 	
 	\item Los parámetros $\lambda_{ji}$, $\mu_{ic}$, $\mu_{ia}$, $\mu_{Tc}$, $\mu_{Ta}$, $c(0)$ y $a(0)$ se consideran parámetros estructurales, es decir, se refieren a procesos biológicos que permanecen constantes durante la simulación. Mientras que los parámetros referentes a la composición de receptores de membrana para una célula concreta $r_{i0}$ dependen de la historia de encuentros con el antígeno que ha tenido su madre y diferirán entre las células hijas cuando esta se divida (veremos cómo en la sección siguiente).
 \end{itemize}
@@ -175,12 +175,12 @@ Ahora que ya hemos visto todos los conceptos matemáticos que subyacen en este m
 %	\item El algoritmo determina qué decisión, división o suicidio, toman las células T.
 %	\item Las decisiones se toman de manera individual y se basan en la información que reciben del entorno a través de su TCR.
 %	\item Lo que decide qué decisión se toma y cuándo es la cantidad de ciertas moléculas inhibidoras.
-%	\item Ciclo y apóptosis son fases mutuamente exclusivas e irreversibles.
+%	\item Ciclo y apoptosis son fases mutuamente exclusivas e irreversibles.
 %	\item Cuando una célula T se divide sus hijas son del mismo tipo y comparten sus receptores de membrana.
 %	\item Cuando una célula muere se elimina de la población.
 %	\item El crecimiento del antígeno depende del número de células T y decrece cuando las células T comienzan a crecer.
 %	\item Cuando las células T detectan al patógeno su población crece rápidamente y decrece también rápidamente cuando el patógeno ha sido vencido, aunque con cierto desfase.
-%	\item En la última etapa de la respuesta inmune coexisten dos tipos de linfocitos T: los linfocitos sensibles a la apóptosis, que mueren durante la \textit{contracción clonal} (efectores), los linfocitos resistentes a la apóptosis, que	sobreviven en forma de linfocitos de memoria.
+%	\item En la última etapa de la respuesta inmune coexisten dos tipos de linfocitos T: los linfocitos sensibles a la apoptosis, que mueren durante la \textit{contracción clonal} (efectores), los linfocitos resistentes a la apoptosis, que	sobreviven en forma de linfocitos de memoria.
 %\end{enumerate} 
 
 

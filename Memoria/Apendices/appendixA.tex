@@ -1,7 +1,21 @@
-\chapter{Título del Apéndice A}
+\chapter{Código de las simulaciones}
 \label{Appendix:A}
 
-Contenido del apéndice
+En este apéndice se expone el código utilizado para las simulaciones del capítulo \ref{cap:simulaciones}. 
+
+El código principal, sobre el que se basan el resto de simulaciones se muestra a continuación. Este código corresponde a la Figura \ref{fig:intolerance} donde puede verse el caso de intolerancia al \textit{patógeno}. Para la 
+simulación del caso de tolerancia, que aparece en la Figura \ref{fig:tolerance} el código es exactamente el mismo aunque varía el valor de los parámetros, como ya se expuso en la correspondiente figura. 
+
+\lstinputlisting[language=Matlab]{Codigo/intolerance_sys_4_1.m}
 
 
-\lstinputlisting[language=Matlab]{Codigo/figura8_v6.m}
+Código del modelo macroscópico:
+\lstinputlisting[language=Matlab]{Codigo/macroscopico/macro_intolerance.m}
+
+
+Código de la Figura \ref{fig:macro_toler_intoler} 
+
+\lstinputlisting[language=Matlab]{Codigo/macroscopico/script_nond_alphaBeta.m}
+
+
+\lstinputlisting[language=Matlab]{Codigo/macroscopico/macro_nond_toler_into.m}

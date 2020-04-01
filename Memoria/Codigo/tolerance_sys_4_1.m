@@ -140,7 +140,7 @@ while t < T_final
                 a0_sys = t_cell_matrix(nCell,2);
                 
                 %Explicit solutions for system 4.1
-                [c,a,p,d] = sys9_sol(t,lambda_taup,lambda_pp, r_tau, p0_sys, lambda_pd, d0_sys, mu_pc, c0_sys, mu_da, a0_sys);
+                [c,a,p,d] = sys_4_1_sol(t,lambda_taup,lambda_pp, r_tau, p0_sys, lambda_pd, d0_sys, mu_pc, c0_sys, mu_da, a0_sys);
                 
                 %Desision state
                 if( a > 0 && c > 0)
@@ -212,7 +212,7 @@ while t < T_final
                 p0_solsys =t_cell_matrix(nCell,4);
                 
                 %Explicit solutions for system 4.2
-                [c,p] = sys15_sol(t,mu_pc_mem, p0_solsys, lambda_taup_mem, lambda_pp_mem, r_tau, c0_solsys);
+                [c,p] = sys_4_2_sol(t,mu_pc_mem, p0_solsys, lambda_taup_mem, lambda_pp_mem, r_tau, c0_solsys);
                 
                 %Division phase
                 if(c <= 0)

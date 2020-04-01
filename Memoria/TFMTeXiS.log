@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  30 MAR 2020 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  31 MAR 2020 20:37
 entering extended mode
 **./TFMTeXiS.tex
 (TFMTeXiS.tex
@@ -1891,7 +1891,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 21.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 21.
-[5] <1_macrofago.jpg, id=381, 334.24875pt x 310.91156pt>
+[5] <1_macrofago.jpg, id=394, 334.24875pt x 310.91156pt>
 File: 1_macrofago.jpg Graphic file (type jpg)
  <use 1_macrofago.jpg>
 Package pdftex.def Info: 1_macrofago.jpg used on input line 27.
@@ -1936,7 +1936,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 40.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 40.
- [6 <./1_macrofago.jpg>] <2_macrofago_anticuerpo.jpg, id=392, 320.69812pt x 157
+ [6 <./1_macrofago.jpg>] <2_macrofago_anticuerpo.jpg, id=405, 320.69812pt x 157
 .33781pt>
 File: 2_macrofago_anticuerpo.jpg Graphic file (type jpg)
 
@@ -1961,7 +1961,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 60.
  [7 <./2_macrofago_anticuerpo.jpg>]
-<Imagenes/EstadoDeLaCuestion/Antigen_presentation.png, id=417, 1149.29375pt x 1
+<Imagenes/EstadoDeLaCuestion/Antigen_presentation.png, id=430, 1149.29375pt x 1
 027.84pt>
 File: Imagenes/EstadoDeLaCuestion/Antigen_presentation.png Graphic file (type p
 ng)
@@ -2131,7 +2131,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 17.
 
-<Cell_Cycle.jpg, id=499, 320.8788pt x 280.8894pt>
+<Cell_Cycle.jpg, id=511, 320.8788pt x 280.8894pt>
 File: Cell_Cycle.jpg Graphic file (type jpg)
  <use Cell_Cycle.jpg>
 Package pdftex.def Info: Cell_Cycle.jpg used on input line 25.
@@ -2387,7 +2387,7 @@ Package babel Info: Redefining spanish shorthand "?
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Imagenes/Simulaciones/intolerance.png, id=590, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/intolerance.png, id=601, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/intolerance.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/intolerance.png>
@@ -2438,7 +2438,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 175.
  [23]
-<Imagenes/Simulaciones/tolerance.png, id=601, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/tolerance.png, id=614, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/tolerance.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/tolerance.png>
@@ -2458,7 +2458,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 185.
 
-<Imagenes/Simulaciones/tresClones.png, id=604, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/tresClones.png, id=619, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/tresClones.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/tresClones.png>
@@ -2466,29 +2466,29 @@ Package pdftex.def Info: Imagenes/Simulaciones/tresClones.png used on input lin
 e 193.
 (pdftex.def)             Requested size: 298.75264pt x 224.07051pt.
 
-<Imagenes/Simulaciones/dosClones.png, id=606, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/dosClones.png, id=623, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/dosClones.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/dosClones.png>
 Package pdftex.def Info: Imagenes/Simulaciones/dosClones.png used on input line
  204.
 (pdftex.def)             Requested size: 298.75264pt x 224.07051pt.
-LaTeX Info: Redefining \. on input line 210.
-LaTeX Info: Redefining \% on input line 210.
+LaTeX Info: Redefining \. on input line 207.
+LaTeX Info: Redefining \% on input line 207.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 207.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 207.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 207.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 207.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 207.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 207.
  [24 <./Imagenes/Simulaciones/intolerance.png (PNG copy)>]
-<Imagenes/Simulaciones/unClon.png, id=613, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/unClon.png, id=632, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/unClon.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/unClon.png>
@@ -2643,7 +2643,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 56.
 
-<Imagenes/Simulaciones/macro_intoler.png, id=657, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/macro_intoler.png, id=678, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/macro_intoler.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/macro_intoler.png>
@@ -2690,7 +2690,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 74.
 
-<Imagenes/Simulaciones/macro_toler.png, id=672, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/macro_toler.png, id=693, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/macro_toler.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/macro_toler.png>
@@ -2710,7 +2710,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 86.
 
-<Imagenes/Simulaciones/macro_toler_intoler.png, id=677, 479.54156pt x 304.13625
+<Imagenes/Simulaciones/macro_toler_intoler.png, id=698, 479.54156pt x 304.13625
 pt>
 File: Imagenes/Simulaciones/macro_toler_intoler.png Graphic file (type png)
  <use Imagenes/Simulaciones/macro_toler_intoler.png>
@@ -2894,91 +2894,125 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1.
-(Codigo/figura8_v6.m
+(Codigo/intolerance_sys_4_1.m
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 1.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 38.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 38.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 38.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 38.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 38.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 38.
 
-[43]
+Underfull \vbox (badness 2799) has occurred while \output is active []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 33.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 33.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 33.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 33.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 33.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 33.
+ [43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 94.
-LaTeX Info: Redefining \% on input line 94.
+LaTeX Info: Redefining \. on input line 89.
+LaTeX Info: Redefining \% on input line 89.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 89.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 89.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 89.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 89.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 89.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 94.
+(babel)             in language  on input line 89.
  [44]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 144.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 149.
+(babel)             in language  on input line 144.
  [45]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 205.
-LaTeX Info: Redefining \% on input line 205.
+LaTeX Info: Redefining \. on input line 200.
+LaTeX Info: Redefining \% on input line 200.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 205.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 205.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 205.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 205.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 205.
+(babel)             in language  on input line 200.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 205.
+(babel)             in language  on input line 200.
  [46]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 261.
- [47]))
+(babel)             in language  on input line 256.
+ [47])
+(Codigo/macroscopico/macro_intolerance.m
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 25.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 25.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 25.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 25.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 25.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 25.
+ [48])
+(Codigo/macroscopico/script_nond_alphaBeta.m
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 26.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 26.
+ [49])
+(Codigo/macroscopico/macro_nond_toler_into.m))
 LaTeX Info: Redefining \. on input line 173.
 LaTeX Info: Redefining \% on input line 173.
 Package babel Info: Redefining spanish shorthand <<
@@ -2993,8 +3027,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 173.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 173.
-
-[48]
+ [50]
 \openout2 = `Apendices/appendixB.aux'.
 
  (Apendices/appendixB.tex
@@ -3024,7 +3057,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 174.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 174.
- [49
+ [51
 
 
 
@@ -3041,7 +3074,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 179.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 179.
- [50
+ [52
 
 
 ]
@@ -3072,7 +3105,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 85.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 85.
- [51
+ [53
 
 ]
 Package babel Info: Redefining spanish shorthand <<
@@ -3087,7 +3120,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 88.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 88.
- [52])
+ [54])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 218.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 218.
  (TFMTeXiS.aux (Cascaras/cover.aux)
@@ -3110,14 +3143,14 @@ LaTeX Info: Redefining \% on input line 55.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 218.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 218.
 Package rerunfilecheck Info: File `TFMTeXiS.out' has not changed.
-(rerunfilecheck)             Checksum: 7E29F216A7302C6F392564CD7C68F314;3408.
+(rerunfilecheck)             Checksum: 8622AB83E41ED8A17E69C4E22ADB52FF;3410.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 218.
  ) 
 Here is how much of TeX's memory you used:
- 27175 strings out of 493323
- 447876 string characters out of 3139072
- 842976 words of memory out of 3000000
- 29512 multiletter control sequences out of 15000+200000
+ 27330 strings out of 493323
+ 450017 string characters out of 3139072
+ 858743 words of memory out of 3000000
+ 29546 multiletter control sequences out of 15000+200000
  560455 words of font info for 83 fonts, out of 3000000 for 9000
  1379 hyphenation exceptions out of 8191
  55i,13n,65p,2537b,2604s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3153,9 +3186,9 @@ gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files
 type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
 /helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.
 pfb>
-Output written on TFMTeXiS.pdf (70 pages, 1423148 bytes).
+Output written on TFMTeXiS.pdf (72 pages, 1465052 bytes).
 PDF statistics:
- 1983 PDF objects out of 2073 (max. 8388607)
- 485 named destinations out of 1000 (max. 500000)
+ 2156 PDF objects out of 2487 (max. 8388607)
+ 596 named destinations out of 1000 (max. 500000)
  418 words of extra memory for PDF output out of 10000 (max. 10000000)
 

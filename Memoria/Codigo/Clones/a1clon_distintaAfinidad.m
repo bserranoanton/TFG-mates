@@ -1,4 +1,5 @@
-%This code is desgined to simulate system 4.1. Tolerance case.
+%This code is desgined to simulate different populations of T cells. 
+%One clone.
 %By Belén Serrano Antón
 %Created 25/02/2020
 %Last Modified 31/03/2020
@@ -9,24 +10,24 @@ t_apo = 0.20;                   %Time lap between the deactivation of Bcl-2 and 
 t_next = 0.3;                   %Time step in this simulation
 
 %Parameters: pathogen
-alpha = 1;                     %Pathogen proliferation rate
-beta = 0.01;                     %Pathogen death rate
+alpha = 6;                      %Pathogen proliferation rate
+beta = 0.04;                    %Pathogen death rate
 
-%Parameters: effector T cells
-lambda_pd = 0.05;%0.04;               %Change rate in membrane receptor Rd, due to Rp signals
-lambda_taup = 6*10^(-5);        %Change rate in membrane receptor Rd, due to TCR signals
-lambda_pp = 0.5*10^(-4);%0.5*10^(-5);        %Change rate in membrane receptor Rp, due to Rp signals
-mu_pc = 2;%0.4                    %Change rate in inhibitor molecule Rb, due to receptor Rc
-mu_da = 3;                    %Change rate in inhibitor molecule Bcl-2, due to receptor Rc
+%Parameters: effector T cells (clon 2)
+lambda_pd = 0.05;               %Change rate in membrane receptor Rd, due to Rp signals
+lambda_taup = 10^(-5);          %Change rate in membrane receptor Rd, due to TCR signals
+lambda_pp = 0.5*10^(-4);        %Change rate in membrane receptor Rp, due to Rp signals
+mu_pc = 15;                     %Change rate in inhibitor molecule Rb, due to receptor Rc
+mu_da = 10;
 
 %Parameters: memory T cells
 lambda_pd_mem = 0;              %Change in membrane receptor Rd, due to Rp signals
 lambda_taup_mem = 10^(-5);      %Change rate in membrane receptor Rd, due to TCR signals
 lambda_pp_mem = 2*10^(-2);      %Change rate in membrane receptor Rp, due to Rp signals
-mu_pc_mem = 2;%0.3;                %Change rate in inhibitor molecule Rb, due to receptor Rc
+mu_pc_mem = 13;                 %Change rate in inhibitor molecule Rb, due to receptor Rc
 
 %Define the final time we will simulate to
-T_final = 17;
+T_final = 25;
 
 %Define the initial number of particles
 N_init = 25;                    %N will represent T cells                
@@ -106,11 +107,6 @@ while t < T_final
     nCell=1;
     ind_N = 1;
     
-    if(N_eff == 0)
-        lambda_taup_mem = 0;
-        mu_pc_mem = 0;
-    end
-    
     while nCell < rec_ind_tcell_matrix
         v_rand = rand(N,1)/N; %vector of N random numbers
        
@@ -140,7 +136,7 @@ while t < T_final
                 a0_sys = t_cell_matrix(nCell,2);
                 
                 %Explicit solutions for system 4.1
-                [c,a,p,d] = sys9_sol(t,lambda_taup,lambda_pp, r_tau, p0_sys, lambda_pd, d0_sys, mu_pc, c0_sys, mu_da, a0_sys);
+                [c,a,p,d] = sys_4_1_sol(t,lambda_taup,lambda_pp, r_tau, p0_sys, lambda_pd, d0_sys, mu_pc, c0_sys, mu_da, a0_sys);
                 
                 %Desision state
                 if( a > 0 && c > 0)
@@ -212,9 +208,9 @@ while t < T_final
                 p0_solsys =t_cell_matrix(nCell,4);
                 
                 %Explicit solutions for system 4.2
-                [c,p] = sys15_sol(t,mu_pc_mem, p0_solsys, lambda_taup_mem, lambda_pp_mem, r_tau, c0_solsys);
+                [c,p] = sys_4_2_sol(t,mu_pc_mem, p0_solsys, lambda_taup_mem, lambda_pp_mem, r_tau, c0_solsys);
                 
-                %Division phase
+                %division phase
                 if(c <= 0)
                     delta_P_child_1 = 0.4+(0.6-0.4)*rand();
                     delta_P_child_2 = 1 - delta_P_child_1;
@@ -271,23 +267,18 @@ while t < T_final
     rec_vector_Y(rec_ind) = Y;
 end
 
-%Plot results
+%Draw results
 f1=figure;
 
+
 figure(f1)
-[hA1]=plot(time_vec,rec_vector_N_eff,'b','LineWidth', 1);
-axis([0 T_final 0 400]);
+[hA1]=plot(time_vec,rec_vector_N_eff,'m','LineWidth', 1);
 
 hold on
 [hA2]=plot(time_vec,rec_vector_Y,'r','LineWidth', 1);
-axis([0 T_final 0 400]);
 
 hold on
 [hA3] = plot(time_vec,rec_vector_N_mem,'g','LineWidth', 1);
 
-set(gca,'YTickLabel',[]); 
-set(gca,'XTickLabel',[]);
-
-axis([0 T_final 0 400]);
-legend([hA1,hA3,hA2],'Células T efectoras','Células T de memoria','Patógeno');
+legend([hA1,hA3,hA2],'Células T efectoras clon 2','Células T de memoria','Patógeno');
 xlabel('Tiempo');  ylabel('Número de células');

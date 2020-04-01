@@ -1,32 +1,47 @@
-%This code is desgined to simulate system 4.1. Tolerance case.
+%This code is desgined to simulate different populations of T cells.
+%Different pathogen affinity.
 %By Belén Serrano Antón
 %Created 25/02/2020
-%Last Modified 31/03/2020
+%Last Modified 31/02/2020
 
 %Variable definition
 t_cycle = 0.15;                 %Time lap between the restriction point and cell division
-t_apo = 0.20;                   %Time lap between the deactivation of Bcl-2 and cell death
+t_apo = 0.2;                    %Time lap between the deactivation of Bcl-2 and cell death
 t_next = 0.3;                   %Time step in this simulation
 
 %Parameters: pathogen
-alpha = 1;                     %Pathogen proliferation rate
-beta = 0.01;                     %Pathogen death rate
+alpha = 6;                      %Pathogen proliferation rate
+beta = 0.04;                    %Pathogen death rate
 
 %Parameters: effector T cells
-lambda_pd = 0.05;%0.04;               %Change rate in membrane receptor Rd, due to Rp signals
-lambda_taup = 6*10^(-5);        %Change rate in membrane receptor Rd, due to TCR signals
-lambda_pp = 0.5*10^(-4);%0.5*10^(-5);        %Change rate in membrane receptor Rp, due to Rp signals
-mu_pc = 2;%0.4                    %Change rate in inhibitor molecule Rb, due to receptor Rc
-mu_da = 3;                    %Change rate in inhibitor molecule Bcl-2, due to receptor Rc
+lambda_pd = 0.05;               %Change rate in membrane receptor Rd, due to Rp signals
+lambda_taup = 2*10^(-4);        %Change rate in membrane receptor Rd, due to TCR signals
+lambda_pp = 0.5*10^(-4);        %Change rate in membrane receptor Rp, due to Rp signals
+mu_pc = 15;                     %Change rate in inhibitor molecule Rb, due to receptor Rc
+mu_da = 10;                     %Change rate in inhibitor molecule Bcl-2, due to receptor Rc
+
+%Parameters: effector T cells (clon 1)
+lambda_pd_clon1 = 0.05;                 %Change rate in membrane receptor Rd, due to Rp signals
+lambda_taup_clon1 = 6*10^(-5);          %Change rate in membrane receptor Rd, due to TCR signals
+lambda_pp_clon1 = 0.5*10^(-4);          %Change rate in membrane receptor Rp, due to Rp signals
+mu_pc_clon1 = 15;                       %Change rate in inhibitor molecule Rb, due to receptor Rc
+mu_da_clon1 = 10;                       %Change rate in inhibitor molecule Bcl-2, due to receptor Rc
+
+%Parameters: effector T cells (clon 2)
+lambda_pd_clon2 = 0.05;                 %Change rate in membrane receptor Rd, due to Rp signals
+lambda_taup_clon2 = 10^(-5);            %Change rate in membrane receptor Rd, due to TCR signals
+lambda_pp_clon2 = 0.5*10^(-4);          %Change rate in membrane receptor Rp, due to Rp signals
+mu_pc_clon2 = 15;                       %Change rate in inhibitor molecule Rb, due to receptor Rc
+mu_da_clon2 = 10;
 
 %Parameters: memory T cells
 lambda_pd_mem = 0;              %Change in membrane receptor Rd, due to Rp signals
 lambda_taup_mem = 10^(-5);      %Change rate in membrane receptor Rd, due to TCR signals
 lambda_pp_mem = 2*10^(-2);      %Change rate in membrane receptor Rp, due to Rp signals
-mu_pc_mem = 2;%0.3;                %Change rate in inhibitor molecule Rb, due to receptor Rc
+mu_pc_mem = 13;                 %Change rate in inhibitor molecule Rb, due to receptor Rc
 
 %Define the final time we will simulate to
-T_final = 17;
+T_final = 25;
 
 %Define the initial number of particles
 N_init = 25;                    %N will represent T cells                
@@ -43,12 +58,16 @@ num_max_cells=10^7;
 
 %Instantiate a vector which will hold the time varying values of T cells
 %and pathogen
-rec_vector_N_eff = -ones(1,num_rec_steps);    %For effector T cells
-rec_vector_N_mem = -ones(1,num_rec_steps);    %For memory T cells
-rec_vector_Y = -ones(1,num_rec_steps);        %For the pathogen
+rec_vector_N_eff = -ones(1,num_rec_steps);          %For effector T cells
+rec_vector_N_eff_clon1 = -ones(1,num_rec_steps);    %For effector T cells
+rec_vector_N_eff_clon2 = -ones(1,num_rec_steps);    %For effector T cells
+rec_vector_N_mem = -ones(1,num_rec_steps);          %For memory T cells
+rec_vector_Y = -ones(1,num_rec_steps);              %For pathogen
 
 %Write the initial condision to these vectors
-rec_vector_N_eff(rec_ind) = N_init;     %Asymetric division of naïve T cells
+rec_vector_N_eff(rec_ind) = round(N_init/3);     %Asymetric division of naïve T cells
+rec_vector_N_eff_clon1(rec_ind) = round((N_init-rec_vector_N_eff(rec_ind))/2);     %Asymetric division of naïve T cells
+rec_vector_N_eff_clon2(rec_ind) = N_init-rec_vector_N_eff_clon1(rec_ind)-rec_vector_N_eff(rec_ind);     %Asymetric division of naïve T cells
 rec_vector_N_mem(rec_ind) = N_init;     %Asymetric division of naïve T cells
 rec_vector_Y(rec_ind) = Y_init;
 
@@ -60,21 +79,26 @@ a0 = 0.3;
 c0 = 0.08;
 c0_mem = 0.04;
 
-t_cell_matrix(1:2:2*N_init,1)=1;    %type 1: Effector T cell
-t_cell_matrix(1:2:2*N_init,2)=a0;
-t_cell_matrix(1:2:2*N_init,3)=c0;
+t_cell_matrix(1:round(N_init/3),1)=1;           %type 1: Effector T cell
+aux = round(N_init/3)+rec_vector_N_eff_clon1(rec_ind);
+t_cell_matrix(round(N_init/3)+1:aux,1)=6;       %type 6: Effector T cell clon 1 
+t_cell_matrix(aux+1:N_init,1)=9;                %type 9: Effector T cell clon 2
+t_cell_matrix(1:N_init,2)=a0;
+t_cell_matrix(1:N_init,3)=c0;
 
-t_cell_matrix(2:2:2*N_init,1)=2;    %type 2: Memory T cell
-t_cell_matrix(2:2:2*N_init,3)=c0_mem; 
+t_cell_matrix(N_init+1:2*N_init,1)=2;           %type 2: Memory T cell
+t_cell_matrix(N_init+1:2*N_init,3)=c0_mem; 
 
 
 % Initialise a vector which will hold the times when reactions occur
 time_vec=zeros(1,num_rec_steps);
 
 %Initialise the number of particles for this repeat
-N_eff = N_init;
+N_eff = rec_vector_N_eff(rec_ind);
+N_eff_clon1 = rec_vector_N_eff_clon1(rec_ind);
+N_eff_clon2 = rec_vector_N_eff_clon2(rec_ind);
 N_mem = N_init;
-N = N_eff + N_mem;
+N = N_eff + N_eff_clon1 + N_eff_clon2 + N_mem;
 Y = Y_init;
 
 %Initialise index for t_cell_matrix
@@ -93,7 +117,7 @@ while t < T_final
     
     if(gone==0)
         %Calculate Y
-        Y = Y_init*exp(t*(alpha - N_eff*beta));
+        Y = Y_init*exp(t*(alpha - (N_eff+N_eff_clon1+N_eff_clon2)*beta));
         Y = max(Y,0);
         if(Y < 10^(-6)) %condition that states when the pathogen is defeated
             Y = 0;
@@ -106,31 +130,38 @@ while t < T_final
     nCell=1;
     ind_N = 1;
     
-    if(N_eff == 0)
-        lambda_taup_mem = 0;
-        mu_pc_mem = 0;
-    end
-    
     while nCell < rec_ind_tcell_matrix
         v_rand = rand(N,1)/N; %vector of N random numbers
        
-        if(t_cell_matrix(nCell,1) == 1 || t_cell_matrix(nCell,1) == 2)
+        if(t_cell_matrix(nCell,1) == 1 || t_cell_matrix(nCell,1) == 2 || t_cell_matrix(nCell,1) == 6 ...
+                || t_cell_matrix(nCell,1) == 9) %T cell
             rho = v_rand(ind_N);
-            %Calculate r_tau
             r_tau=rho*Y;
             ind_N = ind_N + 1;
         end
         
         %Effector T cell
-        if(t_cell_matrix(nCell,1) == 1 || t_cell_matrix(nCell,1) == 3)
+        if(t_cell_matrix(nCell,1) == 1 || t_cell_matrix(nCell,1) == 3 ...
+                || t_cell_matrix(nCell,1) == 6 || t_cell_matrix(nCell,1) == 7 ...
+                || t_cell_matrix(nCell,1) == 9 || t_cell_matrix(nCell,1) == 10)
             if(t_cell_matrix(nCell,6) > 0)
                 %In division phase
                 t_cell_matrix(nCell,6) = max(t_cell_matrix(nCell,6)-t_next,0);
                 
                 %Division phase completed
-                if(t_cell_matrix(nCell,6) == 0 && t_cell_matrix(nCell,1) == 3) 
-                    N_eff = N_eff + 1;
-                    t_cell_matrix(nCell,1) = 1;
+                if(t_cell_matrix(nCell,6) == 0 && (t_cell_matrix(nCell,1) == 3 ...
+                        || t_cell_matrix(nCell,1) == 7 || t_cell_matrix(nCell,1) == 10))
+                    if(t_cell_matrix(nCell,1) == 3)
+                        N_eff = N_eff + 1;
+                        t_cell_matrix(nCell,1) = 1;
+                    elseif (t_cell_matrix(nCell,1) == 7) %clon 1 
+                        N_eff_clon1 = N_eff_clon1 + 1;
+                        t_cell_matrix(nCell,1) = 6;
+                    else %clon 2
+                        N_eff_clon2 = N_eff_clon2 + 1;
+                        t_cell_matrix(nCell,1) = 9;
+                    end
+                    
                 end
             else
                 %Initial conditions
@@ -140,8 +171,13 @@ while t < T_final
                 a0_sys = t_cell_matrix(nCell,2);
                 
                 %Explicit solutions for system 4.1
-                [c,a,p,d] = sys9_sol(t,lambda_taup,lambda_pp, r_tau, p0_sys, lambda_pd, d0_sys, mu_pc, c0_sys, mu_da, a0_sys);
-                
+                if(t_cell_matrix(nCell,1) == 1) %clon 0
+                    [c,a,p,d] = sys9_sol(t,lambda_taup,lambda_pp, r_tau, p0_sys, lambda_pd, d0_sys, mu_pc, c0_sys, mu_da, a0_sys);
+                elseif(t_cell_matrix(nCell,1) == 6) %clon1 
+                    [c,a,p,d] = sys9_sol(t,lambda_taup_clon1,lambda_pp_clon1, r_tau, p0_sys, lambda_pd_clon1, d0_sys, mu_pc_clon1, c0_sys, mu_da_clon1, a0_sys);
+                else %clon 2
+                    [c,a,p,d] = sys9_sol(t,lambda_taup_clon2,lambda_pp_clon2, r_tau, p0_sys, lambda_pd_clon2, d0_sys, mu_pc_clon2, c0_sys, mu_da_clon2, a0_sys);
+                end
                 %Desision state
                 if( a > 0 && c > 0)
                     d=max(d,0);
@@ -153,7 +189,13 @@ while t < T_final
                 else
                     if(a <= 0)      %Initiate apoptosis
                         t_cell_matrix(nCell,6) = t_apo;
-                        t_cell_matrix(nCell,1) = 4;
+                        if(t_cell_matrix(nCell,1) == 1 )
+                            t_cell_matrix(nCell,1) = 4;
+                        elseif(t_cell_matrix(nCell,1) == 6) %clon 1
+                            t_cell_matrix(nCell,1) = 8;
+                        else
+                            t_cell_matrix(nCell,1) = 11;
+                        end
                         
                     elseif(c <= 0)  %Initiate division                       
                         %Membrane receptors are divided between 2 daughter
@@ -179,7 +221,13 @@ while t < T_final
                         
                         %type 3 -> new effector cell that has not
                         %completed division phase
-                        t_cell_matrix(rec_ind_tcell_matrix,1) = 3;
+                        if(t_cell_matrix(nCell,1) == 1)
+                            t_cell_matrix(rec_ind_tcell_matrix,1) = 3;
+                        elseif(t_cell_matrix(nCell,1) == 6) %clon 1
+                            t_cell_matrix(rec_ind_tcell_matrix,1) = 7;
+                        else %clon 2
+                            t_cell_matrix(rec_ind_tcell_matrix,1) = 10;
+                        end
                         t_cell_matrix(rec_ind_tcell_matrix,4) = r_p_child_2;
                         t_cell_matrix(rec_ind_tcell_matrix,5) = r_d_child_2;
                         t_cell_matrix(rec_ind_tcell_matrix,6) = t_cycle;
@@ -204,7 +252,7 @@ while t < T_final
                 %Division phase completed
                 if(t_cell_matrix(nCell,6)==0 && t_cell_matrix(nCell,1) == 5) 
                     N_mem=N_mem+1;
-                    t_cell_matrix(nCell,1) =2;
+                    t_cell_matrix(nCell,1) = 2;
                 end
             else
                 %Initial conditions
@@ -244,17 +292,22 @@ while t < T_final
             nCell=nCell+1;
            
             
-        elseif(t_cell_matrix(nCell,1) == 4) 
-          
+        elseif(t_cell_matrix(nCell,1) == 4 || t_cell_matrix(nCell,1) == 8 ...
+                || t_cell_matrix(nCell,1) == 11) 
             if(t_cell_matrix(nCell,6) > 0)
-                
                 t_cell_matrix(nCell,6) = max(t_cell_matrix(nCell,6)-t_next,0);
-                if(t_cell_matrix(nCell,6)==0) 
-                    N_eff=N_eff-1;
+                if(t_cell_matrix(nCell,6) == 0) 
+                    if(t_cell_matrix(nCell,1) == 4)
+                        N_eff = N_eff - 1;
+                    elseif(t_cell_matrix(nCell,1) == 8)
+                        N_eff_clon1 = N_eff_clon1 - 1;
+                    else
+                        N_eff_clon2 = N_eff_clon2 - 1;
+                    end
                 end
             end
             nCell=nCell+1;
-        else
+        else %type 0: no cell
             break;
         end
         
@@ -265,8 +318,10 @@ while t < T_final
     
     %Record the time and the numbers of molecules
     time_vec(rec_ind) = t;
-    N = N_eff + N_mem;
+    N = N_eff + N_eff_clon1 + N_eff_clon2 + N_mem;
     rec_vector_N_eff(rec_ind) = N_eff;
+    rec_vector_N_eff_clon1(rec_ind) = N_eff_clon1;
+    rec_vector_N_eff_clon2(rec_ind) = N_eff_clon2;
     rec_vector_N_mem(rec_ind) = N_mem;
     rec_vector_Y(rec_ind) = Y;
 end
@@ -276,18 +331,21 @@ f1=figure;
 
 figure(f1)
 [hA1]=plot(time_vec,rec_vector_N_eff,'b','LineWidth', 1);
-axis([0 T_final 0 400]);
+
+hold on
+[hA4]=plot(time_vec,rec_vector_N_eff_clon1,'c','LineWidth', 1);
+
+hold on
+[hA5]=plot(time_vec,rec_vector_N_eff_clon2,'m','LineWidth', 1);
 
 hold on
 [hA2]=plot(time_vec,rec_vector_Y,'r','LineWidth', 1);
-axis([0 T_final 0 400]);
 
 hold on
 [hA3] = plot(time_vec,rec_vector_N_mem,'g','LineWidth', 1);
 
-set(gca,'YTickLabel',[]); 
-set(gca,'XTickLabel',[]);
 
-axis([0 T_final 0 400]);
-legend([hA1,hA3,hA2],'Células T efectoras','Células T de memoria','Patógeno');
+legend([hA1,hA4,hA5,hA3,hA2],'Células T efectoras clon 0',...
+'Células T efectoras clon 1','Células T efectoras clon 2',...
+'Células T de memoria','Patógeno');
 xlabel('Tiempo');  ylabel('Número de células');
