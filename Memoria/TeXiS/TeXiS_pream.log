@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  20 MAR 2020 17:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  5 APR 2020 12:47
 entering extended mode
 **./TeXiS_pream.tex
 (TeXiS_pream.tex
@@ -71,8 +71,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214 \usepackage{
-                  listings}
+l.213 \usepackage[dvipsnames]{
+                              xcolor}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -83,7 +83,170 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.226 \usepackage{
+l.216 \usepackage{
+                  listings}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+! Undefined control sequence.
+l.217 \lstset
+             {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 	l
+        anguage=Matlab,
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+! Undefined control sequence.
+l.220 	backgroundcolor=\color
+                             {lightgray!25},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.224 	commentstyle=\color
+                          {ForestGreen},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 225.
+! Undefined control sequence.
+l.226 	keywordstyle=\color
+                          {blue},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.228 	numberstyle=\footnotesize
+                                \sffamily,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 218--231
+[]
+ []
+
+
+Overfull \hbox (5.24995pt too wide) in paragraph at lines 218--231
+\OT1/cmtt/m/n/10 ,
+ []
+
+
+Overfull \hbox (152.24867pt too wide) in paragraph at lines 218--231
+\OT1/cmtt/m/n/10 backgroundcolor=lightgray!25,
+ []
+
+
+Overfull \hbox (83.99927pt too wide) in paragraph at lines 218--231
+\OT1/cmtt/m/n/10 breaklines=true,
+ []
+
+
+Overfull \hbox (110.24904pt too wide) in paragraph at lines 218--231
+\OT1/cmtt/m/n/10 columns=fullflexible,
+ []
+
+
+Overfull \hbox (68.2494pt too wide) in paragraph at lines 218--231
+\OT1/cmtt/m/n/10 frame=single,
+ []
+
+
+Overfull \hbox (131.24886pt too wide) in paragraph at lines 218--231
+\OT1/cmtt/m/n/10 commentstyle=ForestGreen,
+ []
+
+
+Overfull \hbox (89.24922pt too wide) in paragraph at lines 218--231
+\OT1/cmtt/m/n/10 identifierstyle=,
+ []
+
+
+Overfull \hbox (94.49918pt too wide) in paragraph at lines 218--231
+\OT1/cmtt/m/n/10 keywordstyle=blue,
+ []
+
+
+Overfull \hbox (68.2494pt too wide) in paragraph at lines 218--231
+\OT1/cmtt/m/n/10 numbers=left,
+ []
+
+
+Overfull \hbox (65.77724pt too wide) in paragraph at lines 218--231
+\OT1/cmtt/m/n/10 numberstyle=\OT1/cmss/m/n/10 ,
+ []
+
+
+Overfull \hbox (23.88892pt too wide) in paragraph at lines 218--231
+\OT1/cmss/m/n/10 show-
+ []
+
+
+Overfull \hbox (76.25009pt too wide) in paragraph at lines 218--231
+\OT1/cmss/m/n/10 stringspaces=false
+ []
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.242 \usepackage{
                   url}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -95,7 +258,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.245 \usepackage{
+l.261 \usepackage{
                   ifpdf}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -107,13 +270,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.253 \usepackage[Lenny]{
+l.269 \usepackage[Lenny]{
                          fncychap}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.279 \ifpdf
+l.295 \ifpdf
             
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -251,11 +414,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip41
 )
 ! Extra \fi.
-l.282 \fi
+l.298 \fi
          
 I'm ignoring this; it doesn't match any \if.
 
-Package hyperref Info: Option `colorlinks' set `false' on input line 293.
+Package hyperref Info: Option `colorlinks' set `false' on input line 309.
 
 ! LaTeX Error: \usepackage before \documentclass.
 
@@ -263,7 +426,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.369 \usepackage{
+l.385 \usepackage{
                   makeidx}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -275,7 +438,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.422 \usepackage{
+l.438 \usepackage{
                   multicol}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -287,7 +450,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.508 \usepackage{
+l.524 \usepackage{
                   subfig}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -300,13 +463,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.594 \usepackage{
+l.610 \usepackage{
                   listings}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.595 \lstset
+l.611 \lstset
              {basicstyle=\small}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -321,7 +484,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.595 \lstset{b
+l.611 \lstset{b
                asicstyle=\small}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -338,7 +501,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no = in font nullfont!
 ! Undefined control sequence.
-l.595 \lstset{basicstyle=\small
+l.611 \lstset{basicstyle=\small
                                }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -347,7 +510,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.596 \lstset
+l.612 \lstset
              {showstringspaces=false}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -378,7 +541,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.597 \lstset
+l.613 \lstset
              {tabsize=3}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -396,7 +559,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no 3 in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 595--598
+Overfull \hbox (20.0pt too wide) in paragraph at lines 611--614
 []
  []
 
@@ -407,13 +570,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.602 \usepackage{
+l.618 \usepackage{
                   tabularx}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.606 \addto
+l.622 \addto
             \captionsspanish{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -422,7 +585,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.606 \addto\captionsspanish
+l.622 \addto\captionsspanish
                             {%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -431,7 +594,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.616 \addto
+l.632 \addto
             \captionsenglish{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -440,7 +603,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.616 \addto\captionsenglish
+l.632 \addto\captionsenglish
                             {%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -455,7 +618,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.624 \usepackage[T1]{
+l.640 \usepackage[T1]{
                       fontenc}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -467,7 +630,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.627 \usepackage{
+l.643 \usepackage{
                   epsfig}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -479,7 +642,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.646 \usepackage{
+l.662 \usepackage{
                   calc}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -491,13 +654,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.695 \usepackage{
+l.711 \usepackage{
                   geometry}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.698 \geometry
+l.714 \geometry
                {top=3cm,bottom=3cm,left=3cm,right=3cm}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -512,7 +675,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.698 \geometry{t
+l.714 \geometry{t
                  op=3cm,bottom=3cm,left=3cm,right=3cm}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -555,7 +718,7 @@ Missing character: There is no 3 in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no m in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 698--699
+Overfull \hbox (20.0pt too wide) in paragraph at lines 714--715
 [] 
  []
 
@@ -566,7 +729,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.738 \usepackage{
+l.754 \usepackage{
                   titlesec}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -578,7 +741,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.758 \usepackage{
+l.774 \usepackage{
                   csquotes}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -590,7 +753,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.759 \usepackage[final]{
+l.775 \usepackage[final]{
                          pdfpages}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -602,8 +765,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.763 \usepackage{
+l.779 \usepackage{
                   lipsum}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.782 \usepackage{
+                  subfig}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -615,11 +790,11 @@ between \documentclass and \begin{document}.
 
  
 Here is how much of TeX's memory you used:
- 3890 strings out of 493323
- 59038 string characters out of 3139072
- 139393 words of memory out of 3000000
- 7486 multiletter control sequences out of 15000+200000
- 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 3896 strings out of 493323
+ 59100 string characters out of 3139072
+ 139591 words of memory out of 3000000
+ 7490 multiletter control sequences out of 15000+200000
+ 4113 words of font info for 16 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,0n,21p,236b,32s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,1n,21p,236b,103s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!

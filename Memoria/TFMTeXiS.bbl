@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Arias y Herrero(2016)}]{arias2016emergent}
@@ -56,6 +56,14 @@
   thinking’.
 \newblock {\em BMC Biology\/}, vol.\ 12, 2014.
 \newblock ISSN 1741-7007.
+
+\bibitem[{Leggett et\ al.(2017)Leggett, Cornwallis, Buckling y
+  West}]{leggett2017growth}
+{\sc Leggett, H.~C.}, {\sc Cornwallis, C.~K.}, {\sc Buckling, A.} y {\sc West,
+  S.~A.}
+\newblock Growth rate, transmission mode and virulence in human pathogens.
+\newblock {\em Philosophical Transactions of the Royal Society B: Biological
+  Sciences\/}, vol. 372(1719), p\'agina 20160094, 2017.
 
 \bibitem[{Sompayrac(2016)}]{theHowItWorks}
 {\sc Sompayrac, L.}
