@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Arias y Herrero(2016)}]{arias2016emergent}
@@ -56,6 +56,11 @@
   thinking’.
 \newblock {\em BMC Biology\/}, vol.\ 12, 2014.
 \newblock ISSN 1741-7007.
+
+\bibitem[{Herrero()}]{RoleOfM}
+{\sc Herrero, M.~A.}
+\newblock On the role of mathematics in biology.
+\newblock ????
 
 \bibitem[{Leggett et\ al.(2017)Leggett, Cornwallis, Buckling y
   West}]{leggett2017growth}

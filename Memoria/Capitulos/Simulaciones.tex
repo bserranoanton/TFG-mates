@@ -2,14 +2,14 @@
 \chapter{Simulaciones del modelo microscópico}
 \label{cap:simulaciones}
 
-A lo largo de este capítulo describiremos en detalle las simulaciones realizadas sobre el modelo descrito en la Sección \ref{sec:modelo}, en el que hemos realizado algunas simplificaciones para facilitar la exposición. En concreto, estudiaremos el comportamiento individual de cada célula y describiremos el resultado global de las decisiones individuales de cada una de ellas. Como ya se ha comentado en el capítulo anterior, es posible ajustar los parámetros del modelo de manera que se  pongan de manifiesto distintos comportamientos poblacionales. Concretamente se presentarán situaciones de tolerancia al \textit{patógeno}, correspondientes a \textit{patógenos} cuya población crece lentamente y consigue engañar a nuestras células T, situaciones de intolerancia, aquellas en las que conseguimos ganarle la batalla al \textit{patógeno}. Se discutirá también qué ocurre cuando  poblaciones de células T con distinta afinidad a un \textit{patógeno} se enfrentan a el.
+A lo largo de este capítulo describiremos en detalle las simulaciones realizadas sobre el modelo descrito en la Sección \ref{sec:modelo}, en el que se han realizado algunas simplificaciones para facilitar la exposición. En concreto, estudiaremos el comportamiento individual de cada célula y describiremos el resultado global de las decisiones individuales de cada una de ellas. Como ya se ha comentado en el capítulo anterior, es posible ajustar los parámetros del modelo de manera que se  pongan de manifiesto distintos comportamientos poblacionales. Concretamente se presentarán situaciones de tolerancia al \textit{patógeno}, correspondientes al caso en el que las células T no consiguen controlar la infección y el agente que la produce se hace con el control del organismo, situaciones de intolerancia, aquellas en las que las células T terminan con la población de \textit{patógeno}, acabando así con la infección. Se discutirá también qué ocurre cuando  poblaciones de células T con distinta afinidad a un \textit{patógeno} se enfrentan a él.
 
-Con ayuda de un pseudocódigo veremos algunos detalles sobre de la implementación de las simulaciones. El código, realizado en Matlab puede verse en el Apéndice \ref{Appendix:A}.
-
+Además, en este capítulo se exponen algunos detalles básicos sobre la implementación de los algoritmos utilizados para las simulaciones. Entre estas explicaciones se incluye un pseudocódigo y aclaraciones concretas del código. La versión completa del código principal de este capítulo, realizado en Matlab, puede verse en el Apéndice \ref{Appendix:A}. 
+ 
 
 \section{Modelo simplificado}
 
-Para las simulaciones hemos optado por una versión simplificada del modelo propuesto en la Sección \ref{sec:modelo}, de tal manera que el número de parámetros sea suficiente para no perder la esencia del argumento pero no muy elevado para evitar distraer al lector con notación engorrosa. Siguiendo con la notación de \ref{sec:modelo}, asumiremos $k=2$. Es decir, suponemos que hay dos tipos de receptores: \textit{p} (de proliferación) y \textit{d} (de muerte) que controlan la evolución de los inhibidores de ciclo (Rb) y apoptosis (Bcl-2), respectivamente.
+Para las simulaciones hemos optado por una versión simplificada del modelo propuesto en la Sección \ref{sec:modelo}, de tal manera que el número de parámetros sea suficiente para no perder la esencia del argumento pero no muy elevado para evitar distraer al lector con notación engorrosa. Siguiendo con la notación de \ref{sec:modelo}, asumiremos $k=2$. Es decir, suponemos que hay dos tipos de receptores en la membrana de nuestras células T: \textit{p} (de proliferación) y \textit{d} (de muerte) que controlan la evolución de los inhibidores de ciclo (Rb) y apoptosis (Bcl-2), respectivamente.
 
 Para las células T efectoras que no forman parte de las células T de memoria (veremos ecuaciones específicas para esta población) asumimos que los receptores de proliferación (\textit{p}) se expresan a partir de las señales que reciben gracias a su TCR y que, simultáneamente, autorregulan su expresión induciendo la producción de receptores tipo muerte (\textit{d}). En este caso, las ecuaciones \ref{sist_inhib} y \ref{sist_recep} pueden escribirse como:
 
@@ -29,7 +29,8 @@ Para las células T efectoras que no forman parte de las células T de memoria (
 	\right.
 \end{equation}
 
-Así mismo, hemos simulado este Sistema \ref{sist9_simplif} y la Ecuación \ref{sist_pat_T} para el caso de las células T de memoria. La dinámica de estas células viene dada por el mismo Sistema \ref{sist9_simplif}, en el que se ha tenido en cuenta que $d=0$, puesto que nos centramos solamente en el inhibidor del ciclo celular (recordemos que las células T de memoria no mueren durante la \textit{contracción clonal}). Así las cosas, las ecuaciones que rigen el algoritmo de decisión para células T de memoria viene dado por: 
+%Así mismo, hemos simulado este Sistema \ref{sist9_simplif} y la Ecuación \ref{sist_pat_T} 
+Para el caso de las células T de memoria hay que tener en cuenta que este tipo de células no muere durante la \textit{contracción clonal}, es por ello que las ecuaciones que regulan esta población difieren ligeramente de las vistas en el Sistema \ref{sist9_simplif}. La dinámica de las células T de memoria viene dada por el mismo Sistema \ref{sist9_simplif}, en el que se ha tenido en cuenta que $d=0$, puesto que nos centramos solamente en el inhibidor del ciclo celular y no en el de muerte. Así las cosas, las ecuaciones que rigen el algoritmo de decisión para células T de memoria viene dado por: 
 
 \begin{equation}
 	\label{sist15_simplif}
@@ -43,24 +44,21 @@ Así mismo, hemos simulado este Sistema \ref{sist9_simplif} y la Ecuación \ref{
 	\right.
 \end{equation}
 
-Ahora que ya tenemos las ecuaciones del modelo estamos casi listos para la simulación, hay que elegir valores concretos para los parámetros. Esta no es una tarea sencilla, puesto que se desconoce el valor que toman. En la Tabla \ref{tabla:param} tenemos los parámetros elegidos para la primera simulación (Sección \ref{sim:intoler}). En base a esta elección y a las variantes que se exponen a lo largo de esa sección, obtenemos unos resultados que nos permiten identificar distintos tipos de respuesta inmune, sin necesidad de invocar ningún mecanismo distinto a las hipótesis detalladas en la Sección \ref{sec:hip_bio}. 
-A continuación se presentan los detalles básicos de la implementación.
+Con estos tres sistemas de ecuaciones (\ref{sist_pat_T}, \ref{sist9_simplif} y \ref{sist15_simplif}) queda definido el marco teórico del modelo. Sin embargo, antes de poder simular numéricamente estas ecuaciones debemos elegir los valores concretos que tomarán los parámetros. Esta no es una tarea sencilla, puesto que nadie sabe cuánto pueden valer estos parámetros en la realidad. La elección de los parámetros que hemos hecho para la primera simulación (Sección \ref{sim:intoler}) se recoge en la Tabla \ref{tabla:param}. En base a esta elección y a las variantes que se exponen a lo largo de esa sección, obtenemos unos resultados que nos permiten identificar distintos tipos de respuesta inmune, sin necesidad de invocar ningún mecanismo distinto a las hipótesis detalladas en la Sección \ref{sec:hip_bio}. A continuación se presentan los detalles básicos de la implementación.
 
 
-
-
-\section{Pseudocódigo}
+\section{Detalles de implementación y pseudocódigo}
 
 Con ánimo de aclarar algunos aspectos técnicos, se desarrollan, paso por paso, las instrucciones seguidas para la realización de las simulaciones. El Algoritmo \ref{algo:pseudocodigo} contiene un pseudocódigo muy sencillo con los detalles claves y prácticamente independientes del lenguaje de programación que se utilice. El código completo, realizado en Matlab, puede verse en el Apéndice \ref{Appendix:A}.
 
-Veamos, paso por paso, cómo se simula el modelo: 
+La población de células T se guarda en una matriz, donde se especifica el tipo de la célula (efectora o de memoria), la cantidad de Rb y Bcl-2 que tiene disponible a su alrededor, el número de receptores de membrana que tiene, la fase en la que se encuentra (división, apoptosis o decisión) y el tiempo que le queda para finalizar la fase correspondiente. Como se trata de un modelo microscópico, en el que cada célula toma su decisión de manera independiente, el hilo conductor de la implementación se basa en recorrer la matriz de células y ejecutar la decisión tomada por la célula que se esté tratando. Cada vez que se recorre la población de células T asumimos que pasa un tiempo $t_{next}$ que actualiza el tiempo actual de la simulación al final de la iteración y que permite determinar cuándo una célula ha acabado la fase de división o apoptosis. Veamos, paso por paso, las instrucciones concretas del modelo.
 
 \begin{enumerate}
 	\item Comenzamos la simulación en un tiempo inicial $t=0$ y acabamos en un tiempo final $T_{final}$ que se establecerá una vez las células T efectoras han desaparecido. 
 	
 	\item Para cada tiempo $t$, se calcula la cantidad de \textit{patógeno} disponible, $Y$. 
 	
-	\item En función de $Y$, y para cada célula T de la población, se calcula la cantidad de \textit{patógeno} que está a su alcance y se resuelve el sistema de ecuaciones correspondiente para conocer la cantidad de Rb ($c$) y Bcl-2 ($a$) activa en ese instante. En función de esto se desencadenará la división celular, si $c = 0$, o el suicidio de la célula, si $a = 0$.
+	\item En función de $Y$, y para cada célula T de la población, se calcula la cantidad de \textit{patógeno} que está a su alcance y se resuelve el sistema de ecuaciones correspondiente para conocer la cantidad de Rb ($c$) y Bcl-2 ($a$) activa en ese instante. En función de esto se desencadenará la división celular, si $c = 0$, o el suicidio de la célula, si $a = 0$. En otro caso la célula seguirá en fase de decisión y volverá a calcular $a$ y $c$ en la siguiente iteración en base a la cantidad obtenida en la actual.
 	
 	\item Si la célula va a dividirse se generan dos células hijas con los parámetros correspondientes al TCR, recordemos que la cantidad de receptores de la célula madre se divide entre las dos hijas de manera asimétrica, y los parámetros iniciales, para que pueda comenzar su fase de \textit{decisión}. Se sigue en el paso 6.
 	
@@ -105,8 +103,8 @@ Veamos, paso por paso, cómo se simula el modelo:
 			\EndIf
 		\EndFor
 		
-		\State Se actualiza el número de células de la población.
 		\State $t = t + t_{next};$
+		\State Se actualiza el número de células de la población.	
 		
 		\EndWhile
 		
@@ -117,12 +115,14 @@ En este pseudocódigo se ha detallado cuáles son las ecuaciones involucradas en
 
 \section{Resultados y análisis}
 
-En esta sección expondremos los resultados de algunas simulaciones. Empezaremos por las dos situaciones básicas que se pueden dar en una infección: que logremos vencer al atacante o que, por el contrario, seamos vencidos, y acabaremos mostrando el resultado de diversas simulaciones cuando la afinidad por el \textit{patógeno} de las células T va variando.
+En esta sección expondremos los resultados de las simulaciones realizadas. Empezaremos por las dos situaciones básicas que se pueden dar en una infección: que las células inmunes logren controlar la infección o que, por el contrario, sea el agente infeccioso el que acabe tomando el control de nuestro organismo, y acabaremos mostrando el resultado de diversas simulaciones cuando la afinidad por el \textit{patógeno} de las células T va variando.
 
 \subsection{Intolerancia al \textit{patógeno}}
 \label{sim:intoler}
 
-La primera de nuestras simulaciones puede verse en la Figura \ref{fig:intolerance}. Se muestra en ella el caso correspondiente a la elección de parámetros que se recoge en la Tabla \ref{tabla:param}. Estamos ante un caso de intolerancia al \textit{patógeno}, puesto que las células T son capaces de eliminarlo por completo. Veámoslo con más detalle: el \textit{patógeno}, representado con un línea roja, crece rápidamente, debido a la elección de una tasa de crecimiento, $\alpha$, elevada. Una vez que las células T son conscientes de la rápida proliferación de un agente no deseado, su número comienza a crecer. Sin embargo, como ya habíamos comentado anteriormente, esto se produce con cierto retraso tras la aparición del \textit{patógeno}. Lo que estamos describiendo es la conocida \textit{expansión clonal}. Este crecimiento de células T provoca que el término que acompaña a $\beta$ en la Ecuación \ref{sist_pat_T} comience a ser más grande que el acompañado por $\alpha$ en esta misma ecuación, provocando así que la derivada de $y$ se haga negativa y, por tanto, el número de moléculas del \textit{patógeno} comience a decrecer. Debemos mencionar que el número de células T necesarias para eliminar el \textit{patógeno} viene regulado por el parámetro $\beta$, si este fuera más grande, es decir, las células T fueran más dañinas con el \textit{patógeno}, veríamos una curva azul con un máximo mas pequeño que el de la Figura \ref{fig:intolerance}. (EN REALIDAD EN ESTA FIGURA LA GRÁFICA ESTÁ NORMALIZADA, SERÍA MEJOR PONER LA OTRA SIN NORMALIZAR?)
+La primera de nuestras simulaciones puede verse en la Figura \ref{fig:intolerance}. Se muestra en ella el caso correspondiente a la elección de parámetros que se recoge en la Tabla \ref{tabla:param}. Estamos ante un caso de intolerancia al \textit{patógeno}, puesto que las células T son capaces de controlar la infección eliminarlo por completo. Veámoslo con más detalle: el \textit{patógeno}, representado con un línea roja, crece rápidamente, debido a la elección de una tasa de crecimiento, $\alpha$, elevada. Una vez que las células T son conscientes de la rápida proliferación de un agente no deseado, su número comienza a crecer. Sin embargo, como ya habíamos comentado anteriormente, esto se produce con cierto retraso tras la aparición del \textit{patógeno}. Lo que estamos describiendo es la conocida \textit{expansión clonal}. Este crecimiento de células T provoca que el término que acompaña a $\beta$ en la Ecuación \ref{sist_pat_T} comience a ser más grande que el acompañado por $\alpha$ en esta misma ecuación, provocando así que la derivada de $y$ se haga negativa y, por tanto, el número de moléculas del \textit{patógeno} comience a decrecer. Debemos mencionar que el número de células T necesarias para eliminar el \textit{patógeno} viene regulado por el parámetro $\beta$, si este fuera más grande, es decir, las células T fueran más dañinas con el \textit{patógeno}, el número de células T necesarias para controlar la infección sería menor (y viceversa).
+
+%veríamos una curva azul con un máximo mas pequeño que el de la Figura \ref{fig:intolerance}. (EN REALIDAD EN ESTA FIGURA LA GRÁFICA ESTÁ NORMALIZADA, SERÍA MEJOR PONER LA OTRA SIN NORMALIZAR?)
 
 \begin{table}[h]
 	\begin{center}
@@ -154,22 +154,22 @@ La primera de nuestras simulaciones puede verse en la Figura \ref{fig:intoleranc
 \end{table}
 
 
-Prestemos atención ahora al comportamiento de las células T de memoria: por la sección anterior, ya sabíamos que las células T efectoras y las de memoria iban a constituir poblaciones distintas, puesto que las ecuaciones que rigen sus dinámicas son distintas. La principal diferencia es que las células T de memoria no se suicidan una vez el \textit{patógeno} ha desaparecido, sabemos que permanecen con la información necesaria para atacar al \textit{patógeno} más rápidamente en caso de reaparición. Vemos cómo estas células de memoria aumentan su población tras la aparición del \textit{patógeno}, aunque no vemos un crecimiento tan grande. Su población queda reducida a un $5-10\%$ de la población de células T.
+Prestemos atención ahora al comportamiento de las células T de memoria: por la sección anterior, ya sabíamos que las células T efectoras y las de memoria iban a constituir poblaciones distintas, puesto que las ecuaciones que rigen sus dinámicas son distintas. La principal diferencia es que las células T de memoria no se suicidan una vez el \textit{patógeno} ha desaparecido, permanecen con la información necesaria para atacar al \textit{patógeno} más rápidamente en caso de reaparición. En la Figura \ref{fig:intolerance} vemos cómo estas células de memoria aumentan su población tras la aparición del \textit{patógeno}, aunque se produce un crecimiento tan rápido ni elevado como en el caso de las T efectoras. Su población queda reducida a un $5-10\%$ de la población de células T.
 
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/intolerance}
-	\caption{Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}.}
+	\caption{Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los expuestos en la Tabla \ref{tabla:param}.}
 	\label{fig:intolerance}
 \end{figure}
 
 \subsection{Tolerancia al \textit{patógeno}}
 \label{sim:toler}
 
-Hemos visto una simulación de intolerancia al \textit{patógeno}. Esto es, las células inmunes consiguen controlar la infección y erradicar por completo al agente infeccioso. Sin embargo, esto no es siempre así. Existen virus como PONER EJEMPLO SI SE SABE que han desarrollado una estrategia que consiste en crecer a un ritmo muy lento \citep{leggett2017growth}, de esta manera \textit{sigilosa} engañan a las células T, haciéndolas creer que ha sido eliminado y provocando que estas células inmunes se suiciden. La Figura \ref{fig:tolerance} ilustra esta situación.
+Hemos visto una simulación de intolerancia al \textit{patógeno}. Esto es, las células inmunes consiguen controlar la infección y erradicar por completo al agente infeccioso. Sin embargo, esto no es siempre así. Existen virus como PONER EJEMPLO SI SE SABE que han desarrollado una estrategia que consiste en crecer a un ritmo muy lento, de esta manera \textit{sigilosa} engañan a las células T, haciéndolas creer que ha sido eliminado y provocando que estas células inmunes se suiciden  \citep{leggett2017growth}. La Figura \ref{fig:tolerance} ilustra esta situación.
 
-Como vemos, las células T comienzan la \textit{expansión clonal} como respuesta a la presencia de \textit{patógeno}. Este aumento de población inmune hace que la población del \textit{patógeno} se vea afectada rápidamente (recordemos que su factor de crecimiento, $\alpha$, es pequeño en este caso). Las células inmunes perciben que el \textit{patógeno} ha sido eliminado con éxito, puesto que el número de células del mismo es muy pequeño, y comienzan la \textit{contracción clonal}, haciendo que su población baje hasta desaparecer. Sin embargo, en este caso el \textit{patógeno} no ha sido erradicado por completo y, ahora que no hay atacantes, el \textit{patógeno} puede reproducirse sin problema. Es por esto que su población crece de manera exponencial. En poco tiempo estos \textit{patógenos} \textit{astutos} pueden tomar el control del organismo. 
+Como vemos, las células T comienzan la \textit{expansión clonal} como respuesta a la presencia de \textit{patógeno}, al igual que en el caso anterior. Este aumento de población inmune hace que la población del \textit{patógeno} se vea afectada rápidamente (recordemos que su factor de crecimiento, $\alpha$, es pequeño en este caso) y caiga hasta niveles muy bajos. Es entonces cuando las células inmunes perciben que el \textit{patógeno} ha sido eliminado con éxito y comienzan la \textit{contracción clonal}, haciendo que su población baje hasta desaparecer. Sin embargo, como el \textit{patógeno} no ha sido erradicado por completo y, ahora que no hay atacantes, puede reproducirse sin problema, dando lugar al crecimiento exponencial que vemos en la Figura \ref{fig:tolerance}. En poco tiempo estos \textit{patógenos} \textit{astutos} pueden tomar el control del organismo. 
 
 En cuanto a las células T de memoria, vemos como crecen con la presencia del \textit{patógeno} y se estabilizan cuando la población de células T efectoras llega a cero. Esto es así puesto que las células T de memoria no continúan reproduciéndose en ausencia de células T efectoras, a pesar de la presencia de \textit{patógeno}. PREGUNTAR RAZÓN 
 
