@@ -1,4 +1,4 @@
-%[T, Y] = ode45(@YourFun, T, Y0, Opt);
+%When T = 0 we stop the simulation
 function [position, isterminal, direction] = myEvent(t,ySol)
     position   = ySol(2);
     isterminal = 1;   % Stop the integration

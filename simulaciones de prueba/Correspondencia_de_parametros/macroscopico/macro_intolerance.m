@@ -51,9 +51,9 @@ yValuesP = ySol(:,1);
 flag_defeated = yValuesP < 0.01;
 yValuesP(flag_defeated) = 0;
 
-min_p_cell = min(yValuesP)
-index_time_min_p_cell = yValuesP == min_p_cell
-time_min_p_cell = min(t(index_time_min_p_cell))
+min_p_cell = min(yValuesP);
+index_time_min_p_cell = yValuesP == min_p_cell;
+time_min_p_cell = min(t(index_time_min_p_cell));
 
 %Hacemos que una vez que el patógeno es 0 no vuelva a reproducirse
 % if(min_p_cell < 0.01)
@@ -68,9 +68,9 @@ time_max_p_cell = t(index_time_max_p_cell);
 %yValuesT = deval(ySol,tValues,2);
 yValuesT = ySol(:,2);
 min_t_cell = min(yValuesT);
-index_time_min_t_cell = yValuesT == min_t_cell;
+index_time_min_t_cell = yValuesT == min_t_cell
 tValues(1) = 500; %Evita que el tiempo donde las células T son 0 sea 0
-time_min_t_cell = min(t(index_time_min_t_cell));
+time_min_t_cell = min(t(index_time_min_t_cell))
 tValues(1) = 0;
 
 %yValuesT(find(index_time_min_t_cell==1):end) = 0;
