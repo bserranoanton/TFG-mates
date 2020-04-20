@@ -7,14 +7,14 @@ syms t_cell(t) p(t)
 
 %Constants
 %a = 1.5;
-a = 3;
+a = 3.6;
 %b = 0.1;
 b = 0.1;
 
-k = 0.4;
-%k = 2;
-%lambda = 0.5;
-lambda = 0.5;
+k = 0.1;
+%k = 0.1;
+%lambda = 0.4;
+lambda = 0.77;
 
 t0 = 0; 
 tf = 15; 
@@ -68,9 +68,9 @@ time_max_p_cell = t(index_time_max_p_cell);
 %yValuesT = deval(ySol,tValues,2);
 yValuesT = ySol(:,2);
 min_t_cell = min(yValuesT);
-index_time_min_t_cell = yValuesT == min_t_cell
+index_time_min_t_cell = yValuesT == min_t_cell;
 tValues(1) = 500; %Evita que el tiempo donde las células T son 0 sea 0
-time_min_t_cell = min(t(index_time_min_t_cell))
+time_min_t_cell = min(t(index_time_min_t_cell));
 tValues(1) = 0;
 
 %yValuesT(find(index_time_min_t_cell==1):end) = 0;
@@ -100,9 +100,15 @@ hold on
 [hM4] = plot(time_min_p_cell,min_p_cell,'s','MarkerFaceColor','r', 'MarkerEdgeColor', 'r');
 
 
+disp(max_p_cell);
+disp(time_max_p_cell);
+disp(time_min_p_cell);
 
+disp('----');
 
-
+disp(max_t_cell);
+disp(time_max_t_cell);
+disp(time_min_t_cell);
 
 % figure 
 % hold on
