@@ -155,21 +155,32 @@ La primera de nuestras simulaciones puede verse en la Figura \ref{fig:intoleranc
 
 
 Prestemos atención ahora al comportamiento de las células T de memoria: por la sección anterior, ya sabíamos que las células T efectoras y las de memoria iban a constituir poblaciones distintas, puesto que las ecuaciones que rigen sus dinámicas son distintas. La principal diferencia es que las células T de memoria no se suicidan una vez el \textit{patógeno} ha desaparecido, permanecen con la información necesaria para atacar al \textit{patógeno} más rápidamente en caso de reaparición. En la Figura \ref{fig:intolerance} vemos cómo estas células de memoria aumentan su población tras la aparición del \textit{patógeno}, aunque se produce un crecimiento tan rápido ni elevado como en el caso de las T efectoras. Su población queda reducida a un $5-10\%$ de la población de células T.
+%
+%\begin{figure}[t]
+%	\centering
+%	\begin{tabular}{cc}
+%		\subfloat[Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los expuestos en la Tabla \ref{tabla:param}.]{
+%			\label{fig:intolerance}
+%			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/intolerance}}
+%		& \subfloat[Simulación: caso de tolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.]{
+%			\label{fig:tolerance}
+%			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/tolerance}}\\
+%	\end{tabular}
+%	\caption{Simulaciones del modelo microscópico. Casos de tolerancia e intolerancia al \textit{patógeno}}%\label{foo}
+%\end{figure}
 
 \begin{figure}[t]
 	\centering
-	%\def\tabularxcolumn#1{m{#1}}
-	%\begin{tabularx}{\linewidth}{@{}cXX@{}}
-		%
-		\begin{tabular}{cc}
-			\subfloat[Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los expuestos en la Tabla \ref{tabla:param}.]{
-				\label{fig:intolerance}
-				\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/intolerance}}
-			& \subfloat[Simulación: caso de tolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.]{
-				\label{fig:tolerance}
-				\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/tolerance}}\\
-		\end{tabular}
-%	\end{tabularx}
+	%\begin{tabular}{c}
+		\subfloat[Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los expuestos en la Tabla \ref{tabla:param}.]{
+			\label{fig:intolerance}
+			\includegraphics[width=0.7\columnwidth]{Imagenes/Simulaciones/intolerance}}
+		
+		\subfloat[Simulación: caso de tolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.]{
+			\label{fig:tolerance}
+			\includegraphics[width=0.7\columnwidth]{Imagenes/Simulaciones/tolerance}}\\
+	%\end{tabular}
+
 	\caption{Simulaciones del modelo microscópico. Casos de tolerancia e intolerancia al \textit{patógeno}}%\label{foo}
 \end{figure}
 
@@ -203,41 +214,50 @@ En esta sección veremos cómo se comportan distintas poblaciones de células T 
 
 Comencemos mirando la Figura \ref{fig:tresClones}. En esta simulación hemos considerado tres poblaciones con distinta afinidad, $\lambda_{Tp}$, al \textit{patógeno}. Tenemos el clon $0$ con la afinidad más alta y el clon $2$ con la más baja. La diferencia en cuanto a expansión es considerable, la población más afín al \textit{patógeno} es la que se reproduce a mayor velocidad y se denomina \textit{población inmunodominante}. Este hecho es consecuencia de las ecuaciones del Sistema \ref{sist9_simplif}: la ecuación $\dot{p}(t) = \lambda_{Tp}r_{T}(t) - \lambda_{pp}p(t)$ propicia un mayor crecimiento cuanto más alto es el valor $\lambda_{Tp}$, puesto que provoca que la derivada de $c$ se haga más negativa y se llegue antes al límite $c = 0$ que desencadena la división celular.
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/tresClones}
-	\caption{Simulación: distintas poblaciones de células T con distintas afinidades al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_0} = 2*10^{-4}$, $\lambda_{Tp}^{clon_1} = 6*10^{-5}$, $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
-	\label{fig:tresClones}
-\end{figure}
+%\begin{figure}[t]
+%	\centering
+%	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/tresClones}
+%	\caption{Simulación: distintas poblaciones de células T con distintas afinidades al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_0} = 2*10^{-4}$, $\lambda_{Tp}^{clon_1} = 6*10^{-5}$, $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
+%	\label{fig:tresClones}
+%\end{figure}
 
 
 Pero... ¿qué pasaría si esta \textit{población inmunodominante} desapareciera? Una posible explicación nos la da la Figura \ref{fig:dosClones}. En ella, podemos ver que el modelo sugiere que las \textit{poblaciones subdominantes} se expanden más que antes para suplir la ausencia de la \textit{inmunodominante} y controlar la infección. No debemos olvidar que la afinidad que tienen estas poblaciones al \textit{patógeno} es menor y esto hace que pueda crecer más en el mismo periodo de tiempo.
 
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/dosClones}
-	\caption{Simulación: distintas poblaciones de células T con distintas afinidades al \textit{patógeno}. Clones subdominantes. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_1} = 6*10^{-5}$, $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
-	\label{fig:dosClones}
-\end{figure}
+%\begin{figure}[t]
+%	\centering
+%	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/dosClones}
+%	\caption{Simulación: distintas poblaciones de células T con distintas afinidades al \textit{patógeno}. Clones subdominantes. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_1} = 6*10^{-5}$, $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
+%	\label{fig:dosClones}
+%\end{figure}
 
 Para finalizar veamos el comportamiento del clon $2$ cuando el resto de clones han desaparecido. Como es de esperar, ocurre algo similar a lo que veíamos en la Figura \ref{fig:dosClones}. En este caso el clon $2$ debe hacer un esfuerzo mayor (reproducirse más) para mantener la infección controlada. Comportamiento ilustrado en la Figura \ref{fig:unClon}.
 
 Estas simulaciones ponen de manifiesto la importancia de las células T de memoria. En una situación donde las células T efectoras no presentan una afinidad al \textit{patógeno} muy elevada las consecuencias pueden ser muy graves, pues la infección se alarga y las células T no son suficientemente dañinas para el agente externo. Sin embargo, si contamos con células T de memoria que guardan información relevante para combatir a ese agente, nuestro organismo se encontrará en una situación más segura, ya que se podrá actuar más rápidamente con células que disponen de alta afinidad con el \textit{patógeno} y desencadenarán, por tanto, un ataque mucho más efectivo.
 
+%\begin{figure}[t]
+%	\centering
+%	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/unClon}
+%	\caption{Simulación: distintas poblaciones de células T con distintas afinidades al \textit{patógeno}. Clon subdominante. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
+%	\label{fig:unClon}
+%\end{figure}
+
+
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/unClon}
-	\caption{Simulación: distintas poblaciones de células T con distintas afinidades al \textit{patógeno}. Clon subdominante. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
-	\label{fig:unClon}
+	%\begin{tabular}{c}
+	\subfloat[Simulación: distintas poblaciones de células T con distintas afinidades al \textit{patógeno}. Clones subdominantes. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_1} = 6*10^{-5}$, $\lambda_{Tp}^{clon_2} = 10^{-5}$.]{
+		\label{fig:tresClones}
+		\includegraphics[width=0.5\columnwidth]{Imagenes/Simulaciones/tresClones}}
+	
+	\subfloat[Simulación: distintas poblaciones de células T con distintas afinidades al \textit{patógeno}. Clones subdominantes. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_1} = 6*10^{-5}$, $\lambda_{Tp}^{clon_2} = 10^{-5}$.]{
+		\label{fig:dosClones}
+		\includegraphics[width=0.5\columnwidth]{Imagenes/Simulaciones/dosClones}}\
+	
+	\subfloat[Simulación: distintas poblaciones de células T con distintas afinidades al \textit{patógeno}. Clon subdominante. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_2} = 10^{-5}$.]{
+		\label{fig:unClon}
+		\includegraphics[width=0.5\columnwidth]{Imagenes/Simulaciones/dosClones}}\\
+	
+	\caption{Simulaciones del modelo microscópico. Casos de tolerancia e intolerancia al \textit{patógeno}}%\label{foo}
 \end{figure}
-
-%\begin{figure}[t]
-%\centering
-%	%
-%	\subfloat[a]{ \includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/unClon}} \\ 
-%	\subfloat[b]{\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/unClon}} \\
-%	\subfloat[c]{\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/unClon}}
-%	\caption{Descripción global para la figura}
-%	\label{Etiqueta para toda la figura}
-%\end{figure}
