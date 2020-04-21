@@ -6,13 +6,13 @@ Created on Mon Apr 13 12:00:10 2020
 """
 
 # first neural network with keras tutorial
-import numpy as np
+#import numpy as np
 from numpy import loadtxt
 from keras.models import Sequential
 from keras.layers import Dense
 
 # load the dataset
-dataset = loadtxt('data_neural_network_csv_02.csv', delimiter=',')
+dataset = loadtxt('data_neural_network_csv.csv', delimiter=',')
 # split into input (X) and output (y) variables
 X = dataset[:,0:6]
 y = dataset[:,6:10]
@@ -23,7 +23,7 @@ y = dataset[:,6:10]
 model = Sequential()
 model.add(Dense(12, input_dim=6, activation='relu'))
 model.add(Dense(8, activation='relu'))
-model.add(Dense(4, activation='relu'))
+#model.add(Dense(4, activation='relu'))
 model.add(Dense(4, activation='relu'))
 
 # compile the keras model
@@ -60,7 +60,7 @@ print('Accuracy: %.2f' % (accuracy*100))
 
 
 # load the dataset
-dataset_prueba = loadtxt('data_neural_network_csv.csv', delimiter=',')
+dataset_prueba = loadtxt('data_neural_network_csv_prueba.csv', delimiter=',')
 X_prueba = dataset_prueba[:,0:6]
 y_prueba = dataset_prueba[:,6:10]
 
