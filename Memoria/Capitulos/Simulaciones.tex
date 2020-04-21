@@ -156,13 +156,30 @@ La primera de nuestras simulaciones puede verse en la Figura \ref{fig:intoleranc
 
 Prestemos atención ahora al comportamiento de las células T de memoria: por la sección anterior, ya sabíamos que las células T efectoras y las de memoria iban a constituir poblaciones distintas, puesto que las ecuaciones que rigen sus dinámicas son distintas. La principal diferencia es que las células T de memoria no se suicidan una vez el \textit{patógeno} ha desaparecido, permanecen con la información necesaria para atacar al \textit{patógeno} más rápidamente en caso de reaparición. En la Figura \ref{fig:intolerance} vemos cómo estas células de memoria aumentan su población tras la aparición del \textit{patógeno}, aunque se produce un crecimiento tan rápido ni elevado como en el caso de las T efectoras. Su población queda reducida a un $5-10\%$ de la población de células T.
 
-
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/intolerance}
-	\caption{Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los expuestos en la Tabla \ref{tabla:param}.}
-	\label{fig:intolerance}
+	%\def\tabularxcolumn#1{m{#1}}
+	%\begin{tabularx}{\linewidth}{@{}cXX@{}}
+		%
+		\begin{tabular}{cc}
+			\subfloat[Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los expuestos en la Tabla \ref{tabla:param}.]{
+				\label{fig:intolerance}
+				\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/intolerance}}
+			& \subfloat[Simulación: caso de tolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.]{
+				\label{fig:tolerance}
+				\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/tolerance}}\\
+		\end{tabular}
+%	\end{tabularx}
+	\caption{Simulaciones del modelo microscópico. Casos de tolerancia e intolerancia al \textit{patógeno}}%\label{foo}
 \end{figure}
+
+
+%\begin{figure}[t]
+%	\centering
+%	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/intolerance}
+%	\caption{Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los expuestos en la Tabla \ref{tabla:param}.}
+%	\label{fig:intolerance}
+%\end{figure}
 
 \subsection{Tolerancia al \textit{patógeno}}
 \label{sim:toler}
@@ -173,12 +190,12 @@ Como vemos, las células T comienzan la \textit{expansión clonal} como respuest
 
 En cuanto a las células T de memoria, vemos como crecen con la presencia del \textit{patógeno} y se estabilizan cuando la población de células T efectoras llega a cero. Esto es así puesto que las células T de memoria no continúan reproduciéndose en ausencia de células T efectoras, a pesar de la presencia de \textit{patógeno}. PREGUNTAR RAZÓN 
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/tolerance}
-	\caption{Simulación: caso de tolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.}
-	\label{fig:tolerance}
-\end{figure}
+%\begin{figure}[t]
+%	\centering
+%	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/tolerance}
+%	\caption{Simulación: caso de tolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.}
+%	\label{fig:tolerance}
+%\end{figure}
 
 \subsection{Simulaciones con distintas poblaciones de células T}
 

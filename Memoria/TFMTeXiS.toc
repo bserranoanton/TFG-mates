@@ -27,22 +27,22 @@
 \contentsline {section}{\numberline {4.2}Detalles de implementaci\IeC {\'o}n y pseudoc\IeC {\'o}digo}{22}{section.62}
 \contentsline {section}{\numberline {4.3}Resultados y an\IeC {\'a}lisis}{24}{section.72}
 \contentsline {subsection}{\numberline {4.3.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{24}{subsection.73}
-\contentsline {subsection}{\numberline {4.3.2}Tolerancia al \textit {pat\IeC {\'o}geno}}{25}{subsection.76}
-\contentsline {subsection}{\numberline {4.3.3}Simulaciones con distintas poblaciones de c\IeC {\'e}lulas T}{26}{subsection.78}
-\contentsline {chapter}{\numberline {5}Modelo Macrosc\IeC {\'o}pico}{31}{chapter.82}
-\contentsline {section}{\numberline {5.1}Tolerancia y tasa de crecimiento}{31}{section.83}
-\contentsline {section}{\numberline {5.2}Inercia y elasticidad en las c\IeC {\'e}lulas T}{32}{section.84}
-\contentsline {section}{\numberline {5.3}Simulaciones del modelo macrosc\IeC {\'o}pico}{33}{section.87}
-\contentsline {subsection}{\numberline {5.3.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{33}{subsection.89}
-\contentsline {subsection}{\numberline {5.3.2}Tolerancia al pat\IeC {\'o}geno}{34}{subsection.90}
-\contentsline {subsection}{\numberline {5.3.3}Regiones de tolerancia e intolerancia}{34}{subsection.92}
-\contentsline {chapter}{\numberline {6}Conclusiones y Trabajo Futuro}{37}{chapter.94}
-\contentsline {chapter}{\numberline {7}Introduction}{39}{chapter.95}
+\contentsline {subsection}{\numberline {4.3.2}Tolerancia al \textit {pat\IeC {\'o}geno}}{25}{subsection.78}
+\contentsline {subsection}{\numberline {4.3.3}Simulaciones con distintas poblaciones de c\IeC {\'e}lulas T}{26}{subsection.79}
+\contentsline {chapter}{\numberline {5}Modelo Macrosc\IeC {\'o}pico}{29}{chapter.83}
+\contentsline {section}{\numberline {5.1}Tolerancia y tasa de crecimiento}{29}{section.84}
+\contentsline {section}{\numberline {5.2}Inercia y elasticidad en las c\IeC {\'e}lulas T}{30}{section.85}
+\contentsline {section}{\numberline {5.3}Simulaciones del modelo macrosc\IeC {\'o}pico}{31}{section.88}
+\contentsline {subsection}{\numberline {5.3.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{31}{subsection.90}
+\contentsline {subsection}{\numberline {5.3.2}Tolerancia al pat\IeC {\'o}geno}{32}{subsection.91}
+\contentsline {subsection}{\numberline {5.3.3}Regiones de tolerancia e intolerancia}{32}{subsection.93}
+\contentsline {chapter}{\numberline {6}Conclusiones y Trabajo Futuro}{35}{chapter.95}
+\contentsline {chapter}{\numberline {7}Introduction}{37}{chapter.96}
 \select@language {english}
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{41}{chapter.96}
-\contentsline {chapter}{Bibliograf\'{\i }a}{43}{chapter*.97}
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{39}{chapter.97}
+\contentsline {chapter}{Bibliograf\'{\i }a}{41}{chapter*.98}
 \select@language {spanish}
-\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo de las simulaciones}{45}{appendix.98}
-\contentsline {section}{\numberline {A.1}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:simulaciones}}{45}{section.99}
-\contentsline {section}{\numberline {A.2}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:modeloMacroscopico}}{50}{section.384}
-\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{55}{appendix.520}
+\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo de las simulaciones}{43}{appendix.99}
+\contentsline {section}{\numberline {A.1}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:simulaciones}}{43}{section.100}
+\contentsline {section}{\numberline {A.2}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:modeloMacroscopico}}{48}{section.385}
+\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{53}{appendix.521}
