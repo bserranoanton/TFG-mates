@@ -113,16 +113,6 @@ La población de células T se guarda en una matriz, donde se especifica el tipo
 
 En este pseudocódigo se ha detallado cuáles son las ecuaciones involucradas en cada paso. A continuación, exponemos algunas particularidades de la simulación: hemos omitido que cuando las condiciones son $a > 0$ y $c > 0$, en el caso de las células T efectoras y $c > 0$, en el caso de las células T de memoria, la célula permanece en la fase de decisión pero actualiza sus condiciones para la siguiente iteración según los resultados que ha obtenido en la iteración actual. También hay que tener en cuenta que la división celular y el proceso de apoptosis no se llevan a cabo de manera inmediata, conllevan un tiempo $t_{cycle}$ y $t_{apo}$, respectivamente, por lo que el número total de células en la población debe actualizarse una vez que estos procesos hayan finalizado y no instantáneamente, como pueden sugerir las líneas $10$, $12$ y $17$. Otro aspecto que hemos supuesto es que el parámetro $\gamma$ que aparecía en la Ecuación \ref{ec:rhotau} es $\gamma = 1$. Es decir, suponemos que todo encuentro del TCR de la célula T con el antígeno va a desencadenar una activación. El parámetro $\rho$ debe ser calculado de tal manera que todas las células T tengan las mismas posibilidades a la hora de \textit{obtener su parte de \textit{patógeno}}, en la implementación real se usó un vector de números aleatorios entre $0$ y $1$ normalizado por el número total de células T. Buena parte de la notación usada en el Algoritmo \ref{algo:pseudocodigo} ya ha sido introducida a lo largo de este trabajo, pero volvemos a insistir en que $Y$ representa el número de moléculas del \textit{patógeno}, mientras que $N$ la cantidad total de células T, incluyendo las efectoras y las de memoria. Sin embargo, en la implementación real, en la línea $4$ del pseudocódigo, el $N$ utilizado es solamente el número total de células T efectoras, sin contar las de memoria\footnote{Esto se ha hecho así porque el proceso que siguen las células T de memoria es más complejo que lo que se recoge en el modelo. Estas células al cabo de un tiempo se desactivan y para que tengan un efecto sobre el \textit{patógeno} deben volver a activarse. Para intentar hacer el modelo lo más sencillo posible se ha optado por hacer que las únicas células que combaten al \textit{patógeno} sean las T efectoras.}.
 
-\section{Resultados y análisis}
-
-En esta sección expondremos los resultados de las simulaciones realizadas. Empezaremos por las dos situaciones básicas que se pueden dar en una infección: que las células inmunes logren controlar la infección o que, por el contrario, sea el agente infeccioso el que acabe tomando el control de nuestro organismo, y acabaremos mostrando el resultado de diversas simulaciones cuando la afinidad por el \textit{patógeno} de las células T va variando.
-
-\subsection{Intolerancia al \textit{patógeno}}
-\label{sim:intoler}
-
-La primera de nuestras simulaciones puede verse en la Figura \ref{fig:intolerance}. Se muestra en ella el caso correspondiente a la elección de parámetros que se recoge en la Tabla \ref{tabla:param}. Estamos ante un caso de intolerancia al \textit{patógeno}, puesto que las células T son capaces de controlar la infección eliminarlo por completo. Veámoslo con más detalle: el \textit{patógeno}, representado con un línea roja, crece rápidamente, debido a la elección de una tasa de crecimiento, $\alpha$, elevada. Una vez que las células T son conscientes de la rápida proliferación de un agente no deseado, su número comienza a crecer. Sin embargo, como ya habíamos comentado anteriormente, esto se produce con cierto retraso tras la aparición del \textit{patógeno}. Lo que estamos describiendo es la conocida \textit{expansión clonal}. Este crecimiento de células T provoca que el término que acompaña a $\beta$ en la Ecuación \ref{sist_pat_T} comience a ser más grande que el acompañado por $\alpha$ en esta misma ecuación, provocando así que la derivada de $y$ se haga negativa y, por tanto, el número de moléculas del \textit{patógeno} comience a decrecer. Debemos mencionar que el número de células T necesarias para eliminar el \textit{patógeno} viene regulado por el parámetro $\beta$, si este fuera más grande, es decir, las células T fueran más dañinas con el \textit{patógeno}, el número de células T necesarias para controlar la infección sería menor (y viceversa).
-
-%veríamos una curva azul con un máximo mas pequeño que el de la Figura \ref{fig:intolerance}. (EN REALIDAD EN ESTA FIGURA LA GRÁFICA ESTÁ NORMALIZADA, SERÍA MEJOR PONER LA OTRA SIN NORMALIZAR?)
 
 \begin{table}[h]
 	\begin{center}
@@ -153,36 +143,46 @@ La primera de nuestras simulaciones puede verse en la Figura \ref{fig:intoleranc
 	\end{center}
 \end{table}
 
+\section{Resultados y análisis}
+
+En esta sección expondremos los resultados de las simulaciones realizadas. Empezaremos por las dos situaciones básicas que se pueden dar en una infección: que las células inmunes logren controlar la infección o que, por el contrario, sea el agente infeccioso el que acabe tomando el control de nuestro organismo, y acabaremos mostrando el resultado de diversas simulaciones cuando la afinidad por el \textit{patógeno} de las células T va variando.
+
+\subsection{Intolerancia al \textit{patógeno}}
+\label{sim:intoler}
+
+La primera de nuestras simulaciones puede verse en la Figura \ref{fig:intolerance}. Se muestra en ella el caso correspondiente a la elección de parámetros que se recoge en la Tabla \ref{tabla:param}. Estamos ante un caso de intolerancia al \textit{patógeno}, puesto que las células T son capaces de controlar la infección eliminarlo por completo. Veámoslo con más detalle: el \textit{patógeno}, representado con un línea roja, crece rápidamente, debido a la elección de una tasa de crecimiento, $\alpha$, elevada. Una vez que las células T son conscientes de la rápida proliferación de un agente no deseado, su número comienza a crecer. Sin embargo, como ya habíamos comentado anteriormente, esto se produce con cierto retraso tras la aparición del \textit{patógeno}. Lo que estamos describiendo es la conocida \textit{expansión clonal}. Este crecimiento de células T provoca que el término que acompaña a $\beta$ en la Ecuación \ref{sist_pat_T} comience a ser más grande que el acompañado por $\alpha$ en esta misma ecuación, provocando así que la derivada de $y$ se haga negativa y, por tanto, el número de moléculas del \textit{patógeno} comience a decrecer. Debemos mencionar que el número de células T necesarias para eliminar el \textit{patógeno} viene regulado por el parámetro $\beta$, si este fuera más grande, es decir, las células T fueran más dañinas con el \textit{patógeno}, el número de células T necesarias para controlar la infección sería menor (y viceversa).
+
+%veríamos una curva azul con un máximo mas pequeño que el de la Figura \ref{fig:intolerance}. (EN REALIDAD EN ESTA FIGURA LA GRÁFICA ESTÁ NORMALIZADA, SERÍA MEJOR PONER LA OTRA SIN NORMALIZAR?)
 
 Prestemos atención ahora al comportamiento de las células T de memoria: por la sección anterior, ya sabíamos que las células T efectoras y las de memoria iban a constituir poblaciones distintas, puesto que las ecuaciones que rigen sus dinámicas son distintas. La principal diferencia es que las células T de memoria no se suicidan una vez el \textit{patógeno} ha desaparecido, permanecen con la información necesaria para atacar al \textit{patógeno} más rápidamente en caso de reaparición. En la Figura \ref{fig:intolerance} vemos cómo estas células de memoria aumentan su población tras la aparición del \textit{patógeno}, aunque se produce un crecimiento tan rápido ni elevado como en el caso de las T efectoras. Su población queda reducida a un $5-10\%$ de la población de células T.
-%
-%\begin{figure}[t]
-%	\centering
-%	\begin{tabular}{cc}
-%		\subfloat[Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los expuestos en la Tabla \ref{tabla:param}.]{
-%			\label{fig:intolerance}
-%			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/intolerance}}
-%		& \subfloat[Simulación: caso de tolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.]{
-%			\label{fig:tolerance}
-%			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/tolerance}}\\
-%	\end{tabular}
-%	\caption{Simulaciones del modelo microscópico. Casos de tolerancia e intolerancia al \textit{patógeno}}%\label{foo}
-%\end{figure}
 
 \begin{figure}[t]
 	\centering
-	%\begin{tabular}{c}
+	\begin{tabular}{cc}
 		\subfloat[Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los expuestos en la Tabla \ref{tabla:param}.]{
 			\label{fig:intolerance}
-			\includegraphics[width=0.7\columnwidth]{Imagenes/Simulaciones/intolerance}}
-		
-		\subfloat[Simulación: caso de tolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.]{
+			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/intolerance}}
+		& \subfloat[Simulación: caso de tolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.]{
 			\label{fig:tolerance}
-			\includegraphics[width=0.7\columnwidth]{Imagenes/Simulaciones/tolerance}}\\
-	%\end{tabular}
-
+			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/tolerance}}\\
+	\end{tabular}
 	\caption{Simulaciones del modelo microscópico. Casos de tolerancia e intolerancia al \textit{patógeno}}%\label{foo}
 \end{figure}
+
+%\begin{figure}[t]
+%	\centering
+%	%\begin{tabular}{c}
+%		\subfloat[Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los expuestos en la Tabla \ref{tabla:param}.]{
+%			\label{fig:intolerance}
+%			\includegraphics[width=0.7\columnwidth]{Imagenes/Simulaciones/intolerance}}
+%		
+%		\subfloat[Simulación: caso de tolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.]{
+%			\label{fig:tolerance}
+%			\includegraphics[width=0.7\columnwidth]{Imagenes/Simulaciones/tolerance}}\\
+%	%\end{tabular}
+%
+%	\caption{Simulaciones del modelo microscópico. Casos de tolerancia e intolerancia al \textit{patógeno}}%\label{foo}
+%\end{figure}
 
 
 %\begin{figure}[t]

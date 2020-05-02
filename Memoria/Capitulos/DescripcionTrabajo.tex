@@ -43,7 +43,7 @@ La acción que las \textit{citoquinas} llevan a cabo se produce gracias sus inte
 
 Postulamos que tanto los fenotipos de las células T efectoras como los de las células T con memoria se determinan durante la sinapsis inmune. Esto es, una célula T en estado \textit{naïve} puede diferenciarse en una célula T efectora o en una célula T de memoria. Por su parte, tras esta primera división, las células T efectoras y de memoria, se dividen de manera simétrica, es decir, las células hijas heredarán el tipo de la madre, y ambos tipos se comportan de forma similar durante la respuesta inmune.
 
-\section{Modelo matemático}
+\section{Modelo microscópico}
 \label{sec:modelo}
 
 Basándonos en las hipótesis anteriormente formuladas proponemos a continuación una serie de ecuaciones, con variables continuas y discretas, que darán forma al algoritmo de decisión de nuestro estudio. Como ya habíamos avanzado, se trata de un modelo simple, en el que los sistemas de ecuaciones diferenciales de primer orden propuestos tienen solución explícita. Sin embargo, es esta simplicidad la que hace de él un modelo tan potente, pues, como veremos en el capítulo siguiente, obtendremos resultados que no solo se ajustan a los hechos observados, sino que sacan a la luz comportamientos poblacionales difícilmente observables desde un laboratorio.
@@ -109,7 +109,7 @@ En esta breve sección presentamos algunos aspectos técnicos del algoritmo prop
 \begin{itemize}
 	\item Las condiciones $a(t)\geq0$, $c(t)\geq0$ y $r_i(t)\geq0$, para $i=1,...,k$ definen el domino de las ecuaciones \ref{sist_inhib} y \ref{sist_recep} durante la fase de decisión. 
 	
-	\item Cualquier receptor con valor negarivo $r_i(t) < 0$ es \textit{reseteado} a 0 sin cambiar la fase de decisión en la que está la célula.
+	\item Cualquier receptor con valor negarivo $r_i(t) < 0$ es \textit{reseteado} a $0$ sin cambiar la fase de decisión en la que está la célula.
 	
 	\item Por su parte, las condiciones $a(t)=0$, $c(t)=0$ desencadenan el inicio de la fase de apoptosis y ciclo, respectivamente. Estas fases son excluyentes y no se pueden revertir mediante estimulación por \textit{citoquinas}. Además, tienen longitud constante que denotaremos por $t_{apo}$ y $t_{cycle}$, respectivamente.
 	
