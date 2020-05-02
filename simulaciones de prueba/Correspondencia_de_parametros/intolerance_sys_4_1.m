@@ -4,22 +4,28 @@
 %Last Modified 31/03/2020
 
 %Variable definition
-t_cycle = 0.15;                         %Time lap between the restriction point and cell division
-t_apo = 0.2;                           %Time lap between the deactivation of Bcl-2 and cell death
-t_next = 0.3;                           %Time step in this simulation
+%t_cycle = 0.15;                         %Time lap between the restriction point and cell division
+t_cycle = 0.05; 
+%t_apo = 0.2;                           %Time lap between the deactivation of Bcl-2 and cell death
+t_apo = 0.1;
+%t_next = 0.3;                           %Time step in this simulation
+t_next = 0.15;
 
 %Parameters: Pathogen
 %alpha = 6;                              %Pathogen proliferation rate
-alpha = 2;
-beta = 0.04;                            %Pathogen death rate
-
+alpha = 6.4;
+%beta = 0.04;                            %Pathogen death rate
+beta = 0.22;
 %Parameters: Effector T cells
-lambda_pd = 0.05;                       %Change rate in membrane receptor Rd, due to Rp signals
-lambda_taup = 6*10^(-5);                %Change rate in membrane receptor Rd, due to TCR signals
+%lambda_pd = 0.05;                       %Change rate in membrane receptor Rd, due to Rp signals
+lambda_pd = 0.05;
+%lambda_taup = 6*10^(-5);                %Change rate in membrane receptor Rd, due to TCR signals
+lambda_taup = 6*10^(-5);
 lambda_pp = 0.5*10^(-4);                %Change rate in membrane receptor Rp, due to Rp signals
+%lambda_pp = 10^(-4);
 %mu_pc = 15;                             %Change rate in inhibitor molecule Rb, due to receptor Rc
-mu_pc = 10;
-mu_da = 10;                             %Change rate in inhibitor molecule Bcl-2, due to receptor Rc
+mu_pc = 8;
+mu_da = 15;                             %Change rate in inhibitor molecule Bcl-2, due to receptor Rc
 
 %Parameters: Memory T cells
 lambda_pd_mem = 0;                      %Change in membrane receptor Rd, due to Rp signals
@@ -292,6 +298,15 @@ while t < T_final
         time_0_y_cell = t;
     end
 end
+
+disp(max_y_cell)
+disp(max_t_cell)
+
+disp(time_max_y_cell)
+disp(time_max_t_cell)
+
+disp(time_0_y_cell)
+disp(time_0_t_cell)
 
 %Plot results
 f1=figure;

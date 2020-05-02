@@ -1,0 +1,40 @@
+\chapter{Correspondencia de parámetros entre los modelos microscópico y macroscópico}
+\label{cap:redNeuronal}
+
+Durante los Capítulos \ref{cap:descripcionTrabajo} y \ref{cap:modeloMacroscopico} se establece el marco teórico de dos modelos matemáticos que dan una posible explicación del mecanismo que rige la dinámica de población de las células T durante una infección aguda. Como se puede ver en las simulaciones correspondientes de estos modelos (ver Capítulos \ref{cap:simulaciones} y \ref{cap:modeloMacroscopico}) ambos pueden simular comportamientos similares, como son el de tolerancia e intolerancia al \textit{patógeno}. Sin embargo, ambos modelos son notablemente distintos: 
+
+\begin{enumerate}
+	\item Mientras que el modelo microscópico determina el comportamiento de cada célula, el macroscópico presenta unas ecuaciones que gobiernan sobre toda la población de células. 
+	
+	\item El significado biológico de los parámetros del modelo microscópico, tales como PONER EJEMPLOS, está bien definido. Por su parte, los parámetros $k$ y $\lambda$ que representan la elasticidad y la inercia de la población, respectivamente, tienen un significado difuso desde el punto de vista biológico cuando se refieren a una población.
+	
+\end{enumerate}
+
+A pesar de que el número de parámetros del modelo macroscópico es considerablemente menor, la elección de los parámetros $k$ y $\lambda$ es más compleja que la de los parámetros del modelo microscópico por la razón $2$. Así las cosas, lo ideal sería poder establecer una correspondencia entre los parámetros de ambos modelos. De esta manera se podrían establecer los valores de los parámetros del modelo microscópico, que tienen un significado biológico claro, e inferir el valor de los parámetros del modelo macroscópico o viceversa. A lo largo de este capítulo se detalla cómo se a abordado este problema mediante el uso de técnicas de inteligencia artificial y se interpretan los resultados obtenidos. 
+
+
+\section{Conjunto de datos y entrenamiento de la red neuronal}
+
+Como ya se avanzaba en la introducción, este problema se ha atajado mediante el uso de la inteligencia artificial, más concretamente de una red neuronal. El propósito de esta red es poder establecer el valor de los parámetros que se le deben asignar al modelo macroscópico teniendo como entrada aspectos característicos de una simulación. De esta manera, podemos hacer una simulación con unos parámetros concretos del modelo microscópico, establecer las características (que veremos más adelante) de esta simulación y obtener el valor de los parámetros del modelo macroscópico.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

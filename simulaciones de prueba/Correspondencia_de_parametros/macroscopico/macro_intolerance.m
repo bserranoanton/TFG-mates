@@ -7,17 +7,17 @@ syms t_cell(t) p(t)
 
 %Constants
 %a = 1.5;
-a = 3.6;
+a = 3.2;
 %b = 0.1;
-b = 0.1;
+b = 0.25;
 
-k = 0.1;
+k = 0.3;
 %k = 0.1;
 %lambda = 0.4;
-lambda = 0.77;
+lambda = 0.9;
 
 t0 = 0; 
-tf = 15; 
+tf = 20; 
 dt_cell=diff(t_cell,t);
 
 %Initial Conditions
