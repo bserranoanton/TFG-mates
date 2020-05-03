@@ -317,8 +317,8 @@ figure(f1)
 hold on
 [hA2]=plot(time_vec,rec_vector_Y,'r','LineWidth', 1);
 
-hold on
-[hA3] = plot(time_vec,rec_vector_N_mem,'g','LineWidth', 1);
+%hold on
+%[hA3] = plot(time_vec,rec_vector_N_mem,'g','LineWidth', 1);
 
 %set(gca,'YTickLabel',[]); 
 %set(gca,'XTickLabel',[]);
@@ -330,6 +330,6 @@ hold on
 [hM3] = plot(time_0_t_cell,0,'s','MarkerFaceColor','b', 'MarkerEdgeColor', 'b');
 [hM4] = plot(time_0_y_cell,0,'s','MarkerFaceColor','r', 'MarkerEdgeColor', 'r');
 
-legend([hA1,hA3,hA2,hM1,hM2,hM3,hM4],'Celulas T efectoras','Celulas T de memoria','Patogeno',...
-    'Max celulas T', 'Max celulas patogeno', 'Min celulas T', 'Min celulas patogeno');
-xlabel('Tiempo');  ylabel('Numero de celulas');
+legend([hA1,hA2,hM1,hM2,hM3,hM4],'Celulas T efectoras','Patogeno',...
+    'Max celulas T', 'Max celulaspatogeno', 'Min celulas T', 'Min celulas patogeno');
+xlabel('Tiempo');  ylabel('Número de celulas');

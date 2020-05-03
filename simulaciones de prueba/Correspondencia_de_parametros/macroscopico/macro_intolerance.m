@@ -7,9 +7,9 @@ syms t_cell(t) p(t)
 
 %Constants
 %a = 1.5;
-a = 3.2;
+a = 3.5;
 %b = 0.1;
-b = 0.25;
+b = 0.29;
 
 k = 0.3;
 %k = 0.1;
@@ -131,8 +131,8 @@ disp(time_min_t_cell);
 %set(gca,'YTickLabel',[]); 
 %set(gca,'XTickLabel',[]);
 xlabel('Tiempo');  ylabel('Número de células');
-%legend([hA2,hA1,hM1,hM2,hM3,hM4],'Patógeno','Células T', 'Max celulas T', ...
- %   'Max celulas patogeno', 'Min celulas T', 'Min celulas patogeno');
+legend([hA2,hA1,hM1,hM2,hM3,hM4],'Patógeno','Células T', 'Max celulas T', ...
+   'Max celulas patogeno', 'Min celulas T', 'Min celulas patogeno');
 
 
 

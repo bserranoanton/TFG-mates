@@ -21,6 +21,12 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Simulaci\IeC {\'o}n: caso de tolerancia al \textit {pat\IeC {\'o}geno} en el modelo macrosc\IeC {\'o}pico. Par\IeC {\'a}metros: $\alpha ^{*}=1,1$, $\beta ^{*}=0,01$.\relax }}{32}{figure.caption.92}
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Simulaci\IeC {\'o}n: variaci\IeC {\'o}n de los par\IeC {\'a}metros $\alpha ^{*}$ y $\beta ^{*}$ para dar lugar a regiones de tolerancia e intolerancia.\relax }}{33}{figure.caption.94}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Representaci\IeC {\'o}n gr\IeC {\'a}fica de los valores de \textit {loss} y \textit {accuracy} para cada \textit {epoch} durante el entrenamiento de la red.\relax }}{38}{figure.caption.100}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Valores de \textit {loss} calculados para la red neuronal durante el entrenamiento.}}}{38}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Valores de \textit {accuracy} calculados para la red neuronal durante el entrenamiento.}}}{38}{subfigure.1.2}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Simulaciones del modelo microsc\IeC {\'o}pico. Casos de tolerancia e intolerancia al \textit {pat\IeC {\'o}geno}\relax }}{39}{figure.caption.103}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Simulaci\IeC {\'o}n: caso de intolerancia al \textit {pat\IeC {\'o}geno}. Los par\IeC {\'a}metros son los expuestos en la Tabla \ref {tabla:param}.}}}{39}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Simulaci\IeC {\'o}n: caso de tolerancia al \textit {pat\IeC {\'o}geno}. Los par\IeC {\'a}metros son los mismos que se exponen en la Tabla \ref {tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu _{pc} = 3$, $\mu _{da} = 2$, $\mu _{pc}^{mem} = 2$.}}}{39}{subfigure.2.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \select@language {english}

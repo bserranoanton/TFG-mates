@@ -1,12 +1,15 @@
 \chapter{Correspondencia de parámetros entre los modelos microscópico y macroscópico}
 \label{cap:redNeuronal}
 
-Durante los Capítulos \ref{cap:descripcionTrabajo} y \ref{cap:modeloMacroscopico} se establece el marco teórico de dos modelos matemáticos que dan una posible explicación del mecanismo que rige la dinámica de población de las células T durante una infección aguda. Como se puede ver en las simulaciones correspondientes de estos modelos (ver Capítulos \ref{cap:simulaciones} y \ref{cap:modeloMacroscopico}) ambos pueden simular comportamientos similares, como son el de tolerancia e intolerancia al \textit{patógeno}. Sin embargo, ambos modelos son notablemente distintos: 
+Durante los Capítulos \ref{cap:descripcionTrabajo} y \ref{cap:modeloMacroscopico} se establece el marco teórico de dos modelos matemáticos que dan una posible explicación del mecanismo que rige la dinámica de población de las células T durante una infección aguda. Como se puede ver en las simulaciones correspondientes de estos modelos (ver Capítulos \ref{cap:simulaciones} y \ref{cap:modeloMacroscopico}) ambos pueden reproducir comportamientos similares, como son el de tolerancia e intolerancia al \textit{patógeno}. Sin embargo, ambos modelos son notablemente distintos por varias razones: 
 
 \begin{enumerate}
-	\item Mientras que el modelo microscópico determina el comportamiento de cada célula, el macroscópico presenta unas ecuaciones que gobiernan sobre toda la población de células. 
+	\item Mientras que el modelo microscópico determina el algoritmo de comportamiento de cada célula de manera individual, el macroscópico presenta unas ecuaciones que gobiernan sobre toda la población de células. 
 	
-	\item El significado biológico de los parámetros del modelo microscópico, tales como PONER EJEMPLOS, está bien definido. Por su parte, los parámetros $k$ y $\lambda$ que representan la elasticidad y la inercia de la población, respectivamente, tienen un significado difuso desde el punto de vista biológico cuando se refieren a una población.
+	\item Las ecuaciones diferenciales que conforman el modelo microscópico son de primer orden y su significado, desde el punto de vista biológico está bien definido. Esto es, los parámetros de este modelo, tales como la tasa de proliferación del \textit{patógeno} ($\beta$) o la tasa de cambio de los receptores ($\lambda_{xy}$) (ver Tabla \ref{tabla:param}), son conceptos biológicos claros. Por su parte, el modelo macroscópico utiliza una ecuación de segundo grado, basada en las dinámicas \textit{newtonianas}. Los parámetros $k$ y $\lambda$ que representan la elasticidad y la inercia de la población, respectivamente, tienen un significado difuso desde el punto de vista biológico, pues establecer HAY QUE SEGUIR
+	
+	%pues cada célula contiene muy poca información sobre el avance de la infección y es improbable que cada célula pueda medir  
+
 	
 \end{enumerate}
 
@@ -15,27 +18,80 @@ A pesar de que el número de parámetros del modelo macroscópico es considerabl
 
 \section{Conjunto de datos y entrenamiento de la red neuronal}
 
-Como ya se avanzaba en la introducción, este problema se ha atajado mediante el uso de inteligencia artificial, más concretamente de una red neuronal. El propósito de esta red es poder establecer el valor de los parámetros que se le deben asignar al modelo macroscópico teniendo como entrada aspectos característicos de una simulación. De esta manera, podemos hacer una simulación con unos parámetros concretos del modelo microscópico, establecer las características (que veremos más adelante) de esta simulación y obtener el valor de los parámetros del modelo macroscópico. 
+Como ya se avanzaba en la introducción, este problema se ha atajado mediante el uso de inteligencia artificial, más concretamente de una red neuronal. El propósito de esta red es poder establecer el valor de los parámetros que se le deben asignar al modelo macroscópico teniendo como entrada aspectos característicos de una simulación. En otros términos, se podría decir que se busca hacer la función inversa a la simulación. De esta manera, podemos hacer una simulación con unos parámetros concretos del modelo microscópico, establecer las características (que veremos más adelante) de esta simulación y obtener el valor de los parámetros del modelo macroscópico. 
 
-Antes de poder entrenar la red es necesario determinar con qué datos se va a trabajar.
-
- En primer lugar se estableció que la red sería entrenada para aquellos casos en los que la simulación obtenida era un caso de intolerancia al \textit{patógeno}. 
-
-caso de intolerancia
-como se define cada simulacion
-
-se debe establecer con qué puntos va a quedar definida una simulación
+Antes de poder entrenar la red es necesario determinar con qué datos se va a trabajar. Más concretamente se deben establecer las entradas y las salidas que tendrá la red. En nuestro caso se tomaron las siguientes decisiones:
 
 
+\begin{itemize}
+	\item Las simulaciones que se realizan para obtener los datos pertinentes se corresponden con situaciones de intolerancia al \textit{patógeno}.
+	
+	\item La red neuronal tiene diez datos de entrada y cuatro de salida. Los seis primeros datos de entrada se corresponden con seis puntos de interés de cada simulación. Estos puntos son: el máximo número de células de patógeno alcanzado, el máximo número de células T alcanzado, el tiempo en el que se alcanzaron ambos y el tiempo en el que desaparecieron ambas poblaciones (PONER REFERENCIA A LA FIGURA), que denominaremos como: \textit{max\_P}, \textit{max\_T}, \textit{t\_max\_P}, \textit{t\_max\_T}, \textit{t\_min\_P}, \textit{t\_min\_T}. Los cuatro restantes datos de entrada son los parámetros $\alpha$, $\beta$, $k$ y $\lambda$ del modelo macroscópico con los cuales se han obtenido los seis valores anteriores. Por último, los cuatro parámetros de salida de la red se corresponden con los valores $\alpha$, $\beta$, $k$ y $\lambda$ predichos por la misma.
+	
+	\item El rango de valores para $\alpha$, $\beta$, $k$ y $\lambda$ se estableció con ayuda del modelo macroscópico adimensional (ver Figura \ref{fig:macro_toler_intoler}) y de tal manera que el número de simulaciones resultantes no fuera demasiado elevado. En concreto se establecieron los siguientes rangos:
+	
+	\begin{itemize}
+		\item $\alpha \in  [0,75;7]$
+		\item $\beta \in [0,1;5]$
+		\item $k, \lambda \in [0,1;2]$
+	\end{itemize}
+	
+	Con estos rangos y a un paso de $0,5$ se obtienen unas $2080$ simulaciones, de las cuales $1587$ fueron casos de intolerancia. Los valores correspondientes a los puntos de interés de la simulación y sus parámetros se guardaron en un archivo \textit{data\_neural\_network\_csv} por filas y en el mismo orden que han sido mencionados (\textit{max\_P}, \textit{max\_T}, \textit{t\_max\_P}, \textit{t\_max\_T}, \textit{t\_min\_P}, \textit{t\_min\_T}, $\alpha$, $\beta$, $k$ y $\lambda$). Este documento da lugar al conjunto de datos de la red.
+	
+	Como es habitual para el entrenamiento de una red neuronal, el $70\%$ del conjunto de los datos, tomado de forma aleatoria, se ha utilizado para el entrenamiento y el $30\%$ restante para \textit{testear} la red. La implementación de la red se ha realizado en Python. Esta cuenta con cinco capas densas y activaciones \textit{ReLu}. Esto es importante en la última capa, puesto que los parámetros no pueden tomar valores negativos. PONER REFERENCIA AL CÓDIGO.
+	
+\end{itemize}
+
+
+\section{Resultados obtenidos por la red neuronal}
+
+En esta sección se exponen los resultados obtenidos tras el entrenamiento de la red, prestando atención a los valores de \textit{loss} y \textit{accuracy} obtenidos. Además, veremos un ejemplo real de la inferencia de parámetros dada por la red tras establecer como entrada una simulación del modelo microscópico. 
+
+Comencemos definiendo los conceptos de \textit{epoch}, \textit{loss} y \textit{accuracy} para una red neuronal, de esta manera las gráficas y resultados que vienen a continuación no presentarán ningún impedimento terminológico: Se entiende por \textit{epoch} cada pasada completa por todo el conjunto de datos de entrenamiento. Las redes neuronales, cuando entrenan, hacen varias pasadas por los datos y, en cada una de ellas, intentan minimizar una función de error. El concepto de \textit{loss} está asociado a esto último, pues este es el valor que intentamos minimizar. Cuanto más pequeño es más precisas son las predicciones de la red. En nuestro caso, el valor de \textit{loss} se corresponde con el error cuadrático medio. Por su parte, el valor de \textit{accuracy} es una métrica utilizada para medir el rendimiento del algoritmo. Este valor se calcula una vez la red se ha entrenado y ha fijado todos sus parámetros. El valor de \textit{accuracy} mide cómo de preciso es el modelo comparado con los datos reales. Por ejemplo, supongamos que tenemos $1000$ muestras y nuestro modelo es capaz de clasificar bien $990$ de ellas entonces, el valor de \textit{accuracy} es del $99\%$.
+
+En la Figura \ref{fig:loss_accuracy} podemos ver las gráficas correspondientes a los valores de \textit{loss} y \textit{accuracy} durante el entrenamiento de la red. Como se puede observar en la Figura \ref{fig:accuracy}, el valor de \textit{accuracy} continúa incrementándose para el conjunto de entrenamiento hasta prácticamente la última iteración, lo que indica que el modelo no está sobreentrenando, a pesar de que en el conjunto de prueba se estabilice una vez pasada la iteración $100$ aproximadamente. Sin embargo, el valor de \textit{loss} consigue estabilizarse al mínimo en el conjunto de prueba una vez pasada la iteración $230$ (ver Figura \ref{fig:loss}). Todos estos datos nos sugieren que el número de \textit{epoch} utilizados para entrenar la red es el óptimo.
+
+
+\begin{figure}[t]
+	\centering
+	
+	\subfloat[Valores de \textit{loss} calculados para la red neuronal durante el entrenamiento.]{
+		\label{fig:loss}
+		\includegraphics[width=0.6\columnwidth]{Imagenes/RedNeuronal/loss}}
+	
+	\subfloat[Valores de \textit{accuracy} calculados para la red neuronal durante el entrenamiento.]{
+		\label{fig:accuracy}
+		\includegraphics[width=0.6\columnwidth]{Imagenes/RedNeuronal/accuracy}}
+	
+	\caption{Representación gráfica de los valores de \textit{loss} y \textit{accuracy} para cada \textit{epoch} durante el entrenamiento de la red.}
+	\label{fig:loss_accuracy}
+\end{figure}
+
+
+En el archivo \textit{resultados.txt} se pueden ver algunos de los resultados obtenidos por la red, correspondientes a distintos valores de \textit{accuracy}. En el caso que nos ocupa ahora, detallaremos un ejemplo concreto obtenido a partir de los datos de una simulación del modelo microscópico, cumpliendo así con el propósito de esta red. En la Figura \ref{fig:red_micro} podemos ver el resultado de la simulación del modelo microscópico, con los seis puntos de interés destacados. Concretamente el valor de esos parámetros es: $\textit{max\_P} = 74,4$, $\textit{max\_T} = 88$, $\textit{t\_max\_P} = 3,15$, $\textit{t\_max\_T} = 4,8$, $\textit{t\_min\_P} = 3,9$ y  $\textit{t\_min\_T} = 6,3$. Una vez la red estaba entrenada se introdujeron estos valores como entrada para obtener la predicción de los valores del modelo macroscópico. El resultado obtenido fue: $\alpha = 3,5$, $\beta = 0,29$, $k = 0,3$ y $\lambda = 0,9$. En la Figura \ref{fig:red_macro} puede verse la simulación correspondiente a esos parámetros. Si comparamos esta figura con la figura correspondiente al modelo microscópico observamos a simple vista que ambas presentan dos situaciones muy similares, si bien es cierto que los valores difieren ligeramente. En particular, la simulación del modelo macroscópico tiene como puntos de interés los siguientes valores: $\textit{max\_P} = 68.94$, $\textit{max\_T} = 98,82$, $\textit{t\_max\_P} = 1,27$, $\textit{t\_max\_T} =4$, $\textit{t\_min\_P} = 2,45$ y  $\textit{t\_min\_T} = 6,87$.
 
 
 
+%\begin{figure}[t]
+%	\centering
+%	\includegraphics[width=0.7\textwidth]{Imagenes/RedNeuronal/micro}
+%	\caption{Simulación: distintas poblaciones de células T con distintas afinidades al \textit{patógeno}. Clon subdominante. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
+%	\label{fig:red_micro}
+%\end{figure}
 
 
-
-
-
-
+\begin{figure}[t]
+	\centering
+	\begin{tabular}{cc}
+		\subfloat[Simulación: caso de intolerancia al \textit{patógeno}. Los parámetros son los expuestos en la Tabla \ref{tabla:param}.]{
+			\label{fig:red_micro}
+			\includegraphics[width=0.55\textwidth]{Imagenes/RedNeuronal/micro}}
+		& \subfloat[Simulación: caso de tolerancia al \textit{patógeno}. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\alpha = 1$, $\beta = 0.01$, $\mu_{pc} = 3$, $\mu_{da} = 2$, $\mu_{pc}^{mem} = 2$.]{
+			\label{fig:red_macro}
+			\includegraphics[width=0.55\textwidth]{Imagenes/RedNeuronal/macro}}\\
+	\end{tabular}
+	\caption{Simulaciones del modelo microscópico. Casos de tolerancia e intolerancia al \textit{patógeno}}%\label{foo}
+\end{figure}
 
 
 
