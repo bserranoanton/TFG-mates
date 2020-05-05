@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  5 MAY 2020 13:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  5 MAY 2020 21:14
 entering extended mode
 **./TFMTeXiS.tex
 (TFMTeXiS.tex
@@ -2815,35 +2815,23 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 17.
 
-Underfull \vbox (badness 5802) has occurred while \output is active []
+Underfull \vbox (badness 2057) has occurred while \output is active []
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 20.
+(babel)             in language  on input line 22.
  [35]
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 44.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 44.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 44.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 44.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 44.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 44.
-LaTeX Info: Redefining \. on input line 47.
-LaTeX Info: Redefining \% on input line 47.
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
 
 
 Package Fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -2852,22 +2840,35 @@ We now make it that large for the rest of the document.
 This may cause the page layout to be inconsistent, however.
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 43.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 43.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 43.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 43.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 43.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 47.
-[36] <Imagenes/RedNeuronal/loss.png, id=810, 462.528pt x 345.4506pt>
+(babel)             in language  on input line 43.
+[36]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 46.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 46.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 46.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 46.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 46.
+ <Imagenes/RedNeuronal/loss.png, id=810, 462.528pt x 345.4506pt>
 File: Imagenes/RedNeuronal/loss.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/loss.png>
-Package pdftex.def Info: Imagenes/RedNeuronal/loss.png used on input line 73.
+Package pdftex.def Info: Imagenes/RedNeuronal/loss.png used on input line 75.
 (pdftex.def)             Requested size: 213.39568pt x 159.3836pt.
 
 <Imagenes/RedNeuronal/accuracy.png, id=811, 462.528pt x 345.4506pt>
@@ -2875,43 +2876,43 @@ File: Imagenes/RedNeuronal/accuracy.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/accuracy.png>
 Package pdftex.def Info: Imagenes/RedNeuronal/accuracy.png used on input line 7
-6.
+8.
 (pdftex.def)             Requested size: 213.39568pt x 159.3836pt.
 
-Overfull \hbox (31.26108pt too wide) in paragraph at lines 70--78
+Overfull \hbox (31.26108pt too wide) in paragraph at lines 72--80
  [][] 
  []
 
-LaTeX Info: Redefining \. on input line 84.
-LaTeX Info: Redefining \% on input line 84.
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 86.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 84.
+(babel)             in language  on input line 86.
 [37 <./Imagenes/RedNeuronal/loss.png> <./Imagenes/RedNeuronal/accuracy.png>]
 <Imagenes/RedNeuronal/micro.png, id=823, 479.54156pt x 307.1475pt>
 File: Imagenes/RedNeuronal/micro.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/micro.png>
-Package pdftex.def Info: Imagenes/RedNeuronal/micro.png used on input line 93.
+Package pdftex.def Info: Imagenes/RedNeuronal/micro.png used on input line 95.
 (pdftex.def)             Requested size: 213.39568pt x 136.68254pt.
 
 <Imagenes/RedNeuronal/macro.png, id=826, 451.6875pt x 304.13625pt>
 File: Imagenes/RedNeuronal/macro.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/macro.png>
-Package pdftex.def Info: Imagenes/RedNeuronal/macro.png used on input line 96.
+Package pdftex.def Info: Imagenes/RedNeuronal/macro.png used on input line 98.
 (pdftex.def)             Requested size: 213.39568pt x 143.68657pt.
 
-Overfull \hbox (31.26108pt too wide) in paragraph at lines 90--98
+Overfull \hbox (31.26108pt too wide) in paragraph at lines 92--100
  [][] 
  []
 
@@ -3420,7 +3421,7 @@ fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 /cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on TFMTeXiS.pdf (78 pages, 1662690 bytes).
+Output written on TFMTeXiS.pdf (78 pages, 1662786 bytes).
 PDF statistics:
  2377 PDF objects out of 2487 (max. 8388607)
  628 named destinations out of 1000 (max. 500000)
