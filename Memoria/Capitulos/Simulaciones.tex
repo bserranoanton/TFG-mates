@@ -2,12 +2,12 @@
 \chapter{Simulaciones del modelo microscópico}
 \label{cap:simulaciones}
 
-A lo largo de este capítulo se expone en detalle cómo se han realizado las simulaciones del modelo descrito en la Sección \ref{sec:modelo}. En este caso, se han realizado algunas simplificaciones para facilitar tanto la exposición como la implementación. En lo que sigue, estudiaremos el comportamiento individual de cada célula y describiremos el resultado global de las decisiones individuales de cada una de ellas. Como ya se ha comentado en el capítulo anterior, es posible ajustar los parámetros del modelo de manera que se  pongan de manifiesto distintos comportamientos poblacionales. Concretamente se presentarán situaciones de tolerancia al \textit{patógeno}, correspondientes al caso en el que las células T no consiguen controlar la infección y el agente que la produce se hace con el control del organismo, situaciones de intolerancia, aquellas en las que las células T terminan con la población de \textit{patógeno}, acabando así con la infección y se discutirá también qué ocurre cuando  poblaciones de células T con distinta afinidad a un \textit{patógeno} se enfrentan a él.
+A lo largo de este capítulo se expone en detalle cómo se han realizado las simulaciones del modelo descrito en la Sección \ref{sec:modelo}. En este caso, se han realizado algunas simplificaciones para facilitar tanto la exposición como la implementación (ver Sección \ref{sec:modelo_simplif}). En la Sección \ref{sec:implem_pseudo} se exponen algunas puntualizaciones básicas sobre la implementación de los algoritmos utilizados para las simulaciones de la Sección \ref{sec:simulacionesMicro}. Entre estas explicaciones incluyen un pseudocódigo y aclaraciones sobre aspectos concretos. La versión completa del código principal de este capítulo, realizado en Matlab, puede verse en el Apéndice \ref{Appendix:A}. Como ya se ha comentado en el capítulo anterior, es posible ajustar los parámetros del modelo de manera que se  pongan de manifiesto distintos comportamientos poblacionales. Concretamente se presentan situaciones de intolerancia al \textit{patógeno} (Sección \ref{sim:intoler}), en las que las células T terminan con la población de \textit{patógeno}, acabando así con la infección, situaciones de tolerancia (Sección \ref{sim:toler}), correspondientes al caso en el que las células T no consiguen controlar la infección y el agente que la produce se hace con el control del organismo y se discute también qué ocurre cuando poblaciones de células T con distinta afinidad a un \textit{patógeno} se enfrentan a él (Sección \ref{sim:difPoblacionesT}).
 
-Además, en este capítulo se exponen algunas puntualizaciones básicas sobre la implementación de los algoritmos utilizados para las simulaciones. Entre estas explicaciones incluyen un pseudocódigo y aclaraciones sobre aspectos concretos. La versión completa del código principal de este capítulo, realizado en Matlab, puede verse en el Apéndice \ref{Appendix:A}. 
- 
+%En lo que sigue, estudiaremos el comportamiento individual de cada célula y describiremos el resultado global de las decisiones individuales de cada una de ellas. 
 
 \section{Modelo simplificado}
+\label{sec:modelo_simplif}
 
 Para las simulaciones hemos optado por una versión simplificada del modelo propuesto en la Sección \ref{sec:modelo}, de tal manera que el número de parámetros sea suficiente para no perder la esencia del argumento pero no muy elevado para evitar distraer al lector con notación engorrosa. Siguiendo con la notación de \ref{sec:modelo}, asumiremos $k=2$. Es decir, suponemos que hay dos tipos de receptores en la membrana de nuestras células T: \textit{p} (de proliferación) y \textit{d} (de muerte) que controlan la evolución de los inhibidores de ciclo (Rb) y apoptosis (Bcl-2), respectivamente.
 
@@ -48,6 +48,7 @@ Con estos tres sistemas de ecuaciones (Sistemas \ref{sist_pat_T}, \ref{sist9_sim
 
 
 \section{Detalles de implementación y pseudocódigo}
+\label{sec:implem_pseudo}
 
 Con ánimo de aclarar algunos aspectos técnicos, se especifican, paso por paso, las instrucciones seguidas para la realización de las simulaciones. El Algoritmo \ref{algo:pseudocodigo} contiene un pseudocódigo muy sencillo con los detalles claves y prácticamente independientes del lenguaje de programación que se utilice. El código completo, realizado en Matlab, puede verse en el Apéndice \ref{Appendix:A}.
 
@@ -144,6 +145,7 @@ En este pseudocódigo se ha detallado cuáles son las ecuaciones involucradas en
 \end{table}
 
 \section{Resultados y análisis}
+\label{sec:simulacionesMicro}
 
 En esta sección expondremos los resultados de las simulaciones realizadas. Comenzaremos discutiendo dos situaciones básicas que se pueden dar en una infección: que las células inmunes logren controlar la infección o que, por el contrario, sea el agente infeccioso el que acabe tomando el control de nuestro organismo, y acabaremos mostrando el resultado de diversas simulaciones cuando la afinidad por el \textit{patógeno} de las células T va variando.
 
@@ -209,6 +211,7 @@ En cuanto a las células T de memoria, vemos como crecen con la presencia del \t
 %\end{figure}
 
 \subsection{Simulaciones con distintas poblaciones de células T}
+\label{sim:difPoblacionesT}
 
 En esta sección veremos cómo se comportan distintas poblaciones de células T efectoras frente a un mismo \textit{patógeno}. Estas poblaciones están diseñadas para que tengan afinidades distintas con el \textit{patógeno}. Además veremos cómo se comportan estas poblaciones cuando la población \textit{inmunodominante} desaparece.
 

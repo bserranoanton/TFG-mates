@@ -13,7 +13,7 @@
 \BOOKMARK [2][-]{subsection.21}{El sistema inmune adaptativo}{section.18}% 13
 \BOOKMARK [1][-]{section.29}{Cooperaci\363n entre dos ciencias: Matem\341ticas y Biolog\355a}{chapter.17}% 14
 \BOOKMARK [2][-]{subsection.35}{Modelos matem\341ticos versus inmunolog\355a experimental}{section.29}% 15
-\BOOKMARK [0][-]{chapter.40}{Algoritmo de decisi\363n de las c\351lulas T durante la respuesta inmune}{}% 16
+\BOOKMARK [0][-]{chapter.40}{Algoritmo de decisi\363n de las c\351lulas T durante la respuesta inmune. Modelo Microsc\363pico}{}% 16
 \BOOKMARK [1][-]{section.41}{Hip\363tesis biol\363gicas}{chapter.40}% 17
 \BOOKMARK [2][-]{subsection.42}{La competici\363n entre dos mol\351culas inhibidoras determina la decisi\363n y la duraci\363n de la vida de una c\351lula T}{section.41}% 18
 \BOOKMARK [2][-]{subsection.46}{Los receptores de membrana regulan las din\341micas de Rb y Bcl-2}{section.41}% 19
@@ -27,22 +27,21 @@
 \BOOKMARK [2][-]{subsection.75}{Intolerancia al pat\363geno}{section.74}% 27
 \BOOKMARK [2][-]{subsection.79}{Tolerancia al pat\363geno}{section.74}% 28
 \BOOKMARK [2][-]{subsection.81}{Simulaciones con distintas poblaciones de c\351lulas T}{section.74}% 29
-\BOOKMARK [0][-]{chapter.86}{Modelo Macrosc\363pico}{}% 30
-\BOOKMARK [1][-]{section.87}{Tolerancia y tasa de crecimiento}{chapter.86}% 31
-\BOOKMARK [1][-]{section.88}{Inercia y elasticidad en las c\351lulas T}{chapter.86}% 32
-\BOOKMARK [1][-]{section.91}{Simulaciones del modelo macrosc\363pico}{chapter.86}% 33
-\BOOKMARK [2][-]{subsection.92}{Intolerancia al pat\363geno}{section.91}% 34
-\BOOKMARK [2][-]{subsection.96}{Tolerancia al pat\363geno}{section.91}% 35
-\BOOKMARK [2][-]{subsection.97}{Regiones de tolerancia e intolerancia}{section.91}% 36
-\BOOKMARK [0][-]{chapter.99}{Correspondencia de par\341metros entre los modelos microsc\363pico y macrosc\363pico}{}% 37
-\BOOKMARK [1][-]{section.102}{Conjunto de datos y entrenamiento de la red neuronal}{chapter.99}% 38
-\BOOKMARK [1][-]{section.103}{Resultados obtenidos por la red neuronal}{chapter.99}% 39
-\BOOKMARK [0][-]{chapter.110}{Conclusiones y Trabajo Futuro}{}% 40
-\BOOKMARK [0][-]{chapter.111}{Introduction}{}% 41
-\BOOKMARK [0][-]{chapter.112}{Conclusions and Future Work}{}% 42
-\BOOKMARK [0][-]{chapter*.113}{Bibliograf\355a}{}% 43
-\BOOKMARK [0][-]{appendix.114}{C\363digo de las simulaciones}{}% 44
-\BOOKMARK [1][-]{section.115}{C\363digo referente al Cap\355tulo 4}{appendix.114}% 45
-\BOOKMARK [1][-]{section.400}{C\363digo referente al Cap\355tulo 5}{appendix.114}% 46
-\BOOKMARK [0][-]{appendix.536}{T\355tulo del Ap\351ndice B}{}% 47
-\BOOKMARK [0][-]{fin.0}{Fin}{}% 48
+\BOOKMARK [0][-]{chapter.86}{Algoritmo de decisi\363n de las c\351lulas T durante la respuesta inmune. Modelo Macrosc\363pico}{}% 30
+\BOOKMARK [1][-]{section.87}{Inercia y elasticidad en las c\351lulas T}{chapter.86}% 31
+\BOOKMARK [1][-]{section.90}{Simulaciones del modelo macrosc\363pico}{chapter.86}% 32
+\BOOKMARK [2][-]{subsection.91}{Intolerancia al pat\363geno}{section.90}% 33
+\BOOKMARK [2][-]{subsection.95}{Tolerancia al pat\363geno}{section.90}% 34
+\BOOKMARK [2][-]{subsection.96}{Regiones de tolerancia e intolerancia}{section.90}% 35
+\BOOKMARK [0][-]{chapter.99}{Correspondencia de par\341metros entre los modelos microsc\363pico y macrosc\363pico}{}% 36
+\BOOKMARK [1][-]{section.102}{Conjunto de datos y entrenamiento de la red neuronal}{chapter.99}% 37
+\BOOKMARK [1][-]{section.107}{Resultados obtenidos por la red neuronal}{chapter.99}% 38
+\BOOKMARK [0][-]{chapter.112}{Conclusiones y Trabajo Futuro}{}% 39
+\BOOKMARK [0][-]{chapter.113}{Introduction}{}% 40
+\BOOKMARK [0][-]{chapter.114}{Conclusions and Future Work}{}% 41
+\BOOKMARK [0][-]{chapter*.115}{Bibliograf\355a}{}% 42
+\BOOKMARK [0][-]{appendix.116}{C\363digo de las simulaciones}{}% 43
+\BOOKMARK [1][-]{section.117}{C\363digo referente al Cap\355tulo 4}{appendix.116}% 44
+\BOOKMARK [1][-]{section.402}{C\363digo referente al Cap\355tulo 5}{appendix.116}% 45
+\BOOKMARK [0][-]{appendix.538}{T\355tulo del Ap\351ndice B}{}% 46
+\BOOKMARK [0][-]{fin.0}{Fin}{}% 47

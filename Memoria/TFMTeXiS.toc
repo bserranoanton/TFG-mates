@@ -13,10 +13,10 @@
 \contentsline {section}{\numberline {2.2}Cooperaci\IeC {\'o}n entre dos ciencias: Matem\IeC {\'a}ticas y Biolog\IeC {\'\i }a}{10}{section.29}
 \contentsline {subsection}{\numberline {2.2.1}Modelos matem\IeC {\'a}ticos \textit {versus} inmunolog\IeC {\'\i }a experimental}{11}{subsection.35}
 \contentsline {subsubsection}{\numberline {2.2.1.1}Din\IeC {\'a}mica de las c\IeC {\'e}lulas T. Decisi\IeC {\'o}n entre divisi\IeC {\'o}n o apoptosis}{12}{subsubsection.39}
-\contentsline {chapter}{\numberline {3}Algoritmo de decisi\IeC {\'o}n de las c\IeC {\'e}lulas T durante la respuesta inmune}{15}{chapter.40}
+\contentsline {chapter}{\numberline {3}Algoritmo de decisi\IeC {\'o}n de las c\IeC {\'e}lulas T durante la respuesta inmune. Modelo Microsc\IeC {\'o}pico}{15}{chapter.40}
 \contentsline {section}{\numberline {3.1}Hip\IeC {\'o}tesis biol\IeC {\'o}gicas}{16}{section.41}
 \contentsline {subsection}{\numberline {3.1.1}La competici\IeC {\'o}n entre dos mol\IeC {\'e}culas inhibidoras determina la decisi\IeC {\'o}n y la duraci\IeC {\'o}n de la vida de una c\IeC {\'e}lula T}{16}{subsection.42}
-\contentsline {subsection}{\numberline {3.1.2}Los receptores de membrana regulan las din\IeC {\'a}micas de Rb y Bcl-2}{17}{subsection.46}
+\contentsline {subsection}{\numberline {3.1.2}Los receptores de membrana regulan las din\IeC {\'a}micas de Rb y Bcl-2}{16}{subsection.46}
 \contentsline {subsection}{\numberline {3.1.3}Las c\IeC {\'e}lulas T \textit {na\IeC {\"\i }ve} se dividen de manera asim\IeC {\'e}trica despu\IeC {\'e}s de su activaci\IeC {\'o}n.}{17}{subsection.47}
 \contentsline {section}{\numberline {3.2}Modelo microsc\IeC {\'o}pico}{17}{section.48}
 \contentsline {subsubsection}{\numberline {3.2.0.1}Aspectos t\IeC {\'e}cnicos del modelo}{19}{subsubsection.51}
@@ -28,23 +28,22 @@
 \contentsline {subsection}{\numberline {4.3.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{24}{subsection.75}
 \contentsline {subsection}{\numberline {4.3.2}Tolerancia al \textit {pat\IeC {\'o}geno}}{26}{subsection.79}
 \contentsline {subsection}{\numberline {4.3.3}Simulaciones con distintas poblaciones de c\IeC {\'e}lulas T}{27}{subsection.81}
-\contentsline {chapter}{\numberline {5}Modelo Macrosc\IeC {\'o}pico}{29}{chapter.86}
-\contentsline {section}{\numberline {5.1}Tolerancia y tasa de crecimiento}{29}{section.87}
-\contentsline {section}{\numberline {5.2}Inercia y elasticidad en las c\IeC {\'e}lulas T}{30}{section.88}
-\contentsline {section}{\numberline {5.3}Simulaciones del modelo macrosc\IeC {\'o}pico}{31}{section.91}
-\contentsline {subsection}{\numberline {5.3.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{31}{subsection.92}
-\contentsline {subsection}{\numberline {5.3.2}Tolerancia al pat\IeC {\'o}geno}{31}{subsection.96}
-\contentsline {subsection}{\numberline {5.3.3}Regiones de tolerancia e intolerancia}{32}{subsection.97}
-\contentsline {chapter}{\numberline {6}Correspondencia de par\IeC {\'a}metros entre los modelos microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico}{35}{chapter.99}
-\contentsline {section}{\numberline {6.1}Conjunto de datos y entrenamiento de la red neuronal}{36}{section.102}
-\contentsline {section}{\numberline {6.2}Resultados obtenidos por la red neuronal}{37}{section.103}
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{39}{chapter.110}
-\contentsline {chapter}{\numberline {8}Introduction}{41}{chapter.111}
+\contentsline {chapter}{\numberline {5}Algoritmo de decisi\IeC {\'o}n de las c\IeC {\'e}lulas T durante la respuesta inmune. Modelo Macrosc\IeC {\'o}pico}{29}{chapter.86}
+\contentsline {section}{\numberline {5.1}Inercia y elasticidad en las c\IeC {\'e}lulas T}{29}{section.87}
+\contentsline {section}{\numberline {5.2}Simulaciones del modelo macrosc\IeC {\'o}pico}{31}{section.90}
+\contentsline {subsection}{\numberline {5.2.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{31}{subsection.91}
+\contentsline {subsection}{\numberline {5.2.2}Tolerancia al pat\IeC {\'o}geno}{31}{subsection.95}
+\contentsline {subsection}{\numberline {5.2.3}Regiones de tolerancia e intolerancia}{32}{subsection.96}
+\contentsline {chapter}{\numberline {6}Correspondencia de par\IeC {\'a}metros entre los modelos microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico}{33}{chapter.99}
+\contentsline {section}{\numberline {6.1}Conjunto de datos y entrenamiento de la red neuronal}{34}{section.102}
+\contentsline {section}{\numberline {6.2}Resultados obtenidos por la red neuronal}{35}{section.107}
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{37}{chapter.112}
+\contentsline {chapter}{\numberline {8}Introduction}{39}{chapter.113}
 \select@language {english}
-\contentsline {chapter}{\numberline {9}Conclusions and Future Work}{43}{chapter.112}
-\contentsline {chapter}{Bibliograf\'{\i }a}{45}{chapter*.113}
+\contentsline {chapter}{\numberline {9}Conclusions and Future Work}{41}{chapter.114}
+\contentsline {chapter}{Bibliograf\'{\i }a}{43}{chapter*.115}
 \select@language {spanish}
-\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo de las simulaciones}{47}{appendix.114}
-\contentsline {section}{\numberline {A.1}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:simulaciones}}{47}{section.115}
-\contentsline {section}{\numberline {A.2}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:modeloMacroscopico}}{52}{section.400}
-\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{57}{appendix.536}
+\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo de las simulaciones}{45}{appendix.116}
+\contentsline {section}{\numberline {A.1}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:simulaciones}}{45}{section.117}
+\contentsline {section}{\numberline {A.2}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:modeloMacroscopico}}{50}{section.402}
+\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{55}{appendix.538}
