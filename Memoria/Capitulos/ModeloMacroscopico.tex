@@ -1,5 +1,5 @@
 
-\chapter{Algoritmo de decisión de las células T durante la respuesta inmune. Modelo Macroscópico}
+\chapter{Modelo macroscópico para la dinámica de población de las células T durante la respuesta inmune.}
 \label{cap:modeloMacroscopico}
 
 En este capítulo se expone otro modelo matemático propuesto para determinar el algoritmo de decisión entre división o apoptosis de las células T durante una respuesta inmune (ver Sección \ref{cuestionAmodelizar}). En este área aún son muchas las cuestiones que quedan por resolver: una vez que las células se activan, ¿hasta cuándo continúan dividiéndose?, ¿es esta decisión totalmente dependiente de las condiciones que hayan tenido las células en el momento de su activación?, ¿por qué hay un retraso respecto a la desaparición del \textit{patógeno} en la \textit{contracción clonal}?... Estas cuestiones se atajaron en el Capítulo \ref{cap:descripcionTrabajo}, donde se establece la base teórica de un modelo matemático a nivel microscópico. Es decir, este modelo proporciona el algoritmo de decisión para cada célula, pues las decisiones de las células inmunes son, \textit{a priori}, independientes unas de otras (no se ha encontrado un órgano que regule estos mecanismos \citep{arias2016emergent}).
@@ -73,6 +73,7 @@ El código referente a esa sección puede verse en el Apéndice \ref{Appendix:A}
 
 
 \subsection{Intolerancia al \textit{patógeno}}
+\label{sub:simMacroIntoler}
 
 Como vimos en la Sección \ref{sim:intoler}, el caso de tolerancia al \textit{patógeno} se da cuando las células inmunes consiguen eliminar al agente que causa la infección. 
 En este tipo de simulaciones vemos como el \textit{patógeno} aumenta su población seguido de una rápida proliferación de las células T (\textit{expansión clonal}), cuya acción erradica al \textit{patógeno}. Posteriormente a la desaparición del \textit{patógeno}, y con cierto retraso, tiene lugar la \textit{contracción clonal}, que restaura los niveles de población de células T. En la Figura \ref{fig:macro_intolerance}, correspondiente a a simulación del Sistema \ref{sist_macro}, podemos ver esta situación gráficamente. 
@@ -94,6 +95,7 @@ Queda, por tanto, de manifiesto la característica de inercia, pues se ve cómo 
 \end{figure}
 
 \subsection{Tolerancia al patógeno}
+\label{sub:simMacroToler}
 
 Veamos ahora al caso análogo a la Sección \ref{sim:toler}, donde vimos como un \textit{patógeno} con una tasa de reproducción pequeña conseguía zafarse de las células T. En la Figura \ref{fig:macro_tolerance} vemos que las células T comienzan la \textit{contracción clonal}, haciendo que su población desaparezca irremediablemente, y provocando que el \textit{patógeno} pueda reproducirse sin ningún tipo de impedimento, ya que no desaparece, simplemente se reproduce más lento. En este caso la simulación corresponde al Sistema \ref{sist_macro_nod}.
 
@@ -107,6 +109,7 @@ Veamos ahora al caso análogo a la Sección \ref{sim:toler}, donde vimos como un
 
 
 \subsection{Regiones de tolerancia e intolerancia}
+\label{sub:reg_tolerIntolerMacro}
 
 Un análisis interesante que se puede hacer es qué parámetros determinan estar en una región de tolerancia y cuáles en su complementaria (intolerancia). Este asunto se ha abordado para el modelo macroscópico adimensional (ver Sistema \ref{sist_macro_nod}). Para ello se ha implementado un programa que recorre los valores de $\alpha^{*}$ y $\beta^{*}$ entre $0,1$ y $2,5$ con un paso de $0,1$\footnote{Con paso nos referimos al valor del incremento del parámetro en cada iteración.}, y, para cada valor, simula el Sistema \ref{sist_macro_nod}. Una vez hecha la simulación se observa el número de células T y de \textit{patógeno} para obtener el resultado de tolerancia, en caso de que las células T no consiguen acabar con el \textit{patógeno} o intolerancia en caso contrario. La Figura \ref{fig:macro_toler_intoler} recoge el resultado de todas estas simulaciones, arrojando datos importantes: si dejamos uno de los dos parámetros fijos, es posible cambiar de una región a otra con tan solo modificar el otro parámetro. De hecho, de acuerdo con este modelo, \textit{patógenos} y tumores pueden escapar de la acción de las células T por dos métodos: reduciendo el efecto de las células T, el parámetro $\beta^{*}$, o reduciendo su tasa de proliferación, el parámetro $\alpha^{*}$, \citep{arias2016emergent}. Una consecuencia que se puede extraer de esto es que mecanismos como la fiebre, que incrementa la tasa de proliferación del \textit{patógeno}, o la inflamación, que aumenta la acción de las células T, favorecen que el \textit{patógeno} sea vencido. 
 

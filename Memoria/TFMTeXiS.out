@@ -4,44 +4,45 @@
 \BOOKMARK [1][-]{indice de figuras.1}{\315ndice de figuras}{indices.0}% 4
 \BOOKMARK [1][-]{indice de tablas.1}{\315ndice de tablas}{indices.0}% 5
 \BOOKMARK [0][-]{chapter.8}{Introducci\363n}{}% 6
-\BOOKMARK [1][-]{section.11}{Objetivos}{chapter.8}% 7
-\BOOKMARK [1][-]{section.12}{Plan de trabajo}{chapter.8}% 8
-\BOOKMARK [1][-]{section.13}{Estructura del documento}{chapter.8}% 9
-\BOOKMARK [0][-]{chapter.17}{Estado de la Cuesti\363n}{}% 10
-\BOOKMARK [1][-]{section.18}{Cuestiones b\341sicas de inmunolog\355a}{chapter.17}% 11
-\BOOKMARK [2][-]{subsection.19}{El sistema inmune innato}{section.18}% 12
-\BOOKMARK [2][-]{subsection.21}{El sistema inmune adaptativo}{section.18}% 13
-\BOOKMARK [1][-]{section.29}{Cooperaci\363n entre dos ciencias: Matem\341ticas y Biolog\355a}{chapter.17}% 14
-\BOOKMARK [2][-]{subsection.35}{Modelos matem\341ticos versus inmunolog\355a experimental}{section.29}% 15
-\BOOKMARK [0][-]{chapter.40}{Algoritmo de decisi\363n de las c\351lulas T durante la respuesta inmune. Modelo Microsc\363pico}{}% 16
-\BOOKMARK [1][-]{section.41}{Hip\363tesis biol\363gicas}{chapter.40}% 17
-\BOOKMARK [2][-]{subsection.42}{La competici\363n entre dos mol\351culas inhibidoras determina la decisi\363n y la duraci\363n de la vida de una c\351lula T}{section.41}% 18
-\BOOKMARK [2][-]{subsection.46}{Los receptores de membrana regulan las din\341micas de Rb y Bcl-2}{section.41}% 19
-\BOOKMARK [2][-]{subsection.47}{Las c\351lulas T na\357ve se dividen de manera asim\351trica despu\351s de su activaci\363n.}{section.41}% 20
-\BOOKMARK [1][-]{section.48}{Modelo microsc\363pico}{chapter.40}% 21
-\BOOKMARK [1][-]{section.52}{Din\341mica del pat\363geno durante la respuesta inmune}{chapter.40}% 22
-\BOOKMARK [0][-]{chapter.57}{Simulaciones del modelo microsc\363pico}{}% 23
-\BOOKMARK [1][-]{section.58}{Modelo simplificado}{chapter.57}% 24
-\BOOKMARK [1][-]{section.62}{Detalles de implementaci\363n y pseudoc\363digo}{chapter.57}% 25
-\BOOKMARK [1][-]{section.74}{Resultados y an\341lisis}{chapter.57}% 26
-\BOOKMARK [2][-]{subsection.75}{Intolerancia al pat\363geno}{section.74}% 27
-\BOOKMARK [2][-]{subsection.79}{Tolerancia al pat\363geno}{section.74}% 28
-\BOOKMARK [2][-]{subsection.81}{Simulaciones con distintas poblaciones de c\351lulas T}{section.74}% 29
-\BOOKMARK [0][-]{chapter.86}{Algoritmo de decisi\363n de las c\351lulas T durante la respuesta inmune. Modelo Macrosc\363pico}{}% 30
-\BOOKMARK [1][-]{section.87}{Inercia y elasticidad en las c\351lulas T}{chapter.86}% 31
-\BOOKMARK [1][-]{section.90}{Simulaciones del modelo macrosc\363pico}{chapter.86}% 32
-\BOOKMARK [2][-]{subsection.91}{Intolerancia al pat\363geno}{section.90}% 33
-\BOOKMARK [2][-]{subsection.95}{Tolerancia al pat\363geno}{section.90}% 34
-\BOOKMARK [2][-]{subsection.96}{Regiones de tolerancia e intolerancia}{section.90}% 35
-\BOOKMARK [0][-]{chapter.99}{Correspondencia de par\341metros entre los modelos microsc\363pico y macrosc\363pico}{}% 36
-\BOOKMARK [1][-]{section.102}{Conjunto de datos y entrenamiento de la red neuronal}{chapter.99}% 37
-\BOOKMARK [1][-]{section.107}{Resultados obtenidos por la red neuronal}{chapter.99}% 38
-\BOOKMARK [0][-]{chapter.112}{Conclusiones y Trabajo Futuro}{}% 39
-\BOOKMARK [0][-]{chapter.113}{Introduction}{}% 40
-\BOOKMARK [0][-]{chapter.114}{Conclusions and Future Work}{}% 41
-\BOOKMARK [0][-]{chapter*.115}{Bibliograf\355a}{}% 42
-\BOOKMARK [0][-]{appendix.116}{C\363digo de las simulaciones}{}% 43
-\BOOKMARK [1][-]{section.117}{C\363digo referente al Cap\355tulo 4}{appendix.116}% 44
-\BOOKMARK [1][-]{section.402}{C\363digo referente al Cap\355tulo 5}{appendix.116}% 45
-\BOOKMARK [0][-]{appendix.538}{T\355tulo del Ap\351ndice B}{}% 46
-\BOOKMARK [0][-]{fin.0}{Fin}{}% 47
+\BOOKMARK [1][-]{section.12}{Objetivos}{chapter.8}% 7
+\BOOKMARK [1][-]{section.13}{Plan de trabajo}{chapter.8}% 8
+\BOOKMARK [1][-]{section.14}{Estructura del documento}{chapter.8}% 9
+\BOOKMARK [0][-]{chapter.19}{Estado de la Cuesti\363n}{}% 10
+\BOOKMARK [1][-]{section.20}{Cuestiones b\341sicas de inmunolog\355a}{chapter.19}% 11
+\BOOKMARK [2][-]{subsection.21}{El sistema inmune innato}{section.20}% 12
+\BOOKMARK [2][-]{subsection.23}{El sistema inmune adaptativo}{section.20}% 13
+\BOOKMARK [1][-]{section.31}{Cooperaci\363n entre dos ciencias: Matem\341ticas y Biolog\355a}{chapter.19}% 14
+\BOOKMARK [2][-]{subsection.37}{Modelos matem\341ticos versus inmunolog\355a experimental}{section.31}% 15
+\BOOKMARK [0][-]{chapter.42}{Algoritmo de decisi\363n de las c\351lulas T durante la respuesta inmune. Modelo microsc\363pico}{}% 16
+\BOOKMARK [1][-]{section.43}{Hip\363tesis biol\363gicas}{chapter.42}% 17
+\BOOKMARK [2][-]{subsection.44}{La competici\363n entre dos mol\351culas inhibidoras determina la decisi\363n y la duraci\363n de la vida de una c\351lula T}{section.43}% 18
+\BOOKMARK [2][-]{subsection.48}{Los receptores de membrana regulan las din\341micas de Rb y Bcl-2}{section.43}% 19
+\BOOKMARK [2][-]{subsection.49}{Las c\351lulas T na\357ve se dividen de manera asim\351trica despu\351s de su activaci\363n.}{section.43}% 20
+\BOOKMARK [1][-]{section.50}{Modelo microsc\363pico}{chapter.42}% 21
+\BOOKMARK [2][-]{subsection.53}{Aspectos t\351cnicos del modelo}{section.50}% 22
+\BOOKMARK [1][-]{section.54}{Din\341mica del pat\363geno durante la respuesta inmune}{chapter.42}% 23
+\BOOKMARK [0][-]{chapter.59}{Simulaciones del modelo microsc\363pico}{}% 24
+\BOOKMARK [1][-]{section.60}{Modelo simplificado}{chapter.59}% 25
+\BOOKMARK [1][-]{section.64}{Detalles de implementaci\363n y pseudoc\363digo}{chapter.59}% 26
+\BOOKMARK [1][-]{section.76}{Resultados y an\341lisis}{chapter.59}% 27
+\BOOKMARK [2][-]{subsection.77}{Intolerancia al pat\363geno}{section.76}% 28
+\BOOKMARK [2][-]{subsection.81}{Tolerancia al pat\363geno}{section.76}% 29
+\BOOKMARK [2][-]{subsection.83}{Simulaciones con distintas poblaciones de c\351lulas T}{section.76}% 30
+\BOOKMARK [0][-]{chapter.88}{Modelo macrosc\363pico para la din\341mica de poblaci\363n de las c\351lulas T durante la respuesta inmune.}{}% 31
+\BOOKMARK [1][-]{section.89}{Inercia y elasticidad en las c\351lulas T}{chapter.88}% 32
+\BOOKMARK [1][-]{section.92}{Simulaciones del modelo macrosc\363pico}{chapter.88}% 33
+\BOOKMARK [2][-]{subsection.93}{Intolerancia al pat\363geno}{section.92}% 34
+\BOOKMARK [2][-]{subsection.97}{Tolerancia al pat\363geno}{section.92}% 35
+\BOOKMARK [2][-]{subsection.98}{Regiones de tolerancia e intolerancia}{section.92}% 36
+\BOOKMARK [0][-]{chapter.101}{Correspondencia de par\341metros entre los modelos microsc\363pico y macrosc\363pico}{}% 37
+\BOOKMARK [1][-]{section.104}{Conjunto de datos y entrenamiento de la red neuronal}{chapter.101}% 38
+\BOOKMARK [1][-]{section.109}{Resultados obtenidos por la red neuronal}{chapter.101}% 39
+\BOOKMARK [0][-]{chapter.114}{Conclusiones y Trabajo Futuro}{}% 40
+\BOOKMARK [0][-]{chapter.115}{Introduction}{}% 41
+\BOOKMARK [0][-]{chapter.116}{Conclusions and Future Work}{}% 42
+\BOOKMARK [0][-]{chapter*.117}{Bibliograf\355a}{}% 43
+\BOOKMARK [0][-]{appendix.118}{C\363digo de las simulaciones}{}% 44
+\BOOKMARK [1][-]{section.119}{C\363digo referente al Cap\355tulo 4}{appendix.118}% 45
+\BOOKMARK [1][-]{section.404}{C\363digo referente al Cap\355tulo 5}{appendix.118}% 46
+\BOOKMARK [0][-]{appendix.540}{T\355tulo del Ap\351ndice B}{}% 47
+\BOOKMARK [0][-]{fin.0}{Fin}{}% 48

@@ -1,10 +1,10 @@
-\chapter{Algoritmo de decisión de las células T durante la respuesta inmune. Modelo Microscópico}
+\chapter{Algoritmo de decisión de las células T durante la respuesta inmune. Modelo microscópico}
 \label{cap:descripcionTrabajo}
 
 
-El modelo matemático que se presenta a continuación pretende proporcionar una explicación al proceso que rige la dinámica de población de las células T durante la respuesta del sistema inmune ante una infección aguda (problema expuesto en la Sección \ref{cuestionAmodelizar}). Para formularlo, hemos seguido la siguiente estrategia: a partir de unas hipótesis que corresponden a hechos experimentales conocidos (ver Sección \ref{sec:hip_bio}) se formulan ecuaciones diferenciales muy simples que, de hecho, pueden resolverse de manera explícita. Esta simplicidad es una de las principales características del modelo. Entre otras cosas, se consigue así reducir el número de parámetros al mínimo, con lo que las simulaciones del mismo son más fáciles de analizar e interpretar. 
+El modelo matemático que se presenta a continuación pretende proporcionar una explicación al proceso que rige la dinámica de población de las células T durante la respuesta del sistema inmune ante una infección aguda (problema expuesto en la Sección \ref{cuestionAmodelizar}). Denominamos a este modelo microscópico puesto que propone un algoritmo de decisión, entre división o apoptosis, para cada célula T. %De esta manera, cada célula toma una decisión individual basada en la información que encuentra en su entorno.
 
-Las ecuaciones propuestas en la Sección \ref{sec:modelo} modelizan tanto la dinámica de las células T efectoras, sin olvidar las de memoria, como la dinámica del \textit{patógeno}. Nuestro modelo  difiere sustancialmente  de  muchos otros propuestos hasta la fecha. Por ejemplo, prescindimos de la hipótesis de que las células se dividen un número fijo de veces después de ser activadas \citep{JTB} o  de que la decisión entre dividirse o suicidarse sea en cada célula el resultado de una competencia entre relojes estocásticos internos de vida o suicidio celular \citep{JTB}. En su lugar, asumiremos en nuestro modelo que estas decisiones (división o apoptosis) vienen determinadas por la competición de dos moléculas inhibidoras: Retinoblastoma (Rb), que previene la expresión de genes necesarios para que la célula pueda continuar el ciclo celular y dividirse, y linfoma de célula B-2 (Bcl-2), que bloqueará la muerte celular. La presencia en las células de tales inhibidores es bien conocida \citep{fernandez2012mecanica}. También tendremos en cuenta que la las células T se comunican con el exterior gracias a sus receptores TCR (ver \ref{Tcell}) y, por tanto, sus decisiones se ven afectadas por la cantidad de receptores que presenten (cuantos más receptores, más estímulos serán capaces de percibir), así como por la presencia externa de ligandos capaces de interaccionar con dichos receptores. Además, en la Sección \ref{sec:modeloPatCelT} se presenta en forma de ecuación la dinámica de población del \textit{patógeno} en función de la cantidad de células T disponible y de las interacciones entre ambas poblaciones.
+Para la formulación del modelo se ha seguido la siguiente estrategia: a partir de unas hipótesis, que corresponden a hechos experimentales conocidos (ver Sección \ref{sec:hip_bio}), se formulan ecuaciones diferenciales muy simples que, de hecho, pueden resolverse de manera explícita. Esta simplicidad es una de las principales características del modelo. Entre otras cosas, se consigue así reducir el número de parámetros al mínimo, con lo que las simulaciones del mismo son más fáciles de analizar e interpretar. Las ecuaciones propuestas en la Sección \ref{sec:modelo} modelizan tanto la dinámica de las células T efectoras, sin olvidar las de memoria, como la dinámica del \textit{patógeno} (Sección \ref{sec:modeloPatCelT}). Nuestro modelo  difiere sustancialmente  de  muchos otros propuestos hasta la fecha. Por ejemplo, prescindimos de la hipótesis de que las células se dividen un número fijo de veces después de ser activadas \citep{JTB} o  de que la decisión entre dividirse o suicidarse sea en cada célula el resultado de una competencia entre relojes estocásticos internos de vida o suicidio celular \citep{JTB}. En su lugar, asumiremos en nuestro modelo que estas decisiones (división o apoptosis) vienen determinadas por la competición de dos moléculas inhibidoras: Retinoblastoma (Rb), que previene la expresión de genes necesarios para que la célula pueda continuar el ciclo celular y dividirse, y linfoma de célula B-2 (Bcl-2), que bloqueará la muerte celular. La presencia en las células de tales inhibidores es bien conocida \citep{fernandez2012mecanica}. También tendremos en cuenta que la las células T se comunican con el exterior gracias a sus receptores TCR (ver \ref{Tcell}) y, por tanto, sus decisiones se ven afectadas por la cantidad de receptores que presenten (cuantos más receptores, más estímulos serán capaces de percibir), así como por la presencia externa de ligandos capaces de interaccionar con dichos receptores.
 
 Los fenómenos de \textit{expansión} y \textit{contracción clonal} pueden ser considerados desde una perspectiva global como la manifestación de muchas decisiones individuales. Cada célula T basa sus decisiones únicamente en la información que recoge de su entorno inmediato. Por ello, presentamos en primer lugar un modelo microscópico, en el que se modeliza la decisión de cada célula. En el Capítulo \ref{cap:modeloMacroscopico} se propone un modelo macroscópico, que consiste en un sistema de ecuaciones para el comportamiento de la población de células T, sin tener en cuenta  las decisiones individuales de cada una de ellas. Compararemos finalmente ambos modelos, macro y micro,  y veremos que ambos proporcionan resultados  compatibles. En particular, ambos permiten explicar la aparición de un retraso característico en la contracción clonal, sin recurrir para ello a la intervención de ningún centro externo de control.
 
@@ -90,7 +90,7 @@ Así las cosas, ya estamos en condiciones de presentar las ecuaciones del modelo
 
 Con el Sistema \ref{sist_inhib} ponemos de manifiesto que las concentraciones de Rb y Bcl-2, representadas por $c(t)$ y $a(t)$, respectivamente, dependen del número de señales TCR/antígeno ($r_{T}$) y, del número de receptores de membrana que posea la célula en cuestión.
 
-Asumimos que los receptores de membrana involucrados en el algoritmo de decisión de las células T son independientes y tienen efectos aditivos. Según la hipótesis \ref{sub:hip_recep}, asumimos que las células son capaces de ``contar'' el número de señales que llegan. De acuerdo con estas relaciones lineales obtenemos un modelo robusto, puesto que configuraciones similares de receptores de membrana provocarán decisiones celulares similares. Teniendo en cuenta lo anterior proponemos la siguiente ecuación para los receptores de membrana:
+Asumimos que los receptores de membrana involucrados en el algoritmo de decisión de las células T son independientes y tienen efectos aditivos. Según la Hipótesis \ref{sub:hip_recep}, asumimos que las células son capaces de ``contar'' el número de señales que llegan. De acuerdo con estas relaciones lineales obtenemos un modelo robusto, puesto que configuraciones similares de receptores de membrana provocarán decisiones celulares similares. Teniendo en cuenta lo anterior proponemos la siguiente ecuación para los receptores de membrana:
 
 
 
@@ -102,12 +102,12 @@ Asumimos que los receptores de membrana involucrados en el algoritmo de decisió
 \end{equation}
 
 
-\subsubsection{Aspectos técnicos del modelo}
+\subsection{Aspectos técnicos del modelo}
 
 En esta breve sección presentamos algunos aspectos técnicos del algoritmo propuesto, entre los que se incluyen las condiciones que marcaran en cambio de fase de una célula T, es decir, la condición que propiciará el paso de la fase de \textit{decisión} a \textit{ciclo}, por ejemplo, o los parámetros asignados a las células hijas al nacer .
 
 \begin{itemize}
-	\item Las condiciones $a(t)\geq0$, $c(t)\geq0$ y $r_i(t)\geq0$, para $i=1,...,k$ definen el domino de las ecuaciones \ref{sist_inhib} y \ref{sist_recep} durante la fase de decisión. 
+	\item Las condiciones $a(t)\geq0$, $c(t)\geq0$ y $r_i(t)\geq0$, para $i=1,...,k$ definen el domino de las Ecuaciones \ref{sist_inhib} y \ref{sist_recep} durante la fase de decisión. 
 	
 	\item Cualquier receptor con valor negarivo $r_i(t) < 0$ es \textit{reseteado} a $0$ sin cambiar la fase de decisión en la que está la célula.
 	
@@ -124,7 +124,7 @@ En esta breve sección presentamos algunos aspectos técnicos del algoritmo prop
 \section{Dinámica del \textit{patógeno} durante la respuesta inmune}
 \label{sec:modeloPatCelT}
 
-Ahora que ya tenemos un algoritmo para la dinámica de población de las células T, modelizamos la interacción del \textit{patógeno} con estas células. Debemos recordar que la dinámica de un \textit{patógeno} depende en gran cantidad de las características de este. Sin embargo, en esta sección daremos unas ecuaciones muy generales para que sean aplicables a la mayor cantidad posible de situaciones. En concreto, la dinámica del \textit{patógeno} vendrá dada por:
+En esta sección se propone una ecuación que modela la interacción del \textit{patógeno} con las células T. Debemos recordar que la dinámica de un \textit{patógeno} depende en gran cantidad de las características de este. Sin embargo, en esta sección daremos unas ecuaciones muy generales para que sean aplicables a la mayor cantidad posible de situaciones. En concreto, la dinámica del \textit{patógeno} viene dada por:
 
 \begin{equation}
 	\label{sist_pat_T}
@@ -148,7 +148,7 @@ Donde $\gamma$ es un parámetro que depende del antígeno y denota la probabilid
 	\sum_{x=1}^{n} \rho_{n}^{x} \leq 1
 \end{equation}
 
-Según la Hipótesis \ref{sub:hip_divAsim}, las células T que ya se han diferenciado se dividen de manera simétrica y reparten sus receptores de membrana entre sus dos células hijas. De esta manera, la experiencia con el antígeno, propia de cada célula puede ser transmitida a la siguiente generación.
+Según la Hipótesis \ref{sub:hip_divAsim}, las células T que ya se han diferenciado se dividen de manera simétrica y reparten sus receptores de membrana entre sus dos células hijas. De esta manera, la experiencia con el antígeno propia de cada célula puede ser transmitida a la siguiente generación. Las ecuaciones que determinan el número de receptores de membrana iniciales para las células hijas son:
 
 \begin{equation}
 	\label{sist:div_sim}
@@ -160,10 +160,10 @@ Según la Hipótesis \ref{sub:hip_divAsim}, las células T que ya se han diferen
 \end{equation}
 
 
-Donde $\delta_{i}^{x}$ representa el ratio de receptores de membrana de tipo $R_{i}$ entre las células hijas, $r_{i0}^{1}$ y $r_{i0}^{2}$ denotan los valores iniciales de receptor $R_{i}$ en las células hijas 1 y 2, respectivamente, y  $r_{i}^{x}$ denota el número de receptores $R_{i}$ en la célula T $x$ en el momento de la división celular.
+Donde $\delta_{i}^{x}$ representa el ratio de receptores de membrana de tipo $R_{i}$ entre las células hijas, $r_{i}^{x}$ denota el número de receptores $R_{i}$ en la célula T $x$ en el momento de la división celular y, por último, $r_{i0}^{1}$ y $r_{i0}^{2}$ denotan los valores iniciales de receptor $R_{i}$ en las células hijas $1$ y $2$, respectivamente.
 
 
-Ahora que hemos descrito los conceptos matemáticos que representan las hipótesis biológicas que sustentan este modelo, estamos en condiciones de estudiar las soluciones de las ecuaciones correspondientes y de interpretar en términos biológicos los resultados obtenidos. En el capítulo siguiente presentaremos simulaciones numéricas de este mismo modelo en un caso simplificado, en el que se supone que el número de receptores de membrana es dos ($k = 2$). En ese capítulo se discutirán diferentes situaciones: tolerancia e intolerancia al \textit{patógeno} o respuesta inmune en el caso de poblaciones de células T con distintas afinidades al \textit{patógeno}. Todas estas situaciones han sido reproducidas a partir del mismo modelo, con el simple cambio del valor de sus parámetros, poniendo de manifiesto la capacidad del mismo para reproducir con facilidad situaciones diversas. 
+Una vez descritos los conceptos matemáticos que representan las hipótesis biológicas que sustentan este modelo, estamos en condiciones de estudiar las soluciones de las ecuaciones correspondientes y de interpretar en términos biológicos los resultados obtenidos. En el capítulo siguiente presentaremos simulaciones numéricas de este mismo modelo en un caso simplificado, en el que se supone que el número de receptores de membrana es dos ($k = 2$). En ese capítulo se discutirán diferentes situaciones: tolerancia e intolerancia al \textit{patógeno} o respuesta inmune en el caso de poblaciones de células T con distintas afinidades al \textit{patógeno}. Todas estas situaciones han sido reproducidas a partir del mismo modelo, con el simple cambio del valor de sus parámetros, poniendo de manifiesto la capacidad del mismo para reproducir con facilidad situaciones diversas. 
 
 %\section{Resumen y conclusiones}
 
