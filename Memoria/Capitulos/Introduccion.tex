@@ -48,17 +48,17 @@ Además, se realizan simulaciones numéricas de ambos modelos. Estas simulacione
 
 \section{Objetivos}
 
-Este trabajo de fin de grado se centra en el estudio de la dinámica de población de las células T. Concretamente, en el estudio de dos modelos matemáticos que pretenden dar respuesta a los mecanismos que rigen este comportamiento aún desconocido por la comunidad de biólogos. Como resultado de este proyecto determinamos los siguientes objetivos:
+Este trabajo de fin de grado se centra en el estudio de la dinámica de población de las células T. Concretamente, en el estudio de dos modelos matemáticos que pretenden dar respuesta a los mecanismos que rigen este comportamiento aún desconocido por la comunidad de biólogos. Para abordar este proyecto se determinaron los siguientes objetivos:
 
  \begin{itemize}
-
-	\item Estudio del papel que juegan las células T durante la respuesta inmune.
+ 	
+	\item Estudio básico del sistema inmune, enfocado a conocer el papel que juegan las células T durante una respuesta inmune.
 	
 	\item Estudio y comprensión de los modelos matemáticos que se detallan en este documento y de su importancia en el ámbito de la biología.
 	
- 	\item Implementación del código necesario para simular distintos comportamientos de las células basados en estos modelos y análisis de dichos comportamientos. 
+ 	\item Implementación del código necesario para simular distintos comportamientos de las células T basados en estos modelos y análisis de dichos comportamientos. 
  	
- 	\item Obtención de una primera aproximación para lograr establecer una correspondencia entre los parámetros de los dos modelos vistos. 
+ 	\item Obtención de una primera aproximación para lograr establecer una correspondencia entre los parámetros de los dos modelos estudiados. 
  \end{itemize}
 
 
@@ -67,7 +67,7 @@ Este trabajo de fin de grado se centra en el estudio de la dinámica de poblaci�
 Para la realización de este trabajo se establecieron distintos hitos a lo largo del curso académico. Los primeros meses estaban destinados a una revisión previa de los conceptos biológicos subyacentes. Los cuales engloban nociones básicas sobre el sistema inmune y un estudio más detallado del comportamiento de las células T. Esto constituye una parte fundamental del trabajo, pues los modelos no pueden ser comprendidos en su totalidad si no se miran desde el problema biológico al que intentan dar respuesta. Una vez se afianzara la base biológica se podía comenzar con el estudio de los modelos. El primero que se estudiaría sería el modelo microscópico expuesto en \cite{JTB}. Se estableció la realización de distintas simulaciones del modelo, que complementarían la teoría vista. El segundo modelo, el modelo macroscópico \citep{arias2015growth}, sería estudiado después, con el propósito de poder relacionarlo con el modelo anterior. 
 
 
-Una vez ambos modelos estuvieran revisados y se hubieran realizado las simulaciones correspondientes se abrió la posibilidad de intentar establecer una correspondencia entre los parámetros de ambos modelos. 
+Una vez ambos modelos estuvieran revisados y se hubieran realizado las simulaciones correspondientes se abrió la posibilidad de intentar establecer una correspondencia entre los parámetros de ambos modelos mediante la implementación de una red neuronal. Esto último pondría final al contenido de este trabajo de fin de grado.
 
 
 \section{Estructura del documento}
@@ -80,14 +80,14 @@ Este trabajo está dividido en cuatro partes bien diferenciadas pero con la mism
 	Por su parte, la Sección \ref{sec:coop} aborda el papel de los modelos matemáticos en el campo de la biología. Desde la evolución de la cooperación de estas dos ciencias hasta las características y tipos de los modelos. La Sección \ref{sub:modelosvsinmuno} se especializa en el área de la inmunología. Concretamente en la Sección \ref{cuestionAmodelizar}, nos centramos en el caso de nuestro estudio, los distintos modelos matemáticos formulados para la dinámica de las células T durante una infección aguda.
 	 
 	
-	\item En el Capítulo \ref{cap:descripcionTrabajo} se expone el marco teórico del modelo microscópico propuesto para el problema de decisión entre división y apóptosis de las células T. En la Sección \ref{sec:hip_bio} se detallan las hipótesis biológicas sobre las que se sustenta el modelo, que constituyen hechos contrastados y observados en el campo de la biología. El modelo en sí puede verse en la Sección \ref{sec:modelo}, donde se detalla la notación que seguirá el resto del documento y las ecuaciones diferenciales de primer orden que dan lugar al algoritmo. La última sección de este capítulo, la Sección \ref{sec:modeloPatCelT}, introduce una ecuación diferencial para la dinámica de población del \textit{patógeno}. Las células del \textit{patógeno} se relacionan con la cantidad de células T disponibles. La ecuación establece la interacción entre ambas poblaciones.
+	\item En el Capítulo \ref{cap:descripcionTrabajo} se expone el marco teórico del modelo microscópico propuesto para el problema de decisión entre división y apóptosis de las células T. En la Sección \ref{sec:hip_bio} se detallan las hipótesis biológicas sobre las que se sustenta el modelo, que constituyen hechos contrastados y observados en el campo de la biología. El modelo en sí puede verse en la Sección \ref{sec:modelo}, donde se detalla la notación que seguirá el resto del documento y las ecuaciones diferenciales de primer orden que dan lugar al algoritmo. La última sección de este capítulo, la Sección \ref{sec:modeloPatCelT}, introduce una ecuación diferencial para la dinámica de población del \textit{patógeno} y su relación con la cantidad de células T disponibles. La ecuación establece la interacción entre ambas poblaciones.
 	
 	En el Capítulo \ref{cap:simulaciones} se presentan las simulaciones correspondientes a una simplificación, en número de parámetros del modelo anterior (Sección \ref{sec:modelo_simplif}) y se explican los detalles básicos de la implementación del mismo (Sección \ref{sec:implem_pseudo}). Los resultados de las simulaciones se exponen en la Sección \ref{sec:simulacionesMicro}. Estas simulaciones corresponden a casos de intolerancia y tolerancia al \textit{patógeno} (Secciones \ref{sim:intoler} y \ref{sim:toler}, respectivamente), así como el caso de la respuesta inmune con poblaciones de células T con distintas afinidades al \textit{patógeno} (Sección \ref{sim:difPoblacionesT}).
 	
 	
 	\item El modelo macroscópico se estudia en el Capítulo \ref{cap:modeloMacroscopico}. Las ecuaciones diferenciales de segundo grado de este modelo rigen la dinámica de población de las células T y el \textit{patógeno} de manera colectiva, a diferencia del modelo microscópico, cuyo algoritmo estaba definido para cada una de las células. Este modelo está basado en dos características del comportamiento de la población de células T durante una respuesta inmune: la elasticidad y la inercia (Sección \ref{sec:iner_elast}). También se expresan las ecuaciones del modelo en forma adimensional, consiguiendo así reducir el número de parámetros a la mitad.
 	
-	Además de proponerse el marco teórico, también se realizan las simulaciones numéricas correspondientes al modelo (Seccion \ref{sec:simu_macro}). Estas recogen los casos de intolerancia y tolerancia al \textit{patógeno} (Secciones \ref{sub:simMacroIntoler} y \ref{sub:simMacroToler}, respectivamente) y, para el modelo macroscópico adimensional, se estudia la relevancia del valor de sus dos parámetros en las regiones de tolerancia e intolerancia (Sección \ref{sub:reg_tolerIntolerMacro}).
+	Además de proponerse el marco teórico, también se realizan las simulaciones numéricas correspondientes al modelo en la Seccion \ref{sec:simu_macro}. Estas recogen los casos de intolerancia y tolerancia al \textit{patógeno} (Secciones \ref{sub:simMacroIntoler} y \ref{sub:simMacroToler}, respectivamente) y, para el modelo macroscópico adimensional, se estudia la relevancia del valor de sus dos parámetros en las regiones de tolerancia e intolerancia (Sección \ref{sub:reg_tolerIntolerMacro}).
 	
 	\item Dados los modelos propuestos en los Capítulos \ref{cap:descripcionTrabajo} y \ref{cap:modeloMacroscopico}, y tras la comparación de sus resultados, se busca una correspondencia de parámetros entre ambos modelos en el Capítulo \ref{cap:redNeuronal}. Para ello se implementa una red neuronal capaz de realizar ``la función inversa'' al código referente a las simulaciones del modelo macroscópico. Es decir, dados los resultados de una simulación, predecir el valor de los parámetros necesarios para obtener ese mismo resultado. La construcción del conjunto de datos y la implementación de la red puede verse en la Sección \ref{sec:conjDatos_entreRed}. Los resultados obtenidos y un ejemplo de ejecución, usando como entrada los resultados de una simulación del modelo microscópico, pueden verse en la Sección \ref{sec:resultadoRed}.
 	

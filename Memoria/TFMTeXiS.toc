@@ -23,27 +23,27 @@
 \contentsline {section}{\numberline {3.3}Din\IeC {\'a}mica del \textit {pat\IeC {\'o}geno} durante la respuesta inmune}{19}{section.54}
 \contentsline {chapter}{\numberline {4}Simulaciones del modelo microsc\IeC {\'o}pico}{21}{chapter.59}
 \contentsline {section}{\numberline {4.1}Modelo simplificado}{21}{section.60}
-\contentsline {section}{\numberline {4.2}Detalles de implementaci\IeC {\'o}n y pseudoc\IeC {\'o}digo}{22}{section.64}
-\contentsline {section}{\numberline {4.3}Resultados y an\IeC {\'a}lisis}{24}{section.76}
-\contentsline {subsection}{\numberline {4.3.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{24}{subsection.77}
+\contentsline {section}{\numberline {4.2}Detalles de implementaci\IeC {\'o}n y pseudoc\IeC {\'o}digo}{22}{section.65}
+\contentsline {section}{\numberline {4.3}Resultados y an\IeC {\'a}lisis}{25}{section.76}
+\contentsline {subsection}{\numberline {4.3.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{25}{subsection.77}
 \contentsline {subsection}{\numberline {4.3.2}Tolerancia al \textit {pat\IeC {\'o}geno}}{26}{subsection.81}
 \contentsline {subsection}{\numberline {4.3.3}Simulaciones con distintas poblaciones de c\IeC {\'e}lulas T}{27}{subsection.83}
-\contentsline {chapter}{\numberline {5}Modelo macrosc\IeC {\'o}pico para la din\IeC {\'a}mica de poblaci\IeC {\'o}n de las c\IeC {\'e}lulas T durante la respuesta inmune.}{29}{chapter.88}
-\contentsline {section}{\numberline {5.1}Inercia y elasticidad en las c\IeC {\'e}lulas T}{29}{section.89}
-\contentsline {section}{\numberline {5.2}Simulaciones del modelo macrosc\IeC {\'o}pico}{31}{section.92}
-\contentsline {subsection}{\numberline {5.2.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{31}{subsection.93}
-\contentsline {subsection}{\numberline {5.2.2}Tolerancia al pat\IeC {\'o}geno}{31}{subsection.97}
-\contentsline {subsection}{\numberline {5.2.3}Regiones de tolerancia e intolerancia}{32}{subsection.98}
-\contentsline {chapter}{\numberline {6}Correspondencia de par\IeC {\'a}metros entre los modelos microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico}{33}{chapter.101}
-\contentsline {section}{\numberline {6.1}Conjunto de datos y entrenamiento de la red neuronal}{34}{section.104}
-\contentsline {section}{\numberline {6.2}Resultados obtenidos por la red neuronal}{35}{section.109}
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{37}{chapter.114}
-\contentsline {chapter}{\numberline {8}Introduction}{39}{chapter.115}
+\contentsline {chapter}{\numberline {5}Modelo macrosc\IeC {\'o}pico para la din\IeC {\'a}mica de poblaci\IeC {\'o}n de las c\IeC {\'e}lulas T durante la respuesta inmune.}{29}{chapter.89}
+\contentsline {section}{\numberline {5.1}Inercia y elasticidad en las c\IeC {\'e}lulas T}{29}{section.90}
+\contentsline {section}{\numberline {5.2}Simulaciones del modelo macrosc\IeC {\'o}pico}{31}{section.93}
+\contentsline {subsection}{\numberline {5.2.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{31}{subsection.94}
+\contentsline {subsection}{\numberline {5.2.2}Tolerancia al pat\IeC {\'o}geno}{31}{subsection.98}
+\contentsline {subsection}{\numberline {5.2.3}Regiones de tolerancia e intolerancia}{32}{subsection.99}
+\contentsline {chapter}{\numberline {6}Correspondencia de par\IeC {\'a}metros entre los modelos microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico}{33}{chapter.102}
+\contentsline {section}{\numberline {6.1}Conjunto de datos y entrenamiento de la red neuronal}{34}{section.105}
+\contentsline {section}{\numberline {6.2}Resultados obtenidos por la red neuronal}{35}{section.110}
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{37}{chapter.115}
+\contentsline {chapter}{\numberline {8}Introduction}{39}{chapter.116}
 \select@language {english}
-\contentsline {chapter}{\numberline {9}Conclusions and Future Work}{41}{chapter.116}
-\contentsline {chapter}{Bibliograf\'{\i }a}{43}{chapter*.117}
+\contentsline {chapter}{\numberline {9}Conclusions and Future Work}{41}{chapter.117}
+\contentsline {chapter}{Bibliograf\'{\i }a}{43}{chapter*.118}
 \select@language {spanish}
-\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo de las simulaciones}{45}{appendix.118}
-\contentsline {section}{\numberline {A.1}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:simulaciones}}{45}{section.119}
-\contentsline {section}{\numberline {A.2}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:modeloMacroscopico}}{50}{section.404}
-\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{55}{appendix.540}
+\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo de las simulaciones}{45}{appendix.119}
+\contentsline {section}{\numberline {A.1}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:simulaciones}}{45}{section.120}
+\contentsline {section}{\numberline {A.2}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:modeloMacroscopico}}{50}{section.405}
+\contentsline {chapter}{\numberline {B}T\IeC {\'\i }tulo del Ap\IeC {\'e}ndice B}{55}{appendix.541}
