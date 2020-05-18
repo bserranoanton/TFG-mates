@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.3)  18 MAY 2020 14:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.3)  18 MAY 2020 16:55
 entering extended mode
 **./TFMTeXiS.tex
 (TFMTeXiS.tex
@@ -1318,17 +1318,17 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 
 (Cascaras/cover.tex
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 \cambioIzquierdo=\skip91
 \cambioDerecho=\skip92
 \margenPortada=\skip93
@@ -1341,21 +1341,21 @@ File: Imagenes/Bitmap/escudoUCMcolor.png Graphic file (type png)
 
 <use Imagenes/Bitmap/escudoUCMcolor.png>
 Package pdftex.def Info: Imagenes/Bitmap/escudoUCMcolor.png used on input line 
-188.
+189.
 (pdftex.def)             Requested size: 120.06242pt x 135.67247pt.
 \c@lastyear=\count336
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
  [1
 
 
@@ -1377,30 +1377,30 @@ Package babel Info: Redefining spanish shorthand "?
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./Imagenes/Bitmap/escudoU
 CMcolor.png>]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
  [2]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 188.
+(babel)             in language  on input line 189.
  [3])
 \openout2 = `Cascaras/dedicatoria.aux'.
 
@@ -1883,7 +1883,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 17.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 17.
- <1_macrofago.jpg, id=470, 334.24875pt x 310.91156pt>
+ <1_macrofago.jpg, id=471, 334.24875pt x 310.91156pt>
 File: 1_macrofago.jpg Graphic file (type jpg)
  <use 1_macrofago.jpg>
 Package pdftex.def Info: 1_macrofago.jpg used on input line 29.
@@ -1923,7 +1923,7 @@ a / edward-[]jenner-[]probablemente-[]cientifico-[]que-[]mas-[]vidas-[]ha-[]sal
 vado-[]historia _
  []
 
-<2_macrofago_anticuerpo.jpg, id=483, 320.69812pt x 157.33781pt>
+<2_macrofago_anticuerpo.jpg, id=484, 320.69812pt x 157.33781pt>
 File: 2_macrofago_anticuerpo.jpg Graphic file (type jpg)
 
 <use 2_macrofago_anticuerpo.jpg>
@@ -1963,7 +1963,7 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 70.
 
 [8 <./2_macrofago_anticuerpo.jpg>]
-<Imagenes/EstadoDeLaCuestion/Antigen_presentation.png, id=509, 1149.29375pt x 1
+<Imagenes/EstadoDeLaCuestion/Antigen_presentation.png, id=510, 1149.29375pt x 1
 027.84pt>
 File: Imagenes/EstadoDeLaCuestion/Antigen_presentation.png Graphic file (type p
 ng)
@@ -2145,7 +2145,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 19.
 
-<Cell_Cycle.jpg, id=597, 320.8788pt x 280.8894pt>
+<Cell_Cycle.jpg, id=598, 320.8788pt x 280.8894pt>
 File: Cell_Cycle.jpg Graphic file (type jpg)
  <use Cell_Cycle.jpg>
 Package pdftex.def Info: Cell_Cycle.jpg used on input line 27.
@@ -2449,7 +2449,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 160.
  [25]
-<Imagenes/Simulaciones/intolerance.png, id=716, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/intolerance.png, id=717, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/intolerance.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/intolerance.png>
@@ -2457,7 +2457,7 @@ Package pdftex.def Info: Imagenes/Simulaciones/intolerance.png used on input li
 ne 166.
 (pdftex.def)             Requested size: 213.39568pt x 160.04898pt.
 
-<Imagenes/Simulaciones/tolerance.png, id=719, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/tolerance.png, id=720, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/tolerance.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/tolerance.png>
@@ -2517,7 +2517,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 213.
 
-<Imagenes/Simulaciones/tresClones.png, id=745, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/tresClones.png, id=746, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/tresClones.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/tresClones.png>
@@ -2525,7 +2525,7 @@ Package pdftex.def Info: Imagenes/Simulaciones/tresClones.png used on input lin
 e 255.
 (pdftex.def)             Requested size: 213.39568pt x 160.04898pt.
 
-<Imagenes/Simulaciones/dosClones.png, id=748, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/dosClones.png, id=749, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/dosClones.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/dosClones.png>
@@ -2533,7 +2533,7 @@ Package pdftex.def Info: Imagenes/Simulaciones/dosClones.png used on input line
  259.
 (pdftex.def)             Requested size: 213.39568pt x 160.04898pt.
 
-<Imagenes/Simulaciones/unClon.png, id=751, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/unClon.png, id=752, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/unClon.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/unClon.png>
@@ -2663,7 +2663,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 75.
 
-<Imagenes/Simulaciones/macro_intoler.png, id=803, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/macro_intoler.png, id=804, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/macro_intoler.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/macro_intoler.png>
@@ -2671,7 +2671,7 @@ Package pdftex.def Info: Imagenes/Simulaciones/macro_intoler.png used on input
 line 89.
 (pdftex.def)             Requested size: 213.39568pt x 160.04898pt.
 
-<Imagenes/Simulaciones/macro_toler.png, id=804, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/macro_toler.png, id=805, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/macro_toler.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/macro_toler.png>
@@ -2725,7 +2725,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 115.
 [31]
-<Imagenes/Simulaciones/macro_toler_intoler.png, id=822, 479.54156pt x 304.13625
+<Imagenes/Simulaciones/macro_toler_intoler.png, id=823, 479.54156pt x 304.13625
 pt>
 File: Imagenes/Simulaciones/macro_toler_intoler.png Graphic file (type png)
  <use Imagenes/Simulaciones/macro_toler_intoler.png>
@@ -2837,14 +2837,14 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 42.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 42.
- [36] <Imagenes/RedNeuronal/loss.png, id=858, 462.528pt x 345.4506pt>
+ [36] <Imagenes/RedNeuronal/loss.png, id=859, 462.528pt x 345.4506pt>
 File: Imagenes/RedNeuronal/loss.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/loss.png>
 Package pdftex.def Info: Imagenes/RedNeuronal/loss.png used on input line 51.
 (pdftex.def)             Requested size: 213.39568pt x 159.3836pt.
 
-<Imagenes/RedNeuronal/accuracy.png, id=859, 462.528pt x 345.4506pt>
+<Imagenes/RedNeuronal/accuracy.png, id=860, 462.528pt x 345.4506pt>
 File: Imagenes/RedNeuronal/accuracy.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/accuracy.png>
@@ -2883,7 +2883,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 89.
 [37 <./Imagenes/RedNeuronal/loss.png> <./Imagenes/RedNeuronal/accuracy.png>]
-<Imagenes/RedNeuronal/micro.png, id=876, 479.54156pt x 307.1475pt>
+<Imagenes/RedNeuronal/micro.png, id=877, 479.54156pt x 307.1475pt>
 File: Imagenes/RedNeuronal/micro.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/micro.png>
@@ -2895,7 +2895,7 @@ Underfull \hbox (badness 1975) in paragraph at lines 99--99
  pa-tó-geno
  []
 
-<Imagenes/RedNeuronal/macro.png, id=877, 451.6875pt x 304.13625pt>
+<Imagenes/RedNeuronal/macro.png, id=878, 451.6875pt x 304.13625pt>
 File: Imagenes/RedNeuronal/macro.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/macro.png>
@@ -3371,7 +3371,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
 Here is how much of TeX's memory you used:
  27452 strings out of 493323
  452423 string characters out of 3139066
- 910466 words of memory out of 3000000
+ 910370 words of memory out of 3000000
  29616 multiletter control sequences out of 15000+200000
  563295 words of font info for 87 fonts, out of 3000000 for 9000
  1379 hyphenation exceptions out of 8191
@@ -3413,9 +3413,9 @@ MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
 /utmr8a.pfb>
-Output written on TFMTeXiS.pdf (78 pages, 1685123 bytes).
+Output written on TFMTeXiS.pdf (78 pages, 1683768 bytes).
 PDF statistics:
- 2439 PDF objects out of 2487 (max. 8388607)
+ 2435 PDF objects out of 2487 (max. 8388607)
  633 named destinations out of 1000 (max. 500000)
  470 words of extra memory for PDF output out of 10000 (max. 10000000)
 
