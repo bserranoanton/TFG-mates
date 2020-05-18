@@ -22,10 +22,10 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Simulaci\IeC {\'o}n: caso de tolerancia al \textit {pat\IeC {\'o}geno} en el modelo macrosc\IeC {\'o}pico. Par\IeC {\'a}metros: $\alpha ^{*}=1,1$, $\beta ^{*}=0,01$, $P_m^{*} = 0$.}}}{32}{subfigure.1.2}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Simulaci\IeC {\'o}n: variaci\IeC {\'o}n de los par\IeC {\'a}metros $\alpha ^{*}$ y $\beta ^{*}$ para dar lugar a regiones de tolerancia e intolerancia en el modelo macrosc\IeC {\'o}pico adimensional.\relax }}{33}{figure.caption.101}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Representaci\IeC {\'o}n gr\IeC {\'a}fica de los valores de \textit {loss} y \textit {accuracy} para cada \textit {epoch} durante el entrenamiento de la red.\relax }}{37}{figure.caption.107}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Representaci\IeC {\'o}n gr\IeC {\'a}fica de los valores de \textit {loss} y \textit {accuracy} para cada \textit {epoch} durante el entrenamiento de la red.\relax }}{37}{figure.caption.108}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Valores de \textit {loss} calculados para la red neuronal durante el entrenamiento.}}}{37}{subfigure.1.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Valores de \textit {accuracy} calculados para la red neuronal durante el entrenamiento.}}}{37}{subfigure.1.2}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Ejemplo con simulaciones del modelo microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico con los valores de los par\IeC {\'a}metros predichos por la red neuronal. Casos de intolerancia al \textit {pat\IeC {\'o}geno}\relax }}{38}{figure.caption.112}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Ejemplo con simulaciones del modelo microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico con los valores de los par\IeC {\'a}metros predichos por la red neuronal. Casos de intolerancia al \textit {pat\IeC {\'o}geno}\relax }}{38}{figure.caption.113}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Simulaci\IeC {\'o}n: caso de intolerancia al \textit {pat\IeC {\'o}geno} en el modelo microsc\IeC {\'o}pico. Par\IeC {\'a}metros y variables: $t\_cycle = 0,05$, $t\_apo = 0,1$, $t\_next = 0,15$, $\alpha = 6,4$, $\beta = 0.22$, $\lambda _{pd} = 0.05$, $\lambda _{Tp} = 6*10^{-5}$, $\lambda _{pp} = 0,5*10^{-4}$, $\mu _{pc} = 8$, $\mu _{da} = 15$.}}}{38}{subfigure.2.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Simulaci\IeC {\'o}n: caso de intolerancia al \textit {pat\IeC {\'o}geno} en el modelo macrosc\IeC {\'o}pico. Par\IeC {\'a}metros: $\alpha = 3,5$, $\beta = 0,29$, $k = 0,3$, $\lambda = 0,9$, $P_m = 0$.}}}{38}{subfigure.2.2}
 \addvspace {10\p@ }
@@ -33,5 +33,4 @@
 \select@language {english}
 \addvspace {10\p@ }
 \select@language {spanish}
-\addvspace {10\p@ }
 \addvspace {10\p@ }
