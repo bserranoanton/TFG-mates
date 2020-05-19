@@ -9,7 +9,7 @@ En esta sección se expone el código principal de las simulaciones vistas en el
 
 Para el caso de las figuras correspondientes a varias poblaciones de células T (Figura \ref{fig:tresClones} - Figura \ref{fig:unClon}) la idea que subyace es similar, simplemente se añadieron los correspondientes parámetros y estructuras para guardar la acción de cada una de las poblaciones de células T. 
 
-Las funciones \textit{sys\_4\_1\_sol} y \textit{sys\_4\_2\_sol} dan el resultado de la solución explícita de los sistemas \ref{sist9_simplif} y \ref{sist15_simplif}, respectivamente, evaluada en los parámetros que se pasan a la función. La estructura \textit{t\_cell\_matrix} es una matriz que almacena en cada fila una célula de la población y cuyas columnas guardan los parámetros correspondientes a esa célula (su tipo, condiciones iniciales y el tiempo que le queda para completar la fase de ciclo o apoptosis, en caso de que se encuentre en alguna de ellas). 
+Las funciones \textit{sys\_4\_1\_sol} y \textit{sys\_4\_2\_sol} dan el resultado de la solución explícita de los sistemas \ref{sist9_simplif} y \ref{sist15_simplif}, respectivamente, evaluada en los parámetros que se pasan a la función. La estructura \textit{t\_cell\_matrix} es una matriz que almacena en cada fila una célula de la población y cuyas columnas guardan los parámetros correspondientes a esa célula (su tipo, condiciones iniciales, número de receptores y el tiempo que le queda para completar la fase de ciclo o apoptosis, en caso de que se encuentre en alguna de ellas). 
 
 \lstinputlisting[language=Matlab]{Codigo/Cap_4_Tolerancia_intolerancia/intolerance_sys_4_1.m}
 
@@ -17,14 +17,14 @@ Las funciones \textit{sys\_4\_1\_sol} y \textit{sys\_4\_2\_sol} dan el resultado
 \section{Código referente al Capítulo \ref{cap:modeloMacroscopico}}
 \label{sec:codigoMacro}
 
-Es el turno de ver el código correspondiente al modelo macroscópico. En esta ocasión no disponíamos de un sistema de ecuaciones diferenciales con solución explícita, por lo que tenemos una simulación numérica mediante el uso de la función \textit{ode\_45}\footnote{\url{https://www.mathworks.com/help/matlab/ref/ode45.html}} de Matlab. A continuación podemos ver el código referente a la Figura \ref{fig:macro_intolerance}. En la línea $33$ se incluye la condición $T \geq 0$.
+En esta sección veremos el código correspondiente al modelo macroscópico. En esta ocasión no disponíamos de un sistema de ecuaciones diferenciales con solución explícita, por lo que implementamos las simulaciones numéricas mediante el uso de la función \textit{ode\_45}\footnote{\url{https://www.mathworks.com/help/matlab/ref/ode45.html}} de Matlab. A continuación podemos ver el código referente a la Figura \ref{fig:macro_intolerance}, en el que se modela el Sistema \ref{sist_macro}. 
 
 Para simular la Figura \ref{fig:macro_tolerance}, correspondiente al caso de tolerancia, se tomó el Sistema \ref{sist_macro_nod}, el código sigue la misma estructura aunque las ecuaciones que vemos en las líneas 24 y 25 sufren una ligera modificación: los parámetros $k$ y $\lambda$ desaparecen y se sustituyen $a$ ($\alpha$) y $b$ ($\beta$) por los correspondientes $a\_star$ ($\alpha ^{*}$) y $b\_star$ ($\beta ^{*}$) del Sistema \ref{sist_macro_nod}. 
 
 \lstinputlisting[language=Matlab]{Codigo/Cap_5_Modelo_macroscopico/macro_intolerance.m}
 
 
-Veamos ahora el código de la Figura \ref{fig:macro_toler_intoler}: En este caso queríamos hacer simulaciones variando el valor de los parámetros $\alpha ^{*}$ y $\beta ^{*}$. Para ello tenemos un código que va recorriendo valores en el intervalo $[0, 2'5]$ y llamando con cada par de valores $\alpha ^{*}$ y $\beta ^{*}$ a la función \textit{macro\_nond\_toler\_into} que realiza la simulación del Sistema \ref{sist_macro_nod} y devuelve si hay tolerancia o intolerancia midiendo la cantidad de \textit{patógeno} que queda al final de la simulación. Teniendo en cuenta el resultado, se pinta un rombo rojo si estamos ante un caso de tolerancia o verde en caso de intolerancia al \textit{patógeno}.
+Veamos ahora el código de la Figura \ref{fig:macro_toler_intoler}: En este caso queríamos hacer simulaciones variando el valor de los parámetros $\alpha ^{*}$ y $\beta ^{*}$. Para ello tenemos un código que va recorriendo valores en el intervalo $[0; 2,5]$ y llamando con cada par de valores $\alpha ^{*}$ y $\beta ^{*}$ a la función \textit{macro\_nond\_toler\_into} que realiza la simulación del Sistema \ref{sist_macro_nod} y devuelve si hay tolerancia o intolerancia midiendo la cantidad de \textit{patógeno} que queda al final de la simulación. Teniendo en cuenta el resultado, se pinta un rombo rojo si estamos ante un caso de tolerancia o verde en caso de intolerancia al \textit{patógeno}.
 
 \lstinputlisting[language=Matlab]{Codigo/Cap_5_Modelo_macroscopico/script_nond_alphaBeta.m}
 

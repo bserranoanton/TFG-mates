@@ -1,4 +1,4 @@
-%This code is desgined to simulate figure 5.3.
+%This code is desgined to simulate figure 5.2.
 %By Belen Serrano Anton
 %Created 03/03/2020
 %Last Modified 31/03/2020

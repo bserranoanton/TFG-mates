@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {2.1.1}El sistema inmune innato}{6}{subsection.21}
 \contentsline {subsection}{\numberline {2.1.2}El sistema inmune adaptativo}{7}{subsection.23}
 \contentsline {subsubsection}{\numberline {2.1.2.1}Las c\IeC {\'e}lulas T}{8}{subsubsection.27}
-\contentsline {section}{\numberline {2.2}Cooperaci\IeC {\'o}n entre dos ciencias: Matem\IeC {\'a}ticas y Biolog\IeC {\'\i }a}{10}{section.31}
+\contentsline {section}{\numberline {2.2}Cooperaci\IeC {\'o}n entre dos ciencias: matem\IeC {\'a}ticas y biolog\IeC {\'\i }a}{10}{section.31}
 \contentsline {subsection}{\numberline {2.2.1}Modelos matem\IeC {\'a}ticos \textit {versus} inmunolog\IeC {\'\i }a experimental}{11}{subsection.37}
 \contentsline {subsubsection}{\numberline {2.2.1.1}Din\IeC {\'a}mica de las c\IeC {\'e}lulas T. Decisi\IeC {\'o}n entre divisi\IeC {\'o}n o apoptosis}{12}{subsubsection.41}
 \contentsline {chapter}{\numberline {3}Algoritmo de decisi\IeC {\'o}n de las c\IeC {\'e}lulas T durante la respuesta inmune. Modelo microsc\IeC {\'o}pico}{15}{chapter.42}
