@@ -1,7 +1,7 @@
 \chapter{Correspondencia de parámetros entre los modelos microscópico y macroscópico}
 \label{cap:redNeuronal}
 
-En los Capítulos \ref{cap:descripcionTrabajo} y \ref{cap:modeloMacroscopico} se establece el marco teórico de dos modelos matemáticos que dan una posible explicación del mecanismo que rige la dinámica de población de las células T durante una infección aguda. Como se puede ver en las simulaciones correspondientes de estos modelos (ver Capítulo \ref{cap:simulaciones} y Sección \ref{sec:simu_macro}) ambos pueden reproducir comportamientos similares, como son el de tolerancia e intolerancia al \textit{patógeno}. Sin embargo, ambos modelos son notablemente distintos por dos razones principalmente: 
+En los Capítulos \ref{cap:descripcionTrabajo} y \ref{cap:modeloMacroscopico} se establece el marco teórico de dos modelos matemáticos que dan una posible explicación del mecanismo que rige la dinámica de población de las células T durante una infección aguda. Como se puede ver en las simulaciones correspondientes de estos modelos (ver Capítulo \ref{cap:simulaciones} y Sección \ref{sec:simu_macro}) ambos pueden reproducir comportamientos similares, como son el de tolerancia e intolerancia al patógeno. Sin embargo, ambos modelos son notablemente distintos por dos razones principalmente: 
 
 \begin{enumerate}
 	\item El punto de vista desde el cual se aborda el algoritmo de decisión de las células T es distinto. Mientras que el modelo microscópico determina el algoritmo de comportamiento de cada célula de manera individual, el macroscópico presenta unas ecuaciones que gobiernan sobre toda la población de células. 
@@ -24,7 +24,7 @@ Antes de poder implementar la red es necesario determinar con qué datos se va a
 
 
 \begin{itemize}
-	\item Las simulaciones que se realizan para obtener los datos pertinentes se corresponden con situaciones de intolerancia al \textit{patógeno}.
+	\item Las simulaciones que se realizan para obtener los datos pertinentes se corresponden con situaciones de intolerancia al patógeno.
 	
 	\item La red neuronal consta de diez datos de entrada y cuatro de salida. Los seis primeros datos de entrada se corresponden con seis puntos de interés de cada simulación. Estos puntos son: el máximo número de células de patógeno alcanzado, el máximo número de células T alcanzado, el tiempo en el que se alcanzaron ambos y el tiempo en el que desaparecieron ambas poblaciones (en la Figura \ref{fig:red_micro} pueden verse destacados los puntos mencionados), que denominaremos como \textit{max\_P}, \textit{max\_T}, \textit{t\_max\_P}, \textit{t\_max\_T}, \textit{t\_min\_P}, \textit{t\_min\_T}, respectivamente. Los cuatro restantes datos de entrada son los parámetros $\alpha$, $\beta$, $k$ y $\lambda$ del modelo macroscópico con los cuales se han obtenido los seis valores anteriores. Por último, los cuatro parámetros de salida de la red se corresponden con los valores de los parámetros $\alpha$, $\beta$, $k$ y $\lambda$ predichos por la misma.
 	
@@ -94,14 +94,14 @@ En el archivo \textit{resultados.txt} se pueden ver algunos de los resultados ob
 \begin{figure}[t]
 	\centering
 	\begin{tabular}{cc}
-		\subfloat[Simulación: caso de intolerancia al \textit{patógeno} en el modelo microscópico. Parámetros y variables: $t\_cycle = 0,05$, $t\_apo = 0,1$, $t\_next = 0,15$, $\alpha = 6,4$, $\beta = 0.22$, $\lambda_{pd} = 0.05$, $\lambda_{Tp} = 6*10^{-5}$, $\lambda_{pp} = 0,5*10^{-4}$, $\mu_{pc} = 8$, $\mu_{da} = 15$.]{
+		\subfloat[Simulación: caso de intolerancia al patógeno en el modelo microscópico. Parámetros y variables: $t\_cycle = 0,05$, $t\_apo = 0,1$, $t\_next = 0,15$, $\alpha = 6,4$, $\beta = 0.22$, $\lambda_{pd} = 0.05$, $\lambda_{Tp} = 6*10^{-5}$, $\lambda_{pp} = 0,5*10^{-4}$, $\mu_{pc} = 8$, $\mu_{da} = 15$.]{
 			\label{fig:red_micro}
 			\includegraphics[width=0.5\textwidth]{Imagenes/RedNeuronal/micro}}
-		& \subfloat[Simulación: caso de intolerancia al \textit{patógeno} en el modelo macroscópico. Parámetros: $\alpha = 3,5$, $\beta = 0,29$, $k = 0,3$, $\lambda = 0,9$, $P_m = 0$.]{
+		& \subfloat[Simulación: caso de intolerancia al patógeno en el modelo macroscópico. Parámetros: $\alpha = 3,5$, $\beta = 0,29$, $k = 0,3$, $\lambda = 0,9$, $P_m = 0$.]{
 			\label{fig:red_macro}
 			\includegraphics[width=0.5\textwidth]{Imagenes/RedNeuronal/macro}}\\
 	\end{tabular}
-	\caption{Ejemplo con simulaciones del modelo microscópico y macroscópico con los valores de los parámetros predichos por la red neuronal. Casos de intolerancia al \textit{patógeno}}%\label{foo}
+	\caption{Ejemplo con simulaciones del modelo microscópico y macroscópico con los valores de los parámetros predichos por la red neuronal. Casos de intolerancia al patógeno}%\label{foo}
 \end{figure}
 
 
@@ -109,7 +109,7 @@ En el archivo \textit{resultados.txt} se pueden ver algunos de los resultados ob
 %\begin{figure}[t]
 %	\centering
 %	\includegraphics[width=0.7\textwidth]{Imagenes/RedNeuronal/micro}
-%	\caption{Simulación: distintas poblaciones de células T con distintas afinidades al \textit{patógeno}. Clon subdominante. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
+%	\caption{Simulación: distintas poblaciones de células T con distintas afinidades al patógeno. Clon subdominante. Los parámetros son los mismos que se exponen en la Tabla \ref{tabla:param}, excepto: $\lambda_{Tp}^{clon_2} = 10^{-5}$.}
 %	\label{fig:red_micro}
 %\end{figure}
 

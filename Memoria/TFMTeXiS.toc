@@ -20,18 +20,18 @@
 \contentsline {subsection}{\numberline {3.1.3}Las c\IeC {\'e}lulas T \textit {na\IeC {\"\i }ve} se dividen de manera asim\IeC {\'e}trica despu\IeC {\'e}s de su activaci\IeC {\'o}n.}{17}{subsection.49}
 \contentsline {section}{\numberline {3.2}Modelo microsc\IeC {\'o}pico}{17}{section.50}
 \contentsline {subsection}{\numberline {3.2.1}Aspectos t\IeC {\'e}cnicos del modelo}{19}{subsection.53}
-\contentsline {section}{\numberline {3.3}Din\IeC {\'a}mica del \textit {pat\IeC {\'o}geno} durante la respuesta inmune}{19}{section.54}
+\contentsline {section}{\numberline {3.3}Din\IeC {\'a}mica del pat\IeC {\'o}geno durante la respuesta inmune}{19}{section.54}
 \contentsline {chapter}{\numberline {4}Simulaciones del modelo microsc\IeC {\'o}pico}{21}{chapter.59}
 \contentsline {section}{\numberline {4.1}Modelo simplificado}{21}{section.60}
 \contentsline {section}{\numberline {4.2}Detalles de implementaci\IeC {\'o}n y pseudoc\IeC {\'o}digo}{22}{section.65}
 \contentsline {section}{\numberline {4.3}Resultados y an\IeC {\'a}lisis}{25}{section.76}
-\contentsline {subsection}{\numberline {4.3.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{25}{subsection.77}
-\contentsline {subsection}{\numberline {4.3.2}Tolerancia al \textit {pat\IeC {\'o}geno}}{26}{subsection.81}
+\contentsline {subsection}{\numberline {4.3.1}Intolerancia al pat\IeC {\'o}geno}{25}{subsection.77}
+\contentsline {subsection}{\numberline {4.3.2}Tolerancia al pat\IeC {\'o}geno}{26}{subsection.81}
 \contentsline {subsection}{\numberline {4.3.3}Simulaciones con distintas poblaciones de c\IeC {\'e}lulas T}{27}{subsection.83}
 \contentsline {chapter}{\numberline {5}Modelo macrosc\IeC {\'o}pico para la din\IeC {\'a}mica de poblaci\IeC {\'o}n de las c\IeC {\'e}lulas T durante la respuesta inmune.}{29}{chapter.89}
 \contentsline {section}{\numberline {5.1}Inercia y elasticidad en las c\IeC {\'e}lulas T}{29}{section.90}
 \contentsline {section}{\numberline {5.2}Simulaciones del modelo macrosc\IeC {\'o}pico}{31}{section.93}
-\contentsline {subsection}{\numberline {5.2.1}Intolerancia al \textit {pat\IeC {\'o}geno}}{31}{subsection.94}
+\contentsline {subsection}{\numberline {5.2.1}Intolerancia al pat\IeC {\'o}geno}{31}{subsection.94}
 \contentsline {subsection}{\numberline {5.2.2}Tolerancia al pat\IeC {\'o}geno}{31}{subsection.98}
 \contentsline {subsection}{\numberline {5.2.3}Regiones de tolerancia e intolerancia}{32}{subsection.99}
 \contentsline {chapter}{\numberline {6}Correspondencia de par\IeC {\'a}metros entre los modelos microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico}{35}{chapter.102}
