@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{11}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Arias y Herrero(2016)}]{arias2016emergent}
@@ -32,17 +32,12 @@
 \newblock Mathematics in modern immunology.
 \newblock 2016.
 
-\bibitem[{Darwin(1887)}]{darwin1887life}
-{\sc Darwin, F.}
-\newblock {\em The life and letters of Charles Darwin\/}.
-\newblock 1887.
-
-\bibitem[{Esteban et\ al.(2003)Esteban, Gonzalez y Tejerom}]{esteban2003mendel}
-{\sc Esteban, S.}, {\sc Gonzalez, M.~P.} y {\sc Tejerom, L.}
-\newblock Mendel: Biology, mathematics and history of science.
-\newblock En {\em The Mathematics Education into the 21st Century Project,
-  Proceedings of the International Conference The Decidable and the Undecidable
-  in Mathematics Education. Brno, Czech Republic\/}. 2003.
+\bibitem[{Duffy y Hodgkin(2012)}]{DUFFY2012457}
+{\sc Duffy, K.~R.} y {\sc Hodgkin, P.~D.}
+\newblock Intracellular competition for fates in the immune system.
+\newblock {\em Trends in Cell Biology\/}, vol.\ 22(9), p\'aginas 457 -- 464,
+  2012.
+\newblock ISSN 0962-8924.
 
 \bibitem[{Fern{\'a}ndez~Arias(2012)}]{fernandez2012mecanica}
 {\sc Fern{\'a}ndez~Arias, C.}
@@ -57,10 +52,15 @@
 \newblock {\em BMC Biology\/}, vol.\ 12, 2014.
 \newblock ISSN 1741-7007.
 
-\bibitem[{Herrero()}]{RoleOfM}
-{\sc Herrero, M.~A.}
-\newblock On the role of mathematics in biology.
-\newblock ????
+\bibitem[{Hawkins et\ al.(2007)Hawkins, Turner, Dowling, van Gend y
+  Hodgkin}]{Hawkins5032}
+{\sc Hawkins, E.~D.}, {\sc Turner, M.~L.}, {\sc Dowling, M.~R.}, {\sc van Gend,
+  C.} y {\sc Hodgkin, P.~D.}
+\newblock A model of immune regulation as a consequence of randomized
+  lymphocyte division and death times.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, vol.
+  104(12), p\'aginas 5032--5037, 2007.
+\newblock ISSN 0027-8424.
 
 \bibitem[{Leggett et\ al.(2017)Leggett, Cornwallis, Buckling y
   West}]{leggett2017growth}
