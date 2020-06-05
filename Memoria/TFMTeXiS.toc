@@ -31,7 +31,7 @@
 \contentsline {section}{\numberline {5.1}Inercia y elasticidad en las c\IeC {\'e}lulas T}{27}{section.82}
 \contentsline {section}{\numberline {5.2}Simulaciones del modelo macrosc\IeC {\'o}pico}{29}{section.85}
 \contentsline {subsection}{\numberline {5.2.1}Intolerancia al pat\IeC {\'o}geno}{29}{subsection.86}
-\contentsline {subsection}{\numberline {5.2.2}Tolerancia al pat\IeC {\'o}geno}{29}{subsection.90}
+\contentsline {subsection}{\numberline {5.2.2}Tolerancia al pat\IeC {\'o}geno}{30}{subsection.90}
 \contentsline {subsection}{\numberline {5.2.3}Regiones de tolerancia e intolerancia}{30}{subsection.91}
 \contentsline {chapter}{\numberline {6}Correspondencia de par\IeC {\'a}metros entre los modelos microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico}{33}{chapter.94}
 \contentsline {section}{\numberline {6.1}Conjunto de datos y entrenamiento de la red neuronal}{34}{section.97}
