@@ -22,12 +22,15 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Simulaci\IeC {\'o}n: caso de tolerancia al pat\IeC {\'o}geno en el modelo macrosc\IeC {\'o}pico. Par\IeC {\'a}metros: $\alpha ^{*}=1,1$, $\beta ^{*}=0,01$, $P_m^{*} = 0$.}}}{29}{subfigure.1.2}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Simulaci\IeC {\'o}n del modelo macrosc\IeC {\'o}pico adimensional. Variaci\IeC {\'o}n de los par\IeC {\'a}metros $\alpha ^{*}$ y $\beta ^{*}$ para dar lugar a regiones de tolerancia e intolerancia al pat\IeC {\'o}geno.\relax }}{31}{figure.caption.93}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Representaci\IeC {\'o}n gr\IeC {\'a}fica de los valores de \textit {loss} y \textit {accuracy} para cada \textit {epoch} durante el entrenamiento de la red.\relax }}{35}{figure.caption.100}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Valores de \textit {loss} calculados para la red neuronal durante el entrenamiento.}}}{35}{subfigure.1.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Valores de \textit {accuracy} calculados para la red neuronal durante el entrenamiento.}}}{35}{subfigure.1.2}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Ejemplo con simulaciones del modelo microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico con los valores de los par\IeC {\'a}metros predichos por la red neuronal. Casos de intolerancia al pat\IeC {\'o}geno\relax }}{36}{figure.caption.105}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Simulaci\IeC {\'o}n: caso de intolerancia al pat\IeC {\'o}geno en el modelo microsc\IeC {\'o}pico. Par\IeC {\'a}metros y variables: $t\_cycle = 0,05$, $t\_apo = 0,1$, $t\_next = 0,15$, $\alpha = 6,4$, $\beta = 0.22$, $\lambda _{pd} = 0.05$, $\lambda _{Tp} = 6*10^{-5}$, $\lambda _{pp} = 0,5*10^{-4}$, $\mu _{pc} = 8$, $\mu _{da} = 15$.}}}{36}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Simulaci\IeC {\'o}n: caso de intolerancia al pat\IeC {\'o}geno en el modelo macrosc\IeC {\'o}pico. Par\IeC {\'a}metros: $\alpha = 3,5$, $\beta = 0,29$, $k = 0,3$, $\lambda = 0,9$, $P_m = 0$.}}}{36}{subfigure.2.2}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Representaci\IeC {\'o}n esquem\IeC {\'a}tica de una red neuronal.\relax }}{35}{figure.caption.100}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Esquema de una red neuronal con cuatro capas densas.}}}{35}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Esquema de un nodo de una red neuronal.}}}{35}{subfigure.1.2}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Representaci\IeC {\'o}n gr\IeC {\'a}fica de los valores de \textit {loss} y \textit {accuracy} para cada \textit {epoch} durante el entrenamiento de la red.\relax }}{36}{figure.caption.104}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Valores de \textit {loss} calculados para la red neuronal durante el entrenamiento.}}}{36}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Valores de \textit {accuracy} calculados para la red neuronal durante el entrenamiento.}}}{36}{subfigure.2.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Ejemplo con simulaciones del modelo microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico con los valores de los par\IeC {\'a}metros predichos por la red neuronal. Casos de intolerancia al pat\IeC {\'o}geno.\relax }}{37}{figure.caption.109}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Simulaci\IeC {\'o}n: caso de intolerancia al pat\IeC {\'o}geno en el modelo microsc\IeC {\'o}pico. Par\IeC {\'a}metros y variables: $t\_cycle = 0,05$, $t\_apo = 0,1$, $t\_next = 0,15$, $\alpha = 6,4$, $\beta = 0.22$, $\lambda _{pd} = 0.05$, $\lambda _{Tp} = 6*10^{-5}$, $\lambda _{pp} = 0,5*10^{-4}$, $\mu _{pc} = 8$, $\mu _{da} = 15$.}}}{37}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Simulaci\IeC {\'o}n: caso de intolerancia al pat\IeC {\'o}geno en el modelo macrosc\IeC {\'o}pico. Par\IeC {\'a}metros: $\alpha = 3,5$, $\beta = 0,29$, $k = 0,3$, $\lambda = 0,9$, $P_m = 0$.}}}{37}{subfigure.3.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \select@language {english}
