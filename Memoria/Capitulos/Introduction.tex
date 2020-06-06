@@ -1,9 +1,33 @@
 \chapter{Introduction}
 \label{cap:introduction}
 
-Introduction to the subject area. This chapter contains the translation of Chapter \ref{cap:introduccion}.
 
 
+The year 2018 was proclaimed International Year of Mathematical Biology by two scientific societies: the European Mathematical Society (EMS) and the European Society for Mathematical and Theoretical Biology (ESMTB). This celebration intended to highlight the importance of the applications of mathematics to biology and life sciences and to encourage their interaction\footnote{\url{https://www.icmat.es/divulgacion/Material_Divulgacion/miradas_matematicas/06.pdf}}. Today, life sciences are increasingly using mathematics, ranging from the use of dynamic systems and statistics to models of population and disease spread. In this context, models play an important role, as they are simplified representations of the structure and functioning of a given biological system or process, using mathematical language to express the relationships between variables\footnote{\url{http://www.blogsanidadanimal.com/2018-el-ano-internacional-de-la-biologia-matematica/}}. The appropriate use of models allows us to advance beyond what mere intuition suggests and provides us with useful information that would otherwise be difficult to collect, either because of the high economic cost of the experiments, the time it takes to carry them out or the amount of data to be examined, among other reasons. But it is not only experts who benefit from the simplifying power of mathematical models. During the current COVID-19 health crisis, mathematical models have been used to predict the spread of the virus and to inform society of the risk of this pandemic\footnote{Mathematical models on COVID-19 growth curve in \textit{The Washington Post}: \url{https://www.washingtonpost.com/graphics/2020/world/corona-simulator/}}. 
+
+
+
+Throughout this document, we will focus on the field of immunology. It is interesting to note that the cells that make up the immune system are not regulated by a coordinating organ \citep{arias2016emergent}. Immune cells move freely through the body and lead an independent life. However, they are capable of displaying collective behaviour, as is the case with the response to infectious agents. In this defensive function, T-cells play a very important role. When an infection is detected, the population of this type of cells grows by several orders of magnitude in a few days and, once the infectious agent has disappeared, population levels are restored through the suicide (apoptosis) of a large part of the population generated. The mechanism of decision between division or apoptosis taken by T cells during the immune response still has many questions. In the following chapters, we will present two mathematical models, based on differential equations, which attempt to shed light on this phenomenon. The first one, which can be seen in the Chapter \ref{cap:descripcionTrabajo}, deals with this issue from a microscopic point of view. That is, it proposes a decision algorithm implemented by each cell. Meanwhile, the equations of the second model, set out in the Chapter \ref{cap:modeloMacroscopico}, describe the dynamic behaviour of the entire population of T cells, based on two main characteristics attributed to that population: elasticity and inertia. In both cases, numerical simulations of these models are performed. These simulations represent different situations that can occur during infection. Among them, it is interesting to distinguish between the situation of intolerance to the pathogen, in which case the immune cells manage to control the infection and eliminate the infectious agent, or the situation of tolerance to the pathogen, in which it is the latter who ends up taking control of the organism. It also discusses what happens when we have populations of T cells with different affinities to the pathogen. The relationship between the properties of both models is an interesting topic, which is addressed in the last chapter (Chapter \ref{cap:redNeuronal}). As we will see, both give rise to results that are not only compatible but complementary. 
+
+
+
+\section{Objectives}
+
+
+This Final Project focuses on the study of the population dynamics of T cells in the face of acute infection and, more specifically, on the study of two mathematical models that aim to respond to the mechanisms that govern this behaviour.
+
+To approach this project, the following objectives were determined:
+
+\begin{itemize}
+	
+	\item Study of the basics of th immune system, focusing on the role that T cells play during an \textit{immune response}.
+	
+	\item Study and understanding of the mathematical models detailed in this document and their importance in the field of biology.
+	
+	\item Implementation of the code needed to simulate different T-cell behaviours based on these models and analysis of these behaviours. 
+	
+	\item Obtaining a first approximation to establish a correspondence between the parameters of the two models studied. 
+\end{itemize}
 
 
 
