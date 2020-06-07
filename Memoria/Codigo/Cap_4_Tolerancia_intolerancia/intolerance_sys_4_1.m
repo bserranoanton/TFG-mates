@@ -29,7 +29,7 @@ mu_pc_mem = 13;                         %Change rate in inhibitor molecule Rb, d
 T_final = 25;
 
 %Define the initial number of particles
-N_init = 25;                            %N will represent T cells                
+N_init = 0;                            %N will represent T cells                
 Y_init = 5;                             %Y will represent pathogen
 
 %Define how long the recording vectors should be
@@ -274,7 +274,7 @@ hold on
 [hA2]=plot(time_vec,rec_vector_Y/max(rec_vector_Y),'r','LineWidth', 1);
 
 hold on
-[hA3] = plot(time_vec,rec_vector_N_mem/max(rec_vector_N_eff),'g','LineWidth', 1);
+%[hA3] = plot(time_vec,rec_vector_N_mem/max(rec_vector_N_eff),'g','LineWidth', 1);
 
 set(gca,'YTickLabel',[]); 
 set(gca,'XTickLabel',[]);
