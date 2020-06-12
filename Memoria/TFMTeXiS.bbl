@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{13}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Arias y Herrero(2016)}]{arias2016emergent}
@@ -31,6 +31,13 @@
   R.~M.}
 \newblock Mathematics in modern immunology.
 \newblock 2016.
+
+\bibitem[{Crawford y Wherry(2010)}]{Crawford39.17}
+{\sc Crawford, A.} y {\sc Wherry, E.~J.}
+\newblock Unravelling cd4 t cell dysfunction during chronic infection (39.17).
+\newblock {\em The Journal of Immunology\/}, vol. 184(1 Supplement), p\'aginas
+  39.17--39.17, 2010.
+\newblock ISSN 0022-1767.
 
 \bibitem[{Duffy y Hodgkin(2012)}]{DUFFY2012457}
 {\sc Duffy, K.~R.} y {\sc Hodgkin, P.~D.}
@@ -82,5 +89,14 @@
 \newblock Las células natural killer y su papel en la respuesta inmunitaria
   durante la infección por el virus de la inmunodeficiencia humana tipo-1.
 \newblock 2014.
+
+\bibitem[{Tomov et\ al.(2013)Tomov, Osborne, Dolfi, Sonnenberg, Monticelli,
+  Mansfield, Virgin, Artis y Wherry}]{pmid23596300}
+{\sc Tomov, V.~T.}, {\sc Osborne, L.~C.}, {\sc Dolfi, D.~V.}, {\sc Sonnenberg,
+  G.~F.}, {\sc Monticelli, L.~A.}, {\sc Mansfield, K.}, {\sc Virgin, H.~W.},
+  {\sc Artis, D.} y {\sc Wherry, E.~J.}
+\newblock {{P}ersistent enteric murine norovirus infection is associated with
+  functionally suboptimal virus-specific {C}{D}8 {T} cell responses}.
+\newblock {\em J. Virol.\/}, vol.\ 87(12), p\'aginas 7015--7031, 2013.
 
 \end{thebibliography}
