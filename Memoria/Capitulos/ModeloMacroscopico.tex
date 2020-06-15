@@ -67,23 +67,36 @@ En este tipo de simulaciones vemos como el patógeno aumenta su población segui
 
 Queda, por tanto, de manifiesto la característica de inercia, pues se ve cómo las células T comienzan a disminuir en número después de que el patógeno haya desaparecido, y de elasticidad, pues la población de células T acaba recuperando sus niveles iniciales. Como vemos, el parecido de esta figura con la Figura \ref{fig:intolerance} es notable, ambos modelos, macroscópico y microscópico, simulan el mismo comportamiento desde dos puntos de vista distintos.
 
+
 \begin{figure}[t]
 	\centering
-	\begin{tabular}{cc}
-		\subfloat [Simulación: caso de intolerancia al patógeno en el modelo macroscópico. Parámetros: $\alpha=1,5$, $\beta=0,1$, $k=4$, $\lambda=0.5$, $P_m = 0$.]{
-			\label{fig:macro_intolerance}
-			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/macro_intoler}}
-		& \subfloat[Simulación: caso de tolerancia al patógeno en el modelo macroscópico. Parámetros: $\alpha^{*}=1,1$, $\beta^{*}=0,01$, $P_m^{*} = 0$.]{
-			\label{fig:macro_tolerance}
-			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/macro_toler}}\\
-	\end{tabular}
-	\caption{Simulaciones del modelo macroscópico. Casos de intolerancia y tolerancia al patógeno}%\label{foo}
+	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/macro_intoler}
+	\caption{Simulación del modelo macroscópico. Caso de intolerancia al patógeno. Parámetros: $\alpha=1,5$, $\beta=0,1$, $k=4$, $\lambda=0.5$, $P_m = 0$.}
+	\label{fig:macro_intolerance}
 \end{figure}
+
+
+
 
 \subsection{Tolerancia al patógeno}
 \label{sub:simMacroToler}
 
 Veamos ahora al caso análogo a la Sección \ref{sim:toler}, donde vimos cómo un patógeno con una tasa de reproducción pequeña conseguía zafarse de las células T. En la Figura \ref{fig:macro_tolerance} puede observarse que las células T comienzan la \textit{contracción clonal}, haciendo que su población desaparezca irremediablemente, y provocando que el patógeno pueda reproducirse sin ningún tipo de impedimento. Esto se produce porque la fuerza que ejerce el patógeno no es suficiente para contrarrestar la fuerza elástica de las células T, provocando la \textit{contracción clonal}. En este caso la simulación corresponde al Sistema \ref{sist_macro_nod}.
+
+
+\begin{figure}[t]
+	\centering
+	\begin{tabular}{cc}
+		
+		\subfloat[Simulación: caso de tolerancia al patógeno en el modelo macroscópico adimensional. Parámetros: $\alpha^{*}=1,1$, $\beta^{*}=0,01$, $P_m^{*} = 0$.]{
+			\label{fig:macro_tolerance}
+			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/macro_toler}}
+		& \subfloat [Simulación: caso de tolerancia al patógeno en el modelo macroscópico. Parámetros: $\alpha=0.4$, $\beta=0,008$, $k=0.25$, $\lambda=0.2$, $P_m = 0$.]{
+			\label{fig:macro_intolerance_osci}
+			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/macro_toler_osci}}\\
+	\end{tabular}
+	\caption{Simulaciones del modelo macroscópico. Casos de tolerancia al patógeno}%\label{foo}
+\end{figure}
 
 
 

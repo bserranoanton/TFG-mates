@@ -35,7 +35,8 @@ option2 = odeset('NonNegative',2); %T >= 0
 
 
 ySol = ode45(M,interval,y0, option2);
-tValues = linspace(interval(1),interval(2),1000);
+%tValues = linspace(interval(1),interval(2),1000);
+tValues = linspace(interval(1),interval(2),2000);
 yValues = deval(ySol,tValues,1); 
 
 %Plot results 
@@ -49,8 +50,8 @@ yValues = deval(ySol,tValues,2);
 [hA1] = plot(tValues,yValues,'b','LineWidth', 1);  %T cells 
 %ylim([0,1]);
 
-%set(gca,'YTickLabel',[]); 
-%set(gca,'XTickLabel',[]);
+set(gca,'YTickLabel',[]); 
+set(gca,'XTickLabel',[]);
 xlabel('Tiempo');  ylabel('Numero de celulas');
 legend([hA2,hA1],'Patogeno','Celulas T');
 
