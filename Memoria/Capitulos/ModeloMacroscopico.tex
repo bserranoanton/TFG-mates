@@ -67,10 +67,9 @@ En este tipo de simulaciones vemos como el patógeno aumenta su población segui
 
 Queda, por tanto, de manifiesto la característica de inercia, pues se ve cómo las células T comienzan a disminuir en número después de que el patógeno haya desaparecido, y de elasticidad, pues la población de células T acaba recuperando sus niveles iniciales. Como vemos, el parecido de esta figura con la Figura \ref{fig:intolerance} es notable, ambos modelos, macroscópico y microscópico, simulan el mismo comportamiento desde dos puntos de vista distintos.
 
-
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/macro_intoler}
+	\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/macro_intoler}
 	\caption{Simulación del modelo macroscópico. Caso de intolerancia al patógeno. Parámetros: $\alpha=1,5$, $\beta=0,1$, $k=4$, $\lambda=0.5$, $P_m = 0$.}
 	\label{fig:macro_intolerance}
 \end{figure}
@@ -78,36 +77,39 @@ Queda, por tanto, de manifiesto la característica de inercia, pues se ve cómo 
 
 
 
-\subsection{Tolerancia al patógeno}
-\label{sub:simMacroToler}
-
-Veamos ahora al caso análogo a la Sección \ref{sim:toler}, donde vimos cómo un patógeno con una tasa de reproducción pequeña conseguía zafarse de las células T. En la Figura \ref{fig:macro_tolerance} puede observarse que las células T comienzan la \textit{contracción clonal}, haciendo que su población desaparezca irremediablemente, y provocando que el patógeno pueda reproducirse sin ningún tipo de impedimento. Esto se produce porque la fuerza que ejerce el patógeno no es suficiente para contrarrestar la fuerza elástica de las células T, provocando la \textit{contracción clonal}. En este caso la simulación corresponde al Sistema \ref{sist_macro_nod}.
-
-
-\begin{figure}[t]
+\begin{figure}[H]
 	\centering
 	\begin{tabular}{cc}
+		\subfloat [Simulación: caso de tolerancia al patógeno en el modelo macroscópico. Parámetros: $\alpha=0.05$, $\beta=0,1$, $k=0.25$, $\lambda=0.15$, $P_m = 0$.]{
+			\label{fig:macro_tolerance_2}
+			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/macro_toler_2}}
 		
-		\subfloat[Simulación: caso de tolerancia al patógeno en el modelo macroscópico adimensional. Parámetros: $\alpha^{*}=1,1$, $\beta^{*}=0,01$, $P_m^{*} = 0$.]{
+		& \subfloat[Simulación: caso de tolerancia al patógeno en el modelo macroscópico adimensional. Parámetros: $\alpha^{*}=1,1$, $\beta^{*}=0,01$, $P_m^{*} = 0$.]{
 			\label{fig:macro_tolerance}
-			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/macro_toler}}
-		& \subfloat [Simulación: caso de tolerancia al patógeno en el modelo macroscópico. Parámetros: $\alpha=0.4$, $\beta=0,008$, $k=0.25$, $\lambda=0.2$, $P_m = 0$.]{
-			\label{fig:macro_intolerance_osci}
-			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/macro_toler_osci}}\\
+			\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/macro_toler}} \\
 	\end{tabular}
+	\subfloat [Simulación: caso de tolerancia al patógeno con recaída en la infección en el modelo macroscópico. Parámetros: $\alpha=0.4$, $\beta=0,008$, $k=0.25$, $\lambda=0.2$, $P_m = 0$.]{
+		\label{fig:macro_tolerance_osci}
+		\includegraphics[width=0.5\textwidth]{Imagenes/Simulaciones/macro_toler_osci}}\\
 	\caption{Simulaciones del modelo macroscópico. Casos de tolerancia al patógeno}%\label{foo}
 \end{figure}
 
 
+\subsection{Tolerancia al patógeno}
+\label{sub:simMacroToler}
+
+Veamos ahora al caso análogo a la Sección \ref{sim:toler}, donde vimos cómo un patógeno con una tasa de reproducción pequeña conseguía zafarse de las células T. En la Figura \ref{fig:macro_tolerance_2}, se ha simulado el Sistema \ref{sist_macro} con una tasa de reproducción, $\alpha$, pequeña respecto a la tasa de eliminación del patógeno, $\beta$. Al comienzo, las células T se reproducen rápidamente para controlar la infección, haciendo que la población de patógeno apenas pueda crecer. Sin embargo, cuando empieza la \textit{contracción clonal} se observa que el patógeno consigue escapar del ataque de las células T, cuya población desaparece. Esto se produce porque la fuerza que ejerce el patógeno no es suficiente para contrarrestar la fuerza elástica de las células T, provocando que la población de células T desaparezca irremediablemente. Un comportamiento análogo puede verse en la Figura \ref{fig:macro_tolerance}. En este caso se ha simulado el Sistema \ref{sist_macro_nod} con una tasa de reproducción, $\alpha^{*}$, elevada respecto a la tasa de eliminación del patógeno, $\beta$, al contrario que en el caso anterior. A pesar de ello, tenemos también un comportamiento de tolerancia, lo que sugiere que se necesita un valor mayor de estos parámetros para salir de la región de tolerancia (ver Sección \ref{sub:reg_tolerIntolerMacro}).  
+
+Por su parte, en la Figura \ref{fig:macro_tolerance_osci} se puede observar un comportamiento de tolerancia en el que ha tenido lugar una recaída de la infección. Tras la primera \textit{expansión clonal} de las células T, le sigue la \textit{contracción clonal}, sin embargo, en este caso, la tasa de reproducción del patógeno, $\alpha$, y el número de células del patógeno aún existentes son suficientes para contrarrestar la fuerza elástica de las células T, $k$, provocando así que vuelva a aumentar la población de estas últimas, repitiendo el proceso. Al contrario que en la ocasión anterior y debido a que el número de células del patógeno es menor, puede verse que el mecanismo de \textit{contracción clonal} termina, eliminando a todas las células T y permitiendo el libre crecimiento del patógeno, que crece de manera exponencial.
 
 \subsection{Regiones de tolerancia e intolerancia}
 \label{sub:reg_tolerIntolerMacro}
 
 Es interesante analizar la relación que existe entre el valor de los parámetros del modelo y las regiones de intolerancia y tolerancia. Este asunto se ha abordado para el modelo macroscópico adimensional (ver Sistema \ref{sist_macro_nod}). Para ello se ha implementado un programa que recorre los valores de $\alpha^{*}$ y $\beta^{*}$ entre $0,1$ y $2,5$ con un paso de $0,1$\footnote{Con paso nos referimos al valor del incremento del parámetro en cada iteración.}, y, para cada valor, simula el Sistema \ref{sist_macro_nod}. Una vez hecha la simulación se observa el número de células T y de patógeno para obtener el resultado de tolerancia, en caso de que las células T no consiguen acabar con el patógeno o intolerancia en caso contrario. La Figura \ref{fig:macro_toler_intoler} recoge el resultado de todas estas simulaciones, arrojando datos importantes: si dejamos uno de los dos parámetros fijos, es posible cambiar de una región a otra con tan solo modificar el otro parámetro. De hecho, de acuerdo con este modelo, patógenos (y tumores) pueden escapar de la acción de las células T por dos métodos: reduciendo el efecto de las células T, el parámetro $\beta^{*}$, o reduciendo su tasa de proliferación, el parámetro $\alpha^{*}$, \citep{arias2016emergent}. Una consecuencia que se puede extraer de esto es que mecanismos como la fiebre, que incrementa la tasa de proliferación del patógeno, o la inflamación, que aumenta la acción de las células T, favorecen que el patógeno sea vencido. 
 
-\begin{figure}[t]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{Imagenes/Simulaciones/macro_toler_intoler}
+	\includegraphics[width=0.7\textwidth]{Imagenes/Simulaciones/macro_toler_intoler}
 	\caption{Simulación del modelo macroscópico adimensional. Variación de los parámetros $\alpha^{*}$ y $\beta^{*}$ para dar lugar a regiones de tolerancia e intolerancia al patógeno.}
 	\label{fig:macro_toler_intoler}
 \end{figure}

@@ -31,20 +31,20 @@
 \contentsline {section}{\numberline {5.1}Inercia y elasticidad en las c\IeC {\'e}lulas T}{27}{section.82}
 \contentsline {section}{\numberline {5.2}Simulaciones del modelo macrosc\IeC {\'o}pico}{29}{section.85}
 \contentsline {subsection}{\numberline {5.2.1}Intolerancia al pat\IeC {\'o}geno}{29}{subsection.86}
-\contentsline {subsection}{\numberline {5.2.2}Tolerancia al pat\IeC {\'o}geno}{30}{subsection.88}
-\contentsline {subsection}{\numberline {5.2.3}Regiones de tolerancia e intolerancia}{30}{subsection.92}
-\contentsline {chapter}{\numberline {6}Correspondencia de par\IeC {\'a}metros entre los modelos microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico}{33}{chapter.95}
-\contentsline {section}{\numberline {6.1}Conjunto de datos y entrenamiento de la red neuronal}{34}{section.98}
-\contentsline {subsection}{\numberline {6.1.1}Aspectos t\IeC {\'e}cnicos de la red}{35}{subsection.100}
-\contentsline {section}{\numberline {6.2}Resultados obtenidos por la red neuronal}{35}{section.107}
-\contentsline {subsection}{\numberline {6.2.1}Ejemplo de ejecuci\IeC {\'o}n de la red}{36}{subsection.112}
-\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{39}{chapter.116}
-\contentsline {chapter}{\numberline {8}Introduction}{41}{chapter.119}
-\contentsline {section}{\numberline {8.1}Objectives}{42}{section.123}
+\contentsline {subsection}{\numberline {5.2.2}Tolerancia al pat\IeC {\'o}geno}{30}{subsection.92}
+\contentsline {subsection}{\numberline {5.2.3}Regiones de tolerancia e intolerancia}{31}{subsection.93}
+\contentsline {chapter}{\numberline {6}Correspondencia de par\IeC {\'a}metros entre los modelos microsc\IeC {\'o}pico y macrosc\IeC {\'o}pico}{33}{chapter.96}
+\contentsline {section}{\numberline {6.1}Conjunto de datos y entrenamiento de la red neuronal}{34}{section.99}
+\contentsline {subsection}{\numberline {6.1.1}Aspectos t\IeC {\'e}cnicos de la red}{35}{subsection.101}
+\contentsline {section}{\numberline {6.2}Resultados obtenidos por la red neuronal}{35}{section.108}
+\contentsline {subsection}{\numberline {6.2.1}Ejemplo de ejecuci\IeC {\'o}n de la red}{36}{subsection.113}
+\contentsline {chapter}{\numberline {7}Conclusiones y Trabajo Futuro}{39}{chapter.117}
+\contentsline {chapter}{\numberline {8}Introduction}{41}{chapter.120}
+\contentsline {section}{\numberline {8.1}Objectives}{42}{section.124}
 \select@language {english}
-\contentsline {chapter}{\numberline {9}Conclusions and Future Work}{43}{chapter.124}
-\contentsline {chapter}{Bibliograf\'{\i }a}{45}{chapter*.126}
+\contentsline {chapter}{\numberline {9}Conclusions and Future Work}{43}{chapter.125}
+\contentsline {chapter}{Bibliograf\'{\i }a}{45}{chapter*.127}
 \select@language {spanish}
-\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo de las simulaciones}{47}{appendix.127}
-\contentsline {section}{\numberline {A.1}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:simulaciones}}{47}{section.128}
-\contentsline {section}{\numberline {A.2}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:modeloMacroscopico}}{52}{section.413}
+\contentsline {chapter}{\numberline {A}C\IeC {\'o}digo de las simulaciones}{47}{appendix.128}
+\contentsline {section}{\numberline {A.1}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:simulaciones}}{47}{section.129}
+\contentsline {section}{\numberline {A.2}C\IeC {\'o}digo referente al Cap\IeC {\'\i }tulo \ref {cap:modeloMacroscopico}}{52}{section.414}

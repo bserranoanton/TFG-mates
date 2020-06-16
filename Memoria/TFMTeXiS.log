@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  15 JUN 2020 18:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  16 JUN 2020 13:28
 entering extended mode
 **./TFMTeXiS.tex
 (TFMTeXiS.tex
@@ -1610,8 +1610,8 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 3.
 LaTeX Info: Redefining \% on input line 3.
-LaTeX Info: Redefining \. on input line 39.
-LaTeX Info: Redefining \% on input line 39.
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
 )
 \tf@lof=\write7
 \openout7 = `TFMTeXiS.lof'.
@@ -2631,55 +2631,69 @@ File: Imagenes/Simulaciones/macro_intoler.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/macro_intoler.png>
 Package pdftex.def Info: Imagenes/Simulaciones/macro_intoler.png used on input 
-line 73.
-(pdftex.def)             Requested size: 298.75264pt x 224.07051pt.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 81.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 81.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 81.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 81.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 81.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 81.
-LaTeX Info: Redefining \. on input line 85.
-LaTeX Info: Redefining \% on input line 85.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 85.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 85.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 85.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 85.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 85.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 85.
- [29 <./Imagenes/Simulaciones/macro_intoler.png (PNG copy)>]
-<Imagenes/Simulaciones/macro_toler.png, id=792, 421.575pt x 316.18124pt>
+line 72.
+(pdftex.def)             Requested size: 213.39568pt x 160.04898pt.
+
+<Imagenes/Simulaciones/macro_toler_2.png, id=785, 421.575pt x 316.18124pt>
+File: Imagenes/Simulaciones/macro_toler_2.png Graphic file (type png)
+
+<use Imagenes/Simulaciones/macro_toler_2.png>
+Package pdftex.def Info: Imagenes/Simulaciones/macro_toler_2.png used on input 
+line 85.
+(pdftex.def)             Requested size: 213.39568pt x 160.04898pt.
+
+<Imagenes/Simulaciones/macro_toler.png, id=786, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/macro_toler.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/macro_toler.png>
 Package pdftex.def Info: Imagenes/Simulaciones/macro_toler.png used on input li
-ne 93.
+ne 89.
 (pdftex.def)             Requested size: 213.39568pt x 160.04898pt.
 
-<Imagenes/Simulaciones/macro_toler_osci.png, id=793, 421.575pt x 316.18124pt>
+<Imagenes/Simulaciones/macro_toler_osci.png, id=787, 421.575pt x 316.18124pt>
 File: Imagenes/Simulaciones/macro_toler_osci.png Graphic file (type png)
 
 <use Imagenes/Simulaciones/macro_toler_osci.png>
 Package pdftex.def Info: Imagenes/Simulaciones/macro_toler_osci.png used on inp
-ut line 96.
+ut line 93.
 (pdftex.def)             Requested size: 213.39568pt x 160.04898pt.
 
-Overfull \hbox (31.26108pt too wide) in paragraph at lines 89--98
+Overfull \hbox (31.26108pt too wide) in paragraph at lines 82--93
  [][] 
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 96.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 96.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 96.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 96.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 96.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 96.
+ [29 <./Imagenes/Simulaciones/macro_intoler.png (PNG copy)>]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 98.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 98.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 98.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 98.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 98.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 98.
+LaTeX Info: Redefining \. on input line 103.
+LaTeX Info: Redefining \% on input line 103.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand >>
@@ -2692,31 +2706,30 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 103.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 103.
+ [30 <./Imagenes/Simulaciones/macro_toler_2.png (PNG copy)> <./Imagenes/Simulac
+iones/macro_toler.png (PNG copy)> <./Imagenes/Simulaciones/macro_toler_osci.png
+ (PNG copy)>]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 105.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 105.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 105.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 105.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 105.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 105.
 
-<Imagenes/Simulaciones/macro_toler_intoler.png, id=800, 479.54156pt x 304.13625
+<Imagenes/Simulaciones/macro_toler_intoler.png, id=812, 479.54156pt x 304.13625
 pt>
 File: Imagenes/Simulaciones/macro_toler_intoler.png Graphic file (type png)
  <use Imagenes/Simulaciones/macro_toler_intoler.png>
 Package pdftex.def Info: Imagenes/Simulaciones/macro_toler_intoler.png used on 
-input line 110.
-(pdftex.def)             Requested size: 426.79135pt x 270.68504pt.
+input line 112.
+(pdftex.def)             Requested size: 298.75264pt x 189.47675pt.
 )
-LaTeX Info: Redefining \. on input line 149.
-LaTeX Info: Redefining \% on input line 149.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 149.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 149.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 149.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 149.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 149.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 149.
- [30 <./Imagenes/Simulaciones/macro_toler.png (PNG copy)> <./Imagenes/Simulacio
-nes/macro_toler_osci.png (PNG copy)>]
 LaTeX Info: Redefining \. on input line 149.
 LaTeX Info: Redefining \% on input line 149.
 Package babel Info: Redefining spanish shorthand <<
@@ -2817,7 +2830,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 42.
  [34]
-<Imagenes/RedNeuronal/esquema.png, id=844, 294.34969pt x 143.03438pt>
+<Imagenes/RedNeuronal/esquema.png, id=850, 294.34969pt x 143.03438pt>
 File: Imagenes/RedNeuronal/esquema.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/esquema.png>
@@ -2825,7 +2838,7 @@ Package pdftex.def Info: Imagenes/RedNeuronal/esquema.png used on input line 55
 .
 (pdftex.def)             Requested size: 213.39568pt x 103.69615pt.
 
-<Imagenes/RedNeuronal/esquema2.png, id=845, 406.51875pt x 218.31563pt>
+<Imagenes/RedNeuronal/esquema2.png, id=851, 406.51875pt x 218.31563pt>
 File: Imagenes/RedNeuronal/esquema2.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/esquema2.png>
@@ -2864,14 +2877,14 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 75.
 [35 <./Imagenes/RedNeuronal/esquema.png> <./Imagenes/RedNeuronal/esquema2.png>]
-<Imagenes/RedNeuronal/loss.png, id=855, 462.528pt x 345.4506pt>
+<Imagenes/RedNeuronal/loss.png, id=861, 462.528pt x 345.4506pt>
 File: Imagenes/RedNeuronal/loss.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/loss.png>
 Package pdftex.def Info: Imagenes/RedNeuronal/loss.png used on input line 81.
 (pdftex.def)             Requested size: 213.39568pt x 159.3836pt.
 
-<Imagenes/RedNeuronal/accuracy.png, id=856, 462.528pt x 345.4506pt>
+<Imagenes/RedNeuronal/accuracy.png, id=862, 462.528pt x 345.4506pt>
 File: Imagenes/RedNeuronal/accuracy.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/accuracy.png>
@@ -2910,7 +2923,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 100.
 [36 <./Imagenes/RedNeuronal/loss.png> <./Imagenes/RedNeuronal/accuracy.png>]
-<Imagenes/RedNeuronal/micro.png, id=873, 479.54156pt x 307.1475pt>
+<Imagenes/RedNeuronal/micro.png, id=879, 479.54156pt x 307.1475pt>
 File: Imagenes/RedNeuronal/micro.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/micro.png>
@@ -2922,7 +2935,7 @@ Underfull \hbox (badness 1584) in paragraph at lines 108--108
 []\T1/cmr/m/n/9 (a) |Si-mu-la-ción: ca-so de in-to-le-ran-cia al pa-tó-geno
  []
 
-<Imagenes/RedNeuronal/macro.png, id=874, 451.6875pt x 304.13625pt>
+<Imagenes/RedNeuronal/macro.png, id=880, 451.6875pt x 304.13625pt>
 File: Imagenes/RedNeuronal/macro.png Graphic file (type png)
 
 <use Imagenes/RedNeuronal/macro.png>
@@ -3330,14 +3343,14 @@ LaTeX Info: Redefining \% on input line 56.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
 Package rerunfilecheck Info: File `TFMTeXiS.out' has not changed.
-(rerunfilecheck)             Checksum: 6169F7290F4ED1521EA308686B40C92F;4151.
+(rerunfilecheck)             Checksum: C5A015D5A310D27D017FC547974807DC;4151.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 217.
  ) 
 Here is how much of TeX's memory you used:
- 27434 strings out of 493323
- 452508 string characters out of 3139072
- 909023 words of memory out of 3000000
- 29612 multiletter control sequences out of 15000+200000
+ 27445 strings out of 493323
+ 452805 string characters out of 3139072
+ 909144 words of memory out of 3000000
+ 29621 multiletter control sequences out of 15000+200000
  556658 words of font info for 68 fonts, out of 3000000 for 9000
  1379 hyphenation exceptions out of 8191
  55i,19n,65p,2515b,2599s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3374,9 +3387,9 @@ C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/urw/times/utmr8a.pfb>
-Output written on TFMTeXiS.pdf (74 pages, 1787062 bytes).
+Output written on TFMTeXiS.pdf (74 pages, 1802584 bytes).
 PDF statistics:
- 2361 PDF objects out of 2487 (max. 8388607)
- 636 named destinations out of 1000 (max. 500000)
- 493 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2366 PDF objects out of 2487 (max. 8388607)
+ 637 named destinations out of 1000 (max. 500000)
+ 498 words of extra memory for PDF output out of 10000 (max. 10000000)
 

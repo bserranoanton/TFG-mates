@@ -1,7 +1,7 @@
 %This code is desgined to simulate system 5.1.
 %By Belen Serrano Anton
 %Created 03/03/2020
-%Last Modified 31/03/2020
+%Last Modified 16/06/2020
 
 syms t_cell(t) p(t) 
 
@@ -52,6 +52,6 @@ yValues = deval(ySol,tValues,2);
 
 set(gca,'YTickLabel',[]); 
 set(gca,'XTickLabel',[]);
-xlabel('Tiempo');  ylabel('Numero de celulas');
-legend([hA2,hA1],'Patogeno','Celulas T');
+xlabel('Tiempo');  ylabel('Número de celulas');
+legend([hA2,hA1],'Patógeno','Células T');
 
