@@ -29,9 +29,34 @@ To approach this project, the following objectives were determined:
 	\item Obtaining a first approximation to establish a correspondence between the parameters of the two models studied. 
 \end{itemize}
 
+\section{Work plan}
+
+To carry out this work, various milestones were established throughout the academic year. The first months were devoted to a prior review of the underlying biological concepts. These included basic notions about the immune system and a more detailed study of T cell behaviour. This constitutes a fundamental part of the work, as the models cannot be fully understood if they are not looked at from the biological problem to which they are trying to respond. Once the biological basis was established, the study of the models could begin. The first one to be studied would be the microscopic model shown in \cite{JTB}. Different simulations of the model were established, which would complement the theory seen. The second model, the macroscopic model \citep{arias2015growth}, would be studied later, with the purpose of being able to relate it to the previous one. 
+
+Once both models had been reviewed and the corresponding simulations had been carried out, the possibility was opened up of trying to establish a correspondence between the parameters of both models by implementing a neural network. The latter would put an end to the content of this Bachelor's theses.
 
 
+\section{Document structure}
 
+This work is divided into four well-differentiated parts, but with the same purpose, the study of T cells and their population dynamics during an acute infection. 
 
+\begin{enumerate}
+	\item The context of the document is covered in Chapter \ref{cap:estadoDeLaCuestion}. In particular, Section \ref{sec:cuestInmuno} covers basic notions of immunology, which allows the reader to proceed through the following chapters without any terminological impediment, as far as biological issues are concerned. This section is intended to give a very basic overview of the immune system. It starts with the simplest mechanisms, referring to the \textit{innate immune system} (Section \ref{sub:sistInmInnato}), to the most complex ones, referring to the \textit{adaptive immune system} (Section \ref{sub:sistInmAdap}). The aspects of the immune response involving T cells, such as their activation and performance or immune memory, are discussed in more detail (Section \ref{Tcell}).
+	
+	Furthermore, Section \ref{sec:coop} deals with the role of mathematical models in the field of biology. Specifically, in Section \ref{cuestionAmodelizar}, we focus on the case of our study, the different mathematical models formulated for the dynamics of T cells during an acute infection. 
+	
+	\item The theoretical framework of the proposed microscopic model for the problem of deciding between T cell division and apoptosis is presented in Chapter \ref{cap:descripcionTrabajo}. In Section \ref{sec:hip_bio} the biological hypotheses on which the model is based are detailed. Those hypotheses constitute contrasted and observed facts in the field of biology. The model itself can be seen in Section \ref{sec:modelo}, which details the notation that will be followed by the rest of the document and the first-order differential equations that give rise to the algorithm. The last section of this chapter, Section \ref{sec:modeloPatCelT}, introduces a differential equation for the population dynamics of the pathogen and its relationship to the number of available T cells. The equation establishes the interaction between the two populations.
+		
+	In Chapter \ref{cap:simulaciones} the simulations corresponding to a simplified case of the previous model are presented (Section \ref{sec:modelo_simplif}) and the basic details of its implementation are explained (Section \ref{sec:implem_pseudo}). The results of the simulations are described in Section \ref{sec:simulacionesMicro}. These simulations correspond to cases of intolerance and tolerance to the pathogen (Sections \ref{sim:intoler} and \ref{sim:toler}, respectively), as well as the case of the immune response with populations of T cells with different affinities to the pathogen (Section \ref{sim:difPoblacionesT}).
+	
+	\item The macroscopic model is studied in Chapter \ref{cap:modeloMacroscopico}. The second-order differential equations of this model govern the population dynamics of T cells and the pathogen collectively, unlike the microscopic model, whose algorithm was defined for each cell. This model is based on two characteristics of the T cell population behaviour during an immune response: elasticity and inertia (Section \ref{sec:iner_elast}). 
+	
+	In addition to proposing a theoretical model, the numerical simulations corresponding to the model are also carried out in Section \ref{sec:simu_macro}. These include the cases of intolerance and tolerance to the pathogen (Sections \ref{sub:simMacroIntoler} and \ref{sub:simMacroToler}, respectively) and, for the macroscopic non-dimensional model, the relevance of the value of its two parameters in the regions of tolerance and intolerance is studied (Section \ref{sub:reg_tolerIntolerMacro}).
 
+	\item Then, after studying the models proposed in Chapters \ref{cap:descripcionTrabajo} and \ref{cap:modeloMacroscopico}, and after comparing their results, a parameter correspondence is sought between both models in Chapter \ref{cap:redNeuronal}. For this purpose, a neural network which is capable of performing ``the inverse function'' to the code referring to the simulations of the macroscopic model is implemented. That is to say, given the results of a simulation, the network can predict the value of the parameters necessary to obtain that same result. The construction of the dataset and the implementation of the network can be seen in the Section \ref{sec:conjDatos_entreRed}. The results obtained and an example of execution, using as input the results of a simulation of the microscopic model, can be seen in the Section \ref{sec:resultadoRed}.
+	
+
+\end{enumerate}
+
+Finally, Chapter \ref{cap:conclusions} offers a brief conclusion of the work carried out. To complement the project, the main code of the model simulations (both those of Chapter \ref{cap:simulaciones} and \ref{cap:modeloMacroscopico}) has been included in Appendix \ref{Appendix:A}.
 
