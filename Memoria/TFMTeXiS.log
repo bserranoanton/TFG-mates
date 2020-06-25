@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  24 JUN 2020 17:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  25 JUN 2020 15:35
 entering extended mode
 **./TFMTeXiS.tex
 (TFMTeXiS.tex
@@ -3343,13 +3343,13 @@ LaTeX Info: Redefining \% on input line 56.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 217.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 217.
 Package rerunfilecheck Info: File `TFMTeXiS.out' has not changed.
-(rerunfilecheck)             Checksum: 28D88E94D1AEFA7C0054930027A27B37;4278.
+(rerunfilecheck)             Checksum: 7A752F19FA27F5F68AF13E2F9FCF5AD4;4281.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 217.
  ) 
 Here is how much of TeX's memory you used:
  27455 strings out of 493323
  452899 string characters out of 3139072
- 909145 words of memory out of 3000000
+ 909146 words of memory out of 3000000
  29623 multiletter control sequences out of 15000+200000
  556658 words of font info for 68 fonts, out of 3000000 for 9000
  1379 hyphenation exceptions out of 8191
@@ -3387,9 +3387,9 @@ C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/urw/times/utmr8a.pfb>
-Output written on TFMTeXiS.pdf (76 pages, 1818064 bytes).
+Output written on TFMTeXiS.pdf (76 pages, 1818361 bytes).
 PDF statistics:
- 2425 PDF objects out of 2487 (max. 8388607)
+ 2426 PDF objects out of 2487 (max. 8388607)
  645 named destinations out of 1000 (max. 500000)
  514 words of extra memory for PDF output out of 10000 (max. 10000000)
 
