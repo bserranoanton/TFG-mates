@@ -89,7 +89,7 @@ La clave principal de la implementación es cómo se guarda la población de cé
 	
 	\item En función de $Y$, y para cada célula T de la población, se calcula la cantidad de patógeno que está a su alcance y se resuelve el sistema de ecuaciones correspondiente para conocer la cantidad de Rb ($c$) y Bcl-2 ($a$) activa en ese instante. En función de esto se desencadena la división celular, si $c = 0$, o el suicidio de la célula, si $a = 0$. En otro caso la célula seguirá en fase de decisión y volverá a calcular $a$ y $c$ en la siguiente iteración en base a la cantidad obtenida en la actual.
 	
-	\item Cuando una célula se divide, se generan dos células hijas con los parámetros correspondientes a su TCR (ver Sistema \ref{sist:div_sim}). Recordemos que la cantidad de receptores de la célula madre se divide entre las dos hijas de manera asimétrica, y los parámetros iniciales, para que pueda comenzar su fase de \textit{decisión}. Se sigue en el paso 6.
+	\item Cuando una célula se divide, se generan dos células hijas con los parámetros correspondientes a sus receptores (ver Sistema \ref{sist:div_sim}). Recordemos que la cantidad de receptores de la célula madre se divide entre las dos hijas de manera asimétrica, y los parámetros iniciales, para que pueda comenzar su fase de \textit{decisión}. Se sigue en el paso 6.
 	
 	\item Si por el contrario la célula comete suicidio, se eliminará de la población. 
 

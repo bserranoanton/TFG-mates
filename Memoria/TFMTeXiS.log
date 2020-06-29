@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  25 JUN 2020 15:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2019.11.1)  29 JUN 2020 18:00
 entering extended mode
 **./TFMTeXiS.tex
 (TFMTeXiS.tex
@@ -2453,20 +2453,20 @@ hy-[]is-[]mycobacterium-[]tuberculosis-[]hard-[]to-[]grow-[]the-[]principle-[]o
 f-[]biorelativity-[]explains-[]2161-[]0681 .
  []
 
-LaTeX Info: Redefining \. on input line 202.
-LaTeX Info: Redefining \% on input line 202.
+LaTeX Info: Redefining \. on input line 201.
+LaTeX Info: Redefining \% on input line 201.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 202.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 202.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 202.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 202.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 202.
+(babel)             in language  on input line 201.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 202.
+(babel)             in language  on input line 201.
 [24 <./Imagenes/Simulaciones/intolerance.png (PNG copy)> <./Imagenes/Simulacion
 es/tolerance.png (PNG copy)>]
 Package babel Info: Redefining spanish shorthand <<
@@ -3387,9 +3387,9 @@ C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/urw/times/utmr8a.pfb>
-Output written on TFMTeXiS.pdf (76 pages, 1818361 bytes).
+Output written on TFMTeXiS.pdf (76 pages, 1818777 bytes).
 PDF statistics:
- 2426 PDF objects out of 2487 (max. 8388607)
+ 2427 PDF objects out of 2487 (max. 8388607)
  645 named destinations out of 1000 (max. 500000)
  514 words of extra memory for PDF output out of 10000 (max. 10000000)
 
