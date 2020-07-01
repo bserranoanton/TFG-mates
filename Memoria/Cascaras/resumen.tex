@@ -4,11 +4,11 @@
 
 \section*{}
 
-Nuestro sistema inmune es esencial para nuestra supervivencia. Sin él estaríamos expuestos a ataques de bacterias, virus, parásitos, entre otros. Este sistema se extiende por todo el cuerpo e involucra a muchos tipos de células, órganos, proteínas y tejidos. Su misión principal es reconocer patógenos y reaccionar ante ellos, dando lugar a un proceso que llamamos \textit{respuesta inmune}. 
+Nuestro sistema inmune es esencial para nuestra supervivencia. Sin él estaríamos expuestos a ataques de bacterias, virus y parásitos. Este sistema actúa por todo el cuerpo e involucra a muchos tipos de células. Su misión principal es reconocer patógenos y combatirlos, dando lugar a un proceso que llamamos respuesta inmune. 
 
-En lo que sigue nos centraremos en la dinámica de población de un tipo de célula inmune concreto: las células T. Estas participan de manera fundamental en la \textit{respuesta inmune}, pues son las encargadas de eliminar aquellas células del organismo que han sido infectadas. Los mecanismos biológicos que determinan cuándo y cuánto se reproducen estas células durante la \textit{respuesta inmune} aún están por resolver. 
+En lo que sigue nos centraremos en la dinámica de la población de un tipo de célula inmune concreto: las células T. Estas participan de manera fundamental en la respuesta inmune, pues se encargan de eliminar aquellas células del organismo que han sido infectadas. A día de hoy, los mecanismos biológicos que determinan cuándo y cuánto se reproducen estas células durante la respuesta inmune son conocidos solo de forma parcial. 
 
-Es por ello que, a lo largo de este documento, se exponen dos modelos matemáticos, basados en ecuaciones diferenciales, que intentan dar una posible explicación a este fenómeno desde puntos de vista distintos: uno microscópico (a nivel celular) y otro macroscópico (a nivel de toda la población de células). A pesar de lo complejo que pueda parecer, veremos que la decisión entre división o apoptosis de las células T puede modelarse por medio de ecuaciones simples, que permiten abstraer el problema para su posterior análisis. Además del marco teórico de los modelos, se incluyen diversas simulaciones de los mismos. En ellas se pone de manifiesto su carácter flexible, pues permiten representar situaciones distintas simplemente con la variación del valor de sus parámetros. Esto permite inferir nuevo conocimiento sin necesidad de nuevos experimentos en un laboratorio. Además, en este trabajo se ha buscado una posible correlación entre los parámetros de los modelos propuestos. Como primera aproximación, se ha implementado una red neuronal que permite inferir los parámetros del modelo macroscópico teniendo como entrada aspectos característicos de una \textit{respuesta inmune}.
+A lo largo de este documento, se exponen dos modelos matemáticos, basados en ecuaciones diferenciales, que intentan dar una posible explicación a algunos aspectos de la respuesta inmune desde puntos de vista distintos: uno microscópico (a nivel celular) y otro macroscópico (a nivel de toda la población de células). Veremos que la actividad de las células T depende de su decisión entre división o suicidio (apoptosis) y esta decisión puede estudiarse por medio de ecuaciones simples, que permiten formular el problema de manera adecuada para su posterior análisis. Además del marco teórico de los modelos, se incluyen diversas simulaciones de los mismos. En ellas se pone de manifiesto su carácter flexible, pues permiten representar situaciones inmunológicas distintas cambiando valor de sus parámetros. De este modo es posible obtener información relevante sin necesidad de nuevos experimentos en un laboratorio. Además, en este trabajo se ha buscado una posible correlación entre los parámetros de los modelos (microscópico y macroscópico) propuestos. En concreto y como primera aproximación, se ha implementado una red neuronal que permite inferir los parámetros del modelo macroscópico teniendo como entrada aspectos característicos de una respuesta inmune.
 
 
 
@@ -16,7 +16,7 @@ Es por ello que, a lo largo de este documento, se exponen dos modelos matemátic
    
 %\noindent Máximo 10 palabras clave separadas por comas
 
-\noindent Célula T, patógeno, respuesta inmune, tolerancia, intolerancia, ecuación diferencial, simulación, modelo, infección, red.
+\noindent modelos matemáticos, ecuaciones diferenciales, células T, patógenos, respuesta inmune, simulaciones numéricas.
 
    
 
